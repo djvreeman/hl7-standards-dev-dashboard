@@ -1,0 +1,979 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-07-23",
+    "data_source": "HL7 KPI Dashboard - CSV Import",
+    "time_periods": [
+      "2024-T3",
+      "2025-T1"
+    ],
+    "domains": [
+      "Events",
+      "Financial Health",
+      "Global Engagement",
+      "Membership Health",
+      "Standards Development",
+      "Standards Implementation",
+      "Technology and Process"
+    ],
+    "stewards": [
+      "HL7 International",
+      "Finance",
+      "IT",
+      "Standards Development",
+      "Standards Implementation"
+    ]
+  },
+  "indicators": {
+    "1": {
+      "id": "1",
+      "name": "Active members",
+      "description": "Number of active members (all benefactor, gold, organizational, individual, and special type) of HL7 International.",
+      "domain": "Global Engagement",
+      "stewards": [
+        "HL7 International"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "N",
+      "unit": "members",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2025-T1": {
+          "value": 1098.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "2": {
+      "id": "2",
+      "name": "Active participants ",
+      "description": "Active participants ",
+      "domain": "Global Engagement",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N ",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [],
+      "image": "ID-2-2025-T1.png",
+      "measurements": {
+        "2025-T1": {
+          "value": 95599.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "3": {
+      "id": "3",
+      "name": "Active participants: New",
+      "description": "Active participants: New",
+      "domain": "Global Engagement",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N ",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [],
+      "image": "ID-3-2025-T1.png",
+      "measurements": {
+        "2025-T1": {
+          "value": 2846.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "4": {
+      "id": "4",
+      "name": "Balloters",
+      "description": "Balloters",
+      "domain": "Global Engagement",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "Ave per Item",
+      "unit": "average",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 140.0,
+          "target": 100.0,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 130.0,
+          "target": 100.0,
+          "notes": null
+        }
+      }
+    },
+    "6": {
+      "id": "6",
+      "name": "Citations in policy documents: Global",
+      "description": "Citations in policy documents: Global",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": null,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": null,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "7": {
+      "id": "7",
+      "name": "Citations in policy documents: U.S.",
+      "description": "Citations in policy documents: U.S.",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 12.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 9.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "8": {
+      "id": "8",
+      "name": "Citations in scientific literature",
+      "description": "Citations in scientific literature",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": "ID-8-2025-T1.png",
+      "measurements": {
+        "2024-T3": {
+          "value": 30.0,
+          "target": null,
+          "notes": "<p>For FHIR only</p>"
+        },
+        "2025-T1": {
+          "value": 45.0,
+          "target": null,
+          "notes": "<p>For FHIR only</p>"
+        }
+      }
+    },
+    "9": {
+      "id": "9",
+      "name": "Co-chairs",
+      "description": "Co-chairs",
+      "domain": "Global Engagement",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 167.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 158.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "10": {
+      "id": "10",
+      "name": "Connectathon Tracks",
+      "description": "Connectathon Tracks",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "tracks",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 34.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 27.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "11": {
+      "id": "11",
+      "name": "Connectathon Tracks: Accelerator-led",
+      "description": "Connectathon Tracks: Accelerator-led",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "tracks",
+      "target": null,
+      "targets": {
+        "2024": 30.0,
+        "2025": 30.0
+      },
+      "target_operation": "sum",
+      "tags": [
+        "KPI",
+        "ACCELERATORS"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 17.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 13.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "12": {
+      "id": "12",
+      "name": "Core system uptime: Ballot Desktop",
+      "description": "Core system uptime: Ballot Desktop",
+      "domain": "Technology and Process",
+      "stewards": [
+        "Standards Development",
+        "IT"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": "2025-2025T1-uptime-ballot-desktop.png",
+      "measurements": {
+        "2024-T3": {
+          "value": 99.98,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 100.0,
+          "target": 99.9,
+          "notes": null
+        }
+      }
+    },
+    "13": {
+      "id": "13",
+      "name": "Core system uptime: Confluence",
+      "description": "Core system uptime: Confluence",
+      "domain": "Technology and Process",
+      "stewards": [
+        "Standards Development",
+        "IT"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": "2025-2025T1-uptime-confluencehl7org.png",
+      "measurements": {
+        "2024-T3": {
+          "value": 99.91,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 99.43,
+          "target": 99.9,
+          "notes": null
+        }
+      }
+    },
+    "14": {
+      "id": "14",
+      "name": "Core system uptime: hl7.org",
+      "description": "Core system uptime: hl7.org",
+      "domain": "Technology and Process",
+      "stewards": [
+        "Standards Development",
+        "IT"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": "2025-2025T1-uptime-hl7org-website.png",
+      "measurements": {
+        "2024-T3": {
+          "value": 99.94,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 99.99,
+          "target": 99.9,
+          "notes": null
+        }
+      }
+    },
+    "15": {
+      "id": "15",
+      "name": "Core system uptime: Jira",
+      "description": "Core system uptime: Jira",
+      "domain": "Technology and Process",
+      "stewards": [
+        "Standards Development",
+        "IT"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": "2025-2025T1-uptime-jirahl7org.png",
+      "measurements": {
+        "2024-T3": {
+          "value": 99.99,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 93.15,
+          "target": 99.9,
+          "notes": null
+        }
+      }
+    },
+    "16": {
+      "id": "16",
+      "name": "Countries with national adoption of HL7 specifications",
+      "description": "Number of countries adopting HL7 specifications in their digital health initiatives including regulation, policy, government initiatives, or technical architectures as described here.",
+      "domain": "Standards Implementation",
+      "stewards": [
+        "HL7 International",
+        "Standards Development",
+        "Standards Implementation"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "N",
+      "unit": "countries",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2025-T1": {
+          "value": 23.0,
+          "target": 23.0,
+          "notes": "<p>Results for FHIR only and per 2024 State of FHIR Survey. Comprehensive data collection still in progress.</p>"
+        }
+      }
+    },
+    "17": {
+      "id": "17",
+      "name": "Event participation year over year growth",
+      "description": "Event Participation YoY change = ((Current Year Event Participation - Previous Year Event Participation) / Previous Year Event Participation) × 100%. Here we include all \"core\" HL7 events that we host: HL7 International WGMs, FHIR Connectathons, and DevDays. Other event participation (e.g. webinars, special events, joint meetings with other groups, board meetings, etc) is tracked separately, but not in this KPI.",
+      "domain": "Events",
+      "stewards": [
+        "HL7 International"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2025-T1": {
+          "value": -2.9,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "18": {
+      "id": "18",
+      "name": "Variance from budget: Expenses",
+      "description": "((Actual Expenses - Budgeted Expenses) / Budgeted Expenses) × 100%",
+      "domain": "Financial Health",
+      "stewards": [
+        "HL7 International",
+        "Finance"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "%",
+      "unit": "%-",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2025-T1": {
+          "value": -17.4,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "19": {
+      "id": "19",
+      "name": "Issue submitters",
+      "description": "Issue submitters",
+      "domain": "Global Engagement",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 224.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 186.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "20": {
+      "id": "20",
+      "name": "Issue submitters: New",
+      "description": "Issue submitters: New",
+      "domain": "Global Engagement",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 26.3,
+          "target": 20.0,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 21.0,
+          "target": 20.0,
+          "notes": null
+        }
+      }
+    },
+    "21": {
+      "id": "21",
+      "name": "Issues resolved",
+      "description": "Number of specification feedback issues (as tracked in Jira for FHIR, CDA, V2 and OTHER product families) transitioning to a resolved status.",
+      "domain": "Standards Development",
+      "stewards": [
+        "HL7 International",
+        "Standards Development"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "N",
+      "unit": "issues",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 1663.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 1729.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "22": {
+      "id": "22",
+      "name": "Member satisfaction index (NPS)",
+      "description": "Net Promotor Score measures member loyalty and satisfaction by asking a single question: 'On a scale of 0 to 10, how likely are you to recommend us to a friend or colleague?'. NPS = % of Promoters (9-10 ratings) - % of Detractors (0-6 ratings).",
+      "domain": "Membership Health",
+      "stewards": [
+        "HL7 International"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "N",
+      "unit": "score ",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2025-T1": {
+          "value": null,
+          "target": null,
+          "notes": "<p>To be assessed in summer member survey</p>"
+        }
+      }
+    },
+    "23": {
+      "id": "23",
+      "name": "Membership income change year over year",
+      "description": "Membership income YoY change = (((Current One Year Membership Income - Previous One Year Membership Income) / Previous One Year Membership Income) × 100%",
+      "domain": "Financial Health",
+      "stewards": [
+        "HL7 International",
+        "Finance"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2025-T1": {
+          "value": 1.8,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "24": {
+      "id": "24",
+      "name": "New projects approved",
+      "description": "New projects approved",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 16.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "25": {
+      "id": "25",
+      "name": "Operating reserves (months)",
+      "description": "Months of Operating Reserve = Unrestricted Net Assets (minus Fixed Assets) / Average Monthly Expenses",
+      "domain": "Financial Health",
+      "stewards": [
+        "HL7 International",
+        "Finance"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "N",
+      "unit": "months",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2025-T1": {
+          "value": 9.54,
+          "target": 9.0,
+          "notes": "<p>through end of Q1</p>"
+        }
+      }
+    },
+    "26": {
+      "id": "26",
+      "name": "Participants in HL7 courses delivered",
+      "description": "Number of enrolled participants in educational courses (whether paid or free) delivered by HL7 International, HL7 Affiliates, and HL7 Educational Partners.",
+      "domain": "Standards Implementation",
+      "stewards": [
+        "HL7 International",
+        "Standards Implementation"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "N",
+      "unit": "participants",
+      "target": null,
+      "targets": {
+        "2025": 3000.0
+      },
+      "target_operation": "sum",
+      "tags": [
+        "KPI",
+        "EDUCATION"
+      ],
+      "image": null,
+      "measurements": {
+        "2025-T1": {
+          "value": 882.0,
+          "target": null,
+          "notes": "<p>only hl7.org</p>"
+        }
+      }
+    },
+    "27": {
+      "id": "27",
+      "name": "Published specifications",
+      "description": "Number of new specification (i.e. standards or protocol specifications) editions published by HL7 International.",
+      "domain": "Standards Development",
+      "stewards": [
+        "HL7 International",
+        "Standards Development"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "N",
+      "unit": "specifications",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 20.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 16.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "28": {
+      "id": "28",
+      "name": "Published specifications: Accelerator-led",
+      "description": "Published specifications: Accelerator-led",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "specifications",
+      "target": null,
+      "targets": {
+        "2024": 10.0,
+        "2025": 10.0
+      },
+      "target_operation": "sum",
+      "tags": [
+        "KPI",
+        "ACCELERATORS"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 5.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 11.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "29": {
+      "id": "29",
+      "name": "Variance from budget: Revenue",
+      "description": "((Actual Revenue - Budgeted Revenue) / Budgeted Revenue) × 100%",
+      "domain": "Financial Health",
+      "stewards": [
+        "HL7 International",
+        "Finance"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2025-T1": {
+          "value": -22.8,
+          "target": null,
+          "notes": "<p>through end of Q1</p>"
+        }
+      }
+    },
+    "30": {
+      "id": "30",
+      "name": "Connectathon Tracks: Track leads",
+      "description": "Connectathon Tracks: Track leads",
+      "domain": "Global Engagement",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 65.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 52.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "31": {
+      "id": "31",
+      "name": "Work Groups in good health",
+      "description": "Work Groups in good health",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 100.0,
+          "target": null,
+          "notes": "<p>31/31 Work Groups</p>"
+        },
+        "2025-T1": {
+          "value": 100.0,
+          "target": null,
+          "notes": "<p>31/31 Work Groups</p>"
+        }
+      }
+    },
+    "32": {
+      "id": "32",
+      "name": "Responsiveness to member feedback: Co-chairs",
+      "description": "Responsiveness to member feedback: Co-chairs",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "score ",
+      "target": null,
+      "targets": {
+        "2025": 4.0
+      },
+      "target_operation": null,
+      "tags": [],
+      "image": "ID-32-2025-T1.png",
+      "measurements": {
+        "2025-T1": {
+          "value": 4.0,
+          "target": null,
+          "notes": "<p>Q: How effectively do you think the HL7 organization addresses feedback from its members? (Scale: 1=ignores feedback, 5=very responsive to feedback). A: median response score</p>"
+        }
+      }
+    },
+    "33": {
+      "id": "33",
+      "name": "IG repos using auto-build pipeline",
+      "description": "IG repos using auto-build pipeline",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "specifications",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [],
+      "image": null,
+      "measurements": {
+        "2025-T1": {
+          "value": 573.0,
+          "target": 550.0,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 505.0,
+          "target": 500.0,
+          "notes": null
+        }
+      }
+    }
+  }
+}

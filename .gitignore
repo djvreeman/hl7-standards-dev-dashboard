@@ -1,3 +1,11 @@
+# PROJECT SPECIFIC
+data/kpis/
+
+# Proprietary Font Files (HL7 Gotham Font Bundle)
+# These are commercially licensed fonts and should not be included in public repositories
+static/fonts/HCo_Gotham_Bundle/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

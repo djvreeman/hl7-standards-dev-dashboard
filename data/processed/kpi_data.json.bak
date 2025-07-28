@@ -1,0 +1,623 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-01-15",
+    "data_source": "HL7 KPI Dashboard",
+    "time_periods": ["2024-T3", "2025-T1"],
+    "domains": [
+      "Global Engagement",
+      "Standards Development", 
+      "Standards Implementation",
+      "Technology and Process",
+      "Events",
+      "Financial Health",
+      "Membership Health"
+    ],
+    "stewards": [
+      "HL7 International",
+      "CSDO"
+    ]
+  },
+  "indicators": {
+    "CSDO-1": {
+      "id": "CSDO-1",
+      "name": "Total Global Affiliate Members",
+      "description": "Total number of global affiliate members",
+      "domain": "Global Engagement",
+      "steward": "CSDO",
+      "type": "N",
+      "unit": "members",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 1250,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 1320,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-2": {
+      "id": "CSDO-2", 
+      "name": "Active Global Affiliate Members",
+      "description": "Number of active global affiliate members",
+      "domain": "Global Engagement",
+      "steward": "CSDO",
+      "type": "N",
+      "unit": "members",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 980,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 1045,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-3": {
+      "id": "CSDO-3",
+      "name": "Global Affiliate Member Retention Rate",
+      "description": "Percentage of global affiliate members retained",
+      "domain": "Global Engagement", 
+      "steward": "CSDO",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 78.4,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 79.2,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-4": {
+      "id": "CSDO-4",
+      "name": "Standards Published",
+      "description": "Number of standards published",
+      "domain": "Standards Development",
+      "steward": "CSDO", 
+      "type": "N",
+      "unit": "standards",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 15,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 18,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-5": {
+      "id": "CSDO-5",
+      "name": "Standards Under Development",
+      "description": "Number of standards currently under development",
+      "domain": "Standards Development",
+      "steward": "CSDO",
+      "type": "N", 
+      "unit": "standards",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 8,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 10,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-6": {
+      "id": "CSDO-6",
+      "name": "Implementation Guides Published",
+      "description": "Number of implementation guides published",
+      "domain": "Standards Implementation",
+      "steward": "CSDO",
+      "type": "N",
+      "unit": "guides",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 12,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 15,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-7": {
+      "id": "CSDO-7",
+      "name": "Implementation Success Rate",
+      "description": "Percentage of successful implementations",
+      "domain": "Standards Implementation",
+      "steward": "CSDO",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 85.2,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 87.1,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-8": {
+      "id": "CSDO-8",
+      "name": "Technology Infrastructure Uptime",
+      "description": "Percentage of technology infrastructure uptime",
+      "domain": "Technology and Process",
+      "steward": "CSDO",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 99.8,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 99.9,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-9": {
+      "id": "CSDO-9",
+      "name": "Process Efficiency Score",
+      "description": "Overall process efficiency score",
+      "domain": "Technology and Process",
+      "steward": "CSDO",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 92.1,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 93.4,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-10": {
+      "id": "CSDO-10",
+      "name": "Global Events Hosted",
+      "description": "Number of global events hosted",
+      "domain": "Events",
+      "steward": "CSDO",
+      "type": "N",
+      "unit": "events",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 6,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 7,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-11": {
+      "id": "CSDO-11",
+      "name": "Event Participant Satisfaction",
+      "description": "Average participant satisfaction score for events",
+      "domain": "Events",
+      "steward": "CSDO",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 94.3,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 95.8,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-12": {
+      "id": "CSDO-12",
+      "name": "Revenue Growth Rate",
+      "description": "Year-over-year revenue growth rate",
+      "domain": "Financial Health",
+      "steward": "CSDO",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 12.5,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 15.2,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-13": {
+      "id": "CSDO-13",
+      "name": "Operating Margin",
+      "description": "Operating margin percentage",
+      "domain": "Financial Health",
+      "steward": "CSDO",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 18.7,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 20.1,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-14": {
+      "id": "CSDO-14",
+      "name": "New Member Acquisition",
+      "description": "Number of new members acquired",
+      "domain": "Membership Health",
+      "steward": "CSDO",
+      "type": "N",
+      "unit": "members",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 156,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 178,
+          "notes": null
+        }
+      }
+    },
+    "CSDO-15": {
+      "id": "CSDO-15",
+      "name": "Member Engagement Score",
+      "description": "Overall member engagement score",
+      "domain": "Membership Health",
+      "steward": "CSDO",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 76.8,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 79.5,
+          "notes": null
+        }
+      }
+    },
+    "HL7-1": {
+      "id": "HL7-1",
+      "name": "Total HL7 Members",
+      "description": "Total number of HL7 members",
+      "domain": "Global Engagement",
+      "steward": "HL7 International",
+      "type": "N",
+      "unit": "members",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 2800,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 2950,
+          "notes": null
+        }
+      }
+    },
+    "HL7-2": {
+      "id": "HL7-2",
+      "name": "Active HL7 Members",
+      "description": "Number of active HL7 members",
+      "domain": "Global Engagement",
+      "steward": "HL7 International",
+      "type": "N",
+      "unit": "members",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 2100,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 2250,
+          "notes": null
+        }
+      }
+    },
+    "HL7-3": {
+      "id": "HL7-3",
+      "name": "Member Retention Rate",
+      "description": "Percentage of HL7 members retained",
+      "domain": "Global Engagement",
+      "steward": "HL7 International",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 75.0,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 76.3,
+          "notes": null
+        }
+      }
+    },
+    "HL7-4": {
+      "id": "HL7-4",
+      "name": "Standards Published",
+      "description": "Number of standards published by HL7",
+      "domain": "Standards Development",
+      "steward": "HL7 International",
+      "type": "N",
+      "unit": "standards",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 25,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 28,
+          "notes": null
+        }
+      }
+    },
+    "HL7-5": {
+      "id": "HL7-5",
+      "name": "Standards Under Development",
+      "description": "Number of standards currently under development by HL7",
+      "domain": "Standards Development",
+      "steward": "HL7 International",
+      "type": "N",
+      "unit": "standards",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 12,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 15,
+          "notes": null
+        }
+      }
+    },
+    "HL7-6": {
+      "id": "HL7-6",
+      "name": "Implementation Guides Published",
+      "description": "Number of implementation guides published by HL7",
+      "domain": "Standards Implementation",
+      "steward": "HL7 International",
+      "type": "N",
+      "unit": "guides",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 20,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 24,
+          "notes": null
+        }
+      }
+    },
+    "HL7-7": {
+      "id": "HL7-7",
+      "name": "Implementation Success Rate",
+      "description": "Percentage of successful HL7 implementations",
+      "domain": "Standards Implementation",
+      "steward": "HL7 International",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 82.5,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 85.8,
+          "notes": null
+        }
+      }
+    },
+    "HL7-8": {
+      "id": "HL7-8",
+      "name": "Technology Infrastructure Uptime",
+      "description": "Percentage of HL7 technology infrastructure uptime",
+      "domain": "Technology and Process",
+      "steward": "HL7 International",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 99.5,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 99.7,
+          "notes": null
+        }
+      }
+    },
+    "HL7-9": {
+      "id": "HL7-9",
+      "name": "Process Efficiency Score",
+      "description": "Overall HL7 process efficiency score",
+      "domain": "Technology and Process",
+      "steward": "HL7 International",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 88.7,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 90.2,
+          "notes": null
+        }
+      }
+    },
+    "HL7-10": {
+      "id": "HL7-10",
+      "name": "HL7 Events Hosted",
+      "description": "Number of HL7 events hosted",
+      "domain": "Events",
+      "steward": "HL7 International",
+      "type": "N",
+      "unit": "events",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 8,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 9,
+          "notes": null
+        }
+      }
+    },
+    "HL7-11": {
+      "id": "HL7-11",
+      "name": "Event Participant Satisfaction",
+      "description": "Average participant satisfaction score for HL7 events",
+      "domain": "Events",
+      "steward": "HL7 International",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 91.2,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 93.7,
+          "notes": null
+        }
+      }
+    },
+    "HL7-12": {
+      "id": "HL7-12",
+      "name": "Revenue Growth Rate",
+      "description": "Year-over-year HL7 revenue growth rate",
+      "domain": "Financial Health",
+      "steward": "HL7 International",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 8.3,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 10.1,
+          "notes": null
+        }
+      }
+    },
+    "HL7-13": {
+      "id": "HL7-13",
+      "name": "Operating Margin",
+      "description": "HL7 operating margin percentage",
+      "domain": "Financial Health",
+      "steward": "HL7 International",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 15.4,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 17.2,
+          "notes": null
+        }
+      }
+    },
+    "HL7-14": {
+      "id": "HL7-14",
+      "name": "New Member Acquisition",
+      "description": "Number of new HL7 members acquired",
+      "domain": "Membership Health",
+      "steward": "HL7 International",
+      "type": "N",
+      "unit": "members",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 320,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 380,
+          "notes": null
+        }
+      }
+    },
+    "HL7-15": {
+      "id": "HL7-15",
+      "name": "Member Engagement Score",
+      "description": "Overall HL7 member engagement score",
+      "domain": "Membership Health",
+      "steward": "HL7 International",
+      "type": "%",
+      "unit": "percentage",
+      "target": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 72.1,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 74.8,
+          "notes": null
+        }
+      }
+    }
+  }
+} 
