@@ -89,7 +89,14 @@ class DataService:
         if previous_value == 0:
             change_pct = 100.0 if current_value > 0 else 0.0
         else:
-            change_pct = ((current_value - previous_value) / previous_value) * 100
+            # Handle the case where we transition from negative to positive or vice versa
+            # Use absolute value of previous value to avoid sign flipping issues
+            if (previous_value < 0 and current_value > 0) or (previous_value > 0 and current_value < 0):
+                # When crossing zero, use absolute value of previous value as denominator
+                change_pct = ((current_value - previous_value) / abs(previous_value)) * 100
+            else:
+                # Standard percentage change calculation for same-sign values
+                change_pct = ((current_value - previous_value) / previous_value) * 100
         
         # Determine trend direction
         if change_pct > 0:

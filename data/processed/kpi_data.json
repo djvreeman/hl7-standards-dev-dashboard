@@ -1,11 +1,12 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2025-07-23",
+    "last_updated": "2025-09-05",
     "data_source": "HL7 KPI Dashboard - CSV Import",
     "time_periods": [
       "2024-T3",
-      "2025-T1"
+      "2025-T1",
+      "2025-T2"
     ],
     "domains": [
       "Events",
@@ -46,6 +47,11 @@
       "measurements": {
         "2025-T1": {
           "value": 1098.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 1110.0,
           "target": null,
           "notes": null
         }
@@ -127,6 +133,11 @@
           "value": 130.0,
           "target": 100.0,
           "notes": null
+        },
+        "2025-T2": {
+          "value": 108.0,
+          "target": 100.0,
+          "notes": null
         }
       }
     },
@@ -158,6 +169,11 @@
           "value": null,
           "target": null,
           "notes": null
+        },
+        "2025-T2": {
+          "value": null,
+          "target": null,
+          "notes": "<p>Not yet assessed</p>"
         }
       }
     },
@@ -189,6 +205,11 @@
           "value": 9.0,
           "target": null,
           "notes": null
+        },
+        "2025-T2": {
+          "value": 13.0,
+          "target": null,
+          "notes": null
         }
       }
     },
@@ -209,7 +230,7 @@
       "tags": [
         "KPI"
       ],
-      "image": "ID-8-2025-T1.png",
+      "image": "ID-8-2025-T2.png",
       "measurements": {
         "2024-T3": {
           "value": 30.0,
@@ -218,6 +239,11 @@
         },
         "2025-T1": {
           "value": 45.0,
+          "target": null,
+          "notes": "<p>For FHIR only</p>"
+        },
+        "2025-T2": {
+          "value": 66.0,
           "target": null,
           "notes": "<p>For FHIR only</p>"
         }
@@ -320,6 +346,37 @@
         }
       }
     },
+    "30": {
+      "id": "30",
+      "name": "Connectathon Tracks: Track leads",
+      "description": "Connectathon Tracks: Track leads",
+      "domain": "Global Engagement",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2024-T3": {
+          "value": 65.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 52.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
     "12": {
       "id": "12",
       "name": "Core system uptime: Ballot Desktop",
@@ -338,7 +395,7 @@
       "tags": [
         "KPI"
       ],
-      "image": "2025-2025T1-uptime-ballot-desktop.png",
+      "image": "2025T2-uptime-ballot-desktop.png",
       "measurements": {
         "2024-T3": {
           "value": 99.98,
@@ -347,6 +404,11 @@
         },
         "2025-T1": {
           "value": 100.0,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 99.28,
           "target": 99.9,
           "notes": null
         }
@@ -370,7 +432,7 @@
       "tags": [
         "KPI"
       ],
-      "image": "2025-2025T1-uptime-confluencehl7org.png",
+      "image": "2025T2-uptime-confluencehl7org.png",
       "measurements": {
         "2024-T3": {
           "value": 99.91,
@@ -379,6 +441,11 @@
         },
         "2025-T1": {
           "value": 99.43,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 100.0,
           "target": 99.9,
           "notes": null
         }
@@ -402,7 +469,7 @@
       "tags": [
         "KPI"
       ],
-      "image": "2025-2025T1-uptime-hl7org-website.png",
+      "image": "2025T2-uptime-hl7org-website.png",
       "measurements": {
         "2024-T3": {
           "value": 99.94,
@@ -411,6 +478,11 @@
         },
         "2025-T1": {
           "value": 99.99,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 100.0,
           "target": 99.9,
           "notes": null
         }
@@ -434,7 +506,7 @@
       "tags": [
         "KPI"
       ],
-      "image": "2025-2025T1-uptime-jirahl7org.png",
+      "image": "2025T2-uptime-jirahl7org.png",
       "measurements": {
         "2024-T3": {
           "value": 99.99,
@@ -443,6 +515,11 @@
         },
         "2025-T1": {
           "value": 93.15,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 99.91,
           "target": 99.9,
           "notes": null
         }
@@ -473,13 +550,18 @@
           "value": 23.0,
           "target": 23.0,
           "notes": "<p>Results for FHIR only and per 2024 State of FHIR Survey. Comprehensive data collection still in progress.</p>"
+        },
+        "2025-T2": {
+          "value": 47.0,
+          "target": 23.0,
+          "notes": "<p>Results for FHIR only and per 2025 State of FHIR Survey. Comprehensive data collection still in progress.</p>"
         }
       }
     },
     "17": {
       "id": "17",
       "name": "Event participation year over year growth",
-      "description": "Event Participation YoY change = ((Current Year Event Participation - Previous Year Event Participation) / Previous Year Event Participation) × 100%. Here we include all \"core\" HL7 events that we host: HL7 International WGMs, FHIR Connectathons, and DevDays. Other event participation (e.g. webinars, special events, joint meetings with other groups, board meetings, etc) is tracked separately, but not in this KPI.",
+      "description": "Event Participation YoY change = ((Current Year Event Participation - Previous Year Event Participation) / Previous Year Event Participation) × 100%. Here we include all \"core\" HL7 events that we host: HL7 International WGMs, FHIR Connectathons, and DevDays. This is calculated as a one year \"rolling\" average: 12 months prior to now = current year; 12 months preceding that = previous year. Other event participation (e.g. webinars, special events, joint meetings with other groups, board meetings, etc) is tracked separately, but not in this KPI.",
       "domain": "Events",
       "stewards": [
         "HL7 International"
@@ -499,32 +581,44 @@
           "value": -2.9,
           "target": null,
           "notes": null
+        },
+        "2025-T2": {
+          "value": 1.54,
+          "target": null,
+          "notes": null
         }
       }
     },
-    "18": {
-      "id": "18",
-      "name": "Variance from budget: Expenses",
-      "description": "((Actual Expenses - Budgeted Expenses) / Budgeted Expenses) × 100%",
-      "domain": "Financial Health",
+    "33": {
+      "id": "33",
+      "name": "IG repos using auto-build pipeline",
+      "description": "IG repos using auto-build pipeline",
+      "domain": "Standards Development",
       "stewards": [
-        "HL7 International",
-        "Finance"
+        "Standards Development"
       ],
-      "primary_steward": "HL7 International",
-      "type": "%",
-      "unit": "%-",
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "specifications",
       "target": null,
       "targets": null,
       "target_operation": null,
-      "tags": [
-        "KPI"
-      ],
+      "tags": [],
       "image": null,
       "measurements": {
+        "2024-T3": {
+          "value": 505.0,
+          "target": 500.0,
+          "notes": null
+        },
         "2025-T1": {
-          "value": -17.4,
-          "target": null,
+          "value": 573.0,
+          "target": 550.0,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 593.0,
+          "target": 550.0,
           "notes": null
         }
       }
@@ -557,6 +651,11 @@
           "value": 186.0,
           "target": null,
           "notes": null
+        },
+        "2025-T2": {
+          "value": 198.0,
+          "target": null,
+          "notes": null
         }
       }
     },
@@ -586,6 +685,11 @@
         },
         "2025-T1": {
           "value": 21.0,
+          "target": 20.0,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 19.0,
           "target": 20.0,
           "notes": null
         }
@@ -620,6 +724,11 @@
           "value": 1729.0,
           "target": null,
           "notes": null
+        },
+        "2025-T2": {
+          "value": 1590.0,
+          "target": null,
+          "notes": null
         }
       }
     },
@@ -635,24 +744,26 @@
       "type": "N",
       "unit": "score ",
       "target": null,
-      "targets": null,
-      "target_operation": null,
+      "targets": {
+        "2025": 85.0
+      },
+      "target_operation": "average",
       "tags": [
         "KPI"
       ],
-      "image": null,
+      "image": "ID-22-2025-T2.png",
       "measurements": {
-        "2025-T1": {
-          "value": null,
+        "2025-T2": {
+          "value": 84.0,
           "target": null,
-          "notes": "<p>To be assessed in summer member survey</p>"
+          "notes": "<p>Assessed in 2025 member survey</p>"
         }
       }
     },
     "23": {
       "id": "23",
       "name": "Membership income change year over year",
-      "description": "Membership income YoY change = (((Current One Year Membership Income - Previous One Year Membership Income) / Previous One Year Membership Income) × 100%",
+      "description": "Membership income YoY change = (((Current One Year Membership Income - Previous One Year Membership Income) / Previous One Year Membership Income) × 100%. This is calculated as a one year \"rolling\" average: 12 months prior to now = current year; 12 months preceding that = previous year.",
       "domain": "Financial Health",
       "stewards": [
         "HL7 International",
@@ -702,6 +813,11 @@
         },
         "2025-T1": {
           "value": 16.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 5.0,
           "target": null,
           "notes": null
         }
@@ -793,6 +909,11 @@
           "value": 16.0,
           "target": null,
           "notes": null
+        },
+        "2025-T2": {
+          "value": 25.0,
+          "target": null,
+          "notes": null
         }
       }
     },
@@ -828,6 +949,64 @@
           "value": 11.0,
           "target": null,
           "notes": null
+        },
+        "2025-T2": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "32": {
+      "id": "32",
+      "name": "Responsiveness to member feedback: Co-chairs",
+      "description": "Responsiveness to member feedback: Co-chairs",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "score ",
+      "target": null,
+      "targets": {
+        "2025": 4.0
+      },
+      "target_operation": null,
+      "tags": [],
+      "image": "ID-32-2025-T1.png",
+      "measurements": {
+        "2025-T1": {
+          "value": 4.0,
+          "target": null,
+          "notes": "<p>Q: How effectively do you think the HL7 organization addresses feedback from its members? (Scale: 1=ignores feedback, 5=very responsive to feedback). A: median response score</p>"
+        }
+      }
+    },
+    "18": {
+      "id": "18",
+      "name": "Variance from budget: Expenses",
+      "description": "((Actual Expenses - Budgeted Expenses) / Budgeted Expenses) × 100%",
+      "domain": "Financial Health",
+      "stewards": [
+        "HL7 International",
+        "Finance"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "%",
+      "unit": "%-",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "measurements": {
+        "2025-T1": {
+          "value": -17.4,
+          "target": null,
+          "notes": null
         }
       }
     },
@@ -855,37 +1034,6 @@
           "value": -22.8,
           "target": null,
           "notes": "<p>through end of Q1</p>"
-        }
-      }
-    },
-    "30": {
-      "id": "30",
-      "name": "Connectathon Tracks: Track leads",
-      "description": "Connectathon Tracks: Track leads",
-      "domain": "Global Engagement",
-      "stewards": [
-        "Standards Development"
-      ],
-      "primary_steward": "Standards Development",
-      "type": "N",
-      "unit": "count",
-      "target": null,
-      "targets": null,
-      "target_operation": null,
-      "tags": [
-        "KPI"
-      ],
-      "image": null,
-      "measurements": {
-        "2024-T3": {
-          "value": 65.0,
-          "target": null,
-          "notes": null
-        },
-        "2025-T1": {
-          "value": 52.0,
-          "target": null,
-          "notes": null
         }
       }
     },
@@ -917,61 +1065,11 @@
           "value": 100.0,
           "target": null,
           "notes": "<p>31/31 Work Groups</p>"
-        }
-      }
-    },
-    "32": {
-      "id": "32",
-      "name": "Responsiveness to member feedback: Co-chairs",
-      "description": "Responsiveness to member feedback: Co-chairs",
-      "domain": "Standards Development",
-      "stewards": [
-        "Standards Development"
-      ],
-      "primary_steward": "Standards Development",
-      "type": "N",
-      "unit": "score ",
-      "target": null,
-      "targets": {
-        "2025": 4.0
-      },
-      "target_operation": null,
-      "tags": [],
-      "image": "ID-32-2025-T1.png",
-      "measurements": {
-        "2025-T1": {
-          "value": 4.0,
-          "target": null,
-          "notes": "<p>Q: How effectively do you think the HL7 organization addresses feedback from its members? (Scale: 1=ignores feedback, 5=very responsive to feedback). A: median response score</p>"
-        }
-      }
-    },
-    "33": {
-      "id": "33",
-      "name": "IG repos using auto-build pipeline",
-      "description": "IG repos using auto-build pipeline",
-      "domain": "Standards Development",
-      "stewards": [
-        "Standards Development"
-      ],
-      "primary_steward": "Standards Development",
-      "type": "N",
-      "unit": "specifications",
-      "target": null,
-      "targets": null,
-      "target_operation": null,
-      "tags": [],
-      "image": null,
-      "measurements": {
-        "2025-T1": {
-          "value": 573.0,
-          "target": 550.0,
-          "notes": null
         },
-        "2024-T3": {
-          "value": 505.0,
-          "target": 500.0,
-          "notes": null
+        "2025-T2": {
+          "value": 100.0,
+          "target": null,
+          "notes": "<p>31/31 Work Groups</p>"
         }
       }
     }
