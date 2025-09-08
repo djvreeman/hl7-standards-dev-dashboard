@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2025-09-05",
+    "last_updated": "2025-09-08",
     "data_source": "HL7 KPI Dashboard - CSV Import",
     "time_periods": [
       "2024-T3",
@@ -23,7 +23,8 @@
       "IT",
       "Standards Development",
       "Standards Implementation"
-    ]
+    ],
+    "refresh_timestamp": 1757337458
   },
   "indicators": {
     "1": {

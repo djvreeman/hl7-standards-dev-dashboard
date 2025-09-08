@@ -986,8 +986,18 @@
         // Load summary statistics
         async function loadSummaryStats() {
             try {
-                const response = await fetch(`/api/summary?steward=${encodeURIComponent(currentSteward)}`);
-                const summary = await response.json();
+                const [summaryResponse, metadataResponse] = await Promise.all([
+                    fetch(`/api/summary?steward=${encodeURIComponent(currentSteward)}`),
+                    fetch('/api/metadata')
+                ]);
+                
+                const summary = await summaryResponse.json();
+                const metadata = await metadataResponse.json();
+                
+                // Set the refresh timestamp for cache busting
+                if (metadata.refresh_timestamp) {
+                    window.metadataRefreshTimestamp = metadata.refresh_timestamp;
+                }
                 
                 const summaryHtml = `
                     <div class="summary-card">
@@ -1187,9 +1197,13 @@
             // Image section - only show if image exists
             let imageHtml = '';
             if (card.indicator.image) {
+                // Add cache-busting parameter based on data refresh timestamp
+                // This ensures images are refreshed when data is updated, but not on every page load
+                const cacheBuster = window.dataRefreshTimestamp || window.metadataRefreshTimestamp || Date.now();
+                const imageSrc = `/static/indicators/${card.indicator.image}?v=${cacheBuster}`;
                 imageHtml = `
                     <div class="kpi-image-section">
-                        <img src="/static/indicators/${card.indicator.image}" alt="${card.indicator.name}" class="kpi-image" onclick="openImageModal('/static/indicators/${card.indicator.image}', '${card.indicator.name}')">
+                        <img src="${imageSrc}" alt="${card.indicator.name}" class="kpi-image" onclick="openImageModal('${imageSrc}', '${card.indicator.name}')">
                     </div>
                 `;
             }
@@ -1364,6 +1378,9 @@
                 if (!refreshResponse.ok) {
                     throw new Error('Failed to refresh data');
                 }
+                
+                // Set timestamp for cache busting images
+                window.dataRefreshTimestamp = Date.now();
                 
                 // Reload the dashboard data
                 await loadDashboardData();

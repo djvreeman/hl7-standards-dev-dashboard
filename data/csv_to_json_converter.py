@@ -309,13 +309,15 @@ class CSVToJSONConverter:
             stewards_list.sort()
         
         # Create metadata
+        current_time = datetime.now()
         metadata = KPIMetadata(
             version="1.0",
-            last_updated=datetime.now().strftime("%Y-%m-%d"),
+            last_updated=current_time.strftime("%Y-%m-%d"),
             data_source="HL7 KPI Dashboard - CSV Import",
             time_periods=sorted(list(time_periods)),
             domains=sorted(list(domains)),
-            stewards=stewards_list
+            stewards=stewards_list,
+            refresh_timestamp=int(current_time.timestamp())
         )
         
         return KPIData(

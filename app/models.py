@@ -30,6 +30,7 @@ class KPIMetadata(BaseModel):
     time_periods: List[str] = Field(..., description="Available time periods")
     domains: List[str] = Field(..., description="Available domains")
     stewards: List[str] = Field(..., description="Available stewards")
+    refresh_timestamp: Optional[int] = Field(None, description="Unix timestamp for cache busting")
 
 class KPIData(BaseModel):
     metadata: KPIMetadata = Field(..., description="Data metadata")
