@@ -64,7 +64,7 @@ ID,Time Period,Domain,Indicator,Type,Unit,Value,Notes,Steward,Target,Target Type
 25,2025-T1,Financial Health,Operating reserves (months),N,months,9.54,through end of Q1,HL7; Finance,9,period,,KPI,
 25,2025-T2,Financial Health,Operating reserves (months),N,months,TBD,through end of Q2,HL7; Finance,9,period,,KPI,
 26,2025-T1,Standards Implementation,Participants in HL7 courses delivered,N,participants,882,only hl7.org,HL7; Standards Implementation,3000,annual,sum,KPI;EDUCATION,
-26,2025-T2,Standards Implementation,Participants in HL7 courses delivered,N,participants,2845,only hl7.org,HL7; Standards Implementation,3000,annual,sum,KPI;EDUCATION,
+26,2025-T2,Standards Implementation,Participants in HL7 courses delivered,N,participants,2123,"Only hl7.org participants - does not include courses via Affiliates. In 2025 T2, we also had purchase of 1780 seats for future courses that are yet to be delivered.",HL7; Standards Implementation,3000,annual,sum,KPI;EDUCATION,
 27,2024-T3,Standards Development,Published specifications,N,specifications,20,,HL7; Standards Development,,,,KPI,
 27,2025-T1,Standards Development,Published specifications,N,specifications,16,,HL7; Standards Development,,,,KPI,
 27,2025-T2,Standards Development,Published specifications,N,specifications,25,,HL7; Standards Development,,,,KPI,
