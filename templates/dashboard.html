@@ -1254,13 +1254,26 @@
                     targetLabel += ` (${operation})`;
                 }
                 
+                // For annual targets with sum operation, calculate the year value for display
+                let displayValue = currentValue;
+                if (targetType === 'annual' && card.indicator.target_operation === 'sum') {
+                    const currentYear = currentPeriod.split('-')[0];
+                    let yearValue = 0;
+                    for (const [period, measurement] of Object.entries(card.indicator.measurements)) {
+                        if (period.startsWith(currentYear) && measurement.value !== null) {
+                            yearValue += measurement.value;
+                        }
+                    }
+                    displayValue = formatNumber(yearValue);
+                }
+                
                 targetHtml = `
                     <div class="target-section">
                         <div class="target-label">${targetLabel}</div>
                         <div class="target-progress">
                             <div class="target-progress-bar" style="width: ${Math.min(progress, 100)}%"></div>
                         </div>
-                        <div class="target-text">${currentValue} / ${formatNumber(targetValue)} ${unit} (${progress.toFixed(1)}%)</div>
+                        <div class="target-text">${displayValue} / ${formatNumber(targetValue)} ${unit} (${progress.toFixed(1)}%)</div>
                     </div>
                 `;
             }
