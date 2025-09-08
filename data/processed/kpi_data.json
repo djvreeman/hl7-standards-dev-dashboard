@@ -24,7 +24,7 @@
       "Standards Development",
       "Standards Implementation"
     ],
-    "refresh_timestamp": 1757337458
+    "refresh_timestamp": 1757339442
   },
   "indicators": {
     "1": {
@@ -785,6 +785,11 @@
           "value": 1.8,
           "target": null,
           "notes": null
+        },
+        "2025-T2": {
+          "value": -4.83,
+          "target": null,
+          "notes": null
         }
       }
     },
@@ -876,6 +881,11 @@
       "measurements": {
         "2025-T1": {
           "value": 882.0,
+          "target": null,
+          "notes": "<p>only hl7.org</p>"
+        },
+        "2025-T2": {
+          "value": 2845.0,
           "target": null,
           "notes": "<p>only hl7.org</p>"
         }
