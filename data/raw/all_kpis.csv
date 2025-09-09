@@ -2,7 +2,9 @@ ID,Time Period,Domain,Indicator,Type,Unit,Value,Notes,Steward,Target,Target Type
 1,2025-T1,Global Engagement,Active members,N,members,1098,,HL7,,,,KPI,
 1,2025-T2,Global Engagement,Active members,N,members,1110,,HL7,,,,KPI,
 2,2025-T1,Global Engagement,Active participants ,N ,count,95599,,Standards Development,,,,,ID-2-2025-T1.png
+2,2025-T1,Global Engagement,Active participants ,N ,count,98050,,Standards Development,,,,,ID-2-2025-T2.png
 3,2025-T1,Global Engagement,Active participants: New,N ,count,2846,,Standards Development,,,,,ID-3-2025-T1.png
+3,2025-T2,Global Engagement,Active participants: New,N ,count,2448,,Standards Development,,,,,ID-3-2025-T2.png
 4,2024-T3,Global Engagement,Balloters,Ave per Item,average,140,,Standards Development,100,period,,KPI,
 4,2025-T1,Global Engagement,Balloters,Ave per Item,average,130,,Standards Development,100,period,,KPI,
 4,2025-T2,Global Engagement,Balloters,Ave per Item,average,108,,Standards Development,100,period,,KPI,
@@ -20,13 +22,13 @@ ID,Time Period,Domain,Indicator,Type,Unit,Value,Notes,Steward,Target,Target Type
 9,2025-T2,Global Engagement,Co-chairs,N,count,TBD,,Standards Development,,,,KPI,
 10,2024-T3,Standards Development,Connectathon Tracks,N,tracks,34,,Standards Development,,,,KPI,
 10,2025-T1,Standards Development,Connectathon Tracks,N,tracks,27,,Standards Development,,,,KPI,
-10,2025-T2,Standards Development,Connectathon Tracks,N,tracks,TBD,,Standards Development,,,,KPI,
+10,2025-T2,Standards Development,Connectathon Tracks,N,tracks,29,,Standards Development,,,,KPI,
 11,2024-T3,Standards Development,Connectathon Tracks: Accelerator-led,N,tracks,17,,Standards Development,30,annual,sum,KPI;ACCELERATORS,
 11,2025-T1,Standards Development,Connectathon Tracks: Accelerator-led,N,tracks,13,,Standards Development,30,annual,sum,KPI;ACCELERATORS,
 11,2025-T2,Standards Development,Connectathon Tracks: Accelerator-led,N,tracks,TBD,,Standards Development,30,annual,sum,KPI;ACCELERATORS,
 30,2024-T3,Global Engagement,Connectathon Tracks: Track leads,N,count,65,,Standards Development,,,,KPI,
 30,2025-T1,Global Engagement,Connectathon Tracks: Track leads,N,count,52,,Standards Development,,,,KPI,
-30,2025-T2,Global Engagement,Connectathon Tracks: Track leads,N,count,TBD,,Standards Development,,,,KPI,
+30,2025-T2,Global Engagement,Connectathon Tracks: Track leads,N,count,49,,Standards Development,,,,KPI,
 12,2024-T3,Technology and Process,Core system uptime: Ballot Desktop,%,%,99.98,,Standards Development; IT,99.9,period,,KPI,
 12,2025-T1,Technology and Process,Core system uptime: Ballot Desktop,%,%,100,,Standards Development; IT,99.9,period,,KPI,2025-2025T1-uptime-ballot-desktop.png
 12,2025-T2,Technology and Process,Core system uptime: Ballot Desktop,%,%,99.28,,Standards Development; IT,99.9,period,,KPI,2025T2-uptime-ballot-desktop.png
