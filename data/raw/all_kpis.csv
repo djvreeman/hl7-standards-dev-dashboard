@@ -2,7 +2,7 @@ ID,Time Period,Domain,Indicator,Type,Unit,Value,Notes,Steward,Target,Target Type
 1,2025-T1,Global Engagement,Active members,N,members,1098,,HL7,,,,KPI,
 1,2025-T2,Global Engagement,Active members,N,members,1110,,HL7,,,,KPI,
 2,2025-T1,Global Engagement,Active participants ,N ,count,95599,,Standards Development,,,,,ID-2-2025-T1.png
-2,2025-T1,Global Engagement,Active participants ,N ,count,98050,,Standards Development,,,,,ID-2-2025-T2.png
+2,2025-T2,Global Engagement,Active participants ,N ,count,98050,,Standards Development,,,,,ID-2-2025-T2.png
 3,2025-T1,Global Engagement,Active participants: New,N ,count,2846,,Standards Development,,,,,ID-3-2025-T1.png
 3,2025-T2,Global Engagement,Active participants: New,N ,count,2448,,Standards Development,,,,,ID-3-2025-T2.png
 4,2024-T3,Global Engagement,Balloters,Ave per Item,average,140,,Standards Development,100,period,,KPI,
