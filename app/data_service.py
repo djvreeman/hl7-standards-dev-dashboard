@@ -98,13 +98,63 @@ class DataService:
                 # Standard percentage change calculation for same-sign values
                 change_pct = ((current_value - previous_value) / previous_value) * 100
         
-        # Determine trend direction
-        if change_pct > 0:
-            trend = "up"
-        elif change_pct < 0:
-            trend = "down"
-        else:
-            trend = "stable"
+        # Determine trend direction based on business context
+        if indicator.trend_direction == "higher":
+            # Higher values are better, so positive change is good (up trend)
+            if change_pct > 0:
+                trend = "up"
+            elif change_pct < 0:
+                trend = "down"
+            else:
+                trend = "stable"
+        else:  # trend_direction == "lower"
+            # For "lower is better" indicators, we need to consider the specific business context
+            # This is especially important for variance indicators where the interpretation
+            # depends on whether being under or over budget is preferred
+            
+            # Special handling for variance indicators
+            if "variance from budget" in indicator.name.lower():
+                # For variance indicators, we need to consider the sign and context
+                if "expense" in indicator.name.lower():
+                    # For expense variance: being under budget (negative) is good
+                    # Moving closer to zero (less negative) is worse
+                    if current_value > previous_value:  # Less negative = worse
+                        trend = "down"
+                    elif current_value < previous_value:  # More negative = better
+                        trend = "up"
+                    else:
+                        trend = "stable"
+                elif "revenue" in indicator.name.lower():
+                    # For revenue variance: being under budget (negative) is bad
+                    # Moving closer to zero (less negative) is better
+                    if current_value > previous_value:  # Less negative = better
+                        trend = "up"
+                    elif current_value < previous_value:  # More negative = worse
+                        trend = "down"
+                    else:
+                        trend = "stable"
+                else:
+                    # Generic variance - use absolute distance logic
+                    current_abs = abs(current_value)
+                    previous_abs = abs(previous_value)
+                    
+                    if current_abs < previous_abs:
+                        trend = "up"  # Closer to zero (target) - this is better
+                    elif current_abs > previous_abs:
+                        trend = "down"  # Further from zero (target) - this is worse
+                    else:
+                        trend = "stable"
+            else:
+                # For other "lower is better" indicators, use absolute distance logic
+                current_abs = abs(current_value)
+                previous_abs = abs(previous_value)
+                
+                if current_abs < previous_abs:
+                    trend = "up"  # Closer to zero (target) - this is better
+                elif current_abs > previous_abs:
+                    trend = "down"  # Further from zero (target) - this is worse
+                else:
+                    trend = "stable"
         
         return KPITrend(
             current=current_value,

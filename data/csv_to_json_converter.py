@@ -118,6 +118,39 @@ class CSVToJSONConverter:
         else:
             return "count"
     
+    def _determine_trend_direction(self, indicator_name: str, indicator_type: str) -> str:
+        """Determine whether higher or lower values are better for this indicator"""
+        name_lower = indicator_name.lower()
+        
+        # Indicators where lower values are better
+        lower_is_better_keywords = [
+            "variance from budget",
+            "error",
+            "failure",
+            "downtime",
+            "response time",
+            "cost",
+            "expense",
+            "debt",
+            "deficit",
+            "loss",
+            "complaint",
+            "issue",
+            "problem",
+            "delay",
+            "wait time",
+            "queue",
+            "backlog"
+        ]
+        
+        # Check if any lower-is-better keywords are in the indicator name
+        for keyword in lower_is_better_keywords:
+            if keyword in name_lower:
+                return "lower"
+        
+        # Default to higher is better for most indicators
+        return "higher"
+    
     def _convert_markdown_to_html(self, markdown_text: str) -> str:
         """Convert markdown text to HTML"""
         if not markdown_text or not markdown_text.strip():
@@ -231,6 +264,7 @@ class CSVToJSONConverter:
                     # Use CSV values for unit and type, fallback to auto-determination if not provided
                     final_unit = unit if unit else self._determine_unit(indicator_type, indicator_name)
                     final_type = csv_type if csv_type else indicator_type
+                    trend_direction = self._determine_trend_direction(indicator_name, final_type)
                     
                     indicators[indicator_id] = KPIIndicator(
                         id=indicator_id,
@@ -246,6 +280,7 @@ class CSVToJSONConverter:
                         target_operation=None,  # Target operation - will be populated based on target_operation
                         tags=tags,  # Tags for categorization
                         image=processed_image,  # Optional image filename
+                        trend_direction=trend_direction,  # Whether higher or lower values are better
                         measurements={}
                     )
                 else:

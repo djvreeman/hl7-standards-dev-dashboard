@@ -21,6 +21,7 @@ class KPIIndicator(BaseModel):
     target_operation: Optional[str] = Field(None, description="Operation for annual targets: 'sum' or 'average'")
     tags: List[str] = Field(default_factory=list, description="Tags for categorizing indicators (KPI, ACCELERATOR, etc.)")
     image: Optional[str] = Field(None, description="Optional image filename for the indicator card")
+    trend_direction: str = Field("higher", description="Whether higher or lower values are better: 'higher' or 'lower'")
     measurements: Dict[str, KPIMeasurement] = Field(..., description="Measurements by time period")
 
 class KPIMetadata(BaseModel):

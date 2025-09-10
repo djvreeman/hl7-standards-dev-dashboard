@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2025-09-08",
+    "last_updated": "2025-09-09",
     "data_source": "HL7 KPI Dashboard - CSV Import",
     "time_periods": [
       "2024-T3",
@@ -24,7 +24,7 @@
       "Standards Development",
       "Standards Implementation"
     ],
-    "refresh_timestamp": 1757340017
+    "refresh_timestamp": 1757473089
   },
   "indicators": {
     "1": {
@@ -45,6 +45,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2025-T1": {
           "value": 1098.0,
@@ -73,10 +74,16 @@
       "targets": null,
       "target_operation": null,
       "tags": [],
-      "image": "ID-2-2025-T1.png",
+      "image": "ID-2-2025-T2.png",
+      "trend_direction": "higher",
       "measurements": {
         "2025-T1": {
           "value": 95599.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 98050.0,
           "target": null,
           "notes": null
         }
@@ -97,10 +104,16 @@
       "targets": null,
       "target_operation": null,
       "tags": [],
-      "image": "ID-3-2025-T1.png",
+      "image": "ID-3-2025-T2.png",
+      "trend_direction": "higher",
       "measurements": {
         "2025-T1": {
           "value": 2846.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 2448.0,
           "target": null,
           "notes": null
         }
@@ -124,6 +137,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 140.0,
@@ -160,6 +174,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": null,
@@ -196,6 +211,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 12.0,
@@ -232,6 +248,7 @@
         "KPI"
       ],
       "image": "ID-8-2025-T2.png",
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 30.0,
@@ -268,6 +285,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 167.0,
@@ -275,6 +293,11 @@
           "notes": null
         },
         "2025-T1": {
+          "value": 158.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
           "value": 158.0,
           "target": null,
           "notes": null
@@ -299,6 +322,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 34.0,
@@ -307,6 +331,11 @@
         },
         "2025-T1": {
           "value": 27.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 42.0,
           "target": null,
           "notes": null
         }
@@ -334,6 +363,7 @@
         "ACCELERATORS"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 17.0,
@@ -342,6 +372,11 @@
         },
         "2025-T1": {
           "value": 13.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 19.0,
           "target": null,
           "notes": null
         }
@@ -365,6 +400,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 65.0,
@@ -375,6 +411,11 @@
           "value": 52.0,
           "target": null,
           "notes": null
+        },
+        "2025-T2": {
+          "value": 67.0,
+          "target": null,
+          "notes": "<p>Includes May HL7 FHIR Connectathon and July CMS HL7 FHIR Connectathon</p>"
         }
       }
     },
@@ -397,6 +438,7 @@
         "KPI"
       ],
       "image": "2025T2-uptime-ballot-desktop.png",
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 99.98,
@@ -434,6 +476,7 @@
         "KPI"
       ],
       "image": "2025T2-uptime-confluencehl7org.png",
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 99.91,
@@ -471,6 +514,7 @@
         "KPI"
       ],
       "image": "2025T2-uptime-hl7org-website.png",
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 99.94,
@@ -508,6 +552,7 @@
         "KPI"
       ],
       "image": "2025T2-uptime-jirahl7org.png",
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 99.99,
@@ -546,6 +591,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2025-T1": {
           "value": 23.0,
@@ -577,6 +623,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2025-T1": {
           "value": -2.9,
@@ -606,6 +653,7 @@
       "target_operation": null,
       "tags": [],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 505.0,
@@ -642,6 +690,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "lower",
       "measurements": {
         "2024-T3": {
           "value": 224.0,
@@ -678,6 +727,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "lower",
       "measurements": {
         "2024-T3": {
           "value": 26.3,
@@ -715,6 +765,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "lower",
       "measurements": {
         "2024-T3": {
           "value": 1663.0,
@@ -723,12 +774,12 @@
         },
         "2025-T1": {
           "value": 1729.0,
-          "target": null,
+          "target": 1500.0,
           "notes": null
         },
         "2025-T2": {
           "value": 1590.0,
-          "target": null,
+          "target": 1500.0,
           "notes": null
         }
       }
@@ -753,11 +804,12 @@
         "KPI"
       ],
       "image": "ID-22-2025-T2.png",
+      "trend_direction": "higher",
       "measurements": {
         "2025-T2": {
-          "value": 84.0,
+          "value": 49.0,
           "target": null,
-          "notes": "<p>Assessed in 2025 member survey</p>"
+          "notes": "<p>Assessed in 2025 member survey. General interpretation of NPS Values:<br>\nAbove 50: Excellent - Strong customer loyalty with more promoters than detractors<br>\n30-50: Good - Solid performance with room for improvement<br>\n0-30: Acceptable - Neutral territory, but significant opportunity exists<br>\nBelow 0: Poor - More detractors than promoters, immediate action needed</p>"
         }
       }
     },
@@ -780,6 +832,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2025-T1": {
           "value": 1.8,
@@ -811,6 +864,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 7.0,
@@ -848,11 +902,17 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2025-T1": {
           "value": 9.54,
           "target": 9.0,
           "notes": "<p>through end of Q1</p>"
+        },
+        "2025-T2": {
+          "value": 9.76,
+          "target": 9.0,
+          "notes": "<p>through end of Q2</p>"
         }
       }
     },
@@ -878,6 +938,7 @@
         "EDUCATION"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2025-T1": {
           "value": 882.0,
@@ -885,9 +946,9 @@
           "notes": "<p>only hl7.org</p>"
         },
         "2025-T2": {
-          "value": 2845.0,
+          "value": 2123.0,
           "target": null,
-          "notes": "<p>only hl7.org</p>"
+          "notes": "<p>Only hl7.org participants - does not include courses via Affiliates. In 2025 T2, we also had purchase of 1780 seats for future courses that are yet to be delivered.</p>"
         }
       }
     },
@@ -904,12 +965,15 @@
       "type": "N",
       "unit": "specifications",
       "target": null,
-      "targets": null,
-      "target_operation": null,
+      "targets": {
+        "2025": 57.0
+      },
+      "target_operation": "sum",
       "tags": [
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 20.0,
@@ -950,6 +1014,7 @@
         "ACCELERATORS"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 5.0,
@@ -986,6 +1051,7 @@
       "target_operation": null,
       "tags": [],
       "image": "ID-32-2025-T1.png",
+      "trend_direction": "higher",
       "measurements": {
         "2025-T1": {
           "value": 4.0,
@@ -1013,11 +1079,17 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "lower",
       "measurements": {
         "2025-T1": {
           "value": -17.4,
           "target": null,
           "notes": null
+        },
+        "2025-T2": {
+          "value": -13.9,
+          "target": null,
+          "notes": "<p>through end of Q2</p>"
         }
       }
     },
@@ -1040,11 +1112,17 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "lower",
       "measurements": {
         "2025-T1": {
           "value": -22.8,
           "target": null,
           "notes": "<p>through end of Q1</p>"
+        },
+        "2025-T2": {
+          "value": -5.37,
+          "target": null,
+          "notes": "<p>through end of Q2</p>"
         }
       }
     },
@@ -1066,6 +1144,7 @@
         "KPI"
       ],
       "image": null,
+      "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
           "value": 100.0,
