@@ -19,7 +19,7 @@ ID,Time Period,Domain,Indicator,Type,Unit,Value,Notes,Steward,Target,Target Type
 8,2025-T2,Standards Development,Citations in scientific literature,N,count,66,For FHIR only,Standards Development,,,,KPI,ID-8-2025-T2.png
 9,2024-T3,Global Engagement,Co-chairs,N,count,167,,Standards Development,,,,KPI,
 9,2025-T1,Global Engagement,Co-chairs,N,count,158,,Standards Development,,,,KPI,
-9,2025-T2,Global Engagement,Co-chairs,N,count,TBD,,Standards Development,,,,KPI,
+9,2025-T2,Global Engagement,Co-chairs,N,count,158,,Standards Development,,,,KPI,
 10,2024-T3,Standards Development,Connectathon Tracks,N,tracks,34,,Standards Development,,,,KPI,
 10,2025-T1,Standards Development,Connectathon Tracks,N,tracks,27,,Standards Development,,,,KPI,
 10,2025-T2,Standards Development,Connectathon Tracks,N,tracks,42,,Standards Development,,,,KPI,
