@@ -28,7 +28,7 @@ ID,Time Period,Domain,Indicator,Type,Unit,Value,Notes,Steward,Target,Target Type
 11,2025-T2,Standards Development,Connectathon Tracks: Accelerator-led,N,tracks,19,,Standards Development,30,annual,sum,KPI;ACCELERATORS,
 30,2024-T3,Global Engagement,Connectathon Tracks: Track leads,N,count,65,,Standards Development,,,,KPI,
 30,2025-T1,Global Engagement,Connectathon Tracks: Track leads,N,count,52,,Standards Development,,,,KPI,
-30,2025-T2,Global Engagement,Connectathon Tracks: Track leads,N,count,49,,Standards Development,,,,KPI,
+30,2025-T2,Global Engagement,Connectathon Tracks: Track leads,N,count,67,Includes May HL7 FHIR Connectathon and July CMS HL7 FHIR Connectathon,Standards Development,,,,KPI,
 12,2024-T3,Technology and Process,Core system uptime: Ballot Desktop,%,%,99.98,,Standards Development; IT,99.9,period,,KPI,
 12,2025-T1,Technology and Process,Core system uptime: Ballot Desktop,%,%,100,,Standards Development; IT,99.9,period,,KPI,2025-2025T1-uptime-ballot-desktop.png
 12,2025-T2,Technology and Process,Core system uptime: Ballot Desktop,%,%,99.28,,Standards Development; IT,99.9,period,,KPI,2025T2-uptime-ballot-desktop.png
