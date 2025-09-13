@@ -119,8 +119,30 @@ class CSVToJSONConverter:
             return "count"
     
     def _determine_trend_direction(self, indicator_name: str, indicator_type: str) -> str:
-        """Determine whether higher or lower values are better for this indicator"""
+        """Determine whether higher or lower values are better for this indicator (fallback when Direction field is not provided)"""
         name_lower = indicator_name.lower()
+        
+        # Special cases where higher values are better (override any keyword matching)
+        higher_is_better_special_cases = [
+            "issue submitters",
+            "active participants",
+            "active members",
+            "co-chairs",
+            "track leads",
+            "balloters",
+            "citations",
+            "published specifications",
+            "new projects",
+            "work groups in good health",
+            "participants in courses",
+            "member satisfaction",
+            "operating reserves"
+        ]
+        
+        # Check special cases first
+        for case in higher_is_better_special_cases:
+            if case in name_lower:
+                return "higher"
         
         # Indicators where lower values are better
         lower_is_better_keywords = [
@@ -135,7 +157,9 @@ class CSVToJSONConverter:
             "deficit",
             "loss",
             "complaint",
-            "issue",
+            "issue rate",
+            "issue count",
+            "issue frequency",
             "problem",
             "delay",
             "wait time",
@@ -264,7 +288,13 @@ class CSVToJSONConverter:
                     # Use CSV values for unit and type, fallback to auto-determination if not provided
                     final_unit = unit if unit else self._determine_unit(indicator_type, indicator_name)
                     final_type = csv_type if csv_type else indicator_type
-                    trend_direction = self._determine_trend_direction(indicator_name, final_type)
+                    
+                    # Use direction from CSV, fallback to auto-determination if not provided
+                    direction = row.get('Direction', '').strip()
+                    if direction:
+                        trend_direction = direction
+                    else:
+                        trend_direction = self._determine_trend_direction(indicator_name, final_type)
                     
                     indicators[indicator_id] = KPIIndicator(
                         id=indicator_id,
