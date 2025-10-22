@@ -151,6 +151,61 @@
             background-color: rgba(255, 255, 255, 0.2);
         }
         
+        /* Dropdown Navigation Styles */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .nav-dropdown .nav-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 180px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+            z-index: 1000;
+            border: 1px solid var(--border-color);
+            margin-top: 2px;
+        }
+        
+        .dropdown-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #374151;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f9fafb;
+            color: var(--primary-color);
+        }
+        
+        .nav-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .nav-dropdown:hover .dropdown-toggle {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
         .dashboard-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -952,6 +1007,12 @@
                 
                 const navigationHtml = stewards.map(steward => {
                     const isActive = steward === currentSteward ? 'active' : '';
+                    
+                    // Special handling for Finance steward - create dropdown instead of direct link
+                    if (steward === 'Finance') {
+                        return `<div class="nav-dropdown"><a href="/Finance" class="nav-link ${isActive}" id="nav-finance">Finance</a><div class="dropdown-menu"><a href="/finance" class="dropdown-item">Financial Health Trends and Insights</a></div></div>`;
+                    }
+                    
                     const href = (steward === 'HL7 International' || steward === 'HL7') ? '/' : `/${steward}`;
                     return `<a href="${href}" class="nav-link ${isActive}" id="nav-${steward.toLowerCase().replace(/\s+/g, '-')}">${steward}</a>`;
                 }).join('');
@@ -963,6 +1024,7 @@
                 document.getElementById('steward-navigation').innerHTML = `
                     <a href="/" class="nav-link ${(currentSteward === 'HL7 International' || currentSteward === 'HL7') ? 'active' : ''}">HL7 International</a>
                     <a href="/CSDO" class="nav-link ${currentSteward === 'CSDO' ? 'active' : ''}">CSDO</a>
+                    <div class="nav-dropdown"><a href="/Finance" class="nav-link ${currentSteward === 'Finance' ? 'active' : ''}">Finance</a><div class="dropdown-menu"><a href="/finance" class="dropdown-item">Financial Health Trends and Insights</a></div></div>
                 `;
             }
         }

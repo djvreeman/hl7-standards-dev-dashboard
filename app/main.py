@@ -5,10 +5,12 @@ from fastapi.responses import HTMLResponse
 from fastapi.requests import Request
 from typing import List, Optional
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
-from app.models import KPICard, KPISummary, KPIFilter, ChartData, DashboardMetrics, KPIIndicator
+from app.models import KPICard, KPISummary, KPIFilter, ChartData, DashboardMetrics, KPIIndicator, FinancialHealthMetrics, FinancialChartData
 from app.data_service import DataService
+from app.financial_service import FinancialDataService
 
 # Load environment variables
 load_dotenv()
@@ -19,8 +21,9 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Initialize data service
+# Initialize data services
 data_service = DataService()
+financial_service = FinancialDataService()
 
 # Mount static files
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -148,6 +151,104 @@ async def get_stewards():
         return metadata.stewards
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+# Financial Health Dashboard Endpoints
+@app.get("/finance", response_class=HTMLResponse)
+async def finance_dashboard(request: Request):
+    """Financial health dashboard page"""
+    return templates.TemplateResponse(
+        "finance_dashboard.html",
+        {
+            "request": request,
+            "webawesome_key": WEBAWESOME_KEY
+        }
+    )
+
+@app.get("/api/financial/health", response_model=FinancialHealthMetrics)
+async def get_financial_health():
+    """Get financial health metrics"""
+    try:
+        return financial_service.get_financial_health_metrics()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/financial/summary")
+async def get_financial_summary():
+    """Get financial summary statistics"""
+    try:
+        return financial_service.get_financial_summary()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/financial/charts/{chart_type}", response_model=FinancialChartData)
+async def get_financial_chart(chart_type: str):
+    """Get financial chart data"""
+    try:
+        if chart_type == "revenue-expense-trend":
+            return financial_service.get_revenue_expense_trend_chart()
+        elif chart_type == "revenue-composition":
+            return financial_service.get_revenue_composition_chart()
+        elif chart_type == "key-revenue-streams":
+            return financial_service.get_key_revenue_streams_chart()
+        elif chart_type == "expense-breakdown":
+            return financial_service.get_expense_breakdown_chart()
+        elif chart_type == "program-service-breakdown":
+            return financial_service.get_program_service_breakdown_chart()
+        else:
+            raise HTTPException(status_code=404, detail="Chart type not found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/financial/refresh")
+async def refresh_financial_data():
+    """Refresh financial data by re-parsing 990 XML files"""
+    try:
+        financial_service.refresh_financial_data()
+        return {
+            "status": "success",
+            "message": "Financial data refreshed successfully"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error refreshing financial data: {str(e)}")
+
+@app.get("/api/financial/llm-prompt")
+async def generate_llm_prompt():
+    """Generate LLM prompt for financial analysis"""
+    try:
+        prompt = financial_service.generate_llm_prompt()
+        return {
+            "status": "success",
+            "message": "LLM prompt generated successfully",
+            "prompt_file": "data/processed/llm_prompt.txt"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error generating LLM prompt: {str(e)}")
+
+@app.get("/api/financial/insights")
+async def get_financial_insights():
+    """Get financial insights from markdown file and convert to HTML"""
+    try:
+        insights_file = Path("data/processed/financial_insights.md")
+        if insights_file.exists():
+            with open(insights_file, 'r') as f:
+                markdown_content = f.read()
+            
+            # Convert markdown to HTML
+            html_content = financial_service.parse_markdown_to_html(markdown_content)
+            return {"insights": html_content, "format": "html"}
+        else:
+            return {"insights": "No insights file found. Please generate LLM prompt and create insights markdown file.", "format": "text"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error loading insights: {str(e)}")
+
+@app.get("/api/financial/detailed-table")
+async def get_detailed_financial_table():
+    """Get detailed financial data table (2019-2024)"""
+    try:
+        table_data = financial_service.get_detailed_financial_table()
+        return table_data
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error loading detailed table: {str(e)}")
 
 @app.get("/{steward}", response_class=HTMLResponse)
 async def steward_dashboard(request: Request, steward: str):

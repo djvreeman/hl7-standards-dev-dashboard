@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2025-09-13",
+    "last_updated": "2025-10-22",
     "data_source": "HL7 KPI Dashboard - CSV Import",
     "time_periods": [
       "2024-T3",
@@ -24,7 +24,7 @@
       "Standards Development",
       "Standards Implementation"
     ],
-    "refresh_timestamp": 1757788663
+    "refresh_timestamp": 1761156182
   },
   "indicators": {
     "1": {
@@ -247,7 +247,7 @@
       "tags": [
         "KPI"
       ],
-      "image": null,
+      "image": "ID-8-2025-T2.png",
       "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
@@ -437,7 +437,7 @@
       "tags": [
         "KPI"
       ],
-      "image": null,
+      "image": "2025T2-uptime-ballot-desktop.png",
       "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
@@ -475,7 +475,7 @@
       "tags": [
         "KPI"
       ],
-      "image": null,
+      "image": "2025T2-uptime-confluencehl7org.png",
       "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
@@ -513,7 +513,7 @@
       "tags": [
         "KPI"
       ],
-      "image": null,
+      "image": "2025T2-uptime-hl7org-website.png",
       "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
@@ -551,7 +551,7 @@
       "tags": [
         "KPI"
       ],
-      "image": null,
+      "image": "2025T2-uptime-jirahl7org.png",
       "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
@@ -803,8 +803,8 @@
       "tags": [
         "KPI"
       ],
-      "image": null,
-      "trend_direction": "ID-22-2025-T2.png",
+      "image": "ID-22-2025-T2.png",
+      "trend_direction": "higher",
       "measurements": {
         "2025-T2": {
           "value": 49.0,
@@ -1050,8 +1050,8 @@
       },
       "target_operation": null,
       "tags": [],
-      "image": null,
-      "trend_direction": "ID-32-2025-T1.png",
+      "image": "ID-32-2025-T1.png",
+      "trend_direction": "higher",
       "measurements": {
         "2025-T1": {
           "value": 4.0,
@@ -1112,7 +1112,7 @@
         "KPI"
       ],
       "image": null,
-      "trend_direction": "lower",
+      "trend_direction": "higher",
       "measurements": {
         "2025-T1": {
           "value": -22.8,

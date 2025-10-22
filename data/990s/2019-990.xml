@@ -1,0 +1,854 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Return xmlns="http://www.irs.gov/efile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.irs.gov/efile" returnVersion="2019v5.1">
+  <ReturnHeader binaryAttachmentCnt="0">
+    <ReturnTs>2020-05-05T10:36:06-00:00</ReturnTs>
+    <TaxPeriodEndDt>2019-12-31</TaxPeriodEndDt>
+    <PreparerFirmGrp>
+      <PreparerFirmName>
+        <BusinessNameLine1Txt>Bennett &amp; Associates CPAs PLLC</BusinessNameLine1Txt>
+      </PreparerFirmName>
+      <PreparerUSAddress>
+        <AddressLine1Txt>100 Huronview Blvd</AddressLine1Txt>
+        <CityNm>Ann Arbor</CityNm>
+        <StateAbbreviationCd>MI</StateAbbreviationCd>
+        <ZIPCd>48103</ZIPCd>
+      </PreparerUSAddress>
+    </PreparerFirmGrp>
+    <ReturnTypeCd>990</ReturnTypeCd>
+    <TaxPeriodBeginDt>2019-01-01</TaxPeriodBeginDt>
+    <Filer>
+      <EIN>220311321</EIN>
+      <BusinessName>
+        <BusinessNameLine1Txt>Health Level Seven International Inc</BusinessNameLine1Txt>
+      </BusinessName>
+      <BusinessNameControlTxt>HEAL</BusinessNameControlTxt>
+      <PhoneNum>7346777777</PhoneNum>
+      <USAddress>
+        <AddressLine1Txt>3300 Washtenaw Avenue Room 227</AddressLine1Txt>
+        <CityNm>Ann Arbor</CityNm>
+        <StateAbbreviationCd>MI</StateAbbreviationCd>
+        <ZIPCd>48104</ZIPCd>
+      </USAddress>
+    </Filer>
+    <BusinessOfficerGrp>
+      <PersonNm>Mark McDougall</PersonNm>
+      <PersonTitleTxt>Executive Director</PersonTitleTxt>
+      <SignatureDt>2020-05-05</SignatureDt>
+      <DiscussWithPaidPreparerInd>true</DiscussWithPaidPreparerInd>
+    </BusinessOfficerGrp>
+    <PreparerPersonGrp>
+      <PreparerPersonNm>James H Bennett CPA</PreparerPersonNm>
+      <PhoneNum>7346228015</PhoneNum>
+      <PreparationDt>2020-05-05</PreparationDt>
+    </PreparerPersonGrp>
+    <FilingSecurityInformation>
+      <IPAddress>
+        <IPv4AddressTxt>71.10.62.38</IPv4AddressTxt>
+      </IPAddress>
+      <IPDt>2020-05-05</IPDt>
+      <IPTm>14:31:48</IPTm>
+      <IPTimezoneCd>ED</IPTimezoneCd>
+      <FilingLicenseTypeCd>P</FilingLicenseTypeCd>
+      <AtSubmissionCreationDeviceId>D205B40800AECACC06C8A67B0CD0F2923681F789</AtSubmissionCreationDeviceId>
+      <AtSubmissionFilingDeviceId>BD021A13165984A3233533D0C20F0932B47CF975</AtSubmissionFilingDeviceId>
+    </FilingSecurityInformation>
+    <TaxYr>2019</TaxYr>
+    <BuildTS>2020-09-23 17:36:50Z</BuildTS>
+  </ReturnHeader>
+  <ReturnData documentCnt="7">
+    <IRS990 documentId="990" softwareId="19009610" softwareVersionNum="19.2.1.0">
+      <PrincipalOfficerNm>Charles Jaffe MD PhD</PrincipalOfficerNm>
+      <USAddress>
+        <AddressLine1Txt>3300 Washtenaw Avenue Ste 227</AddressLine1Txt>
+        <CityNm>Ann Arbor</CityNm>
+        <StateAbbreviationCd>MI</StateAbbreviationCd>
+        <ZIPCd>48104</ZIPCd>
+      </USAddress>
+      <GrossReceiptsAmt>14809374</GrossReceiptsAmt>
+      <GroupReturnForAffiliatesInd>false</GroupReturnForAffiliatesInd>
+      <Organization501cInd organization501cTypeTxt="6">X</Organization501cInd>
+      <WebsiteAddressTxt>www.HL7.org</WebsiteAddressTxt>
+      <TypeOfOrganizationCorpInd>X</TypeOfOrganizationCorpInd>
+      <FormationYr>1987</FormationYr>
+      <LegalDomicileStateCd>NJ</LegalDomicileStateCd>
+      <ActivityOrMissionDesc>Activities related to the development and publication of protocol specifications for application level communication among diverse health data acquisitions, processing, and handling systems.</ActivityOrMissionDesc>
+      <VotingMembersGoverningBodyCnt>15</VotingMembersGoverningBodyCnt>
+      <VotingMembersIndependentCnt>15</VotingMembersIndependentCnt>
+      <TotalEmployeeCnt>0</TotalEmployeeCnt>
+      <TotalVolunteersCnt>15</TotalVolunteersCnt>
+      <TotalGrossUBIAmt>0</TotalGrossUBIAmt>
+      <CYContributionsGrantsAmt>1517454</CYContributionsGrantsAmt>
+      <PYProgramServiceRevenueAmt>8474532</PYProgramServiceRevenueAmt>
+      <CYProgramServiceRevenueAmt>7387086</CYProgramServiceRevenueAmt>
+      <PYInvestmentIncomeAmt>170097</PYInvestmentIncomeAmt>
+      <CYInvestmentIncomeAmt>196073</CYInvestmentIncomeAmt>
+      <PYOtherRevenueAmt>126672</PYOtherRevenueAmt>
+      <CYOtherRevenueAmt>281400</CYOtherRevenueAmt>
+      <PYTotalRevenueAmt>8771301</PYTotalRevenueAmt>
+      <CYTotalRevenueAmt>9382013</CYTotalRevenueAmt>
+      <CYGrantsAndSimilarPaidAmt>0</CYGrantsAndSimilarPaidAmt>
+      <CYBenefitsPaidToMembersAmt>0</CYBenefitsPaidToMembersAmt>
+      <PYSalariesCompEmpBnftPaidAmt>811103</PYSalariesCompEmpBnftPaidAmt>
+      <CYSalariesCompEmpBnftPaidAmt>855648</CYSalariesCompEmpBnftPaidAmt>
+      <CYTotalProfFndrsngExpnsAmt>0</CYTotalProfFndrsngExpnsAmt>
+      <CYTotalFundraisingExpenseAmt>0</CYTotalFundraisingExpenseAmt>
+      <PYOtherExpensesAmt>7002684</PYOtherExpensesAmt>
+      <CYOtherExpensesAmt>7008245</CYOtherExpensesAmt>
+      <PYTotalExpensesAmt>7813787</PYTotalExpensesAmt>
+      <CYTotalExpensesAmt>7863893</CYTotalExpensesAmt>
+      <PYRevenuesLessExpensesAmt>957514</PYRevenuesLessExpensesAmt>
+      <CYRevenuesLessExpensesAmt>1518120</CYRevenuesLessExpensesAmt>
+      <TotalAssetsBOYAmt>7968709</TotalAssetsBOYAmt>
+      <TotalAssetsEOYAmt>10000130</TotalAssetsEOYAmt>
+      <TotalLiabilitiesBOYAmt>2698692</TotalLiabilitiesBOYAmt>
+      <TotalLiabilitiesEOYAmt>3438237</TotalLiabilitiesEOYAmt>
+      <NetAssetsOrFundBalancesBOYAmt>5270017</NetAssetsOrFundBalancesBOYAmt>
+      <NetAssetsOrFundBalancesEOYAmt>6561893</NetAssetsOrFundBalancesEOYAmt>
+      <MissionDesc>Activities related to the development and publication of protocol specifications for application level communication among diverse health data acquisitions, processing, and handling systems.</MissionDesc>
+      <SignificantNewProgramSrvcInd>false</SignificantNewProgramSrvcInd>
+      <SignificantChangeInd>false</SignificantChangeInd>
+      <Desc>The organization holds conferences and meetings at which computer interface standards are discussed, reviewed, revised, and enhanced in order to achieve information parity transmitted between users and vendors within the healthcare industry.</Desc>
+      <DescribedInSection501c3Ind>false</DescribedInSection501c3Ind>
+      <ScheduleBRequiredInd referenceDocumentId="990B">true</ScheduleBRequiredInd>
+      <PoliticalCampaignActyInd>false</PoliticalCampaignActyInd>
+      <SubjectToProxyTaxInd>false</SubjectToProxyTaxInd>
+      <DonorAdvisedFundInd>false</DonorAdvisedFundInd>
+      <ConservationEasementsInd>false</ConservationEasementsInd>
+      <CollectionsOfArtInd>false</CollectionsOfArtInd>
+      <CreditCounselingInd>false</CreditCounselingInd>
+      <DonorRstrOrQuasiEndowmentsInd>false</DonorRstrOrQuasiEndowmentsInd>
+      <ReportLandBuildingEquipmentInd referenceDocumentId="990D">true</ReportLandBuildingEquipmentInd>
+      <ReportInvestmentsOtherSecInd>false</ReportInvestmentsOtherSecInd>
+      <ReportProgramRelatedInvstInd>false</ReportProgramRelatedInvstInd>
+      <ReportOtherAssetsInd>false</ReportOtherAssetsInd>
+      <ReportOtherLiabilitiesInd referenceDocumentId="990D">true</ReportOtherLiabilitiesInd>
+      <IncludeFIN48FootnoteInd>false</IncludeFIN48FootnoteInd>
+      <IndependentAuditFinclStmtInd referenceDocumentId="990D">true</IndependentAuditFinclStmtInd>
+      <ConsolidatedAuditFinclStmtInd>false</ConsolidatedAuditFinclStmtInd>
+      <SchoolOperatingInd>false</SchoolOperatingInd>
+      <ForeignOfficeInd>true</ForeignOfficeInd>
+      <ForeignActivitiesInd referenceDocumentId="990F">true</ForeignActivitiesInd>
+      <MoreThan5000KToOrgInd>false</MoreThan5000KToOrgInd>
+      <MoreThan5000KToIndividualsInd>false</MoreThan5000KToIndividualsInd>
+      <ProfessionalFundraisingInd>false</ProfessionalFundraisingInd>
+      <FundraisingActivitiesInd>false</FundraisingActivitiesInd>
+      <GamingActivitiesInd>false</GamingActivitiesInd>
+      <OperateHospitalInd>false</OperateHospitalInd>
+      <GrantsToOrganizationsInd>false</GrantsToOrganizationsInd>
+      <GrantsToIndividualsInd>false</GrantsToIndividualsInd>
+      <ScheduleJRequiredInd referenceDocumentId="990J">true</ScheduleJRequiredInd>
+      <TaxExemptBondsInd>false</TaxExemptBondsInd>
+      <LoanOutstandingInd>false</LoanOutstandingInd>
+      <GrantToRelatedPersonInd>false</GrantToRelatedPersonInd>
+      <BusinessRlnWithOrgMemInd>false</BusinessRlnWithOrgMemInd>
+      <BusinessRlnWithFamMemInd>false</BusinessRlnWithFamMemInd>
+      <BusinessRlnWith35CtrlEntInd referenceDocumentId="990L">true</BusinessRlnWith35CtrlEntInd>
+      <DeductibleNonCashContriInd>false</DeductibleNonCashContriInd>
+      <DeductibleArtContributionInd>false</DeductibleArtContributionInd>
+      <TerminateOperationsInd>false</TerminateOperationsInd>
+      <PartialLiquidationInd>false</PartialLiquidationInd>
+      <DisregardedEntityInd>false</DisregardedEntityInd>
+      <RelatedEntityInd>false</RelatedEntityInd>
+      <RelatedOrganizationCtrlEntInd>false</RelatedOrganizationCtrlEntInd>
+      <ActivitiesConductedPrtshpInd>false</ActivitiesConductedPrtshpInd>
+      <ScheduleORequiredInd>true</ScheduleORequiredInd>
+      <IRPDocumentCnt>63</IRPDocumentCnt>
+      <IRPDocumentW2GCnt>0</IRPDocumentW2GCnt>
+      <BackupWthldComplianceInd>true</BackupWthldComplianceInd>
+      <EmployeeCnt>0</EmployeeCnt>
+      <UnrelatedBusIncmOverLimitInd>false</UnrelatedBusIncmOverLimitInd>
+      <ForeignFinancialAccountInd>true</ForeignFinancialAccountInd>
+      <ForeignCountryCd>BE</ForeignCountryCd>
+      <ProhibitedTaxShelterTransInd>false</ProhibitedTaxShelterTransInd>
+      <TaxablePartyNotificationInd>false</TaxablePartyNotificationInd>
+      <NondeductibleContributionsInd>false</NondeductibleContributionsInd>
+      <IndoorTanningServicesInd>false</IndoorTanningServicesInd>
+      <SubjToTaxRmnrtnExPrchtPymtInd>false</SubjToTaxRmnrtnExPrchtPymtInd>
+      <SubjectToExcsTaxNetInvstIncInd>false</SubjectToExcsTaxNetInvstIncInd>
+      <InfoInScheduleOPartVIInd>X</InfoInScheduleOPartVIInd>
+      <GoverningBodyVotingMembersCnt>15</GoverningBodyVotingMembersCnt>
+      <IndependentVotingMemberCnt>15</IndependentVotingMemberCnt>
+      <FamilyOrBusinessRlnInd>false</FamilyOrBusinessRlnInd>
+      <DelegationOfMgmtDutiesInd>true</DelegationOfMgmtDutiesInd>
+      <ChangeToOrgDocumentsInd>false</ChangeToOrgDocumentsInd>
+      <MaterialDiversionOrMisuseInd>false</MaterialDiversionOrMisuseInd>
+      <MembersOrStockholdersInd>false</MembersOrStockholdersInd>
+      <ElectionOfBoardMembersInd>true</ElectionOfBoardMembersInd>
+      <DecisionsSubjectToApprovaInd>true</DecisionsSubjectToApprovaInd>
+      <MinutesOfGoverningBodyInd>true</MinutesOfGoverningBodyInd>
+      <MinutesOfCommitteesInd>true</MinutesOfCommitteesInd>
+      <OfficerMailingAddressInd>false</OfficerMailingAddressInd>
+      <LocalChaptersInd>true</LocalChaptersInd>
+      <PoliciesReferenceChaptersInd>true</PoliciesReferenceChaptersInd>
+      <Form990ProvidedToGvrnBodyInd>true</Form990ProvidedToGvrnBodyInd>
+      <ConflictOfInterestPolicyInd>true</ConflictOfInterestPolicyInd>
+      <AnnualDisclosureCoveredPrsnInd>true</AnnualDisclosureCoveredPrsnInd>
+      <RegularMonitoringEnfrcInd>true</RegularMonitoringEnfrcInd>
+      <WhistleblowerPolicyInd>true</WhistleblowerPolicyInd>
+      <DocumentRetentionPolicyInd>true</DocumentRetentionPolicyInd>
+      <CompensationProcessCEOInd>true</CompensationProcessCEOInd>
+      <CompensationProcessOtherInd>true</CompensationProcessOtherInd>
+      <InvestmentInJointVentureInd>false</InvestmentInJointVentureInd>
+      <OtherWebsiteInd>X</OtherWebsiteInd>
+      <UponRequestInd>X</UponRequestInd>
+      <BooksInCareOfDetail>
+        <BusinessName>
+          <BusinessNameLine1Txt>Association Management Group Inc</BusinessNameLine1Txt>
+        </BusinessName>
+        <PhoneNum>7346777777</PhoneNum>
+        <USAddress>
+          <AddressLine1Txt>3300 Washtenaw Avenue Suite 222</AddressLine1Txt>
+          <CityNm>Ann Arbor</CityNm>
+          <StateAbbreviationCd>MI</StateAbbreviationCd>
+          <ZIPCd>48104</ZIPCd>
+        </USAddress>
+      </BooksInCareOfDetail>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Charles Jaffe MD PhD</PersonNm>
+        <TitleTxt>CEO</TitleTxt>
+        <AverageHoursPerWeekRt>035.00</AverageHoursPerWeekRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>498148</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Wayne Kubick</PersonNm>
+        <TitleTxt>Chief Technology Officer</TitleTxt>
+        <AverageHoursPerWeekRt>035.00</AverageHoursPerWeekRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>307500</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Calvin Beebe</PersonNm>
+        <TitleTxt>Chair</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>4338</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Jennifer Covich Bordenick</PersonNm>
+        <TitleTxt>Director-At-Large</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>W Edward Hammond</PersonNm>
+        <TitleTxt>Chair Emeritus</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Walter Suarez</PersonNm>
+        <TitleTxt>Vice Chair</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Nancy Orvis</PersonNm>
+        <TitleTxt>Director-At-Large</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Melva Peters</PersonNm>
+        <TitleTxt>Secretary</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Russell Leftwich</PersonNm>
+        <TitleTxt>Treasurer</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Line Saele</PersonNm>
+        <TitleTxt>Affiliate Director</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Austin Kreisler</PersonNm>
+        <TitleTxt>TSC Chair</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Andrew Truscott</PersonNm>
+        <TitleTxt>Director</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Mary Ann Slack</PersonNm>
+        <TitleTxt>Director</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Dave Shaver</PersonNm>
+        <TitleTxt>Director</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Diego Kaminker</PersonNm>
+        <TitleTxt>Affiliate Director</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Kensaku Kawamoto</PersonNm>
+        <TitleTxt>Director-At-Large</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Janet Marchibroda</PersonNm>
+        <TitleTxt>Director-At-Large</TitleTxt>
+        <AverageHoursPerWeekRt>001.00</AverageHoursPerWeekRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>Mark McDougall</PersonNm>
+        <TitleTxt>Executive Director</TitleTxt>
+        <AverageHoursPerWeekRt>035.00</AverageHoursPerWeekRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <TotalReportableCompFromOrgAmt>809986</TotalReportableCompFromOrgAmt>
+      <IndivRcvdGreaterThan100KCnt>2</IndivRcvdGreaterThan100KCnt>
+      <FormerOfcrEmployeesListedInd>false</FormerOfcrEmployeesListedInd>
+      <TotalCompGreaterThan150KInd>true</TotalCompGreaterThan150KInd>
+      <CompensationFromOtherSrcsInd>false</CompensationFromOtherSrcsInd>
+      <ContractorCompensationGrp>
+        <ContractorName>
+          <BusinessName>
+            <BusinessNameLine1Txt>AMG LLC</BusinessNameLine1Txt>
+          </BusinessName>
+        </ContractorName>
+        <ContractorAddress>
+          <USAddress>
+            <AddressLine1Txt>3300 Washtenaw Avenue Suite 222</AddressLine1Txt>
+            <CityNm>Ann Arbor</CityNm>
+            <StateAbbreviationCd>MI</StateAbbreviationCd>
+            <ZIPCd>48104</ZIPCd>
+          </USAddress>
+        </ContractorAddress>
+        <ServicesDesc>Management services</ServicesDesc>
+        <CompensationAmt>2220522</CompensationAmt>
+      </ContractorCompensationGrp>
+      <ContractorCompensationGrp>
+        <ContractorName>
+          <BusinessName>
+            <BusinessNameLine1Txt>Pointe of Care Partners LLC</BusinessNameLine1Txt>
+          </BusinessName>
+        </ContractorName>
+        <ContractorAddress>
+          <USAddress>
+            <AddressLine1Txt>9710 Stirling Rd Suite 106</AddressLine1Txt>
+            <CityNm>Hollywood</CityNm>
+            <StateAbbreviationCd>FL</StateAbbreviationCd>
+            <ZIPCd>33024</ZIPCd>
+          </USAddress>
+        </ContractorAddress>
+        <ServicesDesc>Consulting</ServicesDesc>
+        <CompensationAmt>558045</CompensationAmt>
+      </ContractorCompensationGrp>
+      <ContractorCompensationGrp>
+        <ContractorName>
+          <BusinessName>
+            <BusinessNameLine1Txt>Health eData Inc</BusinessNameLine1Txt>
+          </BusinessName>
+        </ContractorName>
+        <ContractorAddress>
+          <USAddress>
+            <AddressLine1Txt>35 Crescent Ave</AddressLine1Txt>
+            <CityNm>Sausalito</CityNm>
+            <StateAbbreviationCd>CA</StateAbbreviationCd>
+            <ZIPCd>94965</ZIPCd>
+          </USAddress>
+        </ContractorAddress>
+        <ServicesDesc>Consulting</ServicesDesc>
+        <CompensationAmt>295544</CompensationAmt>
+      </ContractorCompensationGrp>
+      <ContractorCompensationGrp>
+        <ContractorName>
+          <BusinessName>
+            <BusinessNameLine1Txt>Boston Children's Hospital</BusinessNameLine1Txt>
+          </BusinessName>
+        </ContractorName>
+        <ContractorAddress>
+          <USAddress>
+            <AddressLine1Txt>PO Box 414413</AddressLine1Txt>
+            <CityNm>Boston</CityNm>
+            <StateAbbreviationCd>MA</StateAbbreviationCd>
+            <ZIPCd>022414413</ZIPCd>
+          </USAddress>
+        </ContractorAddress>
+        <ServicesDesc>Consulting</ServicesDesc>
+        <CompensationAmt>242500</CompensationAmt>
+      </ContractorCompensationGrp>
+      <ContractorCompensationGrp>
+        <ContractorName>
+          <BusinessName>
+            <BusinessNameLine1Txt>Enable Care LLC</BusinessNameLine1Txt>
+          </BusinessName>
+        </ContractorName>
+        <ContractorAddress>
+          <USAddress>
+            <AddressLine1Txt>6240 West 135th St Suite 234</AddressLine1Txt>
+            <CityNm>Overland Park</CityNm>
+            <StateAbbreviationCd>KS</StateAbbreviationCd>
+            <ZIPCd>66223</ZIPCd>
+          </USAddress>
+        </ContractorAddress>
+        <ServicesDesc>Consulting</ServicesDesc>
+        <CompensationAmt>193560</CompensationAmt>
+      </ContractorCompensationGrp>
+      <CntrctRcvdGreaterThan100KCnt>11</CntrctRcvdGreaterThan100KCnt>
+      <GovernmentGrantsAmt>1517454</GovernmentGrantsAmt>
+      <TotalContributionsAmt>1517454</TotalContributionsAmt>
+      <ProgramServiceRevenueGrp>
+        <Desc>Member dues</Desc>
+        <TotalRevenueColumnAmt>3247705</TotalRevenueColumnAmt>
+        <RelatedOrExemptFuncIncomeAmt>3247705</RelatedOrExemptFuncIncomeAmt>
+      </ProgramServiceRevenueGrp>
+      <ProgramServiceRevenueGrp>
+        <Desc>Meetings</Desc>
+        <TotalRevenueColumnAmt>2698811</TotalRevenueColumnAmt>
+        <RelatedOrExemptFuncIncomeAmt>2698811</RelatedOrExemptFuncIncomeAmt>
+      </ProgramServiceRevenueGrp>
+      <ProgramServiceRevenueGrp>
+        <Desc>Education and certification</Desc>
+        <TotalRevenueColumnAmt>1099741</TotalRevenueColumnAmt>
+        <RelatedOrExemptFuncIncomeAmt>1099741</RelatedOrExemptFuncIncomeAmt>
+      </ProgramServiceRevenueGrp>
+      <ProgramServiceRevenueGrp>
+        <Desc>Project management fees</Desc>
+        <TotalRevenueColumnAmt>340829</TotalRevenueColumnAmt>
+        <RelatedOrExemptFuncIncomeAmt>340829</RelatedOrExemptFuncIncomeAmt>
+      </ProgramServiceRevenueGrp>
+      <TotalProgramServiceRevenueAmt>7387086</TotalProgramServiceRevenueAmt>
+      <InvestmentIncomeGrp>
+        <TotalRevenueColumnAmt>186736</TotalRevenueColumnAmt>
+        <ExclusionAmt>186736</ExclusionAmt>
+      </InvestmentIncomeGrp>
+      <GrossAmountSalesAssetsGrp>
+        <SecuritiesAmt>5436698</SecuritiesAmt>
+      </GrossAmountSalesAssetsGrp>
+      <LessCostOthBasisSalesExpnssGrp>
+        <SecuritiesAmt>5427361</SecuritiesAmt>
+      </LessCostOthBasisSalesExpnssGrp>
+      <GainOrLossGrp>
+        <SecuritiesAmt>9337</SecuritiesAmt>
+      </GainOrLossGrp>
+      <NetGainOrLossInvestmentsGrp>
+        <TotalRevenueColumnAmt>9337</TotalRevenueColumnAmt>
+        <ExclusionAmt>9337</ExclusionAmt>
+      </NetGainOrLossInvestmentsGrp>
+      <MiscellaneousRevenueGrp>
+        <TotalRevenueColumnAmt>281400</TotalRevenueColumnAmt>
+        <RelatedOrExemptFuncIncomeAmt>281400</RelatedOrExemptFuncIncomeAmt>
+      </MiscellaneousRevenueGrp>
+      <OtherRevenueTotalAmt>281400</OtherRevenueTotalAmt>
+      <TotalRevenueGrp>
+        <TotalRevenueColumnAmt>9382013</TotalRevenueColumnAmt>
+        <RelatedOrExemptFuncIncomeAmt>7668486</RelatedOrExemptFuncIncomeAmt>
+        <ExclusionAmt>196073</ExclusionAmt>
+      </TotalRevenueGrp>
+      <InfoInScheduleOPartIXInd>X</InfoInScheduleOPartIXInd>
+      <GrantsToDomesticOrgsGrp>
+        <TotalAmt>0</TotalAmt>
+      </GrantsToDomesticOrgsGrp>
+      <GrantsToDomesticIndividualsGrp>
+        <TotalAmt>0</TotalAmt>
+      </GrantsToDomesticIndividualsGrp>
+      <ForeignGrantsGrp>
+        <TotalAmt>0</TotalAmt>
+      </ForeignGrantsGrp>
+      <BenefitsToMembersGrp>
+        <TotalAmt>0</TotalAmt>
+      </BenefitsToMembersGrp>
+      <CompCurrentOfcrDirectorsGrp>
+        <TotalAmt>855648</TotalAmt>
+      </CompCurrentOfcrDirectorsGrp>
+      <CompDisqualPersonsGrp>
+        <TotalAmt>0</TotalAmt>
+      </CompDisqualPersonsGrp>
+      <OtherSalariesAndWagesGrp>
+        <TotalAmt>0</TotalAmt>
+      </OtherSalariesAndWagesGrp>
+      <PensionPlanContributionsGrp>
+        <TotalAmt>0</TotalAmt>
+      </PensionPlanContributionsGrp>
+      <OtherEmployeeBenefitsGrp>
+        <TotalAmt>0</TotalAmt>
+      </OtherEmployeeBenefitsGrp>
+      <PayrollTaxesGrp>
+        <TotalAmt>0</TotalAmt>
+      </PayrollTaxesGrp>
+      <FeesForServicesManagementGrp>
+        <TotalAmt>2220522</TotalAmt>
+      </FeesForServicesManagementGrp>
+      <FeesForServicesLegalGrp>
+        <TotalAmt>19299</TotalAmt>
+      </FeesForServicesLegalGrp>
+      <FeesForServicesAccountingGrp>
+        <TotalAmt>18078</TotalAmt>
+      </FeesForServicesAccountingGrp>
+      <FeesForServicesLobbyingGrp>
+        <TotalAmt>0</TotalAmt>
+      </FeesForServicesLobbyingGrp>
+      <FeesForServicesProfFundraising></FeesForServicesProfFundraising>
+      <FeesForSrvcInvstMgmntFeesGrp>
+        <TotalAmt>43078</TotalAmt>
+      </FeesForSrvcInvstMgmntFeesGrp>
+      <FeesForServicesOtherGrp>
+        <TotalAmt>1791637</TotalAmt>
+      </FeesForServicesOtherGrp>
+      <AdvertisingGrp>
+        <TotalAmt>97817</TotalAmt>
+      </AdvertisingGrp>
+      <OfficeExpensesGrp>
+        <TotalAmt>56856</TotalAmt>
+      </OfficeExpensesGrp>
+      <InformationTechnologyGrp>
+        <TotalAmt>145712</TotalAmt>
+      </InformationTechnologyGrp>
+      <RoyaltiesGrp>
+        <TotalAmt>0</TotalAmt>
+      </RoyaltiesGrp>
+      <OccupancyGrp>
+        <TotalAmt>0</TotalAmt>
+      </OccupancyGrp>
+      <TravelGrp>
+        <TotalAmt>289046</TotalAmt>
+      </TravelGrp>
+      <PymtTravelEntrtnmntPubOfclGrp>
+        <TotalAmt>0</TotalAmt>
+      </PymtTravelEntrtnmntPubOfclGrp>
+      <ConferencesMeetingsGrp>
+        <TotalAmt>1424963</TotalAmt>
+      </ConferencesMeetingsGrp>
+      <InterestGrp>
+        <TotalAmt>0</TotalAmt>
+      </InterestGrp>
+      <PaymentsToAffiliatesGrp>
+        <TotalAmt>0</TotalAmt>
+      </PaymentsToAffiliatesGrp>
+      <DepreciationDepletionGrp>
+        <TotalAmt>0</TotalAmt>
+      </DepreciationDepletionGrp>
+      <InsuranceGrp>
+        <TotalAmt>8413</TotalAmt>
+      </InsuranceGrp>
+      <OtherExpensesGrp>
+        <Desc>Equipment rental</Desc>
+        <TotalAmt>209469</TotalAmt>
+      </OtherExpensesGrp>
+      <OtherExpensesGrp>
+        <Desc>Fees and licenses</Desc>
+        <TotalAmt>314399</TotalAmt>
+      </OtherExpensesGrp>
+      <OtherExpensesGrp>
+        <Desc>Distance eLearning</Desc>
+        <TotalAmt>230403</TotalAmt>
+      </OtherExpensesGrp>
+      <OtherExpensesGrp>
+        <Desc>Credit card and bank fees</Desc>
+        <TotalAmt>104324</TotalAmt>
+      </OtherExpensesGrp>
+      <AllOtherExpensesGrp>
+        <TotalAmt>34229</TotalAmt>
+      </AllOtherExpensesGrp>
+      <TotalFunctionalExpensesGrp>
+        <TotalAmt>7863893</TotalAmt>
+      </TotalFunctionalExpensesGrp>
+      <CashNonInterestBearingGrp>
+        <BOYAmt>1596555</BOYAmt>
+        <EOYAmt>1665392</EOYAmt>
+      </CashNonInterestBearingGrp>
+      <SavingsAndTempCashInvstGrp>
+        <BOYAmt>2571644</BOYAmt>
+        <EOYAmt>4157737</EOYAmt>
+      </SavingsAndTempCashInvstGrp>
+      <PledgesAndGrantsReceivableGrp>
+        <EOYAmt>194719</EOYAmt>
+      </PledgesAndGrantsReceivableGrp>
+      <AccountsReceivableGrp>
+        <BOYAmt>174382</BOYAmt>
+        <EOYAmt>17912</EOYAmt>
+      </AccountsReceivableGrp>
+      <PrepaidExpensesDefrdChargesGrp>
+        <BOYAmt>216319</BOYAmt>
+        <EOYAmt>273882</EOYAmt>
+      </PrepaidExpensesDefrdChargesGrp>
+      <LandBldgEquipCostOrOtherBssAmt>13021</LandBldgEquipCostOrOtherBssAmt>
+      <LandBldgEquipAccumDeprecAmt>13021</LandBldgEquipAccumDeprecAmt>
+      <InvestmentsPubTradedSecGrp>
+        <BOYAmt>3409809</BOYAmt>
+        <EOYAmt>3690488</EOYAmt>
+      </InvestmentsPubTradedSecGrp>
+      <TotalAssetsGrp>
+        <BOYAmt>7968709</BOYAmt>
+        <EOYAmt>10000130</EOYAmt>
+      </TotalAssetsGrp>
+      <AccountsPayableAccrExpnssGrp>
+        <BOYAmt>141489</BOYAmt>
+        <EOYAmt>400662</EOYAmt>
+      </AccountsPayableAccrExpnssGrp>
+      <DeferredRevenueGrp>
+        <BOYAmt>2535283</BOYAmt>
+        <EOYAmt>1580366</EOYAmt>
+      </DeferredRevenueGrp>
+      <OtherLiabilitiesGrp>
+        <BOYAmt>21920</BOYAmt>
+        <EOYAmt>1457209</EOYAmt>
+      </OtherLiabilitiesGrp>
+      <TotalLiabilitiesGrp>
+        <BOYAmt>2698692</BOYAmt>
+        <EOYAmt>3438237</EOYAmt>
+      </TotalLiabilitiesGrp>
+      <OrganizationFollowsFASB117Ind>X</OrganizationFollowsFASB117Ind>
+      <NoDonorRestrictionNetAssetsGrp>
+        <BOYAmt>5270017</BOYAmt>
+        <EOYAmt>6561893</EOYAmt>
+      </NoDonorRestrictionNetAssetsGrp>
+      <TotalNetAssetsFundBalanceGrp>
+        <BOYAmt>5270017</BOYAmt>
+        <EOYAmt>6561893</EOYAmt>
+      </TotalNetAssetsFundBalanceGrp>
+      <TotLiabNetAssetsFundBalanceGrp>
+        <BOYAmt>7968709</BOYAmt>
+        <EOYAmt>10000130</EOYAmt>
+      </TotLiabNetAssetsFundBalanceGrp>
+      <InfoInScheduleOPartXIInd>X</InfoInScheduleOPartXIInd>
+      <ReconcilationRevenueExpnssAmt>1518120</ReconcilationRevenueExpnssAmt>
+      <NetUnrlzdGainsLossesInvstAmt>596129</NetUnrlzdGainsLossesInvstAmt>
+      <PriorPeriodAdjustmentsAmt>-822373</PriorPeriodAdjustmentsAmt>
+      <MethodOfAccountingAccrualInd>X</MethodOfAccountingAccrualInd>
+      <AccountantCompileOrReviewInd>false</AccountantCompileOrReviewInd>
+      <FSAuditedInd>true</FSAuditedInd>
+      <FSAuditedBasisGrp>
+        <SeparateBasisFinclStmtInd>X</SeparateBasisFinclStmtInd>
+      </FSAuditedBasisGrp>
+      <AuditCommitteeInd>false</AuditCommitteeInd>
+      <FederalGrantAuditRequiredInd>true</FederalGrantAuditRequiredInd>
+      <FederalGrantAuditPerformedInd>true</FederalGrantAuditPerformedInd>
+    </IRS990>
+    <IRS990ScheduleB documentId="990B" softwareId="19009610" softwareVersionNum="19.2.1.0">
+      <ContributorInformationGrp>
+        <ContributorNum>RESTRICTED</ContributorNum>
+        <ContributorBusinessName>
+          <BusinessNameLine1>RESTRICTED</BusinessNameLine1>
+        </ContributorBusinessName>
+        <ContributorUSAddress>
+          <AddressLine1>RESTRICTED</AddressLine1>
+          <AddressLine2>RESTRICTED</AddressLine2>
+          <City>RESTRICTED</City>
+          <State>RESTRICTED</State>
+          <ZIPCode>RESTRICTED</ZIPCode>
+        </ContributorUSAddress>
+        <TotalContributionsAmt>RESTRICTED</TotalContributionsAmt>
+      </ContributorInformationGrp>
+    </IRS990ScheduleB>
+    <IRS990ScheduleD documentId="990D" softwareId="19009610" softwareVersionNum="19.2.1.0">
+      <InclEscrowCustodialAcctLiabInd>false</InclEscrowCustodialAcctLiabInd>
+      <EquipmentGrp>
+        <OtherCostOrOtherBasisAmt>13021</OtherCostOrOtherBasisAmt>
+        <DepreciationAmt>13021</DepreciationAmt>
+      </EquipmentGrp>
+      <OtherSecuritiesGrp>
+        <Desc>Financial derivatives and other financial products</Desc>
+      </OtherSecuritiesGrp>
+      <OtherSecuritiesGrp>
+        <Desc>Closely-held equity interests</Desc>
+      </OtherSecuritiesGrp>
+      <OtherLiabilitiesOrgGrp>
+        <Desc>Federal income taxes</Desc>
+      </OtherLiabilitiesOrgGrp>
+      <OtherLiabilitiesOrgGrp>
+        <Desc>Due to affiliates</Desc>
+        <Amt>23830</Amt>
+      </OtherLiabilitiesOrgGrp>
+      <OtherLiabilitiesOrgGrp>
+        <Desc>Project funds held for others</Desc>
+        <Amt>1433379</Amt>
+      </OtherLiabilitiesOrgGrp>
+      <TotalLiabilityAmt>1457209</TotalLiabilityAmt>
+      <TotalRevEtcAuditedFinclStmtAmt>9935064</TotalRevEtcAuditedFinclStmtAmt>
+      <NetUnrealizedGainsInvstAmt>596129</NetUnrealizedGainsInvstAmt>
+      <RevenueNotReportedAmt>596129</RevenueNotReportedAmt>
+      <RevenueSubtotalAmt>9338935</RevenueSubtotalAmt>
+      <InvestmentExpensesNotIncldAmt>43078</InvestmentExpensesNotIncldAmt>
+      <RevenueNotReportedFinclStmtAmt>43078</RevenueNotReportedFinclStmtAmt>
+      <TotalRevenuePerForm990Amt>9382013</TotalRevenuePerForm990Amt>
+      <TotExpnsEtcAuditedFinclStmtAmt>7820815</TotExpnsEtcAuditedFinclStmtAmt>
+      <ExpensesSubtotalAmt>7820815</ExpensesSubtotalAmt>
+      <InvestmentExpensesNotIncld2Amt>43078</InvestmentExpensesNotIncld2Amt>
+      <ExpensesNotRptFinclStmtAmt>43078</ExpensesNotRptFinclStmtAmt>
+      <TotalExpensesPerForm990Amt>7863893</TotalExpensesPerForm990Amt>
+    </IRS990ScheduleD>
+    <IRS990ScheduleF documentId="990F" softwareId="19009610" softwareVersionNum="19.2.1.0">
+      <GrantRecordsMaintainedInd>false</GrantRecordsMaintainedInd>
+      <AccountActivitiesOutsideUSGrp>
+        <RegionTxt>Europe Including Iceland and Greenland</RegionTxt>
+        <OfficesCnt>1</OfficesCnt>
+        <EmployeeCnt>2</EmployeeCnt>
+        <TypeOfActivitiesConductedTxt>Program services</TypeOfActivitiesConductedTxt>
+        <SpecificServicesProvidedTxt>Promote standards</SpecificServicesProvidedTxt>
+        <RegionTotalExpendituresAmt>20000</RegionTotalExpendituresAmt>
+      </AccountActivitiesOutsideUSGrp>
+      <SubtotalOfficesCnt>1</SubtotalOfficesCnt>
+      <SubtotalEmployeesCnt>2</SubtotalEmployeesCnt>
+      <TotalOfficeCnt>1</TotalOfficeCnt>
+      <TotalEmployeeCnt>2</TotalEmployeeCnt>
+      <SubtotalSpentAmt>20000</SubtotalSpentAmt>
+      <TotalSpentAmt>20000</TotalSpentAmt>
+      <TransferToForeignCorpInd>false</TransferToForeignCorpInd>
+      <InterestInForeignTrustInd>false</InterestInForeignTrustInd>
+      <ForeignCorpOwnershipInd>false</ForeignCorpOwnershipInd>
+      <PassiveForeignInvestmestCoInd>false</PassiveForeignInvestmestCoInd>
+      <ForeignPartnershipInd>false</ForeignPartnershipInd>
+      <BoycottCountriesInd>false</BoycottCountriesInd>
+    </IRS990ScheduleF>
+    <IRS990ScheduleJ documentId="990J" softwareId="19009610" softwareVersionNum="19.2.1.0">
+      <WrittenEmploymentContractInd>X</WrittenEmploymentContractInd>
+      <BoardOrCommitteeApprovalInd>X</BoardOrCommitteeApprovalInd>
+      <SeverancePaymentInd>false</SeverancePaymentInd>
+      <SupplementalNonqualRtrPlanInd>false</SupplementalNonqualRtrPlanInd>
+      <EquityBasedCompArrngmInd>false</EquityBasedCompArrngmInd>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>Charles Jaffe MD PhD</PersonNm>
+        <TitleTxt>CEO</TitleTxt>
+        <BaseCompensationFilingOrgAmt>417145</BaseCompensationFilingOrgAmt>
+        <BonusFilingOrganizationAmount>81003</BonusFilingOrganizationAmount>
+        <TotalCompensationFilingOrgAmt>498148</TotalCompensationFilingOrgAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>Wayne Kubick</PersonNm>
+        <TitleTxt>Chief Technology Officer</TitleTxt>
+        <BaseCompensationFilingOrgAmt>307500</BaseCompensationFilingOrgAmt>
+        <TotalCompensationFilingOrgAmt>307500</TotalCompensationFilingOrgAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+    </IRS990ScheduleJ>
+    <IRS990ScheduleL documentId="990L" softwareId="19009610" softwareVersionNum="19.2.1.0">
+      <BusTrInvolveInterestedPrsnGrp>
+        <NameOfInterested>
+          <BusinessName>
+            <BusinessNameLine1Txt>AMG LLC</BusinessNameLine1Txt>
+          </BusinessName>
+        </NameOfInterested>
+        <RelationshipDescriptionTxt>Entity more than 35 owned by Mark McDougall, Executive Director</RelationshipDescriptionTxt>
+        <TransactionAmt>2220522</TransactionAmt>
+        <TransactionDesc>Management fees</TransactionDesc>
+        <SharingOfRevenuesInd>false</SharingOfRevenuesInd>
+      </BusTrInvolveInterestedPrsnGrp>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Part IV Line 1</FormAndLineReferenceDesc>
+        <ExplanationTxt>The management fees listed are paid to Association Management Group LLC AMG LLC, which is 95 owned by Mark McDougall, Executive Director of Health Level Seven International.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleL>
+    <IRS990ScheduleO documentId="990O" softwareId="19009610" softwareVersionNum="19.2.1.0">
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Form 990, Part I, Line 6</FormAndLineReferenceDesc>
+        <ExplanationTxt>Volunteer board members</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Form 990, Part VI, Section A, Line 3</FormAndLineReferenceDesc>
+        <ExplanationTxt>The organization is managed with board oversight by a management company that is majority owned by the Executive Director</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Form 990, Part VI, Section A, Line 7a</FormAndLineReferenceDesc>
+        <ExplanationTxt>Officers and board of director members are nominated and voted for by members of the organization</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Form 990, Part VI, Section A, Line 7b</FormAndLineReferenceDesc>
+        <ExplanationTxt>Any changes to the bylaws require membership approval</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Form 990, Part VI, Section B, Line 11b</FormAndLineReferenceDesc>
+        <ExplanationTxt>A completed copy of the Form 990 is e-mailed to members of the Executive Committee of the Board of Directors for their review prior to filing</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Form 990, Part VI, Section B, Line 12c</FormAndLineReferenceDesc>
+        <ExplanationTxt>Any conflicts of interest are reviewed when the annual conflict of interest forms are submitted each year</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Form 990, Part VI, Section B, Line 15a</FormAndLineReferenceDesc>
+        <ExplanationTxt>The Board approves the employment contract for such executive staff as the Board may consider necessary to support the activities of HL7 and on such terms and conditions as it may deem advisable</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Form 990, Part VI, Section B, Line 15b</FormAndLineReferenceDesc>
+        <ExplanationTxt>The Board approves the employment contract for such executive staff as the Board may consider necessary to support the activities of HL7 and on such terms and conditions as it may deem advisable</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Form 990, Part VI, Section C, Line 19</FormAndLineReferenceDesc>
+        <ExplanationTxt>Agreements, bylaws, and operations manual are available on the organizations website. Financial statements are made available upon request.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Form 990, Part IX, Line 11g</FormAndLineReferenceDesc>
+        <ExplanationTxt>Contractors - technical consulting 1,450,513 Contractors - other services, primarily administrative 216,318 Honorariums for teaching 124,806</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Form 990, Part XI, Line 8</FormAndLineReferenceDesc>
+        <ExplanationTxt>During the year ended December 31, 2019, Health Level Seven International discovered errors that resulted in the overstatement of its net assets and understatement of funds held for others. Funds for various projects received and disbursed by HL7, of which HL7 had no variance power, had been reported as HL7s revenue and expense. This was corrected in 2019 retrospectively to January 1, 2019. The opening balance as of January 1, 2019 of net assets without donor restrictions has been decreased to reflect the correction.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleO>
+  </ReturnData>
+</Return>

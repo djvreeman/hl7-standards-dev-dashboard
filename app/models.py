@@ -74,4 +74,67 @@ class ChartData(BaseModel):
     labels: List[str] = Field(..., description="Chart labels")
     values: List[float] = Field(..., description="Chart values")
     colors: Optional[List[str]] = Field(None, description="Chart colors")
-    type: str = Field("bar", description="Chart type") 
+    type: str = Field("bar", description="Chart type")
+
+# Financial Data Models for 990 Forms
+class FinancialYearData(BaseModel):
+    year: int = Field(..., description="Tax year")
+    total_revenue: float = Field(..., description="Total revenue for the year")
+    total_expenses: float = Field(..., description="Total expenses for the year")
+    net_income: float = Field(..., description="Net income (revenue - expenses)")
+    
+    # Revenue breakdown
+    program_service_revenue: float = Field(..., description="Program service revenue")
+    contributions_grants: float = Field(..., description="Contributions and grants")
+    investment_income: float = Field(..., description="Investment income")
+    other_revenue: float = Field(..., description="Other revenue")
+    
+    # Program service revenue breakdown
+    membership_dues: Optional[float] = Field(None, description="Membership dues")
+    meetings_conferences: Optional[float] = Field(None, description="Meetings and conferences")
+    education_certification: Optional[float] = Field(None, description="Education and certification")
+    project_management_fees: Optional[float] = Field(None, description="Project management fees")
+    qualified_sponsorship_payments: Optional[float] = Field(None, description="Qualified sponsorship payments")
+    other_program_services: Optional[float] = Field(None, description="Other program service revenue (special projects, grants, etc.)")
+    
+    # Expense breakdown
+    salaries_compensation: float = Field(..., description="Salaries and compensation")
+    other_expenses: float = Field(..., description="Other expenses")
+    management_services: Optional[float] = Field(None, description="Management services (pre-2024)")
+    
+    # Balance sheet data
+    total_assets: float = Field(..., description="Total assets")
+    total_liabilities: float = Field(..., description="Total liabilities")
+    net_assets: float = Field(..., description="Net assets")
+    
+    # Employee data
+    total_employees: int = Field(..., description="Total number of employees")
+    total_volunteers: int = Field(..., description="Total number of volunteers")
+
+class FinancialTrend(BaseModel):
+    year: int = Field(..., description="Year")
+    revenue: float = Field(..., description="Total revenue")
+    expenses: float = Field(..., description="Total expenses")
+    net_income: float = Field(..., description="Net income")
+    revenue_growth: Optional[float] = Field(None, description="Revenue growth percentage")
+    expense_growth: Optional[float] = Field(None, description="Expense growth percentage")
+
+class RevenueComposition(BaseModel):
+    year: int = Field(..., description="Year")
+    program_services: float = Field(..., description="Program services revenue")
+    contributions: float = Field(..., description="Contributions revenue")
+    investment_income: float = Field(..., description="Investment income")
+    other_revenue: float = Field(..., description="Other revenue")
+
+class FinancialHealthMetrics(BaseModel):
+    years: List[FinancialYearData] = Field(..., description="Financial data by year")
+    revenue_trend: List[FinancialTrend] = Field(..., description="Revenue and expense trends")
+    revenue_composition: List[RevenueComposition] = Field(..., description="Revenue composition by source")
+    latest_year: int = Field(..., description="Latest year with data")
+    years_available: List[int] = Field(..., description="Available years")
+
+class FinancialChartData(BaseModel):
+    labels: List[str] = Field(..., description="Chart labels (years)")
+    datasets: List[Dict[str, Any]] = Field(..., description="Chart datasets")
+    type: str = Field(..., description="Chart type")
+    title: str = Field(..., description="Chart title") 
