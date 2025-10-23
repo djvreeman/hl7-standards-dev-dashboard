@@ -1010,7 +1010,7 @@
                     
                     // Special handling for Finance steward - create dropdown instead of direct link
                     if (steward === 'Finance') {
-                        return `<div class="nav-dropdown"><a href="/Finance" class="nav-link ${isActive}" id="nav-finance">Finance</a><div class="dropdown-menu"><a href="/finance" class="dropdown-item">Financial Health Trends and Insights</a></div></div>`;
+                        return `<div class="nav-dropdown"><a href="/Finance" class="nav-link ${isActive}" id="nav-finance">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item">Financial Health Trends and Insights</a></div></div>`;
                     }
                     
                     const href = (steward === 'HL7 International' || steward === 'HL7') ? '/' : `/${steward}`;
@@ -1024,7 +1024,7 @@
                 document.getElementById('steward-navigation').innerHTML = `
                     <a href="/" class="nav-link ${(currentSteward === 'HL7 International' || currentSteward === 'HL7') ? 'active' : ''}">HL7 International</a>
                     <a href="/CSDO" class="nav-link ${currentSteward === 'CSDO' ? 'active' : ''}">CSDO</a>
-                    <div class="nav-dropdown"><a href="/Finance" class="nav-link ${currentSteward === 'Finance' ? 'active' : ''}">Finance</a><div class="dropdown-menu"><a href="/finance" class="dropdown-item">Financial Health Trends and Insights</a></div></div>
+                    <div class="nav-dropdown"><a href="/Finance" class="nav-link ${currentSteward === 'Finance' ? 'active' : ''}">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item">Financial Health Trends and Insights</a></div></div>
                 `;
             }
         }

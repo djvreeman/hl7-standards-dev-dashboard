@@ -182,15 +182,19 @@ class FinancialDataService:
         
         years = [str(year.year) for year in metrics.years]
         salaries = [year.salaries_compensation for year in metrics.years]
-        other_expenses = [year.other_expenses for year in metrics.years]
         
-        # Add management services for pre-2024 years
+        # Calculate other expenses by subtracting known categories from total expenses
+        other_expenses = []
         management_services = []
+        
         for year in metrics.years:
-            if year.management_services is not None:
-                management_services.append(year.management_services)
-            else:
-                management_services.append(0)
+            # Get management services (AMG LLC payments)
+            mgmt_services = year.management_services or 0
+            management_services.append(mgmt_services)
+            
+            # Calculate other expenses as total minus salaries minus management services
+            other_exp = year.total_expenses - year.salaries_compensation - mgmt_services
+            other_expenses.append(other_exp)
         
         datasets = [
             {
@@ -416,6 +420,14 @@ Please analyze the following financial data and provide a structured assessment 
 - In 2023, HL7 purchased AMG LLC for $3.3M in management services expenses
 - In 2024, AMG staff became HL7 employees, shifting from external management services to internal salaries
 - This structural change affects year-over-year comparisons
+- **Compensation Structure Impact**: The acquisition expanded the "Officers, Directors, Trustees, Key Employees & Highest Compensated Employees" category as former AMG executives and key personnel were integrated into HL7's leadership structure
+- **Growth Factors**: Recent increases in this compensation category reflect both executive pay growth and the addition of more senior roles from the AMG acquisition
+
+### Additional Operating Cost Factors (2023-2024)
+- **Financial Management Services**: HL7 brought on outside financial management services including a CFO/controller and 1.5 FTE accountant staff
+- **HR Services**: Hired Lemma Consulting for HR services
+- **Contractor Compensation**: These services are reported in the "Total number of independent contractors who received more than $100,000 of compensation from the organization = 23" category
+- **Cost Attribution**: While AMG acquisition is a significant factor, increased operating expenses also reflect strategic investments in financial management, HR services, and other professional services to support organizational growth
 
 ### Revenue Streams Analysis
 - **Program Services** (primary revenue): Membership dues, meetings, education, project management
@@ -424,9 +436,17 @@ Please analyze the following financial data and provide a structured assessment 
 - **Other Revenue**: Miscellaneous sources
 
 ### Expense Categories
-- **Salaries & Compensation**: Employee costs (includes former AMG staff in 2024)
-- **Other Expenses**: Operational costs, facilities, etc.
-- **Management Services**: Pre-2024 external AMG services
+- **Salaries & Compensation**: Regular employee costs (includes former AMG staff in 2024)
+- **Officers, Directors, Trustees, Key Employees & Highest Compensated Employees**: Executive and key personnel compensation (includes expanded roles post-AMG acquisition)
+- **Professional Services**: External consulting and contractor fees (includes financial management services, HR services, and other professional contractors)
+- **Land, Building & Equipment**: Capital and equipment costs
+- **Other Operating Expenses**: Remaining operational costs, facilities, etc.
+- **Management Services**: Pre-2024 external AMG services (transitioned to internal salaries in 2024)
+
+### Contractor Compensation Reporting
+- **High-Value Contractors**: Services from contractors receiving >$100,000 are reported in the "Total number of independent contractors who received more than $100,000 of compensation from the organization = 23" category
+- **Includes**: Financial management services (CFO/controller, 1.5 FTE accountants), HR services (Lemma Consulting), and other professional services
+- **Cost Attribution**: These represent strategic investments in organizational capacity, not just AMG acquisition-related costs
 
 ## 2025+ HL7 Strategic Vision: Revenue Diversification Strategies
 
@@ -460,11 +480,12 @@ Please provide insights on:
 
 1. **Financial Health Trends**: Multi-year patterns in revenue, expenses, and net income, with special attention to the impact of the April 2013 business model change
 2. **Revenue Diversification**: Stability and growth of different revenue streams, with specific attention to HL7's strategic goals for reducing reliance on membership dues and how the 2013 standards access change affected this
-3. **Expense Management**: Efficiency and cost control measures
-4. **Asset Management**: Net asset trends and financial stability
-5. **Business Model Evolution**: How the 2013 change to free standards access affected membership value proposition and revenue development over time
-6. **Strategic Implications**: Recommendations for financial sustainability that align with HL7's 2025+ strategic vision for revenue diversification
-7. **Strategic Alignment**: How current financial performance supports or challenges the organization's goals for new market offerings, partnerships, and external funding opportunities
+3. **Expense Management**: Efficiency and cost control measures, including detailed analysis of major expense categories and the multiple factors driving cost increases
+4. **Compensation Analysis**: Trends in executive and key personnel compensation, including the impact of the AMG acquisition on leadership structure and compensation levels, as well as strategic investments in financial management and HR services
+5. **Asset Management**: Net asset trends and financial stability
+6. **Business Model Evolution**: How the 2013 change to free standards access affected membership value proposition and revenue development over time
+7. **Strategic Implications**: Recommendations for financial sustainability that align with HL7's 2025+ strategic vision for revenue diversification
+8. **Strategic Alignment**: How current financial performance supports or challenges the organization's goals for new market offerings, partnerships, and external funding opportunities
 
 ## Output Format
 
@@ -734,3 +755,100 @@ Structure your response as a markdown document with the following format:
         }
         
         return table_data
+    
+    def get_detailed_expense_trends_chart(self) -> FinancialChartData:
+        """Get detailed expense trends as line chart"""
+        metrics = self.get_financial_health_metrics()
+        
+        labels = [str(year.year) for year in metrics.years]
+        
+        # Define major expense categories for trend analysis
+        # Include the most significant expense categories that are actually populated
+        expense_categories = [
+            ("salaries_compensation", "Salaries & Compensation"),
+            ("management_services", "Management Services (AMG LLC)"),
+            ("compensation_officers_directors", "Officers, Directors, Trustees, Key Employees & Highest Compensated Employees"),
+            ("fees_for_services_other", "Professional Services"),
+            ("land_building_equipment_cost", "Land, Building & Equipment"),
+            ("conferences_meetings", "Conferences & Meetings"),
+            ("travel", "Travel"),
+            ("information_technology", "Information Technology"),
+            ("advertising", "Advertising"),
+            ("office_expenses", "Office Expenses"),
+            ("equipment_rental", "Equipment Rental"),
+            ("distance_elearning", "Distance eLearning"),
+            ("credit_card_bank_fees", "Banking & Credit Card Fees"),
+            ("fees_licenses", "Fees & Licenses"),
+            ("insurance", "Insurance"),
+            ("depreciation", "Depreciation"),
+            ("all_other_expenses", "All Other Expenses")
+        ]
+        
+        datasets = []
+        colors = [
+            "#dc2626", "#6b7280", "#16a34a", "#ca8a04", "#ea580c",
+            "#5f9baf", "#8b5cf6", "#ec4899", "#10b981", "#f59e0b",
+            "#6366f1", "#ef4444", "#84cc16", "#f97316", "#8b5a2b",
+            "#06b6d4", "#8b5cf6", "#f43f5e", "#14b8a6", "#f59e0b"
+        ]
+        
+        for i, (field_name, display_name) in enumerate(expense_categories):
+            values = []
+            for year in metrics.years:
+                value = getattr(year, field_name, 0) or 0
+                values.append(value)
+            
+            # Include categories that have meaningful data or are important for analysis
+            should_include = (
+                any(v > 0 for v in values) or 
+                field_name == "management_services" or  # Always show AMG LLC management services
+                field_name == "salaries_compensation"   # Always show salaries
+            )
+            
+            if should_include:
+                datasets.append({
+                    "label": display_name,
+                    "data": values,
+                    "borderColor": colors[i % len(colors)],
+                    "backgroundColor": colors[i % len(colors)] + "20",
+                    "fill": False,
+                    "tension": 0.4,
+                    "pointRadius": 4,
+                    "pointHoverRadius": 6
+                })
+        
+        # Add "Other Operating Expenses" category that represents the remaining amount
+        # after accounting for all the detailed categories shown above
+        other_values = []
+        for year in metrics.years:
+            total_expenses = year.total_expenses or 0
+            detailed_total = 0
+            
+            # Sum up all the detailed categories we're showing
+            for field_name, _ in expense_categories:
+                if field_name != "other_expenses":  # Don't double-count other_expenses
+                    detailed_total += getattr(year, field_name, 0) or 0
+            
+            # Calculate remaining amount
+            remaining = max(0, total_expenses - detailed_total)
+            other_values.append(remaining)
+        
+        # Only add "Other" category if it has meaningful values
+        if any(v > 0 for v in other_values):
+            datasets.append({
+                "label": "Other Operating Expenses",
+                "data": other_values,
+                "borderColor": colors[len(expense_categories) % len(colors)],
+                "backgroundColor": colors[len(expense_categories) % len(colors)] + "20",
+                "fill": False,
+                "tension": 0.4,
+                "pointRadius": 4,
+                "pointHoverRadius": 6
+            })
+        
+        return FinancialChartData(
+            type="line",
+            labels=labels,
+            datasets=datasets,
+            title="Detailed Expense Trends"
+        )

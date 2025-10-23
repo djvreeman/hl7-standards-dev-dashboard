@@ -102,6 +102,35 @@ class FinancialYearData(BaseModel):
     other_expenses: float = Field(..., description="Other expenses")
     management_services: Optional[float] = Field(None, description="Management services (pre-2024)")
     
+    # Detailed expense categories
+    fees_for_services_legal: Optional[float] = Field(None, description="Fees for services - legal")
+    fees_for_services_accounting: Optional[float] = Field(None, description="Fees for services - accounting")
+    fees_for_services_investment: Optional[float] = Field(None, description="Fees for services - investment management")
+    fees_for_services_other: Optional[float] = Field(None, description="Fees for services - other")
+    
+    # Major additional expense categories
+    compensation_officers_directors: Optional[float] = Field(None, description="Compensation of officers and directors")
+    land_building_equipment_cost: Optional[float] = Field(None, description="Land, building, and equipment costs")
+    advertising: Optional[float] = Field(None, description="Advertising expenses")
+    office_expenses: Optional[float] = Field(None, description="Office expenses")
+    information_technology: Optional[float] = Field(None, description="Information technology expenses")
+    royalties: Optional[float] = Field(None, description="Royalties")
+    occupancy: Optional[float] = Field(None, description="Occupancy expenses")
+    travel: Optional[float] = Field(None, description="Travel expenses")
+    conferences_meetings: Optional[float] = Field(None, description="Conferences and meetings expenses")
+    interest: Optional[float] = Field(None, description="Interest expenses")
+    payments_to_affiliates: Optional[float] = Field(None, description="Payments to affiliates")
+    depreciation: Optional[float] = Field(None, description="Depreciation and depletion")
+    insurance: Optional[float] = Field(None, description="Insurance expenses")
+    all_other_expenses: Optional[float] = Field(None, description="All other expenses")
+    
+    # Specific other expense categories (from OtherExpensesGrp)
+    equipment_rental: Optional[float] = Field(None, description="Equipment rental")
+    distance_elearning: Optional[float] = Field(None, description="Distance eLearning")
+    credit_card_bank_fees: Optional[float] = Field(None, description="Credit card and bank fees")
+    fees_licenses: Optional[float] = Field(None, description="Fees and licenses")
+    exhibit_expense: Optional[float] = Field(None, description="Exhibit expenses")
+    
     # Balance sheet data
     total_assets: float = Field(..., description="Total assets")
     total_liabilities: float = Field(..., description="Total liabilities")

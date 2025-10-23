@@ -35,6 +35,7 @@ Please analyze the following financial data and provide a structured assessment 
 - Investment Income: $9,959
 - Salaries & Compensation: $512,281
 - Other Expenses: $4,493,557
+- Management Services: $1,882,545
 
 **2015:**
 - Total Revenue: $5,731,069
@@ -52,6 +53,7 @@ Please analyze the following financial data and provide a structured assessment 
 - Investment Income: $72,050
 - Salaries & Compensation: $515,500
 - Other Expenses: $4,656,105
+- Management Services: $1,944,627
 
 **2016:**
 - Total Revenue: $5,536,231
@@ -69,6 +71,7 @@ Please analyze the following financial data and provide a structured assessment 
 - Investment Income: $45,291
 - Salaries & Compensation: $450,956
 - Other Expenses: $5,133,240
+- Management Services: $1,971,965
 
 **2017:**
 - Total Revenue: $5,819,795
@@ -86,6 +89,7 @@ Please analyze the following financial data and provide a structured assessment 
 - Investment Income: $106,839
 - Salaries & Compensation: $656,970
 - Other Expenses: $5,218,878
+- Management Services: $1,338,199
 
 **2018:**
 - Total Revenue: $8,771,301
@@ -103,6 +107,7 @@ Please analyze the following financial data and provide a structured assessment 
 - Investment Income: $170,097
 - Salaries & Compensation: $811,103
 - Other Expenses: $7,002,684
+- Management Services: $2,040,037
 
 **2019:**
 - Total Revenue: $9,382,013
@@ -120,6 +125,7 @@ Please analyze the following financial data and provide a structured assessment 
 - Investment Income: $196,073
 - Salaries & Compensation: $855,648
 - Other Expenses: $7,008,245
+- Management Services: $2,220,522
 
 **2020:**
 - Total Revenue: $7,802,573
@@ -137,6 +143,7 @@ Please analyze the following financial data and provide a structured assessment 
 - Investment Income: $65,365
 - Salaries & Compensation: $821,406
 - Other Expenses: $5,851,400
+- Management Services: $2,381,085
 
 **2021:**
 - Total Revenue: $9,574,871
@@ -154,6 +161,7 @@ Please analyze the following financial data and provide a structured assessment 
 - Investment Income: $237,831
 - Salaries & Compensation: $850,664
 - Other Expenses: $6,648,094
+- Management Services: $2,555,120
 
 **2022:**
 - Total Revenue: $10,218,106
@@ -171,6 +179,7 @@ Please analyze the following financial data and provide a structured assessment 
 - Investment Income: $92,093
 - Salaries & Compensation: $1,197,161
 - Other Expenses: $8,290,362
+- Management Services: $2,686,306
 
 **2023:**
 - Total Revenue: $9,748,974
@@ -188,6 +197,7 @@ Please analyze the following financial data and provide a structured assessment 
 - Investment Income: $280,250
 - Salaries & Compensation: $1,748,486
 - Other Expenses: $10,461,098
+- Management Services: $3,739,545
 
 **2024:**
 - Total Revenue: $10,485,763
@@ -219,6 +229,14 @@ Please analyze the following financial data and provide a structured assessment 
 - In 2023, HL7 purchased AMG LLC for $3.3M in management services expenses
 - In 2024, AMG staff became HL7 employees, shifting from external management services to internal salaries
 - This structural change affects year-over-year comparisons
+- **Compensation Structure Impact**: The acquisition expanded the "Officers, Directors, Trustees, Key Employees & Highest Compensated Employees" category as former AMG executives and key personnel were integrated into HL7's leadership structure
+- **Growth Factors**: Recent increases in this compensation category reflect both executive pay growth and the addition of more senior roles from the AMG acquisition
+
+### Additional Operating Cost Factors (2023-2024)
+- **Financial Management Services**: HL7 brought on outside financial management services including a CFO/controller and 1.5 FTE accountant staff
+- **HR Services**: Hired Lemma Consulting for HR services
+- **Contractor Compensation**: These services are reported in the "Total number of independent contractors who received more than $100,000 of compensation from the organization = 23" category
+- **Cost Attribution**: While AMG acquisition is a significant factor, increased operating expenses also reflect strategic investments in financial management, HR services, and other professional services to support organizational growth
 
 ### Revenue Streams Analysis
 - **Program Services** (primary revenue): Membership dues, meetings, education, project management
@@ -227,9 +245,17 @@ Please analyze the following financial data and provide a structured assessment 
 - **Other Revenue**: Miscellaneous sources
 
 ### Expense Categories
-- **Salaries & Compensation**: Employee costs (includes former AMG staff in 2024)
-- **Other Expenses**: Operational costs, facilities, etc.
-- **Management Services**: Pre-2024 external AMG services
+- **Salaries & Compensation**: Regular employee costs (includes former AMG staff in 2024)
+- **Officers, Directors, Trustees, Key Employees & Highest Compensated Employees**: Executive and key personnel compensation (includes expanded roles post-AMG acquisition)
+- **Professional Services**: External consulting and contractor fees (includes financial management services, HR services, and other professional contractors)
+- **Land, Building & Equipment**: Capital and equipment costs
+- **Other Operating Expenses**: Remaining operational costs, facilities, etc.
+- **Management Services**: Pre-2024 external AMG services (transitioned to internal salaries in 2024)
+
+### Contractor Compensation Reporting
+- **High-Value Contractors**: Services from contractors receiving >$100,000 are reported in the "Total number of independent contractors who received more than $100,000 of compensation from the organization = 23" category
+- **Includes**: Financial management services (CFO/controller, 1.5 FTE accountants), HR services (Lemma Consulting), and other professional services
+- **Cost Attribution**: These represent strategic investments in organizational capacity, not just AMG acquisition-related costs
 
 ## 2025+ HL7 Strategic Vision: Revenue Diversification Strategies
 
@@ -263,11 +289,12 @@ Please provide insights on:
 
 1. **Financial Health Trends**: Multi-year patterns in revenue, expenses, and net income, with special attention to the impact of the April 2013 business model change
 2. **Revenue Diversification**: Stability and growth of different revenue streams, with specific attention to HL7's strategic goals for reducing reliance on membership dues and how the 2013 standards access change affected this
-3. **Expense Management**: Efficiency and cost control measures
-4. **Asset Management**: Net asset trends and financial stability
-5. **Business Model Evolution**: How the 2013 change to free standards access affected membership value proposition and revenue development over time
-6. **Strategic Implications**: Recommendations for financial sustainability that align with HL7's 2025+ strategic vision for revenue diversification
-7. **Strategic Alignment**: How current financial performance supports or challenges the organization's goals for new market offerings, partnerships, and external funding opportunities
+3. **Expense Management**: Efficiency and cost control measures, including detailed analysis of major expense categories and the multiple factors driving cost increases
+4. **Compensation Analysis**: Trends in executive and key personnel compensation, including the impact of the AMG acquisition on leadership structure and compensation levels, as well as strategic investments in financial management and HR services
+5. **Asset Management**: Net asset trends and financial stability
+6. **Business Model Evolution**: How the 2013 change to free standards access affected membership value proposition and revenue development over time
+7. **Strategic Implications**: Recommendations for financial sustainability that align with HL7's 2025+ strategic vision for revenue diversification
+8. **Strategic Alignment**: How current financial performance supports or challenges the organization's goals for new market offerings, partnerships, and external funding opportunities
 
 ## Output Format
 

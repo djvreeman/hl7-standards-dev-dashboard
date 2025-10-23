@@ -506,6 +506,10 @@
             grid-template-columns: 1fr;
         }
         
+        .charts-grid.two-column {
+            grid-template-columns: 1fr 1fr;
+        }
+        
         .layout-controls {
             display: flex;
             justify-content: flex-end;
@@ -717,6 +721,14 @@
                 </div>
             </div>
             
+            <!-- Program Service Revenue Breakdown -->
+            <div class="chart-container">
+                <div class="chart-title">Program Service Revenue Breakdown</div>
+                <div class="chart-wrapper">
+                    <canvas id="programServiceBreakdownChart"></canvas>
+                </div>
+            </div>
+            
             <!-- Expense Breakdown -->
             <div class="chart-container">
                 <div class="chart-title">Expense Breakdown</div>
@@ -725,11 +737,11 @@
                 </div>
             </div>
             
-            <!-- Program Service Revenue Breakdown -->
+            <!-- Detailed Expense Trends -->
             <div class="chart-container">
-                <div class="chart-title">Program Service Revenue Breakdown</div>
+                <div class="chart-title">Detailed Expense Trends Over Time</div>
                 <div class="chart-wrapper">
-                    <canvas id="programServiceBreakdownChart"></canvas>
+                    <canvas id="detailedExpenseTrendsChart"></canvas>
                 </div>
             </div>
         </div>
@@ -766,7 +778,7 @@
                     
                     // Special handling for Finance steward - create dropdown instead of direct link
                     if (steward === 'Finance') {
-                        return `<div class="nav-dropdown"><a href="/Finance" class="nav-link active" id="nav-finance">Finance</a><div class="dropdown-menu"><a href="/finance" class="dropdown-item">Financial Health Trends and Insights</a></div></div>`;
+                        return `<div class="nav-dropdown"><a href="/Finance" class="nav-link active" id="nav-finance">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item">Financial Health Trends and Insights</a></div></div>`;
                     }
                     
                     const href = (steward === 'HL7 International' || steward === 'HL7') ? '/' : `/${steward}`;
@@ -780,7 +792,7 @@
                 document.getElementById('steward-navigation').innerHTML = `
                     <a href="/" class="nav-link">HL7 International</a>
                     <a href="/CSDO" class="nav-link">CSDO</a>
-                    <div class="nav-dropdown"><a href="/Finance" class="nav-link active">Finance</a><div class="dropdown-menu"><a href="/finance" class="dropdown-item">Financial Health Trends and Insights</a></div></div>
+                    <div class="nav-dropdown"><a href="/Finance" class="nav-link active">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item">Financial Health Trends and Insights</a></div></div>
                 `;
             }
         }
@@ -903,10 +915,7 @@
                     <div class="note-box">
                         <div class="note-title">*Note on 2024 Salary Increase:</div>
                         <div class="note-content">
-                            HL7 acquired AMG LLC in 2023. In 2024, AMG staff became HL7 employees. 
-                            The 2023 Management Services expense ($3.3M) is now included in 2024 employee compensation. 
-                            Combined personnel costs actually decreased from $5.1M (2023) to $4.4M (2024), 
-                            reflecting a 13.7% efficiency gain.
+                            The staff from AMG LLC were hired by HL7 in 2023. Therefore, the prior Management Services expenses (e.g. $3.3M in 2023) are now reflected in the salaries and compensation of employees. 
                         </div>
                     </div>
                 `;
@@ -926,7 +935,8 @@
                 'revenue-composition', 
                 'key-revenue-streams',
                 'expense-breakdown',
-                'program-service-breakdown'
+                'program-service-breakdown',
+                'detailed-expense-trends'
             ];
                 
                 for (const chartType of chartTypes) {
@@ -1002,7 +1012,8 @@
                 'revenue-composition': 'revenueCompositionChart',
                 'key-revenue-streams': 'keyRevenueStreamsChart',
                 'expense-breakdown': 'expenseBreakdownChart',
-                'program-service-breakdown': 'programServiceBreakdownChart'
+                'program-service-breakdown': 'programServiceBreakdownChart',
+                'detailed-expense-trends': 'detailedExpenseTrendsChart'
             };
             return mapping[chartType];
         }

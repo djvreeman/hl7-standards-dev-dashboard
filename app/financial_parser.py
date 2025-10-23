@@ -126,15 +126,79 @@ class Form990Parser:
         salaries_compensation = get_amount("CYSalariesCompEmpBnftPaidAmt")
         other_expenses = get_amount("CYOtherExpensesAmt")
         
+        # Detailed expense categories
+        fees_for_services_legal = get_amount("FeesForServicesLegalGrp/TotalAmt")
+        fees_for_services_accounting = get_amount("FeesForServicesAccountingGrp/TotalAmt")
+        fees_for_services_investment = get_amount("FeesForSrvcInvstMgmntFeesGrp/TotalAmt")
+        fees_for_services_other = get_amount("FeesForServicesOtherGrp/TotalAmt")
+        advertising = get_amount("AdvertisingGrp/TotalAmt")
+        office_expenses = get_amount("OfficeExpensesGrp/TotalAmt")
+        information_technology = get_amount("InformationTechnologyGrp/TotalAmt")
+        royalties = get_amount("RoyaltiesGrp/TotalAmt")
+        occupancy = get_amount("OccupancyGrp/TotalAmt")
+        travel = get_amount("TravelGrp/TotalAmt")
+        conferences_meetings = get_amount("ConferencesMeetingsGrp/TotalAmt")
+        interest = get_amount("InterestGrp/TotalAmt")
+        payments_to_affiliates = get_amount("PaymentsToAffiliatesGrp/TotalAmt")
+        depreciation = get_amount("DepreciationDepletionGrp/TotalAmt")
+        insurance = get_amount("InsuranceGrp/TotalAmt")
+        all_other_expenses = get_amount("AllOtherExpensesGrp/TotalAmt")
+        
+        # Parse specific other expense categories from OtherExpensesGrp elements
+        equipment_rental = self._extract_other_expense_by_description(irs990, "Equipment rental")
+        distance_elearning = self._extract_other_expense_by_description(irs990, "Distance eLearning")
+        credit_card_bank_fees = self._extract_other_expense_by_description(irs990, "Credit card and bank fees")
+        fees_licenses = self._extract_other_expense_by_description(irs990, "Fees and licenses")
+        exhibit_expense = self._extract_other_expense_by_description(irs990, "Exhibit expense")
+        
         # Management services (pre-2024) - this was the AMG LLC expense
         management_services = None
         if year < 2024:
-            # Look for management services in other expenses or as a separate line
-            # This might need adjustment based on actual XML structure
-            management_services = get_amount("CYManagementAndGeneralExpensesAmt", 0.0)
-            if management_services == 0:
-                # Try alternative field names
-                management_services = get_amount("CYTotalManagementAndGeneralExpensesAmt", 0.0)
+            # Look for management services in the FeesForServicesManagementGrp field
+            management_grp = irs990.find(".//efile:FeesForServicesManagementGrp", self.namespace)
+            if management_grp is not None:
+                total_amt = management_grp.find("efile:TotalAmt", self.namespace)
+                if total_amt is not None and total_amt.text:
+                    try:
+                        management_services = float(total_amt.text)
+                    except ValueError:
+                        management_services = 0.0
+                else:
+                    management_services = 0.0
+            else:
+                management_services = 0.0
+        
+        # Additional major expense categories
+        # Handle nested elements manually
+        fees_for_services_other = None
+        fees_other_grp = irs990.find(".//efile:FeesForServicesOtherGrp", self.namespace)
+        if fees_other_grp is not None:
+            total_amt = fees_other_grp.find("efile:TotalAmt", self.namespace)
+            if total_amt is not None and total_amt.text:
+                try:
+                    fees_for_services_other = float(total_amt.text)
+                except ValueError:
+                    fees_for_services_other = 0.0
+            else:
+                fees_for_services_other = 0.0
+        else:
+            fees_for_services_other = 0.0
+        
+        compensation_officers_directors = None
+        comp_officers_grp = irs990.find(".//efile:CompCurrentOfcrDirectorsGrp", self.namespace)
+        if comp_officers_grp is not None:
+            total_amt = comp_officers_grp.find("efile:TotalAmt", self.namespace)
+            if total_amt is not None and total_amt.text:
+                try:
+                    compensation_officers_directors = float(total_amt.text)
+                except ValueError:
+                    compensation_officers_directors = 0.0
+            else:
+                compensation_officers_directors = 0.0
+        else:
+            compensation_officers_directors = 0.0
+        
+        land_building_equipment_cost = get_amount("LandBldgEquipCostOrOtherBssAmt")
         
         # Balance sheet data
         total_assets = get_amount("TotalAssetsEOYAmt")
@@ -200,12 +264,51 @@ class Form990Parser:
             salaries_compensation=salaries_compensation,
             other_expenses=other_expenses,
             management_services=management_services,
+            fees_for_services_legal=fees_for_services_legal,
+            fees_for_services_accounting=fees_for_services_accounting,
+            fees_for_services_investment=fees_for_services_investment,
+            fees_for_services_other=fees_for_services_other,
+            advertising=advertising,
+            office_expenses=office_expenses,
+            information_technology=information_technology,
+            royalties=royalties,
+            occupancy=occupancy,
+            travel=travel,
+            conferences_meetings=conferences_meetings,
+            interest=interest,
+            payments_to_affiliates=payments_to_affiliates,
+            depreciation=depreciation,
+            insurance=insurance,
+            all_other_expenses=all_other_expenses,
+            equipment_rental=equipment_rental,
+            distance_elearning=distance_elearning,
+            credit_card_bank_fees=credit_card_bank_fees,
+            fees_licenses=fees_licenses,
+            exhibit_expense=exhibit_expense,
+            compensation_officers_directors=compensation_officers_directors,
+            land_building_equipment_cost=land_building_equipment_cost,
             total_assets=total_assets,
             total_liabilities=total_liabilities,
             net_assets=net_assets,
             total_employees=total_employees,
             total_volunteers=total_volunteers
         )
+    
+    def _extract_other_expense_by_description(self, irs990: ET.Element, description: str) -> Optional[float]:
+        """Extract expense amount from OtherExpensesGrp by description"""
+        other_expenses = irs990.findall(".//efile:OtherExpensesGrp", self.namespace)
+        for expense in other_expenses:
+            desc_element = expense.find("efile:Desc", self.namespace)
+            if desc_element is not None and desc_element.text:
+                # Check for partial matches (case insensitive)
+                if description.lower() in desc_element.text.lower():
+                    amount_element = expense.find("efile:TotalAmt", self.namespace)
+                    if amount_element is not None and amount_element.text:
+                        try:
+                            return float(amount_element.text)
+                        except ValueError:
+                            pass
+        return None
     
     def _calculate_trends(self, financial_data: List[FinancialYearData]) -> List[FinancialTrend]:
         """Calculate revenue and expense trends"""

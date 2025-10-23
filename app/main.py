@@ -153,8 +153,8 @@ async def get_stewards():
         raise HTTPException(status_code=500, detail=str(e))
 
 # Financial Health Dashboard Endpoints
-@app.get("/finance", response_class=HTMLResponse)
-async def finance_dashboard(request: Request):
+@app.get("/financial-health", response_class=HTMLResponse)
+async def financial_health_dashboard(request: Request):
     """Financial health dashboard page"""
     return templates.TemplateResponse(
         "finance_dashboard.html",
@@ -194,6 +194,8 @@ async def get_financial_chart(chart_type: str):
             return financial_service.get_expense_breakdown_chart()
         elif chart_type == "program-service-breakdown":
             return financial_service.get_program_service_breakdown_chart()
+        elif chart_type == "detailed-expense-trends":
+            return financial_service.get_detailed_expense_trends_chart()
         else:
             raise HTTPException(status_code=404, detail="Chart type not found")
     except Exception as e:
