@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Bryn Rhodes",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Robert Jenders",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

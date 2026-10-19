@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Paul",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Jeff Brown",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "MaryKay McDaniel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Benoit Schoeffler",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

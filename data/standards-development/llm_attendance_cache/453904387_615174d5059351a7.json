@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "Gary Dickinson, FHL7",
+      "organization": "EHR Standards Consulting",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Ritter, FHL7",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Mark Janczewski, MD, MPH",
+      "organization": "Medical Networks, LLC",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Lincoln Weed JD",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "David Schlossman, MD",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Moehrke",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Sam Schifman",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Mary Lou Moewe",
+      "organization": "Cognizant",
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

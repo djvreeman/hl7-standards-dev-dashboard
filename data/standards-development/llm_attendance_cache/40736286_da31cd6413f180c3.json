@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Melva",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Jean",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Daniel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bob Dieterle",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Julie James",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

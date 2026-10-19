@@ -1,0 +1,219 @@
+{
+  "generated_at": "2026-10-16T01:57:02.182886+00:00",
+  "source": "data/working/process-documents/workgroup-health/wg_health_finals.json",
+  "status": "pass",
+  "summary": {
+    "checks": 14,
+    "passed": 13,
+    "failed_errors": 0,
+    "failed_warnings": 1
+  },
+  "gold_star_timeline": [
+    {
+      "cycle": "2019Jan",
+      "wg_count": 34,
+      "gold_star_count": 17
+    },
+    {
+      "cycle": "2019May",
+      "wg_count": 33,
+      "gold_star_count": 21
+    },
+    {
+      "cycle": "2019Sep",
+      "wg_count": 32,
+      "gold_star_count": 17
+    },
+    {
+      "cycle": "2020Feb",
+      "wg_count": 31,
+      "gold_star_count": 16
+    },
+    {
+      "cycle": "2020May",
+      "wg_count": 34,
+      "gold_star_count": 17
+    },
+    {
+      "cycle": "2020Sep",
+      "wg_count": 33,
+      "gold_star_count": 12
+    },
+    {
+      "cycle": "2021Jan",
+      "wg_count": 30,
+      "gold_star_count": 17
+    },
+    {
+      "cycle": "2021May",
+      "wg_count": 30,
+      "gold_star_count": 16
+    },
+    {
+      "cycle": "2021Sep",
+      "wg_count": 33,
+      "gold_star_count": 26
+    },
+    {
+      "cycle": "2022Jan",
+      "wg_count": 33,
+      "gold_star_count": 29
+    },
+    {
+      "cycle": "2022May",
+      "wg_count": 33,
+      "gold_star_count": 25
+    },
+    {
+      "cycle": "2022Sep",
+      "wg_count": 33,
+      "gold_star_count": 26
+    },
+    {
+      "cycle": "2023Jan",
+      "wg_count": 32,
+      "gold_star_count": 26
+    },
+    {
+      "cycle": "2023May",
+      "wg_count": 32,
+      "gold_star_count": 24
+    },
+    {
+      "cycle": "2023Sep",
+      "wg_count": 32,
+      "gold_star_count": 27
+    },
+    {
+      "cycle": "2024Jan",
+      "wg_count": 32,
+      "gold_star_count": 25
+    },
+    {
+      "cycle": "2024May",
+      "wg_count": 32,
+      "gold_star_count": 27
+    },
+    {
+      "cycle": "2024Sep",
+      "wg_count": 32,
+      "gold_star_count": 24
+    },
+    {
+      "cycle": "2025Jan",
+      "wg_count": 31,
+      "gold_star_count": 21
+    },
+    {
+      "cycle": "2025May",
+      "wg_count": 31,
+      "gold_star_count": 21
+    },
+    {
+      "cycle": "2025Sep",
+      "wg_count": 31,
+      "gold_star_count": 24
+    },
+    {
+      "cycle": "2026Jan",
+      "wg_count": 31,
+      "gold_star_count": 21
+    },
+    {
+      "cycle": "2026May",
+      "wg_count": 30,
+      "gold_star_count": 15
+    },
+    {
+      "cycle": "2026Sep",
+      "wg_count": 30,
+      "gold_star_count": 25
+    }
+  ],
+  "checks": [
+    {
+      "check": "expected_cycles_present",
+      "ok": true,
+      "severity": "error",
+      "detail": "all 24 Final cycles present"
+    },
+    {
+      "check": "no_interim_sources",
+      "ok": true,
+      "severity": "error",
+      "detail": "no Interim PDFs in sources"
+    },
+    {
+      "check": "no_junk_wg_names",
+      "ok": true,
+      "severity": "error",
+      "detail": "no junk names"
+    },
+    {
+      "check": "no_acronym_prefixed_display_names",
+      "ok": true,
+      "severity": "error",
+      "detail": "display names normalized"
+    },
+    {
+      "check": "no_year_as_infraction",
+      "ok": true,
+      "severity": "error",
+      "detail": "no year-like infractions"
+    },
+    {
+      "check": "total_is_newest_t_column",
+      "ok": true,
+      "severity": "error",
+      "detail": "total_infractions == prior_period_infractions[0]"
+    },
+    {
+      "check": "gold_star_usually_on_green",
+      "ok": false,
+      "severity": "warning",
+      "detail": "2019Sep clinical-interoperability-council: gold_star with band=yellow"
+    },
+    {
+      "check": "health_bands_match_legend",
+      "ok": true,
+      "severity": "error",
+      "detail": "green 0\u20133 / yellow 4\u20137 / red 8+"
+    },
+    {
+      "check": "no_duplicate_keys_per_cycle",
+      "ok": true,
+      "severity": "error",
+      "detail": "unique wg_key per cycle"
+    },
+    {
+      "check": "wg_count_sane",
+      "ok": true,
+      "severity": "warning",
+      "detail": "2019Jan:34, 2019May:33, 2019Sep:32, 2020Feb:31, 2020May:34, 2020Sep:33, 2021Jan:30, 2021May:30, 2021Sep:33, 2022Jan:33, 2022May:33, 2022Sep:33, 2023Jan:32, 2023May:32, 2023Sep:32, 2024Jan:32, 2024May:32, 2024Sep:32, 2025Jan:31, 2025May:31, 2025Sep:31, 2026Jan:31, 2026May:30, 2026Sep:30"
+    },
+    {
+      "check": "spot_checks",
+      "ok": true,
+      "severity": "error",
+      "detail": "all 8 spot checks passed"
+    },
+    {
+      "check": "period_labels",
+      "ok": true,
+      "severity": "error",
+      "detail": "all 4 period labels ok"
+    },
+    {
+      "check": "2026Sep_pdf_gold_stars",
+      "ok": true,
+      "severity": "error",
+      "detail": "wgs=30 gold=25 bands=['green'] no_star=['conformance', 'human-and-social-services', 'learning-health-systems', 'mobile-health', 'payer-provider-information-exchange'] non_green=none"
+    },
+    {
+      "check": "gold_star_timeline_present",
+      "ok": true,
+      "severity": "error",
+      "detail": "2019Jan:17/34, 2019May:21/33, 2019Sep:17/32, 2020Feb:16/31, 2020May:17/34, 2020Sep:12/33, 2021Jan:17/30, 2021May:16/30, 2021Sep:26/33, 2022Jan:29/33, 2022May:25/33, 2022Sep:26/33, 2023Jan:26/32, 2023May:24/32, 2023Sep:27/32, 2024Jan:25/32, 2024May:27/32, 2024Sep:24/32, 2025Jan:21/31, 2025May:21/31, 2025Sep:24/31, 2026Jan:21/31, 2026May:15/30, 2026Sep:25/30"
+    }
+  ]
+}

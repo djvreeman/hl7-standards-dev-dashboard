@@ -1,0 +1,83 @@
+{
+  "attendees": [
+    {
+      "name": "Abdullah Rafiqi",
+      "organization": "ICF",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Adam Holmes",
+      "organization": "MITRE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Amenze Okpah",
+      "organization": "NCQA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Anne Smith",
+      "organization": "NCQA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Beth Snevely",
+      "organization": "ICF",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bryn Rhodes",
+      "organization": "ICF",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Chris Schuler",
+      "organization": "Smile Digital Health",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gail Winters",
+      "organization": "Telligen",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gayathri Jayawardena",
+      "organization": "ICF",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jasmin Smith",
+      "organization": "NCQA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jen Seeman",
+      "organization": "ICF",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jessica Cronin",
+      "organization": "Mathematica",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Juliet K. Rubini",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    }
+  ],
+  "confidence": 1
+}

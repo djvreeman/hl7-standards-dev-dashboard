@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "VM",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "KR",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Denis Gagne",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joel Gruenberg",
+      "organization": "Interoperability Institute",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kendrah Baker",
+      "organization": "Interoperability Institute",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rob Lario",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lorraine Constable",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Zimmerling",
+      "organization": "Harris",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

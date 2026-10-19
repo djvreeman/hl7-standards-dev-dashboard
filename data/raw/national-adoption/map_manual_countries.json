@@ -1,0 +1,11 @@
+{
+  "description": "Countries manually confirmed for the national-adoption map that should count in the KPI even before (or in addition to) appearing as Zotero country tags. Prefer adding Zotero evidence with a country keyword; keep entries here until the Zotero sync reflects them, then remove.",
+  "countries": [
+    {
+      "country": "New Zealand",
+      "added": "2026-09-11",
+      "evidence_ris": "data/raw/national-adoption/new_zealand_hl7_fhir.ris",
+      "notes": "2025 survey advised FHIR; absent from 2026 Mandated/Advised lists (false negative / non-reporting). National FHIR Base, HPI, and Shared Care IGs plus Health NZ HPI guidance."
+    }
+  ]
+}

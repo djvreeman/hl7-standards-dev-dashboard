@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Hugh",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "MaryAnn Slack",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Brian Alper",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kate Ebrill",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dion McMurtrie",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

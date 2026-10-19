@@ -1,0 +1,77 @@
+{
+  "attendees": [
+    {
+      "name": "Riki",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "JD",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Ralf",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Hans",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Lorraine",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Vassil Peytchev",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ralf Herzog",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Nick Radov",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ulrike Merrick",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alessandro Sulis",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Cooper Thompson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Quinn",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

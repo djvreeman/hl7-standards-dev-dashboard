@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "Patrick Werner",
+      "organization": "Clinical Genomics",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lynn Laakso",
+      "organization": "HQ",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Saul Kravitz",
+      "organization": "MITRE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jeff Brown",
+      "organization": "Lantana Consulting Group",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jason Vogt",
+      "organization": "Meditech",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Marc Duteau",
+      "organization": "Duteau Design",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Andrew Fagan",
+      "organization": "Oracle Cerner",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Stan Rankins",
+      "organization": "Telligen",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

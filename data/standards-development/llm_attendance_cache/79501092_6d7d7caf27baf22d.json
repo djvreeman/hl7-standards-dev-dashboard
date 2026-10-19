@@ -1,0 +1,59 @@
+{
+  "attendees": [
+    {
+      "name": "Giorgio",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ken Rubin",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ron Parker",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "SL",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "VM",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lloyd",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jerry",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Shane McNamee",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Preston Lee",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

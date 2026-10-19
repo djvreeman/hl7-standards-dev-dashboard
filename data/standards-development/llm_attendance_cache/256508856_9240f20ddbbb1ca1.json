@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Himali Saitwal",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Reuben Daniels",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

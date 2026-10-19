@@ -1,0 +1,83 @@
+{
+  "attendees": [
+    {
+      "name": "Bob M",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Patrick",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Jamie",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Mullai",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "JJ",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "LM",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "BM",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Rachel",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Kevin",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Hayden Bader",
+      "organization": "Epic",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "May Terry",
+      "organization": "MITRE",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Bob Dolin",
+      "organization": "Elimu Informatics",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Armando Dechiara",
+      "organization": "D.HUB Engineering",
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

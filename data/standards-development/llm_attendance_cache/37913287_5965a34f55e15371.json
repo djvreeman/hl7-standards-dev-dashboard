@@ -1,0 +1,77 @@
+{
+  "attendees": [
+    {
+      "name": "Alexander Henket",
+      "organization": "Nictiz",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Andrew Statler",
+      "organization": "Cerner",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Austin Kreisler",
+      "organization": "Leidos",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Avinash Shanbhag",
+      "organization": "ONC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Benjamin Flessner",
+      "organization": "Redox",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Brett Marquard",
+      "organization": "Waveone",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Calvin Beebe",
+      "organization": "Mayo Clinic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gay Dolin",
+      "organization": "IMO",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "George Dixon",
+      "organization": "Allscripts",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jeff Brown",
+      "organization": "J2 Interactive",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joe Lamy",
+      "organization": "AEGIS.net",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Keith Boone",
+      "organization": "Audacious Inquiry",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

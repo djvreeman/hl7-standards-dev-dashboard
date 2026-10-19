@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Erin Holt",
+      "organization": "EHC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joginder Madra",
+      "organization": "JM",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Craig Newman",
+      "organization": "CN",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Laura Rappleye",
+      "organization": "LR",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

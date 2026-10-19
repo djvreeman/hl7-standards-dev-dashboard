@@ -1,0 +1,11 @@
+{
+  "attendees": [
+    {
+      "name": "Ken Rubin",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,173 @@
+{
+  "attendees": [
+    {
+      "name": "Diana Wright",
+      "organization": "Lantana",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Zabrina Gonzaga",
+      "organization": "Lantana",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rick Geimer",
+      "organization": "Lantana",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Amy Vandenbroucke",
+      "organization": "National POLST",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rachel Abbey",
+      "organization": "OS/ONC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Chinonye Onwunli",
+      "organization": "OS/ONC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gay Dolin",
+      "organization": "Namaste Informatics",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lisa Nelson",
+      "organization": "MaxMD",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Becky Learn",
+      "organization": "Indiana Health Information Exchange",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abby Dotson",
+      "organization": "Oregon Health & Science Univ.",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Robert (Rim) Cothren",
+      "organization": "A Cunning Plan; CA Assoc. HIEs",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Andrea Pitkus",
+      "organization": "Univ. Wisconsin",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Eric Chaney",
+      "organization": "NHTSA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Becky Gradl",
+      "organization": "Academy of Nutrition and Dietetics",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Corey Spears",
+      "organization": "MITRE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Christian Witt",
+      "organization": "Beyond Lucid",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Saylor",
+      "organization": "Beyond Lucid",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jonathon Feit",
+      "organization": "Beyond Lucid",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Brooke Miles",
+      "organization": "Cerner",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dan Wortmann",
+      "organization": "Epic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Daniel Rutz",
+      "organization": "Epic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Brodsky",
+      "organization": "Epic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Remle Crowe",
+      "organization": "ESO",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kashif Khan",
+      "organization": "Image Trend",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kelly Clarke",
+      "organization": "Image Trend",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Maria Moen",
+      "organization": "ADVault",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Natasha Kreisle",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jay Ostby",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

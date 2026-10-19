@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Becky Gradl",
+      "organization": "Academy of Nutrition and Dietetics",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lorraine Constable",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Floyd Eisenberg",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Anne Smith",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abdulah Rafiqi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jason Vogt",
+      "organization": "MEDITECH",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

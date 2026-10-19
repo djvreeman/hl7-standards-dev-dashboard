@@ -1,0 +1,77 @@
+{
+  "attendees": [
+    {
+      "name": "Joanne Dehnbostel",
+      "organization": "Computable Publishing LLC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Russ Ott",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gay Dolin",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Al Taylor",
+      "organization": "ONC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John D'Amore",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mat Davis",
+      "organization": "DHIT",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joe Quinn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Brett Marquard",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ryan Zoellner",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Linda Michaelsen",
+      "organization": "Optum",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Benjamin Flessner",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Marc Duteau",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Robert Jenders",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Anne Wizauer",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Rick Geimer",
+      "organization": "Lantana Group",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Csarmann",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

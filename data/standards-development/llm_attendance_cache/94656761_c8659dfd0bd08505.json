@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "HCSC",
+      "organization": "ONC *FAST*",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rachel Foerster & Associates",
+      "organization": "ONC *FAST*",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "POCP",
+      "organization": "ONC *FAST*",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "ONC",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Allscripts",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Cambia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

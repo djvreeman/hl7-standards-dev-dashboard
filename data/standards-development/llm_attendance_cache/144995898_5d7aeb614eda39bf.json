@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Maria Moen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Corey Spears",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

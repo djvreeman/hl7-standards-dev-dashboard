@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "Craig Newman",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Joginder Madra",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Sarah Gaunt",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "John Loonsk",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "AbdulMalik",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Cindy Bush",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Laura Rappleye",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

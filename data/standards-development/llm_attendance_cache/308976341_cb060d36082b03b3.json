@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Lisa R. Nelson",
+      "organization": "MyDirectives, Inc.",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Linda Michaelsen",
+      "organization": "Optum",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Susan Rand",
+      "organization": "Dogwood Health Consulting",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Raychelle Fernandez",
+      "organization": "Dynamic Health IT",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Zabrina Gonzaga",
+      "organization": "Lantana",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kyle MacLennan",
+      "organization": "MEDITECH, Inc.",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

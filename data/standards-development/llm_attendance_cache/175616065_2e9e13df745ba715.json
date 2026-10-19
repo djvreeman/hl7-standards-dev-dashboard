@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "Abdullah Rafiqi",
+      "organization": "ICF",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abigail Watson",
+      "organization": "MITRE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Allanah Marsh",
+      "organization": "Mathematica",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Amenze Okpah",
+      "organization": "NCQA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Amol Vyas",
+      "organization": "NCQA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Anne Smith",
+      "organization": "NCQA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ben Hamlin",
+      "organization": "NCQA",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

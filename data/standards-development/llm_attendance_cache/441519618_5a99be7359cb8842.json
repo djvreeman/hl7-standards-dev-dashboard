@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "James Cummings",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jan Oldenburg",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rachel Richesson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sarah Tonn",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Virginia Lorenzi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Alex",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Paul Petronelli",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joe Lamy",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mohammad",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Essien GE",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

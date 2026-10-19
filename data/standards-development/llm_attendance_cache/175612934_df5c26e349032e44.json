@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Riki",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "JD",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Rob",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Lorraine",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Hans",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Marti",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

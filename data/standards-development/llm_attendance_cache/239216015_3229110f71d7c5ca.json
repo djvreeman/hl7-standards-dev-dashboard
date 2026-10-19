@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Dave Hill",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Maria Moen",
+      "organization": "MyDirectives",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lisa Nelson",
+      "organization": "MyDirectives",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "May Terry",
+      "organization": "MyDirectives",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Moehrke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

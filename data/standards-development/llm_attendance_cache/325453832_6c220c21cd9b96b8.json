@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "Michael Faught",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Erik Moll",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Javier",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kathrin Riech",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Martin Hurrell",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Grant Forest",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Luc Chatty",
+      "organization": "fyrstain.com",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

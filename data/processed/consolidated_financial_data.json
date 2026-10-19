@@ -1,0 +1,978 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": null,
+    "sources": [
+      "audited",
+      "budget"
+    ],
+    "description": "Consolidated financial data from audited financial statements and budgets"
+  },
+  "years": [
+    {
+      "year": 2019,
+      "audited": {
+        "year": 2019,
+        "total_revenue": 9935064.0,
+        "total_expenses": 7820815.0,
+        "net_income": 2114249.0,
+        "program_service_revenue": 7122991.0,
+        "contributions_grants": 0.0,
+        "investment_income": 0.0,
+        "other_revenue": 0.0,
+        "membership_dues": 2983610.0,
+        "meetings_conferences": 2698811.0,
+        "education_certification": 1099741.0,
+        "project_management_fees": 340829.0,
+        "qualified_sponsorship_payments": null,
+        "other_program_services": null,
+        "salaries_compensation": 0.0,
+        "other_expenses": 0.0,
+        "management_services": null,
+        "fees_for_services_legal": null,
+        "fees_for_services_accounting": null,
+        "fees_for_services_investment": null,
+        "fees_for_services_other": null,
+        "compensation_officers_directors": null,
+        "land_building_equipment_cost": null,
+        "advertising": null,
+        "office_expenses": null,
+        "information_technology": null,
+        "royalties": null,
+        "occupancy": null,
+        "travel": null,
+        "conferences_meetings": null,
+        "interest": null,
+        "payments_to_affiliates": null,
+        "depreciation": null,
+        "insurance": null,
+        "all_other_expenses": null,
+        "equipment_rental": null,
+        "distance_elearning": null,
+        "credit_card_bank_fees": null,
+        "fees_licenses": null,
+        "exhibit_expense": null,
+        "total_assets": 0.0,
+        "total_liabilities": 0.0,
+        "net_assets": 0.0,
+        "total_employees": 0,
+        "total_volunteers": 0,
+        "functional_expenses": {
+          "year": 2019,
+          "categories": [
+            {
+              "category_name": "Management fees",
+              "program_services": 0.0,
+              "supporting_services": 1484972.0,
+              "total": 735550.0
+            },
+            {
+              "category_name": "Other professional fees",
+              "program_services": 0.0,
+              "supporting_services": 9831.0,
+              "total": 3021.0
+            },
+            {
+              "category_name": "Advertising and promotion",
+              "program_services": 0.0,
+              "supporting_services": 8475.0,
+              "total": 8475.0
+            },
+            {
+              "category_name": "Office expenses",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 44456.0
+            },
+            {
+              "category_name": "Information technology",
+              "program_services": 0.0,
+              "supporting_services": 481140.0,
+              "total": 481140.0
+            },
+            {
+              "category_name": "Travel",
+              "program_services": 0.0,
+              "supporting_services": 416168.0,
+              "total": 416168.0
+            },
+            {
+              "category_name": "Conferences and meetings",
+              "program_services": 0.0,
+              "supporting_services": 88742.0,
+              "total": 7642.0
+            },
+            {
+              "category_name": "Fees and licenses",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 10293.0
+            },
+            {
+              "category_name": "All other",
+              "program_services": 0.0,
+              "supporting_services": 77125.0,
+              "total": 77125.0
+            },
+            {
+              "category_name": "expenses",
+              "program_services": 0.0,
+              "supporting_services": 5271577.0,
+              "total": 2549238.0
+            }
+          ],
+          "total_program_services": 2518905.0,
+          "total_supporting_services": 507985.0,
+          "total_expenses": 3026890.0
+        }
+      },
+      "budget_draft": null,
+      "budget_final": null,
+      "revenue_variance_draft": null,
+      "revenue_variance_final": null,
+      "expense_variance_draft": null,
+      "expense_variance_final": null
+    },
+    {
+      "year": 2020,
+      "audited": {
+        "year": 2020,
+        "total_revenue": 7982167.0,
+        "total_expenses": 6629396.0,
+        "net_income": 1352771.0,
+        "program_service_revenue": 5616555.0,
+        "contributions_grants": 1564790.0,
+        "investment_income": 0.0,
+        "other_revenue": 251399.0,
+        "membership_dues": 3048015.0,
+        "meetings_conferences": 1073913.0,
+        "education_certification": 1258412.0,
+        "project_management_fees": 236215.0,
+        "qualified_sponsorship_payments": null,
+        "other_program_services": null,
+        "salaries_compensation": 0.0,
+        "other_expenses": 0.0,
+        "management_services": null,
+        "fees_for_services_legal": null,
+        "fees_for_services_accounting": null,
+        "fees_for_services_investment": null,
+        "fees_for_services_other": null,
+        "compensation_officers_directors": null,
+        "land_building_equipment_cost": null,
+        "advertising": null,
+        "office_expenses": null,
+        "information_technology": null,
+        "royalties": null,
+        "occupancy": null,
+        "travel": null,
+        "conferences_meetings": null,
+        "interest": null,
+        "payments_to_affiliates": null,
+        "depreciation": null,
+        "insurance": null,
+        "all_other_expenses": null,
+        "equipment_rental": null,
+        "distance_elearning": null,
+        "credit_card_bank_fees": null,
+        "fees_licenses": null,
+        "exhibit_expense": null,
+        "total_assets": 0.0,
+        "total_liabilities": 0.0,
+        "net_assets": 0.0,
+        "total_employees": 0,
+        "total_volunteers": 0,
+        "functional_expenses": {
+          "year": 2020,
+          "categories": [
+            {
+              "category_name": "Management fees",
+              "program_services": 0.0,
+              "supporting_services": 1569089.0,
+              "total": 811996.0
+            },
+            {
+              "category_name": "Other professional fees",
+              "program_services": 0.0,
+              "supporting_services": 9841.0,
+              "total": 861.0
+            },
+            {
+              "category_name": "Advertising and promotion",
+              "program_services": 0.0,
+              "supporting_services": 276156.0,
+              "total": 276156.0
+            },
+            {
+              "category_name": "Office expenses",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 44133.0
+            },
+            {
+              "category_name": "Information technology",
+              "program_services": 0.0,
+              "supporting_services": 56782.0,
+              "total": 56782.0
+            },
+            {
+              "category_name": "Travel",
+              "program_services": 0.0,
+              "supporting_services": 61538.0,
+              "total": 61538.0
+            },
+            {
+              "category_name": "Conferences and meetings",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 331524.0
+            },
+            {
+              "category_name": "Fees and licenses",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 32.0
+            },
+            {
+              "category_name": "All other",
+              "program_services": 0.0,
+              "supporting_services": 1132.0,
+              "total": 1132.0
+            },
+            {
+              "category_name": "expenses",
+              "program_services": 0.0,
+              "supporting_services": 4240944.0,
+              "total": 2388452.0
+            }
+          ],
+          "total_program_services": 1913396.0,
+          "total_supporting_services": 481610.0,
+          "total_expenses": 2395006.0
+        }
+      },
+      "budget_draft": null,
+      "budget_final": null,
+      "revenue_variance_draft": null,
+      "revenue_variance_final": null,
+      "expense_variance_draft": null,
+      "expense_variance_final": null
+    },
+    {
+      "year": 2021,
+      "audited": {
+        "year": 2021,
+        "total_revenue": 7982167.0,
+        "total_expenses": 6629396.0,
+        "net_income": 1352771.0,
+        "program_service_revenue": 5616555.0,
+        "contributions_grants": 1564790.0,
+        "investment_income": 0.0,
+        "other_revenue": 251399.0,
+        "membership_dues": 3048015.0,
+        "meetings_conferences": 1073913.0,
+        "education_certification": 1258412.0,
+        "project_management_fees": 236215.0,
+        "qualified_sponsorship_payments": null,
+        "other_program_services": null,
+        "salaries_compensation": 0.0,
+        "other_expenses": 0.0,
+        "management_services": null,
+        "fees_for_services_legal": null,
+        "fees_for_services_accounting": null,
+        "fees_for_services_investment": null,
+        "fees_for_services_other": null,
+        "compensation_officers_directors": null,
+        "land_building_equipment_cost": null,
+        "advertising": null,
+        "office_expenses": null,
+        "information_technology": null,
+        "royalties": null,
+        "occupancy": null,
+        "travel": null,
+        "conferences_meetings": null,
+        "interest": null,
+        "payments_to_affiliates": null,
+        "depreciation": null,
+        "insurance": null,
+        "all_other_expenses": null,
+        "equipment_rental": null,
+        "distance_elearning": null,
+        "credit_card_bank_fees": null,
+        "fees_licenses": null,
+        "exhibit_expense": null,
+        "total_assets": 0.0,
+        "total_liabilities": 0.0,
+        "net_assets": 0.0,
+        "total_employees": 0,
+        "total_volunteers": 0,
+        "functional_expenses": {
+          "year": 2021,
+          "categories": [
+            {
+              "category_name": "For the year ended December",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 2020.0
+            },
+            {
+              "category_name": "Management fees",
+              "program_services": 1704587.0,
+              "supporting_services": 850533.0,
+              "total": 2555120.0
+            },
+            {
+              "category_name": "Legal fees",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 96116.0
+            },
+            {
+              "category_name": "Accounting fees",
+              "program_services": 0.0,
+              "supporting_services": 99962.0,
+              "total": 99962.0
+            },
+            {
+              "category_name": "Other professional fees",
+              "program_services": 2.0,
+              "supporting_services": 5621.0,
+              "total": 5623.0
+            },
+            {
+              "category_name": "Advertising and promotion",
+              "program_services": 0.0,
+              "supporting_services": 610170.0,
+              "total": 610170.0
+            },
+            {
+              "category_name": "Office expenses",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 34833.0
+            },
+            {
+              "category_name": "Information technology",
+              "program_services": 0.0,
+              "supporting_services": 346330.0,
+              "total": 346330.0
+            },
+            {
+              "category_name": "Travel",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 3615.0
+            },
+            {
+              "category_name": "Conferences and meetings",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 354331.0
+            },
+            {
+              "category_name": "Insurance",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 3204.0
+            },
+            {
+              "category_name": "Fees and licenses",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 957295.0
+            },
+            {
+              "category_name": "Distance eLearning",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 100311.0
+            },
+            {
+              "category_name": "Credit card and bank fees",
+              "program_services": 104146.0,
+              "supporting_services": 14613.0,
+              "total": 118117.0
+            },
+            {
+              "category_name": "All other",
+              "program_services": 0.0,
+              "supporting_services": 16732.0,
+              "total": 16732.0
+            },
+            {
+              "category_name": "expenses",
+              "program_services": 4687892.0,
+              "supporting_services": 2741000.0,
+              "total": 7428892.0
+            }
+          ],
+          "total_program_services": 2007605.0,
+          "total_supporting_services": 594659.0,
+          "total_expenses": 2602264.0
+        }
+      },
+      "budget_draft": null,
+      "budget_final": null,
+      "revenue_variance_draft": null,
+      "revenue_variance_final": null,
+      "expense_variance_draft": null,
+      "expense_variance_final": null
+    },
+    {
+      "year": 2022,
+      "audited": {
+        "year": 2022,
+        "total_revenue": 10237243.0,
+        "total_expenses": 7428892.0,
+        "net_income": 2808351.0,
+        "program_service_revenue": 6342559.0,
+        "contributions_grants": 2371760.0,
+        "investment_income": 900722.0,
+        "other_revenue": 230083.0,
+        "membership_dues": 3152467.0,
+        "meetings_conferences": 1375530.0,
+        "education_certification": 1529532.0,
+        "project_management_fees": 285030.0,
+        "qualified_sponsorship_payments": null,
+        "other_program_services": null,
+        "salaries_compensation": 300000.0,
+        "other_expenses": 7128892.0,
+        "management_services": null,
+        "fees_for_services_legal": null,
+        "fees_for_services_accounting": null,
+        "fees_for_services_investment": null,
+        "fees_for_services_other": null,
+        "compensation_officers_directors": null,
+        "land_building_equipment_cost": null,
+        "advertising": null,
+        "office_expenses": null,
+        "information_technology": null,
+        "royalties": null,
+        "occupancy": null,
+        "travel": null,
+        "conferences_meetings": null,
+        "interest": null,
+        "payments_to_affiliates": null,
+        "depreciation": null,
+        "insurance": null,
+        "all_other_expenses": null,
+        "equipment_rental": null,
+        "distance_elearning": null,
+        "credit_card_bank_fees": null,
+        "fees_licenses": null,
+        "exhibit_expense": null,
+        "total_assets": 0.0,
+        "total_liabilities": 0.0,
+        "net_assets": 0.0,
+        "total_employees": 0,
+        "total_volunteers": 0,
+        "functional_expenses": {
+          "year": 2022,
+          "categories": [
+            {
+              "category_name": "For the year ended December",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 2021.0
+            },
+            {
+              "category_name": "Salaries and wages",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 300000.0
+            },
+            {
+              "category_name": "Payroll taxes",
+              "program_services": 0.0,
+              "supporting_services": 78613.0,
+              "total": 78613.0
+            },
+            {
+              "category_name": "Management fees",
+              "program_services": 0.0,
+              "supporting_services": 563911.0,
+              "total": 5632.0
+            },
+            {
+              "category_name": "Accounting fees",
+              "program_services": 0.0,
+              "supporting_services": 79223.0,
+              "total": 79223.0
+            },
+            {
+              "category_name": "Other professional fees",
+              "program_services": 3162.0,
+              "supporting_services": 7131.0,
+              "total": 9654.0
+            },
+            {
+              "category_name": "Advertising and promotion",
+              "program_services": 0.0,
+              "supporting_services": 931213.0,
+              "total": 931213.0
+            },
+            {
+              "category_name": "Office expenses",
+              "program_services": 0.0,
+              "supporting_services": 98612.0,
+              "total": 98612.0
+            },
+            {
+              "category_name": "Information technology",
+              "program_services": 0.0,
+              "supporting_services": 217239.0,
+              "total": 217239.0
+            },
+            {
+              "category_name": "Travel",
+              "program_services": 705670.0,
+              "supporting_services": 78460.0,
+              "total": 784130.0
+            },
+            {
+              "category_name": "Conferences and meetings",
+              "program_services": 0.0,
+              "supporting_services": 736787.0,
+              "total": 736787.0
+            },
+            {
+              "category_name": "Fees and licenses",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 77010.0
+            },
+            {
+              "category_name": "Distance eLearning",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 452278.0
+            },
+            {
+              "category_name": "Credit card and bank fees",
+              "program_services": 0.0,
+              "supporting_services": 511133.0,
+              "total": 511133.0
+            },
+            {
+              "category_name": "All other",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 32463.0
+            },
+            {
+              "category_name": "expenses",
+              "program_services": 6082689.0,
+              "supporting_services": 3326771.0,
+              "total": 9409460.0
+            }
+          ],
+          "total_program_services": 3059982.0,
+          "total_supporting_services": 719361.0,
+          "total_expenses": 3779343.0
+        }
+      },
+      "budget_draft": null,
+      "budget_final": null,
+      "revenue_variance_draft": null,
+      "revenue_variance_final": null,
+      "expense_variance_draft": null,
+      "expense_variance_final": null
+    },
+    {
+      "year": 2023,
+      "audited": {
+        "year": 2023,
+        "total_revenue": 9368305.0,
+        "total_expenses": 9409460.0,
+        "net_income": -41155.0,
+        "program_service_revenue": 7462488.0,
+        "contributions_grants": 2520794.0,
+        "investment_income": 757708.0,
+        "other_revenue": 142731.0,
+        "membership_dues": 3578197.0,
+        "meetings_conferences": 1916903.0,
+        "education_certification": 1573888.0,
+        "project_management_fees": 393500.0,
+        "qualified_sponsorship_payments": null,
+        "other_program_services": null,
+        "salaries_compensation": 635729.0,
+        "other_expenses": 8773731.0,
+        "management_services": null,
+        "fees_for_services_legal": null,
+        "fees_for_services_accounting": null,
+        "fees_for_services_investment": null,
+        "fees_for_services_other": null,
+        "compensation_officers_directors": null,
+        "land_building_equipment_cost": null,
+        "advertising": null,
+        "office_expenses": null,
+        "information_technology": null,
+        "royalties": null,
+        "occupancy": null,
+        "travel": null,
+        "conferences_meetings": null,
+        "interest": null,
+        "payments_to_affiliates": null,
+        "depreciation": null,
+        "insurance": null,
+        "all_other_expenses": null,
+        "equipment_rental": null,
+        "distance_elearning": null,
+        "credit_card_bank_fees": null,
+        "fees_licenses": null,
+        "exhibit_expense": null,
+        "total_assets": 17965739.0,
+        "total_liabilities": 7347279.0,
+        "net_assets": 10618460.0,
+        "total_employees": 0,
+        "total_volunteers": 0,
+        "functional_expenses": {
+          "year": 2023,
+          "categories": [
+            {
+              "category_name": "For the year ended December",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 2022.0
+            },
+            {
+              "category_name": "Salaries and wages",
+              "program_services": 168525.0,
+              "supporting_services": 467204.0,
+              "total": 635729.0
+            },
+            {
+              "category_name": "Pension plan contribution",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 94132.0
+            },
+            {
+              "category_name": "Payroll taxes",
+              "program_services": 0.0,
+              "supporting_services": 40730.0,
+              "total": 40730.0
+            },
+            {
+              "category_name": "Management fees",
+              "program_services": 5092.0,
+              "supporting_services": 311.0,
+              "total": 5143.0
+            },
+            {
+              "category_name": "Legal fees",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 35739.0
+            },
+            {
+              "category_name": "Accounting fees",
+              "program_services": 0.0,
+              "supporting_services": 36390.0,
+              "total": 36390.0
+            },
+            {
+              "category_name": "Other professional fees",
+              "program_services": 0.0,
+              "supporting_services": 2501.0,
+              "total": 464.0
+            },
+            {
+              "category_name": "Advertising and promotion",
+              "program_services": 0.0,
+              "supporting_services": 928192.0,
+              "total": 928192.0
+            },
+            {
+              "category_name": "Office expenses",
+              "program_services": 0.0,
+              "supporting_services": 87926.0,
+              "total": 87926.0
+            },
+            {
+              "category_name": "Information technology",
+              "program_services": 0.0,
+              "supporting_services": 997264.0,
+              "total": 997264.0
+            },
+            {
+              "category_name": "Travel",
+              "program_services": 0.0,
+              "supporting_services": 474122.0,
+              "total": 53273.0
+            },
+            {
+              "category_name": "Conferences and meetings",
+              "program_services": 1392.0,
+              "supporting_services": 1443.0,
+              "total": 2611.0
+            },
+            {
+              "category_name": "Insurance",
+              "program_services": 0.0,
+              "supporting_services": 69611.0,
+              "total": 69611.0
+            },
+            {
+              "category_name": "Equipment rental",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 474103.0
+            },
+            {
+              "category_name": "Fees and licenses",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 9571.0
+            },
+            {
+              "category_name": "Distance eLearning",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 311.0
+            },
+            {
+              "category_name": "Credit card and bank fees",
+              "program_services": 0.0,
+              "supporting_services": 437103.0,
+              "total": 437103.0
+            },
+            {
+              "category_name": "Amortization",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 96759.0
+            },
+            {
+              "category_name": "All other",
+              "program_services": 0.0,
+              "supporting_services": 210171.0,
+              "total": 210171.0
+            },
+            {
+              "category_name": "expenses",
+              "program_services": 7739734.0,
+              "supporting_services": 4387260.0,
+              "total": 12126994.0
+            }
+          ],
+          "total_program_services": 3969340.0,
+          "total_supporting_services": 919318.0,
+          "total_expenses": 4888658.0
+        }
+      },
+      "budget_draft": null,
+      "budget_final": null,
+      "revenue_variance_draft": null,
+      "revenue_variance_final": null,
+      "expense_variance_draft": null,
+      "expense_variance_final": null
+    },
+    {
+      "year": 2024,
+      "audited": {
+        "year": 2024,
+        "total_revenue": 10856214.0,
+        "total_expenses": 11841033.0,
+        "net_income": -984819.0,
+        "program_service_revenue": 6634380.0,
+        "contributions_grants": 2959899.0,
+        "investment_income": 993934.0,
+        "other_revenue": 268001.0,
+        "membership_dues": 3065031.0,
+        "meetings_conferences": 1996248.0,
+        "education_certification": 1223801.0,
+        "project_management_fees": 349300.0,
+        "qualified_sponsorship_payments": null,
+        "other_program_services": null,
+        "salaries_compensation": 3847325.0,
+        "other_expenses": 7993708.0,
+        "management_services": null,
+        "fees_for_services_legal": null,
+        "fees_for_services_accounting": null,
+        "fees_for_services_investment": null,
+        "fees_for_services_other": null,
+        "compensation_officers_directors": null,
+        "land_building_equipment_cost": null,
+        "advertising": null,
+        "office_expenses": null,
+        "information_technology": null,
+        "royalties": null,
+        "occupancy": null,
+        "travel": null,
+        "conferences_meetings": null,
+        "interest": null,
+        "payments_to_affiliates": null,
+        "depreciation": null,
+        "insurance": null,
+        "all_other_expenses": null,
+        "equipment_rental": null,
+        "distance_elearning": null,
+        "credit_card_bank_fees": null,
+        "fees_licenses": null,
+        "exhibit_expense": null,
+        "total_assets": 16845521.0,
+        "total_liabilities": 8500460.0,
+        "net_assets": 8345061.0,
+        "total_employees": 0,
+        "total_volunteers": 0,
+        "functional_expenses": {
+          "year": 2024,
+          "categories": [
+            {
+              "category_name": "For the year ended December",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 2023.0
+            },
+            {
+              "category_name": "Salaries and wages",
+              "program_services": 1181597.0,
+              "supporting_services": 2665728.0,
+              "total": 3847325.0
+            },
+            {
+              "category_name": "Pension plan contribution",
+              "program_services": 0.0,
+              "supporting_services": 70950.0,
+              "total": 15383.0
+            },
+            {
+              "category_name": "Other employee benefits",
+              "program_services": 276726.0,
+              "supporting_services": 19430.0,
+              "total": 296156.0
+            },
+            {
+              "category_name": "Payroll taxes",
+              "program_services": 0.0,
+              "supporting_services": 804128.0,
+              "total": 125213.0
+            },
+            {
+              "category_name": "Management fees",
+              "program_services": 0.0,
+              "supporting_services": 1745.0,
+              "total": 1745.0
+            },
+            {
+              "category_name": "Legal fees",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 41426.0
+            },
+            {
+              "category_name": "Accounting fees",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 866112.0
+            },
+            {
+              "category_name": "Other professional fees",
+              "program_services": 0.0,
+              "supporting_services": 7031.0,
+              "total": 1534.0
+            },
+            {
+              "category_name": "Advertising and promotion",
+              "program_services": 190016.0,
+              "supporting_services": 664230.0,
+              "total": 854246.0
+            },
+            {
+              "category_name": "Office expenses",
+              "program_services": 0.0,
+              "supporting_services": 48216.0,
+              "total": 48216.0
+            },
+            {
+              "category_name": "Information technology",
+              "program_services": 0.0,
+              "supporting_services": 206381.0,
+              "total": 206381.0
+            },
+            {
+              "category_name": "Travel",
+              "program_services": 405947.0,
+              "supporting_services": 34791.0,
+              "total": 440738.0
+            },
+            {
+              "category_name": "Conferences and meetings",
+              "program_services": 0.0,
+              "supporting_services": 758969.0,
+              "total": 758969.0
+            },
+            {
+              "category_name": "Insurance",
+              "program_services": 44211.0,
+              "supporting_services": 26527.0,
+              "total": 70738.0
+            },
+            {
+              "category_name": "Equipment rental",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 852284.0
+            },
+            {
+              "category_name": "Fees and licenses",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 2371.0
+            },
+            {
+              "category_name": "Distance eLearning",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 346210.0
+            },
+            {
+              "category_name": "Credit card and bank fees",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 46833.0
+            },
+            {
+              "category_name": "Amortization",
+              "program_services": 0.0,
+              "supporting_services": 0.0,
+              "total": 26262.0
+            },
+            {
+              "category_name": "All other",
+              "program_services": 169009.0,
+              "supporting_services": 250202.0,
+              "total": 419211.0
+            },
+            {
+              "category_name": "expenses",
+              "program_services": 6347491.0,
+              "supporting_services": 5493542.0,
+              "total": 11841033.0
+            }
+          ],
+          "total_program_services": 2835935.0,
+          "total_supporting_services": 840075.0,
+          "total_expenses": 3676010.0
+        }
+      },
+      "budget_draft": null,
+      "budget_final": null,
+      "revenue_variance_draft": null,
+      "revenue_variance_final": null,
+      "expense_variance_draft": null,
+      "expense_variance_final": null
+    }
+  ],
+  "years_available": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "latest_year": 2024
+}
+
+

@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Virginia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Maria",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jan Oldenberg",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

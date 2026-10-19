@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "Johnathan Coleman",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Kathleen Connor",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Mohammad",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "John",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Lloyd",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Dave",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Hans",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "EssienGe",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

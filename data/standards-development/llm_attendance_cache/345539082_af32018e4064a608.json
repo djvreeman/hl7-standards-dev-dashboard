@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "Johnathan Coleman",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kathleen Connor",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Petronelli",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rita Torkzadeh",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Ortega",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alex Mense",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joe Lamy",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

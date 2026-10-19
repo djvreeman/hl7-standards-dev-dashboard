@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" class="wa-theme-default wa-palette-default wa-brand-red wa-neutral-gray wa-success-green wa-warning-yellow wa-danger-orange">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HL7 Membership Health Dashboard</title>
+    
+    <!-- WebAwesome CSS -->
+    <link rel="stylesheet" href="https://cdn.webawesome.com/css/webawesome.min.css">
+    
+    <!-- HL7 Brand Fonts -->
+    <link rel="stylesheet" href="/static/css/fonts.css">
+    
+    <!-- Custom Dashboard CSS -->
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js Time Adapter -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    
+    <!-- Custom styles -->
+    <style>
+        :root {
+            /* WebAwesome Theme Colors */
+            --wa-brand: #dc2626;
+            --wa-neutral: #6b7280;
+            --wa-success: #16a34a;
+            --wa-warning: #ca8a04;
+            --wa-danger: #ea580c;
+            --wa-primary: #dc2626;
+            --wa-secondary: #6b7280;
+            --font-family-primary: 'Gotham', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            
+            /* Chart Color Palette */
+            --chart-primary: #dc2626;      /* WebAwesome Red */
+            --chart-secondary: #6b7280;    /* WebAwesome Gray */
+            --chart-tertiary: #16a34a;      /* WebAwesome Green */
+            --chart-quaternary: #ca8a04;    /* WebAwesome Yellow */
+            --chart-quinary: #ea580c;       /* WebAwesome Orange */
+            
+            /* Legacy variables for compatibility */
+            --primary-color: var(--wa-brand);
+            --secondary-color: var(--wa-neutral);
+            --success-color: var(--wa-success);
+            --warning-color: var(--wa-warning);
+            --danger-color: var(--wa-danger);
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+            --border-color: #e2e8f0;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            font-family: var(--font-family-primary);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .dashboard-header {
+            background: white;
+            color: #1f2937;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            padding: 2rem 2rem 1rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .header-logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-image {
+            height: 80px;
+            width: auto;
+        }
+        
+        .header-title {
+            flex: 1;
+        }
+        
+        .dashboard-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 0;
+        }
+        
+        .dashboard-subtitle {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-top: 0.5rem;
+        }
+        
+        .navigation-container {
+            background: linear-gradient(135deg, var(--primary-color), #b91c1c);
+            padding: 1rem 2rem;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Dropdown Navigation Styles */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .nav-dropdown .nav-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 180px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+            z-index: 1000;
+            border: 1px solid var(--border-color);
+            margin-top: 2px;
+        }
+        
+        .dropdown-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #374151;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f9fafb;
+            color: var(--primary-color);
+        }
+        
+        .dropdown-item.active {
+            background-color: #f3f4f6;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .nav-dropdown:hover .dropdown-toggle {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .chart-container {
+            background: var(--card-background);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+        
+        .chart-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .chart-wrapper {
+            position: relative;
+            height: 400px;
+        }
+        
+        .chart-note {
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-container {
+                padding: 1rem;
+            }
+            
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chart-wrapper {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="/static/hl7-international-logo.png" alt="HL7 International" class="logo-image">
+            </div>
+            <div class="header-title">
+                <h1 class="dashboard-title">Membership Health Dashboard</h1>
+                <p class="dashboard-subtitle">Tracking membership retention and engagement metrics</p>
+            </div>
+        </div>
+        <div class="navigation-container">
+            <nav class="navigation" id="steward-navigation">
+                <!-- Navigation will be loaded dynamically -->
+            </nav>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Charts Grid -->
+        <div class="charts-grid">
+            <!-- Member Retention Rate Chart -->
+            <div class="chart-container">
+                <div class="chart-title">Member Retention Rate</div>
+                <div class="chart-wrapper">
+                    <canvas id="memberRetentionChart"></canvas>
+                </div>
+                <div class="chart-note" id="chart-note" style="margin-top: 0.5rem; font-size: 0.875rem; color: #64748b;">
+                    Loading...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let memberRetentionChart = null;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            loadStewardNavigation();
+            loadMemberRetentionChart();
+        });
+        
+        // Load steward navigation dynamically
+        async function loadStewardNavigation() {
+            try {
+                const response = await fetch('/api/stewards');
+                const stewards = await response.json();
+                
+                const navigationHtml = stewards.map(steward => {
+                    const isActive = steward === 'HL7 International' || steward === 'HL7' ? '' : '';
+                    
+                    // Special handling for Finance steward - create dropdown
+                    if (steward === 'Finance') {
+                        const currentPath = window.location.pathname;
+                        const isFinancialHealth = currentPath === '/financial-health';
+                        const isGeographic = currentPath === '/financial-geographic';
+                        return `<div class="nav-dropdown"><a href="/Finance" class="nav-link" id="nav-finance">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item ${isFinancialHealth ? 'active' : ''}">Financial Health Trends and Insights</a><a href="/financial-geographic" class="dropdown-item ${isGeographic ? 'active' : ''}">Geographic Insights</a></div></div>`;
+                    }
+                    
+                    // Special handling for Membership steward - create dropdown
+                    if (steward === 'Membership') {
+                        const currentPath = window.location.pathname;
+                        const isMembershipHealth = currentPath === '/membership-health';
+                        return `<div class="nav-dropdown"><a href="/Membership" class="nav-link active" id="nav-membership">Membership</a><div class="dropdown-menu"><a href="/membership-health" class="dropdown-item ${isMembershipHealth ? 'active' : ''}">Membership Health</a></div></div>`;
+                    }
+                    
+                    // Special handling for Standards Development steward - create dropdown
+                    if (steward === 'Standards Development') {
+                        const currentPath = window.location.pathname;
+                        const isStandardsDevelopmentInsights = currentPath === '/standards-development-insights';
+                        const isWgHealthHistory = currentPath === '/wg-health-history';
+                        const isWgMeetingParticipation = currentPath === '/wg-meeting-participation';
+                        return `<div class="nav-dropdown"><a href="/Standards Development" class="nav-link" id="nav-standards-development">Standards Development</a><div class="dropdown-menu"><a href="/standards-development-insights" class="dropdown-item ${isStandardsDevelopmentInsights ? 'active' : ''}">Standards Development Insights</a><a href="/wg-health-history" class="dropdown-item ${isWgHealthHistory ? 'active' : ''}">Work Group Health History</a><a href="/wg-meeting-participation" class="dropdown-item ${isWgMeetingParticipation ? 'active' : ''}">Meeting Participation</a></div></div>`;
+                    }
+                    
+                    const href = (steward === 'HL7 International' || steward === 'HL7') ? '/' : `/${steward}`;
+                    return `<a href="${href}" class="nav-link ${isActive}" id="nav-${steward.toLowerCase().replace(/\s+/g, '-')}">${steward}</a>`;
+                }).join('');
+                
+                document.getElementById('steward-navigation').innerHTML = navigationHtml;
+            } catch (error) {
+                console.error('Error loading navigation:', error);
+                // Fallback navigation
+                const currentPath = window.location.pathname;
+                const isMembershipHealth = currentPath === '/membership-health';
+                document.getElementById('steward-navigation').innerHTML = `
+                    <a href="/" class="nav-link">HL7 International</a>
+                    <div class="nav-dropdown"><a href="/Membership" class="nav-link active">Membership</a><div class="dropdown-menu"><a href="/membership-health" class="dropdown-item ${isMembershipHealth ? 'active' : ''}">Membership Health</a></div></div>
+                `;
+            }
+        }
+        
+        // Helper function to convert period string (e.g., "2024-T3") to date
+        function periodToDate(period) {
+            const [year, trimester] = period.split('-T');
+            const yearNum = parseInt(year);
+            const trimNum = parseInt(trimester);
+            
+            // T1: Jan-Apr (end: Apr 30)
+            // T2: May-Aug (end: Aug 31)
+            // T3: Sep-Dec (end: Dec 31)
+            let month, day;
+            if (trimNum === 1) {
+                month = 3; // April (0-indexed: 3 = April)
+                day = 30;
+            } else if (trimNum === 2) {
+                month = 7; // August (0-indexed: 7 = August)
+                day = 31;
+            } else if (trimNum === 3) {
+                month = 11; // December (0-indexed: 11 = December)
+                day = 31;
+            } else {
+                // Fallback to end of year
+                month = 11;
+                day = 31;
+            }
+            
+            return new Date(yearNum, month, day);
+        }
+        
+        async function loadMemberRetentionChart() {
+            try {
+                const response = await fetch('/api/membership/charts/member-retention');
+                const chartData = await response.json();
+                
+                const ctx = document.getElementById('memberRetentionChart').getContext('2d');
+                
+                // Destroy existing chart if it exists
+                if (memberRetentionChart) {
+                    memberRetentionChart.destroy();
+                }
+                
+                // Convert period labels to dates and update datasets
+                const dates = chartData.labels.map(periodToDate);
+                // Create a map from date timestamp to period label for easy lookup
+                const dateToPeriodMap = {};
+                dates.forEach((date, index) => {
+                    dateToPeriodMap[date.getTime()] = chartData.labels[index];
+                });
+                
+                const updatedDatasets = chartData.datasets.map(dataset => ({
+                    ...dataset,
+                    data: dataset.data.map((value, index) => ({
+                        x: dates[index].getTime(),
+                        y: value
+                    }))
+                }));
+                
+                const config = {
+                    type: chartData.type,
+                    data: {
+                        datasets: updatedDatasets
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: function(context) {
+                                        // Find the original period label for this data point
+                                        const timestamp = context[0].parsed.x;
+                                        return dateToPeriodMap[timestamp] || '';
+                                    },
+                                    label: function(context) {
+                                        return context.dataset.label + ': ' + context.parsed.y.toFixed(1) + '%';
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                min: 70,
+                                max: 90,
+                                ticks: {
+                                    callback: function(value) {
+                                        return value + '%';
+                                    }
+                                }
+                            },
+                            x: {
+                                type: 'time',
+                                time: {
+                                    unit: 'month',
+                                    displayFormats: {
+                                        month: 'MMM yyyy'
+                                    }
+                                },
+                                ticks: {
+                                    source: 'data',
+                                    maxRotation: 0,
+                                    minRotation: 0,
+                                    callback: function(value, index, ticks) {
+                                        // Use the period label instead of formatted date
+                                        return dateToPeriodMap[value] || '';
+                                    }
+                                },
+                                adapters: {
+                                    date: {
+                                        locale: 'en-US'
+                                    }
+                                }
+                            }
+                        }
+                    }
+                };
+                
+                memberRetentionChart = new Chart(ctx, config);
+                
+                // Update chart note with description and target
+                const noteElement = document.getElementById('chart-note');
+                const targetDataset = chartData.datasets.find(d => d.label && d.label.includes('Target'));
+                const targetValue = targetDataset ? targetDataset.label.match(/\d+/)?.[0] : null;
+                
+                let noteLines = [];
+                
+                if (targetValue) {
+                    noteLines.push(`<strong>Target:</strong> ${targetValue}% (Annual Average)`);
+                }
+                
+                if (chartData.description) {
+                    noteLines.push(`<strong>Indicator Definition:</strong> ${chartData.description}`);
+                }
+                
+                if (noteLines.length > 0) {
+                    noteElement.innerHTML = noteLines.join('<br>');
+                } else {
+                    noteElement.textContent = '';
+                }
+            } catch (error) {
+                console.error('Error loading member retention chart:', error);
+                document.getElementById('chart-note').textContent = '';
+            }
+        }
+    </script>
+</body>
+</html>
+

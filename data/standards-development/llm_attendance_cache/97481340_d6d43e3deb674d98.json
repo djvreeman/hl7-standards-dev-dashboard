@@ -1,0 +1,11 @@
+{
+  "attendees": [
+    {
+      "name": "MH Co-chairs",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    }
+  ],
+  "confidence": 0.9
+}

@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Virginia",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Maria",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

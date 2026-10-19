@@ -1,0 +1,107 @@
+{
+  "attendees": [
+    {
+      "name": "John Moehrke",
+      "organization": "GE Healthcare",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Chris Lindop",
+      "organization": "Canon",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jonathan Whitby",
+      "organization": "DICOM/MITA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Carolyn Hull",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Isaac Vetter",
+      "organization": "Philips",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bas van den Heuvel",
+      "organization": "DICOM/MITA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abderrazek Boufahja",
+      "organization": "HL7 Austria & DICOM Usergroup Austria",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Reinhard Egelkraut",
+      "organization": "Philips",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Chris Melo",
+      "organization": "DICOM/MITA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "David Ouagne",
+      "organization": "Alphora",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bryn Rhodes",
+      "organization": "iParsimony",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Floyd Eisenberg",
+      "organization": "HL7 participant",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Hatem",
+      "organization": "PJM Consulting",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Peter Muir",
+      "organization": "Hausam Consulting LLC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Robert Hausam",
+      "organization": "GE Healthcare",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Steve Nichols",
+      "organization": "Optimum eHealth",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Yan Heras",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

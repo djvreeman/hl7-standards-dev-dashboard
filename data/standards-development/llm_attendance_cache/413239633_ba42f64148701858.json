@@ -1,0 +1,23 @@
+{
+  "attendees": [
+    {
+      "name": "John Carter",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Peter Jordan",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Grahame Grieve",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

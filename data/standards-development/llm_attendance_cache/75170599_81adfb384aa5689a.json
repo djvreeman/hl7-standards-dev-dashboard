@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Floyd Eisenberg",
+      "organization": "CQI",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lorraine Constable",
+      "organization": "OO",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Stan Huff",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Susan Matney",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

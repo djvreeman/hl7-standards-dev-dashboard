@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Austin",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Gay",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Matt",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Russ",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sean",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

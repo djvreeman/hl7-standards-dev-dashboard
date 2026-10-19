@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "Dave Pyke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Virginia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mark Scrimshire",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Trisha Torrey",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "e-Patient Dave",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave deBronkart",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Josh Mandel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

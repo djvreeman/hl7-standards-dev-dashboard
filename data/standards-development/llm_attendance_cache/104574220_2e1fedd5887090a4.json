@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Keith Boone",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Viet Nguyen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Floyd Eisenberg",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Stan Rankins",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bryn Rhodes",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abdullah Rafiqi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

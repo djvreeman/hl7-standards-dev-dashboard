@@ -1,0 +1,233 @@
+{
+  "attendees": [
+    {
+      "name": "James Cummings",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Maria Moen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Virginia Lorenzi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rachel Richesson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Ritter",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alex Kontur",
+      "organization": "BSBSA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Allison Kemp",
+      "organization": "ASTP",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Amy Dalmas",
+      "organization": "FEHRM",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ben Hamlin",
+      "organization": "IPRO",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Casey Fitzgerald",
+      "organization": "Epic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Charles Gabrial",
+      "organization": "FEHRM",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Danny Laurent",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Graham Grieve",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jeff Danford",
+      "organization": "Optum",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jessica Skopac",
+      "organization": "Global Alliant",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joanie Harper",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joanne Zhou",
+      "organization": "a hospital",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John D\u2019Amore",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Josh Mandel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kazuyuki Dambara",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lincoln Weed",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lisa Anderson",
+      "organization": "NQF/JC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Matt Molenda",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Nnamdi Usifoh",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sarah Danziger",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sarah Tonn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Julia Skapik",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Carmela Couderc",
+      "organization": "ASTP/ONC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Susan Hull",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mig Dunajick",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lenel James",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mark Roberts",
+      "organization": "CARIN",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Janice Reese",
+      "organization": "FAST",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mary Ann Boyle",
+      "organization": "HL7",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Thomas Chon",
+      "organization": "Tetra Fields",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Anil Patel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Meryl Bloomrosen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jasmin Smith",
+      "organization": "NCQA",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

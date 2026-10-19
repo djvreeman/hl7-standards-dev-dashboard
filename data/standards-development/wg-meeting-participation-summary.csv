@@ -1,0 +1,49 @@
+wg_key,wg_name,jira_key,space_key,meetings_indexed,meetings_wgm,meetings_telecon,meetings_main,meetings_project,meetings_type_other,meetings_concalls_linked,meetings_with_attendance,meetings_empty_attendance,meetings_unparseable,meetings_date_unresolved,attendance_gap_rate,needs_attendance_review,median_headcount,median_participant_headcount,pct_meetings_ge_5,pct_quorum_met,distinct_people,distinct_participants,distinct_cochairs,pct_present_beyond_cochairs,pct_meetings_with_participant,distinct_organizations,pct_present_rows_with_org,coverage_score,last_meeting_date
+arden-syntax,Arden Syntax,as,ARD,31,6,25,25,0,0,0,31,0,0,1,0.0,False,4.0,4.0,0.1935,,10,10,0,1.0,1.0,8,1.0,1.0,2026-10-05
+biomedical-research-regulation,Biomedical Research & Regulation,brr,BRR,132,0,132,113,0,19,0,114,0,18,64,0.1364,True,37.0,37.0,0.9825,,87,87,0,1.0,1.0,6,0.0017,0.8636,2026-10-06
+cda-management-group,CDA Management Group,cdamg,CDA,98,10,88,88,0,0,0,96,0,2,29,0.0204,False,8.0,8.0,0.8958,0.0,46,46,0,1.0,1.0,33,0.8652,0.9796,2026-10-28
+clinical-decision-support,Clinical Decision Support,cds,CDS,6,6,0,0,0,0,0,0,0,6,22,1.0,True,,,,,0,0,0,,,0,,0.0,2026-09-01
+clinical-genomics,Clinical Genomics,cg,CGW,3,3,0,0,0,0,0,3,0,0,2,0.0,False,19.0,19.0,1.0,,30,30,0,1.0,1.0,30,0.94,1.0,2026-01-01
+clinical-information-modeling-initiative,Clinical Information Modeling Initiative,cimi,CIMI,8,8,0,0,0,0,0,7,0,0,21,0.0,False,6.0,6.0,0.5714,,13,13,0,1.0,1.0,11,0.7027,1.0,2026-09-22
+clinical-interoperability-council,Clinical Interoperability Council,cic,CIC,55,15,40,40,0,0,0,49,6,0,26,0.1091,True,4.0,4.0,0.4694,0.8333,91,90,1,0.9975,1.0,109,0.9656,0.8909,2026-10-22
+clinical-quality-information,Clinical Quality Information,cqi,CQIWC,84,13,71,0,0,71,0,71,1,12,77,0.1548,True,22.0,22.0,0.9718,,221,221,0,1.0,1.0,138,0.5781,0.8452,2026-09-19
+conformance,Conformance,cgit,CONF,38,4,34,34,0,0,0,36,0,2,1,0.0526,False,4.0,4.0,0.3889,,33,31,2,0.9583,1.0,8,0.7847,0.9474,2026-10-06
+cross-group-projects,Cross-Group Projects,cgp,CGP,10,9,1,0,1,0,0,9,0,1,15,0.1,False,22.0,22.0,1.0,,91,91,0,1.0,1.0,62,0.9828,0.9,2026-09-01
+devices,Devices,dev,HCD,144,14,130,61,0,69,0,139,0,5,33,0.0347,True,8.0,8.0,0.9353,1.0,76,75,1,0.9991,0.9928,66,0.9618,0.9653,2026-10-08
+electronic-health-records,Electronic Health Records,ehr,EHR,121,31,90,90,0,0,0,110,0,9,24,0.0756,True,6.0,6.0,0.8273,,284,284,0,1.0,1.0,185,0.5367,0.9244,2026-10-06
+executive-committee,Executive Committee,ex,,,,,,,,,,,,,,,,,,,,,,,,,,,
+fhir-director,FHIR Director,director,,,,,,,,,,,,,,,,,,,,,,,,,,,
+fhir-infrastructure,FHIR Infrastructure,fhir-i,FHIRI,110,6,104,0,1,103,0,109,0,1,965,0.0091,False,6.0,6.0,0.7982,,14,12,4,0.9878,1.0,26,0.6539,0.9909,2026-10-07
+fhir-management-group,FHIR Management Group,fmg,FMG,105,15,90,0,0,90,0,101,0,4,2,0.0381,True,20.0,18.0,0.9901,0.0,234,231,4,0.9061,0.9901,0,0.0,0.9619,2026-10-07
+financial-management,Financial Management,fm,FM,7,7,0,0,0,0,0,7,0,0,33,0.0,False,17.0,17.0,1.0,,58,58,0,1.0,1.0,45,0.9487,1.0,2026-09-19
+hl7-australia-au-core,HL7 Australia AU Core,au-core,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hl7-australia-au-erequesting,HL7 Australia AU eRequesting,au-ereq,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hl7-australia-fhir,HL7 Australia FHIR,au-fhir,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hl7-australia-technical-steering-committee,HL7 Australia Technical Steering Committee,au-tsc,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hl7-australia-terminology,HL7 Australia Terminology,au-terminology,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hl7-australia-v2,HL7 Australia V2,au-v2,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hl7-europe,HL7 Europe,eu,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hl7-terminology-authority,HL7 Terminology Authority,hta,,,,,,,,,,,,,,,,,,,,,,,,,,,
+human-and-social-services,Human and Social Services,hss,HSS,28,4,24,0,0,24,0,24,0,4,8,0.1429,True,7.0,4.0,0.8333,,56,48,8,0.6686,1.0,1,0.0698,0.8571,2026-10-01
+imaging-integration,Imaging Integration,ii,IMIN,6,6,0,0,0,0,0,6,0,0,6,0.0,False,15.0,15.0,1.0,,45,45,0,1.0,1.0,33,0.8953,1.0,2026-09-01
+implementable-technology-specifications,Implementable Technology Specifications,its,ITS,42,6,36,0,0,36,0,41,0,0,12,0.0,False,4.0,4.0,0.3415,1.0,29,29,0,1.0,1.0,24,0.2802,1.0,2026-09-19
+infrastructure-and-messaging,Infrastructure and Messaging,inm,INM,85,10,75,0,0,75,0,81,0,4,30,0.0471,True,3.0,1.0,0.2099,1.0,33,29,4,0.581,0.8889,25,0.8697,0.9529,2026-09-19
+international-council,International Council,ic,,,,,,,,,,,,,,,,,,,,,,,,,,,
+learning-health-systems,Learning Health Systems,lhs,LHS,9,4,5,0,5,0,0,9,0,0,20,0.0,False,3.0,3.0,0.3333,0.2,61,61,0,1.0,1.0,52,0.8913,1.0,2026-01-24
+mobile-health,Mobile Health,mh,MH,90,6,84,0,0,84,0,29,57,0,20,0.6628,True,1.0,1.0,0.1034,,31,30,1,0.9815,1.0,11,0.3148,0.3372,2026-09-19
+orchestration-services-and-architecture,"Orchestration, Services, and Architecture",soa,,,,,,,,,,,,,,,,,,,,,,,,,,,
+orchestration-services-architecture,"Orchestration, Services, and Architecture",soa,SOA,3,2,1,0,0,1,0,1,1,1,50,0.6667,False,16.0,16.0,1.0,,16,16,0,1.0,1.0,14,0.9375,0.3333,2026-05-09
+orders-and-observations,Orders & Observations,oo,OO,793,6,787,94,687,6,0,607,160,26,57,0.2346,True,6.0,5.0,0.6491,,501,483,34,0.8783,0.8731,249,0.6694,0.7654,2026-10-19
+patient-administration,Patient Administration,pa,PA,79,6,73,72,0,1,0,31,7,41,22,0.6076,True,1.0,1.0,0.2581,,140,136,5,0.9787,0.871,81,0.7617,0.3924,2026-10-06
+patient-care,Patient Care,pc,PC,177,7,170,41,11,118,0,174,1,2,45,0.0169,True,8.0,7.0,0.8621,0.9103,339,336,8,0.9363,1.0,212,0.733,0.9831,2026-10-12
+patient-empowerment,Patient Empowerment,pe,PE,150,6,144,0,8,136,0,69,80,1,58,0.54,True,4.0,4.0,0.4783,,145,144,1,0.9938,1.0,119,0.8025,0.46,2026-10-01
+payer-provider-information-exchange,Payer/Provider Information Exchange,pie,ATT,100,4,96,73,16,7,0,71,29,0,17,0.29,True,6.0,6.0,0.7887,,200,200,0,1.0,1.0,96,0.5261,0.71,2026-10-06
+pharmacy,Pharmacy,pharm,PHAR,85,6,79,0,0,79,0,81,0,4,42,0.0471,True,6.0,6.0,0.716,,64,64,0,1.0,1.0,50,0.9202,0.9529,2026-10-12
+public-health,Public Health,pher,PHWG,109,10,99,0,0,99,0,106,0,3,93,0.0275,True,6.0,5.0,0.5283,,76,72,13,0.9144,1.0,53,0.189,0.9725,2026-12-03
+publishing,Publishing,pubs,,,,,,,,,,,,,,,,,,,,,,,,,,,
+security,Security,security,SEC,53,6,48,0,0,47,0,7,4,42,27,0.8679,True,20.0,20.0,0.8571,,59,58,1,0.9836,1.0,49,0.9508,0.1321,2026-10-12
+structured-documents,Structured Documents,sd,SD,100,6,94,0,1,93,0,8,89,3,164,0.92,True,13.5,13.5,0.625,,48,47,2,0.9778,0.875,48,0.9444,0.08,2026-10-15
+technical-steering-committee,Technical Steering Committee,tsc,,,,,,,,,,,,,,,,,,,,,,,,,,,
+terminology-infrastructure,Terminology Infrastructure,vocab,VOC,206,6,200,54,74,72,0,73,79,54,69,0.6456,True,1.0,1.0,0.1781,,146,146,0,1.0,1.0,127,0.8475,0.3544,2026-10-12
+terminology-services-management-group,Terminology Services Management Group,tsmg,TSMG,106,0,106,0,0,106,0,83,23,0,1,0.217,True,5.0,2.0,0.5542,0.0,4,3,1,0.4813,1.0,11,0.7164,0.783,2026-10-08
+v2-management-group,V2 Management Group,v2mg,V2MG,13,6,7,0,0,7,0,10,1,2,38,0.2308,True,4.0,4.0,0.3,,23,22,3,0.9189,0.9,6,0.2162,0.7692,2026-09-19

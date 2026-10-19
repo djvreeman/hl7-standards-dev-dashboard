@@ -1,0 +1,71 @@
+{
+  "attendees": [
+    {
+      "name": "John Garguilo",
+      "organization": "NIST",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Martin Rosner",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Faughn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Javier Espina",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Malcolm Clarke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Schluter",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dan Rubery",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Erik",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Rhoads",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

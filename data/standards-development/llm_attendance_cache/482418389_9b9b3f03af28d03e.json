@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "John Moehrke",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Kathleen Connor",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mohammad Jafari",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Matt Blackmon",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

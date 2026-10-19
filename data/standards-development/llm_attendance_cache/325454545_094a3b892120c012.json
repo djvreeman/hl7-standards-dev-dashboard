@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Gay",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Khalid",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "TI (SD)",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "PC (SD)",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "CGP (SD)",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 0.9
+}

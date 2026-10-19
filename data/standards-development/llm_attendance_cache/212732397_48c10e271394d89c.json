@@ -1,0 +1,77 @@
+{
+  "attendees": [
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Rhoads",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Martin Kasparick",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Schluter",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Malcolm Clarke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Faughn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kosta",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ken Fuchs",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bjorn Anderson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Martin Rosner",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "David G.",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Anura",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

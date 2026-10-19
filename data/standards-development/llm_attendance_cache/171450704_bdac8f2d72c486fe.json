@@ -1,0 +1,23 @@
+{
+  "attendees": [
+    {
+      "name": "Abbie",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Hill",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

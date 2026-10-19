@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Maria Michaels",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kishore Bashyam",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

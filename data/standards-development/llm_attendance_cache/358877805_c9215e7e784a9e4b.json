@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Yan Heras",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Matt Tiller",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sharon",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Stan",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bryn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Anne",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

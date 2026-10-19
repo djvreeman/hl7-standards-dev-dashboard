@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "John",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Aaron",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jamie",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Pyke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mohammad Jafari",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sandy Vance",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

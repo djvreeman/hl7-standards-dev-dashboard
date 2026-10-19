@@ -1,0 +1,83 @@
+{
+  "attendees": [
+    {
+      "name": "Hugh",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Smita",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Boris",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Andy",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Peter Bomberg",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jean",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rebecca Baker",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Brian Alper",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ian Fore",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Harold Solbrig",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lise",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "May Terry",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Caroline Potteiger",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

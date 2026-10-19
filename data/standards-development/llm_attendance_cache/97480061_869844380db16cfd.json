@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Dave Hill",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Debi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Virginia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Vassil Peytchev",
+      "organization": "Epic",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

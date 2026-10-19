@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Gary Dickinson, FHL7",
+      "organization": "EHR Standards Consulting",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Ritter, FHL7",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Lincoln Weed JD",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Bernd Blobel",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Maria Moen",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

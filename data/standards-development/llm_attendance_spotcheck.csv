@@ -1,0 +1,531 @@
+headcount,page_id,reason,status,title,url,wg_key
+4,494864745,ok,accepted,2026-09 Rockville WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=494864745,arden-syntax
+2,358277211,ok,accepted,2025-09 Pittsburgh WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=358277211,arden-syntax
+3,239214800,ok,accepted,2024-05 Dallas WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=239214800,arden-syntax
+2,144996043,ok,accepted,2023-01 Henderson WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=144996043,arden-syntax
+1,101357993,ok,accepted,"2022-05 ""Dallas"" WGM Minutes",https://confluence.hl7.org/pages/viewpage.action?pageId=101357993,arden-syntax
+1,79500554,ok,accepted,"2021-09 ""Rockville"" WGM Minutes",https://confluence.hl7.org/pages/viewpage.action?pageId=79500554,arden-syntax
+2,97480053,ok,accepted,"2021-01 ""Las Vegas"" WGM Minutes",https://confluence.hl7.org/pages/viewpage.action?pageId=97480053,arden-syntax
+0,403866125,too_few,rejected,2025-11-03 Meeting Notes,,biomedical-research-regulation
+0,391649121,too_few,rejected,2025-10-20 Meeting Notes,,biomedical-research-regulation
+3,66913829,ok,accepted,Thur Q2 - Minutes Sept 2019,https://confluence.hl7.org/pages/viewpage.action?pageId=66913829,biomedical-research-regulation
+1,51217897,headcount_low_vs_median,rejected,Thur Q1 - Minutes May 2019,,biomedical-research-regulation
+5,76155716,ok,accepted,2020 02 WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=76155716,biomedical-research-regulation
+4,116458794,ok,accepted,2021 09 WGM Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=116458794,biomedical-research-regulation
+11,104570710,ok,accepted,2021 05 WGM Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=104570710,biomedical-research-regulation
+13,97458927,ok,accepted,2021 01 WGM Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=97458927,biomedical-research-regulation
+0,90901794,too_few,rejected,2020 09 WGM Agenda,,biomedical-research-regulation
+0,82912865,too_few,rejected,BR&R Virtual WGM,,biomedical-research-regulation
+0,66921103,too_few,rejected,2020 02 WGM Agenda,,biomedical-research-regulation
+0,468259788,too_few,rejected,WGM Prep Checklist for CMG - 2026 September,,cda-management-group
+0,413238313,too_few,rejected,WGM Prep Checklist for CMG - 2026 January,,cda-management-group
+0,358263172,too_few,rejected,WGM Prep Checklist for CMG - 2025 September,,cda-management-group
+6,308976341,ok,accepted,2025 January CMG/SD WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=308976341,cda-management-group
+0,288401263,too_few,rejected,WGM Prep Checklist for CMG - 2025 January,,cda-management-group
+0,265094111,too_few,rejected,WGM Prep Checklist for CMG - 2024 September,,cda-management-group
+0,212732341,too_few,rejected,WGM Prep Checklist for CMG - 2024 Jan,,cda-management-group
+7,184912109,ok,accepted,WGM Prep Checklist for CMG - 2023 Sep,https://confluence.hl7.org/pages/viewpage.action?pageId=184912109,cda-management-group
+7,161065171,ok,accepted,WGM Prep Checklist for CMG - 2023 May,https://confluence.hl7.org/pages/viewpage.action?pageId=161065171,cda-management-group
+9,139673523,ok,accepted,WGM Prep Checklist for CMG - 2023 Jan,https://confluence.hl7.org/pages/viewpage.action?pageId=139673523,cda-management-group
+6,134947714,ok,accepted,WGM Prep Checklist for CMG - 2022 Sept,https://confluence.hl7.org/pages/viewpage.action?pageId=134947714,cda-management-group
+6,104582019,ok,accepted,2021-04-14 Meeting notes,https://confluence.hl7.org/pages/viewpage.action?pageId=104582019,cda-management-group
+9,17663432,ok,accepted,2018-01-12 CDAMG Conference Call,https://confluence.hl7.org/pages/viewpage.action?pageId=17663432,cda-management-group
+6,6000814,ok,accepted,CMG Weekly Meeting Notes & Rotating Co-Chair Schedule,https://confluence.hl7.org/pages/viewpage.action?pageId=6000814,cda-management-group
+0,104569615,too_few,rejected,Meeting Notes: CDA to FHIR Alignment,,cda-management-group
+0,104569612,too_few,rejected,Meeting Notes: JIRA for CDA Balloting,,cda-management-group
+0,104569618,too_few,rejected,Meeting Notes: CDA Core Specification,,cda-management-group
+0,91982654,too_few,rejected,Meeting Notes: CDA IG Web Publishing,,cda-management-group
+0,104569590,too_few,rejected,Meeting Notes: Maturity Model for CDA Templates,,cda-management-group
+0,104569585,too_few,rejected,Meeting Notes: Collaborative Template Review Pilot,,cda-management-group
+0,37388313,too_few,rejected,Meeting Notes: Jira for CDA Specification Feedback,,cda-management-group
+5,76156432,ok,accepted,2020-02-06 Q3 CDS WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=76156432,clinical-decision-support
+1,76156731,ok,accepted,2020-02-05 Q1 CDS WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=76156731,clinical-decision-support
+0,144991693,too_few,rejected,COKA Risk of Bias Terminology and Tooling Working Group Meeting Notes (Copy),,clinical-decision-support
+0,104578066,too_few,rejected,COKA Risk of Bias Terminology and Tooling Working Group Meeting Notes,,clinical-decision-support
+0,104573640,too_few,rejected,Archive Common Metadata Framework Meeting Notes,,clinical-decision-support
+0,144991654,too_few,rejected,Common Metadata Framework Meeting Notes (Copy),,clinical-decision-support
+1,104573642,ok,accepted,Content Citation and Classification Tools Development Meeting Notes,https://confluence.hl7.org/pages/viewpage.action?pageId=104573642,clinical-decision-support
+0,144991667,too_few,rejected,Content Citation and Classification Tools Development Meeting Notes (Copy),,clinical-decision-support
+5,358277352,ok,accepted,2025-09 CG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=358277352,clinical-genomics
+4,256186672,ok,accepted,2024-09 CG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=256186672,clinical-genomics
+3,156544952,ok,accepted,2023-05 CGW WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=156544952,clinical-genomics
+6,81029609,ok,accepted,2022-01 CG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=81029609,clinical-genomics
+12,79500400,ok,accepted,2021-09 WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=79500400,clinical-genomics
+13,113674305,ok,accepted,2021-05 CG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=113674305,clinical-genomics
+9,97478821,ok,accepted,2021-01 CG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=97478821,clinical-genomics
+10,90899714,ok,accepted,CG-2020-09 WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=90899714,clinical-genomics
+9,51218379,ok,accepted,2019-05 CGW WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=51218379,clinical-genomics
+2,40731230,ok,accepted,2019-01 CG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=40731230,clinical-genomics
+0,37913195,too_few,rejected,2019-01 CG WGM Agenda,,clinical-genomics
+3,29753404,ok,accepted,2018-09 CG WGM Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=29753404,clinical-genomics
+10,413248828,ok,accepted,2026-01CG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=413248828,clinical-genomics
+32,413240506,headcount_high_vs_median,rejected,2026 January WGM CIC Minutes,,clinical-interoperability-council
+9,81033405,ok,accepted,2022 May CIC WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=81033405,clinical-interoperability-council
+0,81034798,too_few,rejected,"CREDS Meeting Agenda and Minutes-- January 26, 2022",,clinical-interoperability-council
+2,51220082,ok,accepted,CIC WGM May '19 Wed Q1 Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=51220082,clinical-interoperability-council
+3,51220094,ok,accepted,CIC WGM May '19 Wed Q3 Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=51220094,clinical-interoperability-council
+14,97483406,ok,accepted,CIC September 29 (Wednesday) Q2 WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=97483406,clinical-interoperability-council
+15,97481496,ok,accepted,CIC September 29 (Wednesday) Q1 WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=97481496,clinical-interoperability-council
+4,51218576,ok,accepted,CIC WGM May '19 Tue Q3 Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=51218576,clinical-interoperability-council
+0,441130726,too_few,rejected,2026-04-03 Meeting Minutes,,clinical-quality-information
+1,413245876,headcount_low_vs_median,rejected,2026-01-09 Meeting Minutes,,clinical-quality-information
+4,403869003,ok,accepted,2025-11-14 Meeting Minutes DRAFT,https://confluence.hl7.org/pages/viewpage.action?pageId=403869003,clinical-quality-information
+6,358877805,ok,accepted,2025-06-20 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=358877805,clinical-quality-information
+13,324973740,ok,accepted,2025-04-11 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=324973740,clinical-quality-information
+8,324971685,ok,accepted,2025-04-04 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=324971685,clinical-quality-information
+8,325461581,ok,accepted,2025-03-28 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=325461581,clinical-quality-information
+4,274269206,ok,accepted,26 September 2024 Q1 CQI Hosting CDS WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=274269206,clinical-quality-information
+0,239247411,too_few,rejected,22 May 2024 Q1 CQI Hosting CDS WGM Minutes,,clinical-quality-information
+2,239215293,ok,accepted,21 May 2024 Q1 CDS Hosting CQI WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=239215293,clinical-quality-information
+7,175616065,ok,accepted,2023-07-21 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=175616065,clinical-quality-information
+4,175610858,ok,accepted,2023-07-07 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=175610858,clinical-quality-information
+5,175608771,ok,accepted,2023-06-30 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=175608771,clinical-quality-information
+7,161070676,ok,accepted,2023-04-21 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=161070676,clinical-quality-information
+7,81030816,ok,accepted,May 2022 CDS-CQI WGM Agenda Planning,https://confluence.hl7.org/pages/viewpage.action?pageId=81030816,clinical-quality-information
+5,90358934,ok,accepted,2022-02-25 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=90358934,clinical-quality-information
+0,79499667,too_few,rejected,"September 22, 2021 - Q1 - CQI/CDS WGM Minutes",,clinical-quality-information
+6,79499677,ok,accepted,"September 22, 2021 - Q2 - CQI/CDS WGM Minutes",https://confluence.hl7.org/pages/viewpage.action?pageId=79499677,clinical-quality-information
+3,79499655,ok,accepted,"September 21, 2021 Q1 - CDS/CQI WGM Minutes",https://confluence.hl7.org/pages/viewpage.action?pageId=79499655,clinical-quality-information
+5,79499646,ok,accepted,"September 20, 2021 Q3 CQI/CDS WGM Minutes",https://confluence.hl7.org/pages/viewpage.action?pageId=79499646,clinical-quality-information
+6,104574220,ok,accepted,2021-03-12 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=104574220,clinical-quality-information
+15,97471015,ok,accepted,2020-12-11 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=97471015,clinical-quality-information
+0,76155697,too_few,rejected,WGM Agenda/Minutes San Antonio May 2020 - CANCELLED,,clinical-quality-information
+11,82912897,ok,accepted,"WGM Minutes: CQI hosts CDS, CIMI, Pharmacy, May 2020 (Clinical Quality Information)",https://confluence.hl7.org/pages/viewpage.action?pageId=82912897,clinical-quality-information
+6,82912888,ok,accepted,"WGM Minutes: Connectathon Recap for Clinical Reasoning Track, May 2020 (Clinical Quality Information)",https://confluence.hl7.org/pages/viewpage.action?pageId=82912888,clinical-quality-information
+2,75170607,ok,accepted,"<February 5, 2020> CQI WGM Minutes",https://confluence.hl7.org/pages/viewpage.action?pageId=75170607,clinical-quality-information
+4,75170599,ok,accepted,"<February 4, 2020 Q3> CQI WGM Minutes",https://confluence.hl7.org/pages/viewpage.action?pageId=75170599,clinical-quality-information
+9,482413712,ok,accepted,2026-09 Rockville WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=482413712,conformance
+10,358878387,ok,accepted,"2025-09  Pittsburgh, PA, USA, WGM",https://confluence.hl7.org/pages/viewpage.action?pageId=358878387,conformance
+7,76153774,ok,accepted,2020-02 Conformance Meeting Notes,https://confluence.hl7.org/pages/viewpage.action?pageId=76153774,conformance
+7,66914920,ok,accepted,2019-09 Meeting Notes,https://confluence.hl7.org/pages/viewpage.action?pageId=66914920,conformance
+6,40731773,ok,accepted,2019-05 Meeting Notes,https://confluence.hl7.org/pages/viewpage.action?pageId=40731773,conformance
+0,81031169,too_few,rejected,Cross-Group Projects 2022-05 WGM Agenda/Minutes (Virtual),,cross-group-projects
+0,81028600,too_few,rejected,21 January 2022 Q4 CGP WGM Minutes,,cross-group-projects
+8,81028597,ok,accepted,21 January 2022 Q3 CGP WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=81028597,cross-group-projects
+6,79499804,ok,accepted,"September 23, 2021 - Q3 - CGP WGM Minutes",https://confluence.hl7.org/pages/viewpage.action?pageId=79499804,cross-group-projects
+6,91992492,ok,accepted,2020-09-24 CGP WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91992492,cross-group-projects
+2,66937823,ok,accepted,February 4 CGP WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=66937823,cross-group-projects
+0,441522689,too_few,rejected,Meeting Notes: 2026 May 19-22 HL7 Devices Work Group (Rotterdam),,devices
+5,413249034,ok,accepted,Meeting Notes: 2026 January 26-30 HL7 Devices Work Group (virtual),https://confluence.hl7.org/pages/viewpage.action?pageId=413249034,devices
+3,358282125,ok,accepted,"Meeting Notes: 2025 September 15-19 HL7 Devices Work Group (Pittsburgh, USA)",https://confluence.hl7.org/pages/viewpage.action?pageId=358282125,devices
+8,325453832,ok,accepted,"Meeting Notes: 2025 May 12-16 HL7 Devices Work Group (Madrid, Spain)",https://confluence.hl7.org/pages/viewpage.action?pageId=325453832,devices
+11,288072451,ok,accepted,Meeting Notes: 2025 January 27-31 HL7 Devices Work Group (Virtual),https://confluence.hl7.org/pages/viewpage.action?pageId=288072451,devices
+8,248713078,ok,accepted,"Meeting Notes: 2024 September 21-27 HL7 Devices Work Group (Atlanta, Georgia)",https://confluence.hl7.org/pages/viewpage.action?pageId=248713078,devices
+12,97469173,ok,accepted,"Meeting Minutes: January 2021, HL7 & Joint HL7 Devices and IEEE PoCD Working Group Meeting, Virtual/On-line",https://confluence.hl7.org/pages/viewpage.action?pageId=97469173,devices
+14,91980173,ok,accepted,"Mtg Minutes: September 2020, 34th Annual HL7 Plenary & Joint HL7 Devices and IEEE PoCD Working Group Meeting, Virtual/On-line",https://confluence.hl7.org/pages/viewpage.action?pageId=91980173,devices
+10,220694622,ok,accepted,"Agenda: 2024-May 20 thru 24 - HL7 DEVICES Working Group Meetings (In-Person, Dallas, Texas)",https://confluence.hl7.org/pages/viewpage.action?pageId=220694622,devices
+5,91980172,ok,accepted,"Agenda: 2020-September-21 thru 25 - IEEE and HL7 Plenary DEVICES Joint Working Group Meetings, Virtual",https://confluence.hl7.org/pages/viewpage.action?pageId=91980172,devices
+6,212732394,ok,accepted,Agenda: 2024-January  29 thru February 2 - HL7 DEVICES Working Group Meetings (Virtual ONLY),https://confluence.hl7.org/pages/viewpage.action?pageId=212732394,devices
+5,184910875,ok,accepted,Agenda: 2023-September 09 thru 15 - HL7 DEVICES Working Group Meetings,https://confluence.hl7.org/pages/viewpage.action?pageId=184910875,devices
+10,161061964,ok,accepted,Agenda: 2023-May 08 thru 12 - HL7 DEVICES & IEEE 11073 Joint Working Group Meetings,https://confluence.hl7.org/pages/viewpage.action?pageId=161061964,devices
+12,108300457,ok,accepted,"Agenda: 2022-September 19 thru 23 - IEEE 11073 and HL7 DEVICES Joint Working Group Meetings, In-Person (Plenary)",https://confluence.hl7.org/pages/viewpage.action?pageId=108300457,devices
+13,81035262,ok,accepted,"Agenda: 2022-May 9 thru 13 - IEEE 11073 and HL7 DEVICES Joint Working Group Meetings, Virtual",https://confluence.hl7.org/pages/viewpage.action?pageId=81035262,devices
+13,81017589,ok,accepted,"Agenda: 2022-January 18 thru 21 - IEEE and HL7 DEVICES Joint Working Group Meetings, Virtual",https://confluence.hl7.org/pages/viewpage.action?pageId=81017589,devices
+13,77369966,ok,accepted,"Agenda: 2021-September 20 thru 24 - IEEE and HL7 DEVICES Joint Working Group Meetings, Virtual (Plenary)",https://confluence.hl7.org/pages/viewpage.action?pageId=77369966,devices
+13,111124128,ok,accepted,"Agenda: 2021-May 24 thru 30 - IEEE and HL7 DEVICES Joint Working Group Meetings, Virtual",https://confluence.hl7.org/pages/viewpage.action?pageId=111124128,devices
+10,97469171,ok,accepted,"Agenda: 2021-January-25 thru 29 - IEEE and HL7 DEVICES Joint Working Group Meetings, Virtual",https://confluence.hl7.org/pages/viewpage.action?pageId=97469171,devices
+10,220694625,ok,accepted,Meeting Notes: May 2024 - HL7 DEV Devices WG (In-Person),https://confluence.hl7.org/pages/viewpage.action?pageId=220694625,devices
+12,212732397,ok,accepted,Meeting Notes: January 2024 - HL7 DEV Devices WG (Virtual Only),https://confluence.hl7.org/pages/viewpage.action?pageId=212732397,devices
+7,184910877,ok,accepted,Meeting Notes: September 2023 In-Person - HL7 DEV Devices WG,https://confluence.hl7.org/pages/viewpage.action?pageId=184910877,devices
+24,111124088,ok,accepted,Meeting Notes - May 2021 Virtual - IEEE 11073 General Committee / IEEE-PoCD WG / HL7 DEV Devices WG,https://confluence.hl7.org/pages/viewpage.action?pageId=111124088,devices
+6,161061969,ok,accepted,Meeting Notes: May 2023 In-Person - HL7 DEV Devices WG & IEEE 11073 PoCD WG,https://confluence.hl7.org/pages/viewpage.action?pageId=161061969,devices
+22,90341380,ok,accepted,Meeting Notes: May 2022 Virtual - IEEE 11073 General Committee / IEEE-PoCD WG / HL7 DEV Devices WG,https://confluence.hl7.org/pages/viewpage.action?pageId=90341380,devices
+13,144990674,ok,accepted,Meeting Notes: January 2023 In-Person - HL7 DEV Devices WG & IEEE 11073 PoCD WG,https://confluence.hl7.org/pages/viewpage.action?pageId=144990674,devices
+16,81029136,ok,accepted,Meeting Notes: January 2022 Virtual - IEEE 11073 General Committee / IEEE-PoCD WG / HL7 DEV Devices WG,https://confluence.hl7.org/pages/viewpage.action?pageId=81029136,devices
+12,108300462,ok,accepted,Meeting Notes: September 2022 In-Person - IEEE 11073 General Committee / IEEE-PoCD WG / HL7 DEV Devices WG (Plenary),https://confluence.hl7.org/pages/viewpage.action?pageId=108300462,devices
+23,77369972,ok,accepted,Meeting Notes: September (Plenary) 2021 Virtual - IEEE 11073 General Committee / IEEE-PoCD WG / HL7 DEV Devices WG,https://confluence.hl7.org/pages/viewpage.action?pageId=77369972,devices
+15,66916138,ok,accepted,2019 Mtg Minutes -September Atlanta IEEE/HL7-HCD,https://confluence.hl7.org/pages/viewpage.action?pageId=66916138,devices
+9,66940511,ok,accepted,"2020 Mtg Minutes -February Sydney, Australia Joint IEEE/HL7-HCD WG Meetings",https://confluence.hl7.org/pages/viewpage.action?pageId=66940511,devices
+9,468257487,ok,accepted,"EHR WG 2026-09 HL7 WGM (Rockville, MD, USA) Agenda/Calendar",https://confluence.hl7.org/pages/viewpage.action?pageId=468257487,electronic-health-records
+6,479986461,ok,accepted,EHR WG Agenda/Minutes 2026-07-28,https://confluence.hl7.org/pages/viewpage.action?pageId=479986461,electronic-health-records
+8,453904387,ok,accepted,EHR WG Agenda/Minutes 2026-04-14,https://confluence.hl7.org/pages/viewpage.action?pageId=453904387,electronic-health-records
+6,441522580,ok,accepted,EHR WG Agenda/Minutes 2026-04-07,https://confluence.hl7.org/pages/viewpage.action?pageId=441522580,electronic-health-records
+5,441516089,ok,accepted,EHR WG Agenda/Minutes 2026-03-03,https://confluence.hl7.org/pages/viewpage.action?pageId=441516089,electronic-health-records
+8,204280647,ok,accepted,EHR WG 2023-09 HL7 WGM (Phoenix) Agenda/Calendar,https://confluence.hl7.org/pages/viewpage.action?pageId=204280647,electronic-health-records
+4,404100078,ok,accepted,FHIR Infrastructure WGM Agenda 202601,https://confluence.hl7.org/pages/viewpage.action?pageId=404100078,fhir-infrastructure
+4,325460611,ok,accepted,FHIR Infrastructure WGM Agenda 202505,https://confluence.hl7.org/pages/viewpage.action?pageId=325460611,fhir-infrastructure
+7,101351692,ok,accepted,FAST Exchange Minutes CC 20220426,https://confluence.hl7.org/pages/viewpage.action?pageId=101351692,fhir-infrastructure
+6,94656761,ok,accepted,FAST Exchange Minutes CC 20220412,https://confluence.hl7.org/pages/viewpage.action?pageId=94656761,fhir-infrastructure
+10,307302458,ok,accepted,2025-01-27 FMG (Tooling) WGM Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=307302458,fhir-management-group
+8,288395926,ok,accepted,2024-11-20 FMG Attendance Log,https://confluence.hl7.org/pages/viewpage.action?pageId=288395926,fhir-management-group
+4,81008436,ok,accepted,2021-11-24 FMG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=81008436,fhir-management-group
+10,66943156,ok,accepted,2020-02-07 FMG WGM Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=66943156,fhir-management-group
+10,55938025,ok,accepted,2019-07-10 FMG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=55938025,fhir-management-group
+8,116457746,ok,accepted,2021 SEP - Virtual Financial Management Work Group WGM Agenda - DRAFT,https://confluence.hl7.org/pages/viewpage.action?pageId=116457746,financial-management
+13,104565164,ok,accepted,2021 MAY - Virtual Financial Management Work Group WGM Agenda - DRAFT,https://confluence.hl7.org/pages/viewpage.action?pageId=104565164,financial-management
+0,97473747,too_few,rejected,2021 JAN Virtual - Financial Management Work Group WGM Agenda/Meeting Minutes,,financial-management
+4,90899886,ok,accepted,2020 SEP - FM Virtual WGM Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=90899886,financial-management
+6,31686975,ok,accepted,2018 Oct Baltimore FM WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=31686975,financial-management
+0,101358910,too_few,rejected,2022 05 09 - FM WGM Minutes - VOCABULARY DISCUSSIONS,,financial-management
+4,79505921,ok,accepted,2022 01 18 Tues Q1 - FM WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=79505921,financial-management
+0,31688011,too_few,rejected,20XX XXX Where Financial Management Work Group WGM Agenda,,financial-management
+6,358888114,ok,accepted,HSS WGM Agenda/Minutes 2025-09,https://confluence.hl7.org/pages/viewpage.action?pageId=358888114,human-and-social-services
+6,308972405,ok,accepted,HSS WGM Agenda/Minutes 2025-01,https://confluence.hl7.org/pages/viewpage.action?pageId=308972405,human-and-social-services
+17,104563585,ok,accepted,2021-05 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=104563585,imaging-integration
+5,358267447,ok,accepted,2025-08-13 ITS minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=358267447,implementable-technology-specifications
+1,101359525,ok,accepted,2022-05-10 Q1 ITS minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=101359525,implementable-technology-specifications
+1,81030774,ok,accepted,2022-01-09 ITS WGM Q1 minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=81030774,implementable-technology-specifications
+3,80120419,ok,accepted,2019-09-03 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120419,implementable-technology-specifications
+3,80120417,ok,accepted,2019-08-20 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120417,implementable-technology-specifications
+5,80120415,ok,accepted,2019-08-06 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120415,implementable-technology-specifications
+5,80120413,ok,accepted,2019-07-09 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120413,implementable-technology-specifications
+4,80120411,ok,accepted,2019-07-02 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120411,implementable-technology-specifications
+4,80120409,ok,accepted,2019-06-04 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120409,implementable-technology-specifications
+4,80120405,ok,accepted,2019-05-28 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120405,implementable-technology-specifications
+5,80120403,ok,accepted,2019-05-21 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120403,implementable-technology-specifications
+3,80120395,ok,accepted,2019-04-02 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120395,implementable-technology-specifications
+4,80120393,ok,accepted,2019-03-19 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120393,implementable-technology-specifications
+6,80120391,ok,accepted,2019-03-05 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120391,implementable-technology-specifications
+5,80120389,ok,accepted,2019-02-12 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120389,implementable-technology-specifications
+4,80120387,ok,accepted,2019-01-29 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120387,implementable-technology-specifications
+4,80120382,ok,accepted,2019-01-08 Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=80120382,implementable-technology-specifications
+0,413042778,too_few,rejected,2026-01-29 Thursday January INM Q1 Agenda/Minutes,,infrastructure-and-messaging
+0,58658200,too_few,rejected,2019-INM September Atlanta WGM Agenda,,infrastructure-and-messaging
+0,37914567,too_few,rejected,Survey for SanAntonio WGM INM attendance,,infrastructure-and-messaging
+4,288391469,ok,accepted,2025 January LHS WGM Minutes Q3/Q4,https://confluence.hl7.org/pages/viewpage.action?pageId=288391469,learning-health-systems
+0,91980927,too_few,rejected,September 2020 WGM (Virtual) - Learning Health Systems Agenda and Minutes,,learning-health-systems
+0,48236427,too_few,rejected,May 2019 WGM - Learning Health Systems Agenda and Minutes,,learning-health-systems
+5,39158442,ok,accepted,January 2019 WGM - Learning Health Systems Agenda and Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=39158442,learning-health-systems
+0,413249616,too_few,rejected,2026 January MH WGM Minutes,,mobile-health
+3,274269295,ok,accepted,September 2024 MH WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=274269295,mobile-health
+0,239215996,too_few,rejected,May 2024 MH WGM Minutes,,mobile-health
+3,97481375,ok,accepted,2021-01-28 Q3: MH WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=97481375,mobile-health
+1,97481340,ok,accepted,2021-01-27 Q1:  MH WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=97481340,mobile-health
+0,97481350,too_few,rejected,2021-01-27 Q2:  MH WGM Minutes,,mobile-health
+3,35719065,ok,accepted,2019 San Antonio WGM Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=35719065,mobile-health
+8,239247319,ok,accepted,2024/05 SOA WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=239247319,orchestration-services-architecture
+10,161066833,ok,accepted,SOA May 2023 New Orleans WGM minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=161066833,orchestration-services-architecture
+9,79501092,ok,accepted,September 2021 WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=79501092,orchestration-services-architecture
+6,113674244,ok,accepted,May 2021 SOA WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=113674244,orchestration-services-architecture
+8,51224805,ok,accepted,SOA Sep 2019 Minutes Atlanta WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=51224805,orchestration-services-architecture
+8,265095232,ok,accepted,2024/09 OSA WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=265095232,orchestration-services-architecture
+5,79503329,ok,accepted,SOA 2022/01 WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=79503329,orchestration-services-architecture
+9,97478311,ok,accepted,SOA 2021/01 WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=97478311,orchestration-services-architecture
+7,91984276,ok,accepted,Sep 21-25 SOA WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91984276,orchestration-services-architecture
+0,31688824,too_few,rejected,SOA 2019/01 WGM Agenda - San Antonio,,orchestration-services-architecture
+2,66936919,ok,accepted,12/06/2019 Nutrition call minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=66936919,orders-and-observations
+3,66936917,ok,accepted,11/22/2019 Nutrition call minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=66936917,orders-and-observations
+4,66936915,ok,accepted,11/15/2019 Nutrition call minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=66936915,orders-and-observations
+3,66936913,ok,accepted,11/08/2019 Nutrition call minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=66936913,orders-and-observations
+3,66936908,ok,accepted,10/18/2019 Nutrition call minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=66936908,orders-and-observations
+4,66936885,ok,accepted,10/11/2019 Nutrition call minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=66936885,orders-and-observations
+3,66936867,ok,accepted,10/04/2019 Nutrition call minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=66936867,orders-and-observations
+4,66936850,ok,accepted,09/27/2019 Nutrition Call Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=66936850,orders-and-observations
+3,66921502,ok,accepted,08/23/2019 Nutrition call minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=66921502,orders-and-observations
+2,58655007,ok,accepted,07/19/2019 Nutrition call minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=58655007,orders-and-observations
+6,58655000,ok,accepted,06/21/2019 Nutrition call minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=58655000,orders-and-observations
+4,55935430,ok,accepted,06/14/2019 Nutrition call minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=55935430,orders-and-observations
+8,51216495,ok,accepted,04/26/2019 Nutrition call minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=51216495,orders-and-observations
+6,468257460,ok,accepted,OO WGM 202609 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=468257460,orders-and-observations
+7,413056865,ok,accepted,WGM 202605 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=413056865,orders-and-observations
+8,403869410,ok,accepted,OO WGM 202601 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=403869410,orders-and-observations
+5,358886937,ok,accepted,WGM 202509 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=358886937,orders-and-observations
+5,324963918,ok,accepted,OO WGM 202505 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=324963918,orders-and-observations
+6,288396758,ok,accepted,OO WGM 202501 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=288396758,orders-and-observations
+7,248712562,ok,accepted,OO WGM 202409 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=248712562,orders-and-observations
+6,220701050,ok,accepted,OO WGM 202405 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=220701050,orders-and-observations
+7,208472294,ok,accepted,OO WGM 202401 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=208472294,orders-and-observations
+6,175612934,ok,accepted,OO WGM 202309 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=175612934,orders-and-observations
+6,66921928,ok,accepted,OO WGM 202002 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=66921928,orders-and-observations
+6,156544355,ok,accepted,OO WGM 202305 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=156544355,orders-and-observations
+6,144983433,ok,accepted,OO WGM 202301 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=144983433,orders-and-observations
+7,101362549,ok,accepted,OO WGM 202209 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=101362549,orders-and-observations
+4,131049462,ok,accepted,OO WGM Agenda - 202209,https://confluence.hl7.org/pages/viewpage.action?pageId=131049462,orders-and-observations
+6,90353944,ok,accepted,202205 OO WGM Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=90353944,orders-and-observations
+4,81015894,ok,accepted,OO WGM Agenda - 202201,https://confluence.hl7.org/pages/viewpage.action?pageId=81015894,orders-and-observations
+12,116461150,ok,accepted,OO WGM Agenda - 202109,https://confluence.hl7.org/pages/viewpage.action?pageId=116461150,orders-and-observations
+6,54690514,ok,accepted,OO WGM 201909 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=54690514,orders-and-observations
+5,104563602,ok,accepted,OO WGM Agenda - 202105,https://confluence.hl7.org/pages/viewpage.action?pageId=104563602,orders-and-observations
+6,97458032,ok,accepted,OO WGM Agenda - 202101,https://confluence.hl7.org/pages/viewpage.action?pageId=97458032,orders-and-observations
+5,90901839,ok,accepted,OO WGM Agenda - 202009,https://confluence.hl7.org/pages/viewpage.action?pageId=90901839,orders-and-observations
+5,40739048,ok,accepted,OO WGM 201905 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=40739048,orders-and-observations
+7,37913580,ok,accepted,OO WGM 201901 - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=37913580,orders-and-observations
+0,97479274,too_few,rejected,OO Meeting Minutes - 2020,,orders-and-observations
+0,66939115,too_few,rejected,OO Meeting Minutes - 2019,,orders-and-observations
+0,40730889,too_few,rejected,OO Meeting Minutes - 2018,,orders-and-observations
+4,413052116,ok,accepted,2026 May WGM Rotterdam - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=413052116,patient-administration
+0,184926111,too_few,rejected,2024 January WGM (Virtual) - Agenda,,patient-administration
+5,144997656,ok,accepted,2023 May WGM (New Orleans) - Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=144997656,patient-administration
+3,79506896,ok,accepted,2022 January Virtual WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=79506896,patient-administration
+3,77365782,ok,accepted,2021 September Virtual WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=77365782,patient-administration
+5,97480364,ok,accepted,2021 May Virtual WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=97480364,patient-administration
+5,90901867,ok,accepted,2020 September Virtual WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=90901867,patient-administration
+2,66917974,ok,accepted,"2020 Feb WGM Agenda - Sydney, Australia",https://confluence.hl7.org/pages/viewpage.action?pageId=66917974,patient-administration
+3,51224000,ok,accepted,2019 Sept WGM Agenda - Atlanta,https://confluence.hl7.org/pages/viewpage.action?pageId=51224000,patient-administration
+5,307302416,ok,accepted,2025 January PC WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=307302416,patient-care
+0,76157308,too_few,rejected,2020 May WGM - Patient Care Agenda,,patient-care
+10,51224615,ok,accepted,2019 Sept WGM - Patient Care Agenda and Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=51224615,patient-care
+12,40734031,ok,accepted,2019 May WGM - Patient Care Agenda and Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=40734031,patient-care
+0,6000821,too_few,rejected,Patient Care FHIR Conference Calls,,patient-care
+0,76162471,too_few,rejected,MCC Meeting Minutes,,patient-care
+4,494863628,ok,accepted,Q1 (Tuesday) Agenda and Minutes - Patient Empowerment Sept 2026 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=494863628,patient-empowerment
+0,494863639,too_few,rejected,Q2 (Tuesday) Agenda and Minutes - Patient Empowerment Sept 2026 WGM,,patient-empowerment
+5,494863649,ok,accepted,Q2 (Wednesday) Agenda and Minutes - Patient Empowerment Sept 2026 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=494863649,patient-empowerment
+0,494863591,too_few,rejected,Q2 (Monday) Agenda and Minutes - Patient Empowerment Sept 2026 WGM,,patient-empowerment
+0,494863618,too_few,rejected,Q3 (Monday) Agenda and Minutes - Patient Empowerment Sept 2026 WGM,,patient-empowerment
+6,453928935,ok,accepted,Sept 2026 WGM Agenda - Patient Empowerment,https://confluence.hl7.org/pages/viewpage.action?pageId=453928935,patient-empowerment
+4,453921539,ok,accepted,Q2 (Wednesday) Agenda and Minutes - Patient Empowerment May 2026 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=453921539,patient-empowerment
+0,453919414,too_few,rejected,Q3 (Monday) Agenda and Minutes - Patient Empowerment May 2026 WGM,,patient-empowerment
+1,413055772,headcount_low_vs_median,rejected,May 2026 WGM Agenda - Patient Empowerment,,patient-empowerment
+5,441519618,ok,accepted,2026-03-16 Engagement Subgroup Agenda and Meeting Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=441519618,patient-empowerment
+4,413248873,ok,accepted,Q3 (Thursday) Agenda and Minutes - Patient Empowerment Jan 2026 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=413248873,patient-empowerment
+4,413248853,ok,accepted,Q2 (Monday) Agenda and Minutes - Patient Empowerment Jan 2026 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=413248853,patient-empowerment
+2,413248849,ok,accepted,Q1 (Monday) Agenda and Minutes - Patient Empowerment Jan 2026 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=413248849,patient-empowerment
+0,413248870,too_few,rejected,Q2 (Tuesday) Agenda and Minutes - Patient Empowerment Jan 2026 WGM,,patient-empowerment
+0,413248866,too_few,rejected,Q1 (Tuesday) Agenda and Minutes - Patient Empowerment Jan 2026 WGM,,patient-empowerment
+38,413248876,headcount_high_vs_median,rejected,QLUNCH (Wednesday) Agenda and Minutes - Patient Empowerment Jan 2026 WGM,,patient-empowerment
+0,413054108,too_few,rejected,Q2 (Wednesday) Agenda and Minutes - Patient Empowerment Jan 2026 WGM,,patient-empowerment
+0,413248883,too_few,rejected,Q1 (Friday) Agenda and Minutes - Patient Empowerment Jan 2026 WGM,,patient-empowerment
+0,413248886,too_few,rejected,Q2 (Friday) Agenda and Minutes - Patient Empowerment Jan 2026 WGM,,patient-empowerment
+0,403869938,too_few,rejected,Jan 2026 WGM Agenda - Patient Empowerment,,patient-empowerment
+0,358278264,too_few,rejected,9/16/25 Q1 (Tuesday) Agenda and Minutes - Patient Empowerment Sept 2025 WGM,,patient-empowerment
+0,358277346,too_few,rejected,9/17/25 Q2 (Wednesday) Agenda and Minutes - Patient Empowerment Sept 2025 WGM,,patient-empowerment
+0,358277337,too_few,rejected,9/16/25 Q2 (Tuesday) Agenda and Minutes - Patient Empowerment Sept 2025 WGM,,patient-empowerment
+0,358277293,too_few,rejected,9/15/25 Q3 (Monday) Agenda and Minutes - Patient Empowerment Sept 2025 WGM,,patient-empowerment
+2,358875987,ok,accepted,Sept 2025 WGM Agenda - Patient Empowerment,https://confluence.hl7.org/pages/viewpage.action?pageId=358875987,patient-empowerment
+0,345085135,too_few,rejected,5/14/25 Q2 (Wednesday) Agenda and Minutes - Patient Empowerment May 2025 WGM,,patient-empowerment
+2,345083854,ok,accepted,5/13/25 Q4 (Tuesday) Agenda and Minutes - Patient Empowerment May 2025 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=345083854,patient-empowerment
+7,345083218,ok,accepted,5/12/25 Q1 (Monday) Agenda and Minutes - Patient Empowerment May 2025 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=345083218,patient-empowerment
+2,345083233,ok,accepted,5/12/25 Q4 (Monday) Agenda and Minutes - Patient Empowerment May 2025 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=345083233,patient-empowerment
+7,345083225,ok,accepted,5/12/25 Q3 (Monday) Agenda and Minutes - Patient Empowerment May 2025 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=345083225,patient-empowerment
+8,324964368,ok,accepted,May 2025 WGM Agenda - Patient Empowerment,https://confluence.hl7.org/pages/viewpage.action?pageId=324964368,patient-empowerment
+0,308971527,too_few,rejected,1/30/25 Q2(Thursday) Agenda and Minutes - Patient Empowerment Jan 2025 WGM,,patient-empowerment
+4,308971515,ok,accepted,1/29/25 Q2(Wednesday) Agenda and Minutes - Patient Empowerment Jan 2025 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=308971515,patient-empowerment
+0,308971509,too_few,rejected,1/28/25 Q2(Tuesday) Agenda and Minutes - Patient Empowerment Jan 2025 WGM,,patient-empowerment
+0,308971521,too_few,rejected,1/29/25 Q3(Wednesday) Agenda and Minutes - Patient Empowerment Jan 2025 WGM,,patient-empowerment
+0,308971496,too_few,rejected,1/27/25 Q3(Monday) Agenda and Minutes - Patient Empowerment Jan 2025 WGM,,patient-empowerment
+0,308971502,too_few,rejected,1/27/25 Q4(Monday) Agenda and Minutes - Patient Empowerment Jan 2025 WGM,,patient-empowerment
+0,281284200,too_few,rejected,January 2025 WGM Agenda - Patient Empowerment,,patient-empowerment
+0,273941735,too_few,rejected,9/24/24 Q2(Wednesday) Agenda and Minutes - Patient Empowerment Sept 2024 WGM,,patient-empowerment
+0,273941762,too_few,rejected,9/24/24 Q3(Wednesday) Agenda and Minutes - Patient Empowerment Sept 2024 WGM,,patient-empowerment
+0,273941707,too_few,rejected,9/23/24 Q5(Monday) Agenda and Minutes - Patient Empowerment Sept 2024 WGM,,patient-empowerment
+0,273941733,too_few,rejected,9/24/24 Q3(Tuesday) Agenda and Minutes - Patient Empowerment Sept 2024 WGM,,patient-empowerment
+2,248876691,ok,accepted,September 2024 WGM+ Agenda - Patient Empowerment,https://confluence.hl7.org/pages/viewpage.action?pageId=248876691,patient-empowerment
+5,239216015,ok,accepted,May 5/22/24 Q2(Wednesday) Agenda and Minutes - Patient Empowerment May 2024 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=239216015,patient-empowerment
+0,239215311,too_few,rejected,May 5/21/24 Q3(Tuesday) Agenda and Minutes - Patient Empowerment May 2024 WGM,,patient-empowerment
+5,239214811,ok,accepted,May 5/20/24 Q1(Monday) Agenda and Minutes - Patient Empowerment May 2024 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=239214811,patient-empowerment
+0,239216018,too_few,rejected,May 5/22/24 Q3(Wednesday) Agenda and Minutes - Patient Empowerment May 2024 WGM,,patient-empowerment
+0,239216032,too_few,rejected,May 5/22/24 Q4(Wednesday) Agenda and Minutes - Patient Empowerment May 2024 WGM,,patient-empowerment
+0,239215309,too_few,rejected,May 5/21/24 Q1(Tuesday) Agenda and Minutes - Patient Empowerment May 2024 WGM,,patient-empowerment
+0,220698286,too_few,rejected,May 2024 WGM Agenda - Patient Empowerment,,patient-empowerment
+0,218828064,too_few,rejected,2/2/24 Q4 (Friday) Agenda and Minutes - Patient Empowerment Jan 2024 WGM,,patient-empowerment
+0,218828062,too_few,rejected,2/1/24 Q5 (Thursday) Agenda and Minutes - Patient Empowerment Jan 2024 WGM,,patient-empowerment
+0,218828057,too_few,rejected,1/30/24 Q5 (Tuesday) Agenda and Minutes - Patient Empowerment Jan 2024 WGM,,patient-empowerment
+1,204276404,headcount_low_vs_median,rejected,January 2024 WGM Agenda - Patient Empowerment,,patient-empowerment
+7,184922911,ok,accepted,5/11/23 Q4 (Monday) Agenda and Minutes - Patient Empowerment Sept 2023 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=184922911,patient-empowerment
+13,184922923,ok,accepted,5/12/23 Q3(Tuesday) Agenda and Minutes - Patient Empowerment Sept 2023 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=184922923,patient-empowerment
+3,184922907,ok,accepted,5/11/23 Q3 (Monday) Agenda and Minutes - Patient Empowerment Sept 2023 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=184922907,patient-empowerment
+6,184922918,ok,accepted,5/12/23 Q2(Tuesday) Agenda and Minutes - Patient Empowerment Sept 2023 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=184922918,patient-empowerment
+6,184922931,ok,accepted,5/13/23 Q2 (Wednesday) Agenda and Minutes - Patient Empowerment Sept 2023 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=184922931,patient-empowerment
+0,184922927,too_few,rejected,5/13/23 Q4 (Wednesday) Agenda and Minutes - Patient Empowerment Sept 2023 WGM,,patient-empowerment
+0,184922913,too_few,rejected,5/12/23 Q1 (Tuesday) Agenda and Minutes - Patient Empowerment Sept 2023 WGM,,patient-empowerment
+3,171450704,ok,accepted,Sept 2023 WGM Agenda - Patient Empowerment,https://confluence.hl7.org/pages/viewpage.action?pageId=171450704,patient-empowerment
+0,156544109,too_few,rejected,"May 2023 WGM Agenda - Patient Empowerment, May 8 - 12, 2023",,patient-empowerment
+8,171443621,ok,accepted,5/10/23 Q2 (Wednesday) Agenda and Minutes - Patient Empowerment May 2023 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=171443621,patient-empowerment
+0,171443619,too_few,rejected,5/10/23 Q1 (Wednesday) Agenda and Minutes - Patient Empowerment May 2023 WGM,,patient-empowerment
+0,171443617,too_few,rejected,5/8/23 Q2 (Monday) Agenda and Minutes - Patient Empowerment May 2023 WGM,,patient-empowerment
+9,161075944,ok,accepted,5/11/23 Q3 (Thursday) Agenda and Minutes - Patient Empowerment May 2023 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=161075944,patient-empowerment
+0,161075932,too_few,rejected,5/9/23 Q2 (Tuesday) Agenda and Minutes - Patient Empowerment May 2023 WGM,,patient-empowerment
+0,161078141,too_few,rejected,5/8/23 Q4 (Monday) Agenda and Minutes - Patient Empowerment May 2023 WGM,,patient-empowerment
+0,161075926,too_few,rejected,5/8/23 Q3 (Monday) Agenda and Minutes - Patient Empowerment May 2023 WGM,,patient-empowerment
+0,161075934,too_few,rejected,5/9/23 Q5 (Tuesday) Agenda and Minutes - Patient Empowerment May 2023 WGM,,patient-empowerment
+6,139664472,ok,accepted,"Agenda - Patient Empowerment WG for HL7 WGM, Jan 16 - 20, 2023",https://confluence.hl7.org/pages/viewpage.action?pageId=139664472,patient-empowerment
+0,154992887,too_few,rejected,1/17/23 Q3 (Tuesday) Agenda and Minutes - Patient Empowerment Jan 2023 WGM,,patient-empowerment
+0,154992885,too_few,rejected,1/17/23 Q2 (Tuesday) Agenda and Minutes - Patient Empowerment Jan 2023 WGM,,patient-empowerment
+0,154992883,too_few,rejected,1/17/23 Q1 (Tuesday) Agenda and Minutes - Patient Empowerment Jan 2023 WGM,,patient-empowerment
+0,144995893,too_few,rejected,1/16/23 Q2 (Monday) Agenda and Minutes - Patient Empowerment Jan 2023 WGM,,patient-empowerment
+0,144995891,too_few,rejected,1/16/23 Q1 (Monday) Agenda and Minutes - Patient Empowerment Jan 2023 WGM,,patient-empowerment
+0,154992874,too_few,rejected,1/18/23 Q2 (Wednesday) Agenda and Minutes - Patient Empowerment Jan 2023 WGM,,patient-empowerment
+0,144997711,too_few,rejected,1/19/23 Q2 (Thursday) Agenda and Minutes - Patient Empowerment Jan 2023 WGM,,patient-empowerment
+2,144995898,ok,accepted,1/16/23 Q4 (Monday) Agenda and Minutes - Patient Empowerment Jan 2023 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=144995898,patient-empowerment
+0,144995896,too_few,rejected,1/16/23 Q3 (Monday) Agenda and Minutes - Patient Empowerment Jan 2023 WGM,,patient-empowerment
+0,144997713,too_few,rejected,1/18/23 Q3 (Wednesday) Agenda and Minutes - Patient Empowerment Jan 2023 WGM,,patient-empowerment
+0,104764522,too_few,rejected,"Agenda - Patient Empowermt WG for HL7 WGM, Sept 19 - 23, 2022",,patient-empowerment
+9,139658961,ok,accepted,9/21/22 Q2 (Wednesday) Minutes - Patient Empowerment Sept 2022 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=139658961,patient-empowerment
+0,139659060,too_few,rejected,9/22/22 Q2 (Friday) Minutes - Patient Empowerment Sept 2022 WGM,,patient-empowerment
+0,139659024,too_few,rejected,9/22/22 Q1 (Friday) Minutes - Patient Empowerment Sept 2022 WGM,,patient-empowerment
+0,139664537,too_few,rejected,Copy of 9/20/22 Q4 (Tuesday) Agenda - Patient Empowerment Sept 2022 WGM,,patient-empowerment
+0,139658970,too_few,rejected,9/20/22 Q3 (Tuesday) Agenda - Patient Empowerment Sept 2022 WGM,,patient-empowerment
+0,139658952,too_few,rejected,9/20/22 Q2 (Tuesday) Agenda - Patient Empowerment Sept 2022 WGM,,patient-empowerment
+1,139658741,headcount_low_vs_median,rejected,9/19/22 Q4 (Monday) Agenda - Patient Empowerment Sept 2022 WGM,,patient-empowerment
+12,101358368,ok,accepted,5/11/22 Q2 (Wednesday) Minutes - Patient Empowerment May 2022 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=101358368,patient-empowerment
+0,101358372,too_few,rejected,5/11/22 Q4 (Wednesday) Minutes - Patient Empowerment May 2022 WGM,,patient-empowerment
+0,101358378,too_few,rejected,5/12/22 Q1 (Thursday) Minutes - Patient Empowerment May 2022 WGM,,patient-empowerment
+1,101358370,headcount_low_vs_median,rejected,5/11/22 Q3 (Wednesday) Minutes - Patient Empowerment May 2022 WGM,,patient-empowerment
+0,101358380,too_few,rejected,5/12/22 Q3 (Thursday) Minutes - Patient Empowerment May 2022 WGM,,patient-empowerment
+0,101358366,too_few,rejected,5/11/22 Q1 (Wednesday) Minutes - Patient Empowerment May 2022 WGM,,patient-empowerment
+0,101358382,too_few,rejected,5/12/22 Q4 (Thursday) Minutes - Patient Empowerment May 2022 WGM,,patient-empowerment
+2,101358286,ok,accepted,5/9/22 Q1 (Monday) Minutes - Patient Empowerment May 2022 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=101358286,patient-empowerment
+5,101358311,ok,accepted,5/10/22 Q3 (Tuesday) Minutes - Patient Empowerment May 2022 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=101358311,patient-empowerment
+5,101358294,ok,accepted,5/9/22 Q4 (Monday) Minutes - Patient Empowerment May 2022 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=101358294,patient-empowerment
+5,101358292,ok,accepted,5/9/22 Q2 (Monday) Minutes - Patient Empowerment May 2022 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=101358292,patient-empowerment
+4,104764505,ok,accepted,5/10/22 Q1 (Tuesday) Minutes - Patient Empowerment May 2022 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=104764505,patient-empowerment
+0,101358385,too_few,rejected,5/13/22 Q1 (Friday) Agenda - Patient Empowerment May 2022 WGM,,patient-empowerment
+0,101358305,too_few,rejected,5/10/22 Q1 (Tuesday) Agenda - Patient Empowerment May 2022 WGM,,patient-empowerment
+0,101358388,too_few,rejected,5/13/22 Q2 (Friday) Agenda - Patient Empowerment May 2022 WGM,,patient-empowerment
+2,101358308,ok,accepted,5/10/22 Q2 (Tuesday) Agenda - Patient Empowerment May 2022 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=101358308,patient-empowerment
+1,81029632,headcount_low_vs_median,rejected,1/19/22 Q2 (Wednes) Agenda & Minutes - Patient Empowerment Jan 2022 WGM,,patient-empowerment
+2,81029627,ok,accepted,1/18/20 Q4 (Tues) Agenda & Minutes - Patient Empowerment Jan 2022 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=81029627,patient-empowerment
+4,81029625,ok,accepted,1/18/22 Q1 (Tues) Agenda & Minutes - Patient Empowerment Jan 2022 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=81029625,patient-empowerment
+0,81031989,too_few,rejected,1/21/22 Q2 (Friday) Agenda & Minutes - Patient Empowerment Jan 2022 WGM,,patient-empowerment
+0,81031991,too_few,rejected,1/21/22 Q3 (Friday) Agenda & Minutes - Patient Empowerment Jan 2022 WGM,,patient-empowerment
+2,81031461,ok,accepted,1/20/22 Q3 (Thursday) Agenda & Minutes - Patient Empowerment Jan 2022 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=81031461,patient-empowerment
+0,81029634,too_few,rejected,1/19/22 Q4 (Wednes) Agenda & Minutes - Patient Empowerment Jan 2022 WGM,,patient-empowerment
+0,81018539,too_few,rejected,"Agenda Matrix - Pt Empowermt WG for HL7 Virtual WGM, Jan 18-21 , 2022",,patient-empowerment
+0,116459505,too_few,rejected,"! Agenda Matrix - Pt Empowermt WG for HL7 Virtual WGM, Sept 20-24, 2021",,patient-empowerment
+4,79500278,ok,accepted,9/22 Q2 (Weds) Agenda & Minutes - Patient Empowerment Sept 2021 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=79500278,patient-empowerment
+4,79500274,ok,accepted,9/21 Q4 (Tues) Agenda & Minutes - Patient Empowerment Sept 2021 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=79500274,patient-empowerment
+0,79500288,too_few,rejected,9/23 Q4 (Thur) Agenda & Minutes - Patient Empowerment Sept 2021 WGM,,patient-empowerment
+8,79500282,ok,accepted,9/23 Q1 (Thur) Agenda & Minutes - Patient Empowerment Sept 2021 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=79500282,patient-empowerment
+4,79500280,ok,accepted,9/22 Q3 (Weds) Agenda & Minutes - Patient Empowerment Sept 2021 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=79500280,patient-empowerment
+3,79500276,ok,accepted,9/22 Q1 (Weds) Agenda & Minutes - Patient Empowerment Sept 2021 WGM  **DRAFT**,https://confluence.hl7.org/pages/viewpage.action?pageId=79500276,patient-empowerment
+7,79500270,ok,accepted,9/21 Q1 (Tues) Agenda & Minutes - Patient Empowerment Sept 2021 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=79500270,patient-empowerment
+0,79500262,too_few,rejected,9/20 Q4 (Mon) Agenda & Minutes - Patient Empowerment Sept 2021 WGM,,patient-empowerment
+0,79500290,too_few,rejected,9/24 Q3 (Fri) Agenda and Minutes - Patient Empowerment Sept 2021 WGM,,patient-empowerment
+0,79500294,too_few,rejected,9/24 Q4 (Fri) Agenda & Minutes - Patient Empowerment Sept 2021 WGM,,patient-empowerment
+4,79500259,ok,accepted,9/20 Q3 (Mon) Minutes - Patient Empowerment Sept 2021 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=79500259,patient-empowerment
+3,113674802,ok,accepted,Patient Empowerment May 2021 WGM Monday Q3 Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=113674802,patient-empowerment
+10,113676702,ok,accepted,Patient Empowerment May 2021 WGM Friday Q4,https://confluence.hl7.org/pages/viewpage.action?pageId=113676702,patient-empowerment
+8,113675523,ok,accepted,Patient Empowerment May 2021 WGM Wednesday Q2,https://confluence.hl7.org/pages/viewpage.action?pageId=113675523,patient-empowerment
+0,104570397,too_few,rejected,"Agenda Matrix - Pt Empowermt WG for HL7 Virtual WGM, May 24-28, 2021",,patient-empowerment
+2,97475000,ok,accepted,Agenda - Pt Empowermt WG for January 2021 HL7 Virtual WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=97475000,patient-empowerment
+0,91980216,too_few,rejected,Pt Empowerment WG's agenda for Sept 2020 HL7 Virtual WGM,,patient-empowerment
+5,91992668,ok,accepted,Sept 25: 12-1:30PM Session Pat Empowerment WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91992668,patient-empowerment
+0,91992664,too_few,rejected,Sept 25: 10-11:30AM Session Pat Empowerment WGM Minutes,,patient-empowerment
+0,91991829,too_few,rejected,Sept 23: 12-1:30PM Session Pat Empowerment WGM Minutes,,patient-empowerment
+0,91991827,too_few,rejected,Sept 23: 10-11:30AM Session Pat Empowerment WGM Minutes,,patient-empowerment
+0,91990979,too_few,rejected,Sept 21: 4-5:30PM Session Pat Empowerment WGM Minutes,,patient-empowerment
+5,97481194,ok,accepted,1/28 Q4 minutes - Patient Empowerment WG,https://confluence.hl7.org/pages/viewpage.action?pageId=97481194,patient-empowerment
+8,97481200,ok,accepted,1/29 Q3 minutes - Patient Empowerment WG,https://confluence.hl7.org/pages/viewpage.action?pageId=97481200,patient-empowerment
+7,97481198,ok,accepted,1/29 Q1 minutes - Patient Empowerment WG,https://confluence.hl7.org/pages/viewpage.action?pageId=97481198,patient-empowerment
+7,97480668,ok,accepted,1/26 Q4 minutes - Patient Empowerment WG,https://confluence.hl7.org/pages/viewpage.action?pageId=97480668,patient-empowerment
+5,97481191,ok,accepted,1/27 Q2 minutes - Patient Empowerment WG,https://confluence.hl7.org/pages/viewpage.action?pageId=97481191,patient-empowerment
+9,97481181,ok,accepted,1/27 Q1 minutes - Patient Empowerment WG,https://confluence.hl7.org/pages/viewpage.action?pageId=97481181,patient-empowerment
+0,97480055,too_few,rejected,1/25 Q1 minutes - Patient Empowerment WG,,patient-empowerment
+4,97480061,ok,accepted,1/25 Q2 minutes - Patient Empowerment WG,https://confluence.hl7.org/pages/viewpage.action?pageId=97480061,patient-empowerment
+9,175616960,ok,accepted,"PIE WGM Sept 11-14, 2023 Agenda/Minutes",https://confluence.hl7.org/pages/viewpage.action?pageId=175616960,payer-provider-information-exchange
+9,37912655,ok,accepted,Jan 2019 HL7 AWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=37912655,payer-provider-information-exchange
+3,39157990,ok,accepted,2018-12-04_AWG_Call Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=39157990,payer-provider-information-exchange
+11,40738723,ok,accepted,AWG  2019 May (Montreal) Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=40738723,payer-provider-information-exchange
+24,144981907,headcount_high_vs_median,rejected,Meeting Minutes Archive - prior to 2022,,payer-provider-information-exchange
+6,358896372,ok,accepted,September 2025 WGM - Pharmacy WG Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=358896372,pharmacy
+0,325454354,too_few,rejected,May 2025 WGM - Pharmacy WG Agenda,,pharmacy
+5,307302474,ok,accepted,Documentation-related Jira items - January 2025 WGM,https://confluence.hl7.org/pages/viewpage.action?pageId=307302474,pharmacy
+4,90342270,ok,accepted,Pharmacy WG May 2022 Virtual WGM Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=90342270,pharmacy
+8,77365347,ok,accepted,September 2021 Virtual WGM Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=77365347,pharmacy
+4,104570778,ok,accepted,May 2021 Virtual WGM Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=104570778,pharmacy
+6,40736286,ok,accepted,May 2019 Pharmacy WGM Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=40736286,pharmacy
+27,34439708,ok,accepted,WGM Attendance Jan 2019,https://confluence.hl7.org/pages/viewpage.action?pageId=34439708,pharmacy
+3,66939071,ok,accepted,Sydney Working Group Meeting Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=66939071,pharmacy
+6,58656053,ok,accepted,Atlanta Working Group Meeting Agenda,https://confluence.hl7.org/pages/viewpage.action?pageId=58656053,pharmacy
+0,24379504,too_few,rejected,October 2018 Baltimore Work Group Minutes/Agenda,,pharmacy
+3,29753433,ok,accepted,Conference Calls/Meetings,https://confluence.hl7.org/pages/viewpage.action?pageId=29753433,pharmacy
+7,24379511,ok,accepted,Pharmacy WGM Agenda - October 2018 - Baltimore,https://confluence.hl7.org/pages/viewpage.action?pageId=24379511,pharmacy
+9,403869392,ok,accepted,January 2026 - Virtual - Pharmacy WG Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=403869392,pharmacy
+6,274268274,ok,accepted,20240925 Q1 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=274268274,public-health
+2,218827422,ok,accepted,20240129 Q3 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=218827422,public-health
+1,218827425,ok,accepted,20240129 Q4 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=218827425,public-health
+2,184923554,ok,accepted,20230913 Q2 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=184923554,public-health
+6,184923545,ok,accepted,20230911 Q4 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=184923545,public-health
+3,101357920,ok,accepted,20220511 Q1 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=101357920,public-health
+0,101357902,too_few,rejected,20220509 Q1 PHWG WGM Minutes,,public-health
+1,101357912,ok,accepted,20220509 Q4 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=101357912,public-health
+2,79502048,ok,accepted,Wednesday Q2 Sept 2021 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=79502048,public-health
+4,113672636,ok,accepted,Monday Q3 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=113672636,public-health
+2,91991553,ok,accepted,2021-01-14 Public Health WG Call Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91991553,public-health
+7,91991551,ok,accepted,2021-01-07 Public Health WG Call Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91991551,public-health
+7,91991540,ok,accepted,2020-12-10 Public Health WG Call Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91991540,public-health
+0,91991538,too_few,rejected,2020-12-03 Public Health WG Call Minutes,,public-health
+0,91991533,too_few,rejected,2020-11-19 Public Health WG Call Minutes,,public-health
+2,91991531,ok,accepted,2020-11-12 Public Health WG Call Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91991531,public-health
+2,91991529,ok,accepted,2020-11-05 Public Health WG Call Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91991529,public-health
+0,91991526,too_few,rejected,2020-10-29 Public Health WG Call Minutes,,public-health
+6,91991524,ok,accepted,2020-10-22 Public Health WG Call Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91991524,public-health
+9,91991522,ok,accepted,2020-10-15 Public Health WG Call Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91991522,public-health
+3,91992484,ok,accepted,20200924 14:00 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91992484,public-health
+4,31689307,ok,accepted,2019-01 WGM Agenda (San Antonio),https://confluence.hl7.org/pages/viewpage.action?pageId=31689307,public-health
+4,17662221,ok,accepted,2018-09 WGM Agenda (Baltimore),https://confluence.hl7.org/pages/viewpage.action?pageId=17662221,public-health
+5,358277123,ok,accepted,20250915 Q3 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=358277123,public-health
+2,113676531,ok,accepted,Thursday Q3 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=113676531,public-health
+8,101358608,ok,accepted,In Person survey - PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=101358608,public-health
+2,97481820,ok,accepted,20210128 Thurs Q1 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=97481820,public-health
+7,97479292,ok,accepted,20210125 Mon Q1 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=97479292,public-health
+1,91992845,ok,accepted,20200925 14:00 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91992845,public-health
+5,91992737,ok,accepted,20200925 12:00 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91992737,public-health
+5,91991810,ok,accepted,20200922 14:00 PHWG WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=91991810,public-health
+11,494870444,ok,accepted,2026-09-28 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=494870444,security
+4,482418389,ok,accepted,2026-08-31 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=482418389,security
+8,482418188,ok,accepted,2026-08-17 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=482418188,security
+11,474744694,ok,accepted,2026-07-20 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=474744694,security
+12,474744136,ok,accepted,2026-07-06 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=474744136,security
+8,453928442,ok,accepted,2026-06-22 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=453928442,security
+5,453916911,ok,accepted,2026-06-08 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=453916911,security
+20,453916480,ok,accepted,2026-05-11 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=453916480,security
+18,453915190,ok,accepted,2026-05-11 Security WG Agenda / Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=453915190,security
+18,453904987,ok,accepted,2026-04-27 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=453904987,security
+7,453904740,ok,accepted,2026-04-13 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=453904740,security
+6,441516520,ok,accepted,2026-03-16 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=441516520,security
+6,413057011,ok,accepted,2026-03-02 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=413057011,security
+7,413252504,ok,accepted,2026-02-09 Security WG Agenda & Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=413252504,security
+3,413251640,ok,accepted,2026-02-09 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=413251640,security
+4,413042456,ok,accepted,2026-01-19 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=413042456,security
+3,413042454,ok,accepted,2026-01-05 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=413042454,security
+3,403870700,ok,accepted,2025-12-08 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=403870700,security
+4,403870486,ok,accepted,2025-11-24 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=403870486,security
+3,403867539,ok,accepted,2025-11-17 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=403867539,security
+5,391651119,ok,accepted,2025-11-10 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=391651119,security
+7,391646682,ok,accepted,2025-10-27 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=391646682,security
+5,391645164,ok,accepted,2025-10-13 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=391645164,security
+4,391644247,ok,accepted,2025-10-06 Security WG Agenda/Minutes - CANCELLED,https://confluence.hl7.org/pages/viewpage.action?pageId=391644247,security
+4,391643802,ok,accepted,2025-09-29 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=391643802,security
+5,358891361,ok,accepted,2025-09-08 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=358891361,security
+8,358258654,ok,accepted,2025-07-14 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=358258654,security
+8,358255047,ok,accepted,2025-06-30 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=358255047,security
+7,345539082,ok,accepted,2025-06-02 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=345539082,security
+7,345084563,ok,accepted,May 2025 SEC WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=345084563,security
+7,324973992,ok,accepted,2025-04-28 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=324973992,security
+6,324973849,ok,accepted,2025-04-14 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=324973849,security
+1,324969036,headcount_low_vs_median,rejected,2025-03-31 Security WG Agenda/Minutes,,security
+6,325455349,ok,accepted,2025-03-17 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=325455349,security
+6,325454190,ok,accepted,2025-03-03 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=325454190,security
+1,320996550,headcount_low_vs_median,rejected,2025-02-17 Security WG Agenda/Minutes,,security
+2,307303801,ok,accepted,2025-02-03 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=307303801,security
+2,302842789,ok,accepted,2025-01-20 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=302842789,security
+11,288072331,ok,accepted,2025-01-06 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=288072331,security
+12,288065879,ok,accepted,2024-12-09 Security WG Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=288065879,security
+7,161078409,ok,accepted,9 May 2023 SEC WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=161078409,security
+5,104571068,ok,accepted,2021-03-03 Security Ballot Work Session Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=104571068,security
+7,76155060,ok,accepted,05 FEB 2020 SEC WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=76155060,security
+7,66920358,ok,accepted,18 SEP 2019 SEC WGM Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=66920358,security
+11,51222534,ok,accepted,SECURITY WGM Minutes (8th May 2019 WED),https://confluence.hl7.org/pages/viewpage.action?pageId=51222534,security
+0,39159947,too_few,rejected,2019-01 January Security WGM Agenda/Minutes San Antonio,,security
+11,104568917,ok,accepted,202105 Security WGM Agenda/Minutes,https://confluence.hl7.org/pages/viewpage.action?pageId=104568917,security
+0,204280529,too_few,rejected,202401 Security WGM Agenda,,security
+0,413252974,too_few,rejected,2026-02-19 SD Agenda and Minutes,,structured-documents
+0,204284834,too_few,rejected,2024 Jan SDWG WGM Agenda (UTC Timezone),,structured-documents
+0,144981029,too_few,rejected,2023 Jan SDWG WGM Agenda,,structured-documents
+0,104575085,too_few,rejected,2021 September SDWG WGM Agenda,,structured-documents
+0,184924258,too_few,rejected,Mon Q3 Sep 2023 SDWG Minutes,,structured-documents
+0,474742973,too_few,rejected,Sept 2026 - HL7 WGM Meeting Agenda for Terminology Infrastructure,,terminology-infrastructure
+0,413057969,too_few,rejected,May 2026 - HL7 WGM Meeting Agenda for Terminology Infrastructure,,terminology-infrastructure
+0,413255937,too_few,rejected,2026-03-02 Agenda and Minutes,,terminology-infrastructure
+0,413045223,too_few,rejected,2026-01-05 Agenda and Minutes,,terminology-infrastructure
+0,325454653,too_few,rejected,May 2025 - HL7 WGM Meeting Agenda for Terminology Infrastructure,,terminology-infrastructure
+0,281219929,too_few,rejected,Jan 2025 - HL7 Virtual WGM Meeting Agenda for Terminology Infrastructure,,terminology-infrastructure
+0,256181508,too_few,rejected,2024-07-01 Agenda and Minutes,,terminology-infrastructure
+0,225706914,too_few,rejected,May 2024 - HL7 WGM Meeting Agenda for Terminology Infrastructure,,terminology-infrastructure
+0,204281832,too_few,rejected,Jan 2024 - HL7 Virtual WGM Meeting Agenda for Terminology Infrastructure,,terminology-infrastructure
+0,204277481,too_few,rejected,Tracker Issues 2023-11-13 Agenda and Minutes,,terminology-infrastructure
+0,156536349,too_few,rejected,May 2023 - HL7 WGM Meeting Agenda for Terminology Infrastructure,,terminology-infrastructure
+0,139667538,too_few,rejected,Jan 2023 - HL7 WGM Meeting Agenda for Vocabulary,,terminology-infrastructure
+0,90351038,too_few,rejected,May 2022 - HL7 Virtual WGM Meeting Agenda for Vocabulary,,terminology-infrastructure
+0,79506128,too_few,rejected,Jan 2022 - HL7 Virtual WGM Meeting Agenda for Vocabulary,,terminology-infrastructure
+0,104563438,too_few,rejected,May 2021 - HL7 Virtual WGM Meeting Agenda for Vocabulary,,terminology-infrastructure
+0,97458306,too_few,rejected,Jan 2021 - HL7 Virtual WGM Meeting Agenda for Vocabulary,,terminology-infrastructure
+0,86978442,too_few,rejected,Sept 2020 - HL7 Virtual WGM Meeting Agenda for Vocabulary,,terminology-infrastructure
+0,76157212,too_few,rejected,May 2020 - HL7 WGM Meeting Agenda for Vocabulary,,terminology-infrastructure
+0,81986004,too_few,rejected,Virtual May 2020 - HL7 WGM Meeting Agenda for Vocabulary,,terminology-infrastructure
+0,51224709,too_few,rejected,Sept 2019 - HL7 Atlanta WGM Meeting Agenda for Vocabulary,,terminology-infrastructure
+0,31690080,too_few,rejected,January 2019 - HL7 WGM Meeting Agenda for Vocabulary,,terminology-infrastructure
+0,66920535,too_few,rejected,Feb 2020 - HL7 Sydney WGM Meeting Agenda for Vocabulary,,terminology-infrastructure
+0,6001056,too_few,rejected,V2 Tooling Call Minutes,,v2-management-group

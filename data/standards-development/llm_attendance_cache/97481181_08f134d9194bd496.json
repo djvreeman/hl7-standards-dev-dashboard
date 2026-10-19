@@ -1,0 +1,59 @@
+{
+  "attendees": [
+    {
+      "name": "Jan Ogdenburg",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Robert Stegwee",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Timon Grob",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Keith",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joe",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Moerke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joe Lamy",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Virginia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lorraine Constable",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

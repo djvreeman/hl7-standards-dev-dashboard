@@ -1,12 +1,33 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2025-10-22",
+    "last_updated": "2026-09-15",
     "data_source": "HL7 KPI Dashboard - CSV Import",
     "time_periods": [
+      "2019-T1",
+      "2019-T2",
+      "2019-T3",
+      "2020-T1",
+      "2020-T2",
+      "2020-T3",
+      "2021-T1",
+      "2021-T2",
+      "2021-T3",
+      "2022-T1",
+      "2022-T2",
+      "2022-T3",
+      "2023-T1",
+      "2023-T2",
+      "2023-T3",
+      "2024-T1",
+      "2024-T2",
       "2024-T3",
       "2025-T1",
-      "2025-T2"
+      "2025-T2",
+      "2025-T3",
+      "2026-AllTime",
+      "2026-T1",
+      "2026-T2"
     ],
     "domains": [
       "Events",
@@ -21,138 +42,2862 @@
       "HL7 International",
       "Finance",
       "IT",
+      "Membership",
       "Standards Development",
       "Standards Implementation"
     ],
-    "refresh_timestamp": 1761156182
+    "refresh_timestamp": 1789483402
   },
   "indicators": {
-    "1": {
-      "id": "1",
-      "name": "Active members",
-      "description": "Number of active members (all benefactor, gold, organizational, individual, and special type) of HL7 International.",
-      "domain": "Global Engagement",
+    "27": {
+      "id": "27",
+      "name": "Published specifications",
+      "description": "Number of new specification (i.e. standards or protocol specifications) editions published by HL7 International.",
+      "domain": "Standards Development",
       "stewards": [
-        "HL7 International"
+        "HL7 International",
+        "Standards Development"
       ],
       "primary_steward": "HL7 International",
       "type": "N",
-      "unit": "members",
+      "unit": "specifications",
       "target": null,
-      "targets": null,
-      "target_operation": null,
+      "targets": {
+        "2019": 57.0,
+        "2020": 57.0,
+        "2021": 57.0,
+        "2022": 57.0,
+        "2023": 57.0,
+        "2024": 57.0,
+        "2025": 57.0,
+        "2026": 57.0
+      },
+      "target_operation": "sum",
       "tags": [
         "KPI"
       ],
       "image": null,
       "trend_direction": "higher",
       "measurements": {
+        "2019-T1": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2019-T2": {
+          "value": 16.0,
+          "target": null,
+          "notes": null
+        },
+        "2019-T3": {
+          "value": 18.0,
+          "target": null,
+          "notes": null
+        },
+        "2020-T1": {
+          "value": 17.0,
+          "target": null,
+          "notes": null
+        },
+        "2020-T2": {
+          "value": 16.0,
+          "target": null,
+          "notes": null
+        },
+        "2020-T3": {
+          "value": 29.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T1": {
+          "value": 12.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T2": {
+          "value": 20.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T3": {
+          "value": 21.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T1": {
+          "value": 15.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 23.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 20.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 21.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 19.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 22.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 16.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 20.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 20.0,
+          "target": null,
+          "notes": null
+        },
         "2025-T1": {
-          "value": 1098.0,
+          "value": 16.0,
           "target": null,
           "notes": null
         },
         "2025-T2": {
-          "value": 1110.0,
+          "value": 23.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 16.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 21.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 27.0,
           "target": null,
           "notes": null
         }
       }
     },
-    "2": {
-      "id": "2",
-      "name": "Active participants ",
-      "description": "Active participants ",
-      "domain": "Global Engagement",
+    "28": {
+      "id": "28",
+      "name": "Published specifications: Accelerator-led",
+      "description": "Published specifications: Accelerator-led",
+      "domain": "Standards Development",
       "stewards": [
         "Standards Development"
       ],
       "primary_steward": "Standards Development",
-      "type": "N ",
-      "unit": "count",
+      "type": "N",
+      "unit": "specifications",
       "target": null,
-      "targets": null,
-      "target_operation": null,
-      "tags": [],
-      "image": "ID-2-2025-T2.png",
+      "targets": {
+        "2019": 10.0,
+        "2020": 10.0,
+        "2021": 10.0,
+        "2022": 10.0,
+        "2023": 10.0,
+        "2024": 10.0,
+        "2025": 10.0,
+        "2026": 10.0
+      },
+      "target_operation": "sum",
+      "tags": [
+        "KPI",
+        "ACCELERATORS"
+      ],
+      "image": null,
       "trend_direction": "higher",
       "measurements": {
+        "2019-T1": {
+          "value": null,
+          "target": null,
+          "notes": null
+        },
+        "2019-T2": {
+          "value": null,
+          "target": null,
+          "notes": null
+        },
+        "2019-T3": {
+          "value": 2.0,
+          "target": null,
+          "notes": null
+        },
+        "2020-T1": {
+          "value": 2.0,
+          "target": null,
+          "notes": null
+        },
+        "2020-T2": {
+          "value": 2.0,
+          "target": null,
+          "notes": null
+        },
+        "2020-T3": {
+          "value": 10.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T1": {
+          "value": 1.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T2": {
+          "value": 4.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T3": {
+          "value": 2.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T1": {
+          "value": 4.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 5.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 5.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 5.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 4.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 5.0,
+          "target": null,
+          "notes": null
+        },
         "2025-T1": {
-          "value": 95599.0,
+          "value": 11.0,
           "target": null,
           "notes": null
         },
         "2025-T2": {
-          "value": 98050.0,
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 10.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 4.0,
           "target": null,
           "notes": null
         }
       }
     },
-    "3": {
-      "id": "3",
-      "name": "Active participants: New",
-      "description": "Active participants: New",
-      "domain": "Global Engagement",
+    "43": {
+      "id": "43",
+      "name": "Packages",
+      "description": "Number of package versions available in the FHIR ecosystem. Most packages correspond to an IG. Sourced from packages2.fhir.org.",
+      "domain": "Standards Development",
       "stewards": [
         "Standards Development"
       ],
       "primary_steward": "Standards Development",
-      "type": "N ",
+      "type": "N",
       "unit": "count",
       "target": null,
       "targets": null,
       "target_operation": null,
-      "tags": [],
-      "image": "ID-3-2025-T2.png",
+      "tags": [
+        "ECOSYSTEM"
+      ],
+      "image": null,
       "trend_direction": "higher",
       "measurements": {
+        "2019-T1": {
+          "value": 55.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2019-T2": {
+          "value": 68.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2019-T3": {
+          "value": 90.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2020-T1": {
+          "value": 108.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2020-T2": {
+          "value": 130.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2020-T3": {
+          "value": 141.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2021-T1": {
+          "value": 147.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2021-T2": {
+          "value": 161.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2021-T3": {
+          "value": 182.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2022-T1": {
+          "value": 198.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2022-T2": {
+          "value": 221.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2022-T3": {
+          "value": 280.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2023-T1": {
+          "value": 333.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2023-T2": {
+          "value": 400.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2023-T3": {
+          "value": 468.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2024-T1": {
+          "value": 574.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2024-T2": {
+          "value": 691.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2024-T3": {
+          "value": 835.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
         "2025-T1": {
-          "value": 2846.0,
+          "value": 946.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2025-T2": {
+          "value": 1071.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2025-T3": {
+          "value": 1172.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2026-T1": {
+          "value": 1247.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 37 package(s) from API</p>"
+        },
+        "2026-T2": {
+          "value": 1349.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 42 package(s) from API</p>"
+        }
+      }
+    },
+    "44": {
+      "id": "44",
+      "name": "Packages: New",
+      "description": "Number of new package versions available in the FHIR ecosystem. Most packages correspond to an IG. Sourced from packages2.fhir.org.",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ECOSYSTEM"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2019-T1": {
+          "value": 9.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2019-T2": {
+          "value": 13.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2019-T3": {
+          "value": 22.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2020-T1": {
+          "value": 18.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2020-T2": {
+          "value": 22.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2020-T3": {
+          "value": 11.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2021-T1": {
+          "value": 6.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2021-T2": {
+          "value": 14.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2021-T3": {
+          "value": 21.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2022-T1": {
+          "value": 16.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2022-T2": {
+          "value": 23.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2022-T3": {
+          "value": 59.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2023-T1": {
+          "value": 53.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2023-T2": {
+          "value": 67.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2023-T3": {
+          "value": 68.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2024-T1": {
+          "value": 106.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2024-T2": {
+          "value": 117.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2024-T3": {
+          "value": 144.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2025-T1": {
+          "value": 111.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2025-T2": {
+          "value": 125.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2025-T3": {
+          "value": 101.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 35 package(s) from API</p>"
+        },
+        "2026-T1": {
+          "value": 68.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 37 package(s) from API</p>"
+        },
+        "2026-T2": {
+          "value": 85.0,
+          "target": null,
+          "notes": "<p>Failed to fetch 42 package(s) from API</p>"
+        }
+      }
+    },
+    "45": {
+      "id": "45",
+      "name": "Package versions",
+      "description": "Package versions",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ECOSYSTEM"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2019-T1": {
+          "value": 124.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2019-T2": {
+          "value": 150.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2019-T3": {
+          "value": 189.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2020-T1": {
+          "value": 229.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2020-T2": {
+          "value": 303.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2020-T3": {
+          "value": 370.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2021-T1": {
+          "value": 405.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2021-T2": {
+          "value": 441.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2021-T3": {
+          "value": 513.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2022-T1": {
+          "value": 571.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2022-T2": {
+          "value": 640.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2022-T3": {
+          "value": 830.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2023-T1": {
+          "value": 979.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2023-T2": {
+          "value": 1140.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2023-T3": {
+          "value": 1388.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2024-T1": {
+          "value": 1717.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2024-T2": {
+          "value": 2229.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2024-T3": {
+          "value": 2794.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2025-T1": {
+          "value": 3249.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2025-T2": {
+          "value": 3860.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2025-T3": {
+          "value": 4517.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2026-T1": {
+          "value": 5543.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 37 package(s) from API</p>"
+        },
+        "2026-T2": {
+          "value": 6520.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 42 package(s) from API</p>"
+        }
+      }
+    },
+    "46": {
+      "id": "46",
+      "name": "Packages versions: New",
+      "description": "Packages versions: New",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ECOSYSTEM"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2019-T1": {
+          "value": 23.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2019-T2": {
+          "value": 26.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2019-T3": {
+          "value": 39.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2020-T1": {
+          "value": 40.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2020-T2": {
+          "value": 74.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2020-T3": {
+          "value": 67.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2021-T1": {
+          "value": 35.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2021-T2": {
+          "value": 36.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2021-T3": {
+          "value": 72.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2022-T1": {
+          "value": 58.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2022-T2": {
+          "value": 69.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2022-T3": {
+          "value": 190.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2023-T1": {
+          "value": 149.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2023-T2": {
+          "value": 161.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2023-T3": {
+          "value": 248.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2024-T1": {
+          "value": 329.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2024-T2": {
+          "value": 512.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2024-T3": {
+          "value": 565.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2025-T1": {
+          "value": 455.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2025-T2": {
+          "value": 611.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2025-T3": {
+          "value": 657.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 35 package(s) from API</p>"
+        },
+        "2026-T1": {
+          "value": 469.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 37 package(s) from API</p>"
+        },
+        "2026-T2": {
+          "value": 826.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 42 package(s) from API</p>"
+        }
+      }
+    },
+    "47": {
+      "id": "47",
+      "name": "Published specifications: U.S. Realm",
+      "description": "Published specifications: U.S. Realm",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "specifications",
+      "target": null,
+      "targets": {
+        "2019": 10.0,
+        "2020": 10.0,
+        "2021": 10.0,
+        "2022": 10.0,
+        "2023": 10.0,
+        "2024": 10.0,
+        "2025": 10.0,
+        "2026": 10.0
+      },
+      "target_operation": "sum",
+      "tags": [],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2019-T1": {
+          "value": 3.0,
+          "target": null,
+          "notes": null
+        },
+        "2019-T2": {
+          "value": 2.0,
+          "target": null,
+          "notes": null
+        },
+        "2019-T3": {
+          "value": 9.0,
+          "target": null,
+          "notes": null
+        },
+        "2020-T1": {
+          "value": 13.0,
+          "target": null,
+          "notes": null
+        },
+        "2020-T2": {
+          "value": 10.0,
+          "target": null,
+          "notes": null
+        },
+        "2020-T3": {
+          "value": 17.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T1": {
+          "value": 5.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T2": {
+          "value": 14.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T3": {
+          "value": 16.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T1": {
+          "value": 12.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 17.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 14.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 13.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 16.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 15.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 11.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 14.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 16.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 12.0,
           "target": null,
           "notes": null
         },
         "2025-T2": {
-          "value": 2448.0,
+          "value": 17.0,
           "target": null,
           "notes": null
+        },
+        "2025-T3": {
+          "value": 10.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 14.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 11.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "48": {
+      "id": "48",
+      "name": "Published specifications: Universal Realm",
+      "description": "Published specifications: Universal Realm",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "specifications",
+      "target": null,
+      "targets": {
+        "2019": 10.0,
+        "2020": 10.0,
+        "2021": 10.0,
+        "2022": 10.0,
+        "2023": 10.0,
+        "2024": 10.0,
+        "2025": 10.0,
+        "2026": 10.0
+      },
+      "target_operation": "sum",
+      "tags": [],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2019-T1": {
+          "value": 4.0,
+          "target": null,
+          "notes": null
+        },
+        "2019-T2": {
+          "value": 14.0,
+          "target": null,
+          "notes": null
+        },
+        "2019-T3": {
+          "value": 9.0,
+          "target": null,
+          "notes": null
+        },
+        "2020-T1": {
+          "value": 4.0,
+          "target": null,
+          "notes": null
+        },
+        "2020-T2": {
+          "value": 6.0,
+          "target": null,
+          "notes": null
+        },
+        "2020-T3": {
+          "value": 12.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T1": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T2": {
+          "value": 6.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T3": {
+          "value": 5.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T1": {
+          "value": 3.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 6.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 6.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 8.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 3.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 5.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 6.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 4.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 4.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 6.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 6.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 16.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "34": {
+      "id": "34",
+      "name": "Member Retention Rate",
+      "description": "Number of members at the end of the period - number of new members acquired % number of individuals at the beginning of the period x 100.",
+      "domain": "Membership Health",
+      "stewards": [
+        "Membership"
+      ],
+      "primary_steward": "Membership",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": {
+        "2020": 85.0,
+        "2021": 85.0,
+        "2022": 85.0,
+        "2023": 85.0,
+        "2024": 85.0,
+        "2025": 85.0
+      },
+      "target_operation": "average",
+      "tags": [],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2020-T3": {
+          "value": 84.0,
+          "target": null,
+          "notes": null
+        },
+        "2021-T3": {
+          "value": 81.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 85.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 87.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 79.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 77.0,
+          "target": null,
+          "notes": "<blockquote>\n<p>90: Exceptional - indicates strong member satisfaction and engagement<br>\n80 to 89: Good - healthy retention but may benefit from targeted improvements<br>\n70 to 79: Fair - suggests some challenges with member value or engagement<br>\n&lt;70: Concerning - likely signals issues with member experience, benefits or communication</p>\n</blockquote>"
         }
       }
     },
     "4": {
       "id": "4",
-      "name": "Balloters",
-      "description": "Balloters",
+      "name": "Balloters per CG",
+      "description": "Balloters per CG",
       "domain": "Global Engagement",
       "stewards": [
         "Standards Development"
       ],
       "primary_steward": "Standards Development",
-      "type": "Ave per Item",
+      "type": "N",
       "unit": "average",
       "target": null,
       "targets": null,
       "target_operation": null,
       "tags": [
-        "KPI"
+        "KPI",
+        "BALLOTS"
       ],
       "image": null,
       "trend_direction": "higher",
       "measurements": {
+        "2022-T1": {
+          "value": 136.3,
+          "target": 100.0,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 130.5,
+          "target": 100.0,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 165.7,
+          "target": 100.0,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 141.4,
+          "target": 100.0,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 143.1,
+          "target": 100.0,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 149.0,
+          "target": 100.0,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 138.6,
+          "target": 100.0,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 127.9,
+          "target": 100.0,
+          "notes": null
+        },
         "2024-T3": {
-          "value": 140.0,
+          "value": 145.7,
           "target": 100.0,
           "notes": null
         },
         "2025-T1": {
-          "value": 130.0,
+          "value": 138.9,
           "target": 100.0,
           "notes": null
         },
         "2025-T2": {
-          "value": 108.0,
+          "value": 106.7,
           "target": 100.0,
           "notes": null
+        },
+        "2025-T3": {
+          "value": 127.6,
+          "target": 100.0,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 169.1,
+          "target": 100.0,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 128.2,
+          "target": 100.0,
+          "notes": "<p>Includes ballot cycles: 202605 (21 CGs), 202609 (1 CG). Unique enrollment/active counts span all consensus groups that closed in this period.</p>"
+        }
+      }
+    },
+    "19": {
+      "id": "19",
+      "name": "Issue submitters",
+      "description": "Issue submitters",
+      "domain": "Global Engagement",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI",
+        "ISSUES"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 260.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 202.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 238.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 219.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 192.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 184.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 224.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 208.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 241.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 215.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 209.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 199.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 264.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 234.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "20": {
+      "id": "20",
+      "name": "Issue submitters: New",
+      "description": "Issue submitters: New",
+      "domain": "Global Engagement",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI",
+        "ISSUES"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 29.2,
+          "target": 20.0,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 18.3,
+          "target": 20.0,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 15.1,
+          "target": 20.0,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 16.4,
+          "target": 20.0,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 17.2,
+          "target": 20.0,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 23.4,
+          "target": 20.0,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 18.8,
+          "target": 20.0,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 19.7,
+          "target": 20.0,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 27.8,
+          "target": 20.0,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 21.9,
+          "target": 20.0,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 18.2,
+          "target": 20.0,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 19.6,
+          "target": 20.0,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 31.4,
+          "target": 20.0,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 17.1,
+          "target": 20.0,
+          "notes": null
+        }
+      }
+    },
+    "21": {
+      "id": "21",
+      "name": "Issues resolved",
+      "description": "Number of specification feedback issues (as tracked in Jira for FHIR, CDA, V2 and OTHER product families) transitioning to a resolved status.",
+      "domain": "Standards Development",
+      "stewards": [
+        "HL7 International",
+        "Standards Development"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "N",
+      "unit": "issues",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI",
+        "ISSUES"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 2581.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 2435.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 1869.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 2600.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 1167.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 1686.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 2196.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 1289.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 1603.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 1598.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 950.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 1072.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 1298.0,
+          "target": 1000.0,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 726.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "35": {
+      "id": "35",
+      "name": "Resolution Time: Average",
+      "description": "Time from creation of issue to first transition to any resolved state (Deferred, Resolved - Change Required, Published, Duplicate, Resolved - No Change, or Applied). Calculated as average days.",
+      "domain": "Standards Development",
+      "stewards": [
+        "HL7 International",
+        "Standards Development"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "days",
+      "unit": "days",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ISSUES"
+      ],
+      "image": null,
+      "trend_direction": "lower",
+      "measurements": {
+        "2022-T1": {
+          "value": 290.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 305.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 263.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 309.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 182.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 207.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 238.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 262.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 151.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 316.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 117.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 53.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 39.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 35.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "36": {
+      "id": "36",
+      "name": "Resolution Time: Median",
+      "description": "Time from creation of issue to first transition to any resolved state (Deferred, Resolved - Change Required, Published, Duplicate, Resolved - No Change, or Applied). Calculated as median days.",
+      "domain": "Standards Development",
+      "stewards": [
+        "HL7 International",
+        "Standards Development"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "days",
+      "unit": "days",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ISSUES"
+      ],
+      "image": null,
+      "trend_direction": "lower",
+      "measurements": {
+        "2022-T1": {
+          "value": 111.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 133.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 139.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 76.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 134.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 71.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 46.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 78.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 55.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 99.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 36.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 29.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 17.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 22.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "37": {
+      "id": "37",
+      "name": "Resolution Time: P80",
+      "description": "Time from creation of issue to first transition to any resolved state (Deferred, Resolved - Change Required, Published, Duplicate, Resolved - No Change, or Applied). Calculated as the 80th percentile of resolution time.",
+      "domain": "Standards Development",
+      "stewards": [
+        "HL7 International",
+        "Standards Development"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "days",
+      "unit": "days",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ISSUES"
+      ],
+      "image": null,
+      "trend_direction": "lower",
+      "measurements": {
+        "2022-T1": {
+          "value": 381.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 431.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 308.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 295.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 260.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 259.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 189.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 279.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 159.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 305.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 229.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 87.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 69.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 73.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "38": {
+      "id": "38",
+      "name": "Resolution to Application Time: Average",
+      "description": "Time from issue entering 'Resolved - Change Required' status to 'Applied'.",
+      "domain": "Standards Development",
+      "stewards": [
+        "HL7 International",
+        "Standards Development"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "days",
+      "unit": "days",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ISSUES"
+      ],
+      "image": null,
+      "trend_direction": "lower",
+      "measurements": {
+        "2022-T1": {
+          "value": 231.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 361.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 312.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 182.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 194.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 116.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 176.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 265.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 184.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 232.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 61.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 40.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 37.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 24.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "39": {
+      "id": "39",
+      "name": "Balloters enrolled",
+      "description": "Number of people (unique individuals) enrolled in any of the Consensus Groups. Derived from Jira, which does not include withdraw or reaffirmation, or other special ballots like GOM approval.",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "BALLOTS"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 291.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 269.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 323.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 272.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 223.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 295.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 301.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 245.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 277.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 254.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 211.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 279.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 335.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 350.0,
+          "target": null,
+          "notes": "<p>Includes ballot cycles: 202605 (21 CGs), 202609 (1 CG). Unique enrollment/active counts span all consensus groups that closed in this period.</p>"
+        }
+      }
+    },
+    "40": {
+      "id": "40",
+      "name": "Active voters",
+      "description": "Number of people who cast an 'active' vote (either Affirmative or Negative) in any of the Consensus Groups",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "BALLOTS"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 205.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 177.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 245.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 190.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 161.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 157.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 213.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 180.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 210.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 176.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 141.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 206.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 242.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 224.0,
+          "target": null,
+          "notes": "<p>Includes ballot cycles: 202605 (21 CGs), 202609 (1 CG). Unique enrollment/active counts span all consensus groups that closed in this period.</p>"
+        }
+      }
+    },
+    "41": {
+      "id": "41",
+      "name": "Active voters",
+      "description": "Number of people who cast an 'active' vote (either Affirmative or Negative) in any of the Consensus Groups out of all enrolled voters in the Consensus Groups.",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "BALLOTS"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 70.44673539518901,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 65.79925650557621,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 75.85139318885449,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 69.85294117647058,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 72.19730941704036,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 53.22033898305085,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 70.7641196,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 73.46938775510205,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 75.81227436823104,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 69.29133858267717,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 66.82464454976304,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 73.83512544802868,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 72.23880597014926,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 64.0,
+          "target": null,
+          "notes": "<p>Includes ballot cycles: 202605 (21 CGs), 202609 (1 CG). Unique enrollment/active counts span all consensus groups that closed in this period.</p>"
+        }
+      }
+    },
+    "42": {
+      "id": "42",
+      "name": "Active voters % per CG",
+      "description": "Average of the % of Active Voters per Consensus Group across all CGs in the time period.",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "average",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "BALLOTS"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 37.3,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 50.5,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 44.6,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 40.3,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 44.2,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 31.3,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 41.6,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 42.3,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 36.3,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 39.6,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 24.4,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 33.9,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 37.3,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 34.2,
+          "target": null,
+          "notes": "<p>Includes ballot cycles: 202605 (21 CGs), 202609 (1 CG). Unique enrollment/active counts span all consensus groups that closed in this period.</p>"
+        }
+      }
+    },
+    "49": {
+      "id": "49",
+      "name": "Package versions: New R4",
+      "description": "Package versions: New R4",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ECOSYSTEM"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 54.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 58.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 141.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 114.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 131.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 205.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 282.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 409.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 479.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 375.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 482.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 560.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 347.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 37 package(s) from API</p>"
+        },
+        "2026-T2": {
+          "value": 567.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 42 package(s) from API</p>"
+        }
+      }
+    },
+    "50": {
+      "id": "50",
+      "name": "Package versions: New R4B",
+      "description": "Package versions: New R4B",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ECOSYSTEM"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 2.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 6.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 13.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 18.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 20.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 27.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 57.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 49.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 29.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 41.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 23.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 23.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 37 package(s) from API</p>"
+        },
+        "2026-T2": {
+          "value": 66.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 42 package(s) from API</p>"
+        }
+      }
+    },
+    "51": {
+      "id": "51",
+      "name": "Package versions: New R5",
+      "description": "Package versions: New R5",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ECOSYSTEM"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 0.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 0.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 2.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 12.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 4.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 14.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 8.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 32.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 22.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 30.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 56.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 59.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 63.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 37 package(s) from API</p>"
+        },
+        "2026-T2": {
+          "value": 110.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 42 package(s) from API</p>"
+        }
+      }
+    },
+    "52": {
+      "id": "52",
+      "name": "Package versions: Total R4",
+      "description": "Package versions: Total R4",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ECOSYSTEM"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 303.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 361.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 502.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 616.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 747.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 952.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 1234.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 1643.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 2122.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 2497.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 2979.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 3539.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 4402.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 37 package(s) from API</p>"
+        },
+        "2026-T2": {
+          "value": 5105.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 42 package(s) from API</p>"
+        }
+      }
+    },
+    "53": {
+      "id": "53",
+      "name": "Package versions: Total R4B",
+      "description": "Package versions: Total R4B",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ECOSYSTEM"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 6.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 13.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 19.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 32.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 50.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 70.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 97.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 154.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 203.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 232.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 273.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 296.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 319.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 37 package(s) from API</p>"
+        },
+        "2026-T2": {
+          "value": 387.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 42 package(s) from API</p>"
+        }
+      }
+    },
+    "54": {
+      "id": "54",
+      "name": "Package versions: Total R5",
+      "description": "Package versions: Total R5",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ECOSYSTEM"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2022-T1": {
+          "value": 0.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T2": {
+          "value": 0.0,
+          "target": null,
+          "notes": null
+        },
+        "2022-T3": {
+          "value": 2.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T1": {
+          "value": 14.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T2": {
+          "value": 18.0,
+          "target": null,
+          "notes": null
+        },
+        "2023-T3": {
+          "value": 32.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T1": {
+          "value": 40.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T2": {
+          "value": 72.0,
+          "target": null,
+          "notes": null
+        },
+        "2024-T3": {
+          "value": 94.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 124.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 180.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 239.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 305.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 37 package(s) from API</p>"
+        },
+        "2026-T2": {
+          "value": 421.0,
+          "target": null,
+          "notes": "<p>Failed to fetch versions for 42 package(s) from API</p>"
         }
       }
     },
@@ -187,6 +2932,11 @@
           "notes": null
         },
         "2025-T2": {
+          "value": null,
+          "target": null,
+          "notes": "<p>Not yet assessed</p>"
+        },
+        "2025-T3": {
           "value": null,
           "target": null,
           "notes": "<p>Not yet assessed</p>"
@@ -227,6 +2977,21 @@
           "value": 13.0,
           "target": null,
           "notes": null
+        },
+        "2025-T3": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 10.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 12.0,
+          "target": null,
+          "notes": null
         }
       }
     },
@@ -247,7 +3012,7 @@
       "tags": [
         "KPI"
       ],
-      "image": "ID-8-2025-T2.png",
+      "image": "ID-8-2026-T2.png",
       "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
@@ -262,6 +3027,21 @@
         },
         "2025-T2": {
           "value": 66.0,
+          "target": null,
+          "notes": "<p>For FHIR only</p>"
+        },
+        "2025-T3": {
+          "value": 53.0,
+          "target": null,
+          "notes": "<p>For FHIR only</p>"
+        },
+        "2026-T1": {
+          "value": 43.0,
+          "target": null,
+          "notes": "<p>For FHIR only</p>"
+        },
+        "2026-T2": {
+          "value": 79.0,
           "target": null,
           "notes": "<p>For FHIR only</p>"
         }
@@ -298,6 +3078,11 @@
           "notes": null
         },
         "2025-T2": {
+          "value": 158.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
           "value": 158.0,
           "target": null,
           "notes": null
@@ -382,6 +3167,270 @@
         }
       }
     },
+    "12": {
+      "id": "12",
+      "name": "Core system uptime: Ballot Desktop",
+      "description": "Core system uptime: Ballot Desktop",
+      "domain": "Technology and Process",
+      "stewards": [
+        "Standards Development",
+        "IT"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": "2026T2-uptime-ballot-desktop.png",
+      "trend_direction": "higher",
+      "measurements": {
+        "2024-T3": {
+          "value": 99.98,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 100.0,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 99.28,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 99.99,
+          "target": 99.9,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 100.0,
+          "target": 99.9,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 99.99,
+          "target": 99.9,
+          "notes": null
+        }
+      }
+    },
+    "13": {
+      "id": "13",
+      "name": "Core system uptime: Confluence",
+      "description": "Core system uptime: Confluence",
+      "domain": "Technology and Process",
+      "stewards": [
+        "Standards Development",
+        "IT"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": "2026T2-uptime-confluencehl7org.png",
+      "trend_direction": "higher",
+      "measurements": {
+        "2024-T3": {
+          "value": 99.91,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 99.43,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 100.0,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 99.92,
+          "target": 99.9,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 99.24,
+          "target": 99.9,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 99.59,
+          "target": 99.9,
+          "notes": null
+        }
+      }
+    },
+    "14": {
+      "id": "14",
+      "name": "Core system uptime: hl7.org",
+      "description": "Core system uptime: hl7.org",
+      "domain": "Technology and Process",
+      "stewards": [
+        "Standards Development",
+        "IT"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": "2026T2-uptime-hl7org-website.png",
+      "trend_direction": "higher",
+      "measurements": {
+        "2024-T3": {
+          "value": 99.94,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 99.99,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 100.0,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 99.98,
+          "target": 99.9,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 100.0,
+          "target": 99.9,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 99.99,
+          "target": 99.9,
+          "notes": null
+        }
+      }
+    },
+    "15": {
+      "id": "15",
+      "name": "Core system uptime: Jira",
+      "description": "Core system uptime: Jira",
+      "domain": "Technology and Process",
+      "stewards": [
+        "Standards Development",
+        "IT"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "%",
+      "unit": "%",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": "2026T2-uptime-jirahl7org.png",
+      "trend_direction": "higher",
+      "measurements": {
+        "2024-T3": {
+          "value": 99.99,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 93.15,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 99.91,
+          "target": 99.9,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 99.9,
+          "target": 99.9,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 99.3,
+          "target": 99.9,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 99.02,
+          "target": 99.9,
+          "notes": null
+        }
+      }
+    },
+    "24": {
+      "id": "24",
+      "name": "New projects approved",
+      "description": "New projects approved",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "count",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "KPI"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2024-T3": {
+          "value": 7.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 16.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T2": {
+          "value": 5.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 9.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 2.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 2.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
     "30": {
       "id": "30",
       "name": "Connectathon Tracks: Track leads",
@@ -419,14 +3468,13 @@
         }
       }
     },
-    "12": {
-      "id": "12",
-      "name": "Core system uptime: Ballot Desktop",
-      "description": "Core system uptime: Ballot Desktop",
-      "domain": "Technology and Process",
+    "31": {
+      "id": "31",
+      "name": "Work Groups in good health",
+      "description": "Work Groups in good health",
+      "domain": "Standards Development",
       "stewards": [
-        "Standards Development",
-        "IT"
+        "Standards Development"
       ],
       "primary_steward": "Standards Development",
       "type": "%",
@@ -437,136 +3485,211 @@
       "tags": [
         "KPI"
       ],
-      "image": "2025T2-uptime-ballot-desktop.png",
+      "image": null,
       "trend_direction": "higher",
       "measurements": {
         "2024-T3": {
-          "value": 99.98,
-          "target": 99.9,
-          "notes": null
+          "value": 100.0,
+          "target": null,
+          "notes": "<p>31/31 Work Groups</p>"
         },
         "2025-T1": {
           "value": 100.0,
-          "target": 99.9,
+          "target": null,
+          "notes": "<p>31/31 Work Groups</p>"
+        },
+        "2025-T2": {
+          "value": 100.0,
+          "target": null,
+          "notes": "<p>31/31 Work Groups</p>"
+        },
+        "2025-T3": {
+          "value": 100.0,
+          "target": null,
+          "notes": "<p>31/31 Work Groups</p>"
+        },
+        "2026-T1": {
+          "value": 100.0,
+          "target": 100.0,
+          "notes": "<p>31/31 Work Groups</p>"
+        },
+        "2026-T2": {
+          "value": 100.0,
+          "target": 100.0,
+          "notes": "<p>30/30 Work Groups</p>"
+        }
+      }
+    },
+    "33": {
+      "id": "33",
+      "name": "IG repos using auto-build pipeline",
+      "description": "IG repos using auto-build pipeline",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "specifications",
+      "target": null,
+      "targets": null,
+      "target_operation": null,
+      "tags": [
+        "ECOSYSTEM"
+      ],
+      "image": null,
+      "trend_direction": "higher",
+      "measurements": {
+        "2024-T3": {
+          "value": 505.0,
+          "target": 500.0,
+          "notes": null
+        },
+        "2025-T1": {
+          "value": 573.0,
+          "target": 550.0,
           "notes": null
         },
         "2025-T2": {
-          "value": 99.28,
-          "target": 99.9,
+          "value": 593.0,
+          "target": 550.0,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 643.0,
+          "target": 550.0,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 657.0,
+          "target": 550.0,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 690.0,
+          "target": 550.0,
           "notes": null
         }
       }
     },
-    "13": {
-      "id": "13",
-      "name": "Core system uptime: Confluence",
-      "description": "Core system uptime: Confluence",
-      "domain": "Technology and Process",
+    "1": {
+      "id": "1",
+      "name": "Active members",
+      "description": "Number of active members (all benefactor, gold, organizational, individual, and special type) of HL7 International.",
+      "domain": "Global Engagement",
       "stewards": [
-        "Standards Development",
-        "IT"
+        "HL7 International"
       ],
-      "primary_steward": "Standards Development",
-      "type": "%",
-      "unit": "%",
+      "primary_steward": "HL7 International",
+      "type": "N",
+      "unit": "members",
       "target": null,
       "targets": null,
       "target_operation": null,
       "tags": [
         "KPI"
       ],
-      "image": "2025T2-uptime-confluencehl7org.png",
+      "image": null,
       "trend_direction": "higher",
       "measurements": {
-        "2024-T3": {
-          "value": 99.91,
-          "target": 99.9,
-          "notes": null
-        },
         "2025-T1": {
-          "value": 99.43,
-          "target": 99.9,
+          "value": 1098.0,
+          "target": null,
           "notes": null
         },
         "2025-T2": {
-          "value": 100.0,
-          "target": 99.9,
+          "value": 1110.0,
+          "target": null,
           "notes": null
         }
       }
     },
-    "14": {
-      "id": "14",
-      "name": "Core system uptime: hl7.org",
-      "description": "Core system uptime: hl7.org",
-      "domain": "Technology and Process",
+    "2": {
+      "id": "2",
+      "name": "Active participants ",
+      "description": "Active participants ",
+      "domain": "Global Engagement",
       "stewards": [
-        "Standards Development",
-        "IT"
+        "Standards Development"
       ],
       "primary_steward": "Standards Development",
-      "type": "%",
-      "unit": "%",
+      "type": "N ",
+      "unit": "count",
       "target": null,
       "targets": null,
       "target_operation": null,
-      "tags": [
-        "KPI"
-      ],
-      "image": "2025T2-uptime-hl7org-website.png",
+      "tags": [],
+      "image": "2026T2 - Active Global HL7 Participants.png",
       "trend_direction": "higher",
       "measurements": {
-        "2024-T3": {
-          "value": 99.94,
-          "target": 99.9,
-          "notes": null
-        },
         "2025-T1": {
-          "value": 99.99,
-          "target": 99.9,
+          "value": 95599.0,
+          "target": null,
           "notes": null
         },
         "2025-T2": {
-          "value": 100.0,
-          "target": 99.9,
+          "value": 98050.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 99812.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 102074.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 104281.0,
+          "target": null,
           "notes": null
         }
       }
     },
-    "15": {
-      "id": "15",
-      "name": "Core system uptime: Jira",
-      "description": "Core system uptime: Jira",
-      "domain": "Technology and Process",
+    "3": {
+      "id": "3",
+      "name": "Active participants: New",
+      "description": "Active participants: New",
+      "domain": "Global Engagement",
       "stewards": [
-        "Standards Development",
-        "IT"
+        "Standards Development"
       ],
       "primary_steward": "Standards Development",
-      "type": "%",
-      "unit": "%",
+      "type": "N ",
+      "unit": "count",
       "target": null,
       "targets": null,
       "target_operation": null,
-      "tags": [
-        "KPI"
-      ],
-      "image": "2025T2-uptime-jirahl7org.png",
+      "tags": [],
+      "image": "2026T2 - New Global HL7 Participants.png",
       "trend_direction": "higher",
       "measurements": {
-        "2024-T3": {
-          "value": 99.99,
-          "target": 99.9,
-          "notes": null
-        },
         "2025-T1": {
-          "value": 93.15,
-          "target": 99.9,
+          "value": 2846.0,
+          "target": null,
           "notes": null
         },
         "2025-T2": {
-          "value": 99.91,
-          "target": 99.9,
+          "value": 2448.0,
+          "target": null,
+          "notes": null
+        },
+        "2025-T3": {
+          "value": 2112.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T1": {
+          "value": 1819.0,
+          "target": null,
+          "notes": null
+        },
+        "2026-T2": {
+          "value": 2207.0,
+          "target": null,
           "notes": null
         }
       }
@@ -599,9 +3722,19 @@
           "notes": "<p>Results for FHIR only and per 2024 State of FHIR Survey. Comprehensive data collection still in progress.</p>"
         },
         "2025-T2": {
-          "value": 47.0,
+          "value": 28.0,
           "target": 23.0,
           "notes": "<p>Results for FHIR only and per 2025 State of FHIR Survey. Comprehensive data collection still in progress.</p>"
+        },
+        "2025-T3": {
+          "value": 34.0,
+          "target": 23.0,
+          "notes": "<p>Results for FHIR only and per 2025 State of FHIR Survey + Incremental additions from comprehensive data collection still in progress at https://danielvreeman.com/hl7-map/</p>"
+        },
+        "2026-T2": {
+          "value": 46.0,
+          "target": 23.0,
+          "notes": "<p>Results for FHIR only: union of 2026 State of FHIR Survey (regulation mandates or advises FHIR) and manually verified national evidence at https://danielvreeman.com/hl7-map/.</p>"
         }
       }
     },
@@ -637,127 +3770,18 @@
         }
       }
     },
-    "33": {
-      "id": "33",
-      "name": "IG repos using auto-build pipeline",
-      "description": "IG repos using auto-build pipeline",
-      "domain": "Standards Development",
-      "stewards": [
-        "Standards Development"
-      ],
-      "primary_steward": "Standards Development",
-      "type": "N",
-      "unit": "specifications",
-      "target": null,
-      "targets": null,
-      "target_operation": null,
-      "tags": [],
-      "image": null,
-      "trend_direction": "higher",
-      "measurements": {
-        "2024-T3": {
-          "value": 505.0,
-          "target": 500.0,
-          "notes": null
-        },
-        "2025-T1": {
-          "value": 573.0,
-          "target": 550.0,
-          "notes": null
-        },
-        "2025-T2": {
-          "value": 593.0,
-          "target": 550.0,
-          "notes": null
-        }
-      }
-    },
-    "19": {
-      "id": "19",
-      "name": "Issue submitters",
-      "description": "Issue submitters",
-      "domain": "Global Engagement",
-      "stewards": [
-        "Standards Development"
-      ],
-      "primary_steward": "Standards Development",
-      "type": "N",
-      "unit": "count",
-      "target": null,
-      "targets": null,
-      "target_operation": null,
-      "tags": [
-        "KPI"
-      ],
-      "image": null,
-      "trend_direction": "higher",
-      "measurements": {
-        "2024-T3": {
-          "value": 224.0,
-          "target": null,
-          "notes": null
-        },
-        "2025-T1": {
-          "value": 186.0,
-          "target": null,
-          "notes": null
-        },
-        "2025-T2": {
-          "value": 198.0,
-          "target": null,
-          "notes": null
-        }
-      }
-    },
-    "20": {
-      "id": "20",
-      "name": "Issue submitters: New",
-      "description": "Issue submitters: New",
-      "domain": "Global Engagement",
-      "stewards": [
-        "Standards Development"
-      ],
-      "primary_steward": "Standards Development",
-      "type": "%",
-      "unit": "%",
-      "target": null,
-      "targets": null,
-      "target_operation": null,
-      "tags": [
-        "KPI"
-      ],
-      "image": null,
-      "trend_direction": "higher",
-      "measurements": {
-        "2024-T3": {
-          "value": 26.3,
-          "target": 20.0,
-          "notes": null
-        },
-        "2025-T1": {
-          "value": 21.0,
-          "target": 20.0,
-          "notes": null
-        },
-        "2025-T2": {
-          "value": 19.0,
-          "target": 20.0,
-          "notes": null
-        }
-      }
-    },
-    "21": {
-      "id": "21",
-      "name": "Issues resolved",
-      "description": "Number of specification feedback issues (as tracked in Jira for FHIR, CDA, V2 and OTHER product families) transitioning to a resolved status.",
-      "domain": "Standards Development",
+    "18": {
+      "id": "18",
+      "name": "Variance from budget: Expenses",
+      "description": "((Actual Expenses - Budgeted Expenses) / Budgeted Expenses) × 100%",
+      "domain": "Financial Health",
       "stewards": [
         "HL7 International",
-        "Standards Development"
+        "Finance"
       ],
       "primary_steward": "HL7 International",
-      "type": "N",
-      "unit": "issues",
+      "type": "%",
+      "unit": "%-",
       "target": null,
       "targets": null,
       "target_operation": null,
@@ -765,51 +3789,17 @@
         "KPI"
       ],
       "image": null,
-      "trend_direction": "higher",
+      "trend_direction": "lower",
       "measurements": {
-        "2024-T3": {
-          "value": 1663.0,
-          "target": null,
-          "notes": null
-        },
         "2025-T1": {
-          "value": 1729.0,
-          "target": 1500.0,
+          "value": -17.4,
+          "target": null,
           "notes": null
         },
         "2025-T2": {
-          "value": 1590.0,
-          "target": 1500.0,
-          "notes": null
-        }
-      }
-    },
-    "22": {
-      "id": "22",
-      "name": "Member satisfaction index (NPS)",
-      "description": "Net Promotor Score measures member loyalty and satisfaction by asking a single question: 'On a scale of 0 to 10, how likely are you to recommend us to a friend or colleague?'. NPS = % of Promoters (9-10 ratings) - % of Detractors (0-6 ratings).",
-      "domain": "Membership Health",
-      "stewards": [
-        "HL7 International"
-      ],
-      "primary_steward": "HL7 International",
-      "type": "N",
-      "unit": "score ",
-      "target": null,
-      "targets": {
-        "2025": 85.0
-      },
-      "target_operation": "average",
-      "tags": [
-        "KPI"
-      ],
-      "image": "ID-22-2025-T2.png",
-      "trend_direction": "higher",
-      "measurements": {
-        "2025-T2": {
-          "value": 49.0,
+          "value": -13.9,
           "target": null,
-          "notes": "<p>Assessed in 2025 member survey. General interpretation of NPS Values:<br>\nAbove 50: Excellent - Strong customer loyalty with more promoters than detractors<br>\n30-50: Good - Solid performance with room for improvement<br>\n0-30: Acceptable - Neutral territory, but significant opportunity exists<br>\nBelow 0: Poor - More detractors than promoters, immediate action needed</p>"
+          "notes": "<p>through end of Q2</p>"
         }
       }
     },
@@ -820,7 +3810,8 @@
       "domain": "Financial Health",
       "stewards": [
         "HL7 International",
-        "Finance"
+        "Finance",
+        "Membership"
       ],
       "primary_steward": "HL7 International",
       "type": "%",
@@ -841,43 +3832,6 @@
         },
         "2025-T2": {
           "value": -4.83,
-          "target": null,
-          "notes": null
-        }
-      }
-    },
-    "24": {
-      "id": "24",
-      "name": "New projects approved",
-      "description": "New projects approved",
-      "domain": "Standards Development",
-      "stewards": [
-        "Standards Development"
-      ],
-      "primary_steward": "Standards Development",
-      "type": "N",
-      "unit": "count",
-      "target": null,
-      "targets": null,
-      "target_operation": null,
-      "tags": [
-        "KPI"
-      ],
-      "image": null,
-      "trend_direction": "higher",
-      "measurements": {
-        "2024-T3": {
-          "value": 7.0,
-          "target": null,
-          "notes": null
-        },
-        "2025-T1": {
-          "value": 16.0,
-          "target": null,
-          "notes": null
-        },
-        "2025-T2": {
-          "value": 5.0,
           "target": null,
           "notes": null
         }
@@ -952,147 +3906,6 @@
         }
       }
     },
-    "27": {
-      "id": "27",
-      "name": "Published specifications",
-      "description": "Number of new specification (i.e. standards or protocol specifications) editions published by HL7 International.",
-      "domain": "Standards Development",
-      "stewards": [
-        "HL7 International",
-        "Standards Development"
-      ],
-      "primary_steward": "HL7 International",
-      "type": "N",
-      "unit": "specifications",
-      "target": null,
-      "targets": {
-        "2025": 57.0
-      },
-      "target_operation": "sum",
-      "tags": [
-        "KPI"
-      ],
-      "image": null,
-      "trend_direction": "higher",
-      "measurements": {
-        "2024-T3": {
-          "value": 20.0,
-          "target": null,
-          "notes": null
-        },
-        "2025-T1": {
-          "value": 16.0,
-          "target": null,
-          "notes": null
-        },
-        "2025-T2": {
-          "value": 25.0,
-          "target": null,
-          "notes": null
-        }
-      }
-    },
-    "28": {
-      "id": "28",
-      "name": "Published specifications: Accelerator-led",
-      "description": "Published specifications: Accelerator-led",
-      "domain": "Standards Development",
-      "stewards": [
-        "Standards Development"
-      ],
-      "primary_steward": "Standards Development",
-      "type": "N",
-      "unit": "specifications",
-      "target": null,
-      "targets": {
-        "2024": 10.0,
-        "2025": 10.0
-      },
-      "target_operation": "sum",
-      "tags": [
-        "KPI",
-        "ACCELERATORS"
-      ],
-      "image": null,
-      "trend_direction": "higher",
-      "measurements": {
-        "2024-T3": {
-          "value": 5.0,
-          "target": null,
-          "notes": null
-        },
-        "2025-T1": {
-          "value": 11.0,
-          "target": null,
-          "notes": null
-        },
-        "2025-T2": {
-          "value": 7.0,
-          "target": null,
-          "notes": null
-        }
-      }
-    },
-    "32": {
-      "id": "32",
-      "name": "Responsiveness to member feedback: Co-chairs",
-      "description": "Responsiveness to member feedback: Co-chairs",
-      "domain": "Standards Development",
-      "stewards": [
-        "Standards Development"
-      ],
-      "primary_steward": "Standards Development",
-      "type": "N",
-      "unit": "score ",
-      "target": null,
-      "targets": {
-        "2025": 4.0
-      },
-      "target_operation": null,
-      "tags": [],
-      "image": "ID-32-2025-T1.png",
-      "trend_direction": "higher",
-      "measurements": {
-        "2025-T1": {
-          "value": 4.0,
-          "target": null,
-          "notes": "<p>Q: How effectively do you think the HL7 organization addresses feedback from its members? (Scale: 1=ignores feedback, 5=very responsive to feedback). A: median response score</p>"
-        }
-      }
-    },
-    "18": {
-      "id": "18",
-      "name": "Variance from budget: Expenses",
-      "description": "((Actual Expenses - Budgeted Expenses) / Budgeted Expenses) × 100%",
-      "domain": "Financial Health",
-      "stewards": [
-        "HL7 International",
-        "Finance"
-      ],
-      "primary_steward": "HL7 International",
-      "type": "%",
-      "unit": "%-",
-      "target": null,
-      "targets": null,
-      "target_operation": null,
-      "tags": [
-        "KPI"
-      ],
-      "image": null,
-      "trend_direction": "lower",
-      "measurements": {
-        "2025-T1": {
-          "value": -17.4,
-          "target": null,
-          "notes": null
-        },
-        "2025-T2": {
-          "value": -13.9,
-          "target": null,
-          "notes": "<p>through end of Q2</p>"
-        }
-      }
-    },
     "29": {
       "id": "29",
       "name": "Variance from budget: Revenue",
@@ -1126,10 +3939,73 @@
         }
       }
     },
-    "31": {
-      "id": "31",
-      "name": "Work Groups in good health",
-      "description": "Work Groups in good health",
+    "32": {
+      "id": "32",
+      "name": "Responsiveness to member feedback: Co-chairs",
+      "description": "Responsiveness to member feedback: Co-chairs",
+      "domain": "Standards Development",
+      "stewards": [
+        "Standards Development"
+      ],
+      "primary_steward": "Standards Development",
+      "type": "N",
+      "unit": "score ",
+      "target": null,
+      "targets": {
+        "2025": 4.0,
+        "2026": 4.0
+      },
+      "target_operation": null,
+      "tags": [],
+      "image": "ID-32-2026-T1.png",
+      "trend_direction": "higher",
+      "measurements": {
+        "2025-T1": {
+          "value": 4.0,
+          "target": null,
+          "notes": "<p>Q: How effectively do you think the HL7 organization addresses feedback from its members? (Scale: 1=ignores feedback, 5=very responsive to feedback). A: median response score</p>"
+        },
+        "2026-T1": {
+          "value": 4.0,
+          "target": null,
+          "notes": null
+        }
+      }
+    },
+    "22": {
+      "id": "22",
+      "name": "Member satisfaction index (NPS)",
+      "description": "Net Promotor Score measures member loyalty and satisfaction by asking a single question: 'On a scale of 0 to 10, how likely are you to recommend us to a friend or colleague?'. NPS = % of Promoters (9-10 ratings) - % of Detractors (0-6 ratings).",
+      "domain": "Membership Health",
+      "stewards": [
+        "HL7 International",
+        "Membership"
+      ],
+      "primary_steward": "HL7 International",
+      "type": "N",
+      "unit": "score ",
+      "target": null,
+      "targets": {
+        "2025": 85.0
+      },
+      "target_operation": "average",
+      "tags": [
+        "KPI"
+      ],
+      "image": "ID-22-2025-T2.png",
+      "trend_direction": "higher",
+      "measurements": {
+        "2025-T2": {
+          "value": 49.0,
+          "target": null,
+          "notes": "<p>Assessed in 2025 member survey. General interpretation of NPS Values:<br>\nAbove 50: Excellent - Strong customer loyalty with more promoters than detractors<br>\n30-50: Good - Solid performance with room for improvement<br>\n0-30: Acceptable - Neutral territory, but significant opportunity exists<br>\nBelow 0: Poor - More detractors than promoters, immediate action needed</p>"
+        }
+      }
+    },
+    "55": {
+      "id": "55",
+      "name": "Issues resulting in specification changes",
+      "description": "Issues resulting in specification changes",
       "domain": "Standards Development",
       "stewards": [
         "Standards Development"
@@ -1141,25 +4017,15 @@
       "targets": null,
       "target_operation": null,
       "tags": [
-        "KPI"
+        "ISSUES"
       ],
       "image": null,
       "trend_direction": "higher",
       "measurements": {
-        "2024-T3": {
-          "value": 100.0,
-          "target": null,
-          "notes": "<p>31/31 Work Groups</p>"
-        },
-        "2025-T1": {
-          "value": 100.0,
-          "target": null,
-          "notes": "<p>31/31 Work Groups</p>"
-        },
-        "2025-T2": {
-          "value": 100.0,
-          "target": null,
-          "notes": "<p>31/31 Work Groups</p>"
+        "2026-AllTime": {
+          "value": 74.8,
+          "target": 70.0,
+          "notes": null
         }
       }
     }

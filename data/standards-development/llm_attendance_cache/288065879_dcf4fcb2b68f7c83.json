@@ -1,0 +1,77 @@
+{
+  "attendees": [
+    {
+      "name": "John Moehrke",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Kathleen Connor",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Mohammad Jafari",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Petronelli",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Pyke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Corey Spears",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Luis Maas",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Humberto Lee",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alex Mense",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Trish Williams",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Martin Rosner",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rita Torkzadeh",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

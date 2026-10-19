@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Lori Fourquet",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Genny Luensman",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

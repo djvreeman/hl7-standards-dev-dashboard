@@ -3,7 +3,7 @@ from typing import List, Dict, Any, Optional
 from pathlib import Path
 from app.models import (
     KPIData, KPIIndicator, KPIMeasurement, KPICard, KPITrend, 
-    KPISummary, KPIMetadata, KPIFilter, ChartData, DashboardMetrics
+    KPISummary, KPIMetadata, KPIFilter, ChartData, DashboardMetrics, FinancialChartData
 )
 
 class DataService:
@@ -61,16 +61,19 @@ class DataService:
         return self._data.indicators.get(indicator_id)
     
     def calculate_trend(self, indicator: KPIIndicator) -> Optional[KPITrend]:
-        """Calculate trend between the two most recent time periods"""
-        if not self._data or len(self._data.metadata.time_periods) < 2:
-            return None
-        
-        # Get the two most recent time periods
+        """Calculate trend between the two most recent time periods for this indicator"""
         if not self._data:
             return None
-        time_periods = sorted(self._data.metadata.time_periods)
-        current_period = time_periods[-1]
-        previous_period = time_periods[-2]
+        
+        # Get the time periods that actually have measurements for this indicator
+        indicator_periods = sorted(indicator.measurements.keys())
+        
+        if len(indicator_periods) < 2:
+            return None
+        
+        # Get the two most recent periods for this indicator
+        current_period = indicator_periods[-1]
+        previous_period = indicator_periods[-2]
         
         # Get measurements for both periods
         current_measurement = indicator.measurements.get(current_period)
@@ -167,8 +170,14 @@ class DataService:
         """Calculate progress percentage towards target and return (progress, target_type, target_value)"""
         if not self._data:
             return None, None, None
-        time_periods = sorted(self._data.metadata.time_periods)
-        current_period = time_periods[-1]
+        
+        # Get the time periods that actually have measurements for this indicator
+        indicator_periods = sorted(indicator.measurements.keys())
+        
+        if not indicator_periods:
+            return None, None, None
+        
+        current_period = indicator_periods[-1]
         current_year = current_period.split("-")[0] if "-" in current_period else None
         current_measurement = indicator.measurements.get(current_period)
         
@@ -224,9 +233,23 @@ class DataService:
                 target_type=None,
                 target_value=None
             )
-        time_periods = sorted(self._data.metadata.time_periods)
-        current_period = time_periods[-1]
-        previous_period = time_periods[-2] if len(time_periods) > 1 else None
+        
+        # Get the time periods that actually have measurements for this indicator
+        indicator_periods = sorted(indicator.measurements.keys())
+        
+        if not indicator_periods:
+            return KPICard(
+                indicator=indicator,
+                current_value=None,
+                previous_value=None,
+                trend=None,
+                progress_to_target=None,
+                target_type=None,
+                target_value=None
+            )
+        
+        current_period = indicator_periods[-1]
+        previous_period = indicator_periods[-2] if len(indicator_periods) > 1 else None
         
         current_measurement = indicator.measurements.get(current_period)
         previous_measurement = indicator.measurements.get(previous_period) if previous_period else None
@@ -419,4 +442,228 @@ class DataService:
     
     def get_metadata(self) -> Optional[KPIMetadata]:
         """Get data metadata"""
-        return self._data.metadata if self._data else None 
+        return self._data.metadata if self._data else None
+    
+    def get_member_retention_chart_data(self) -> FinancialChartData:
+        """Get chart data for Member Retention Rate indicator (ID=34)"""
+        if not self._data:
+            return FinancialChartData(labels=[], datasets=[], type="line", title="Member Retention Rate")
+        
+        indicator = self._data.indicators.get("34")
+        if not indicator:
+            return FinancialChartData(labels=[], datasets=[], type="line", title="Member Retention Rate")
+        
+        # Get all measurements sorted by time period
+        periods = sorted(indicator.measurements.keys())
+        labels = []
+        values = []
+        
+        for period in periods:
+            measurement = indicator.measurements[period]
+            if measurement.value is not None:
+                labels.append(period)
+                values.append(measurement.value)
+        
+        # Get target value (annual target, average operation)
+        target_value = None
+        if indicator.targets:
+            # Get the most recent year's target, or use any available target
+            target_value = list(indicator.targets.values())[0] if indicator.targets else None
+        
+        # Create datasets for Chart.js format
+        datasets = [
+            {
+                "label": "Member Retention Rate",
+                "data": values,
+                "borderColor": "#dc2626",  # HL7 brand red
+                "backgroundColor": "transparent",
+                "borderWidth": 3,
+                "fill": False,
+                "tension": 0.4,
+                "pointRadius": 5,
+                "pointHoverRadius": 7
+            }
+        ]
+        
+        # Add target line if target exists
+        if target_value is not None:
+            target_line = [target_value] * len(labels)
+            datasets.append({
+                "label": f"Target ({target_value}%)",
+                "data": target_line,
+                "borderColor": "#16a34a",  # HL7 success green
+                "backgroundColor": "transparent",
+                "borderWidth": 2,
+                "borderDash": [5, 5],
+                "fill": False,
+                "pointRadius": 0,
+                "pointHoverRadius": 0
+            })
+        
+        # Get the indicator description for the chart note
+        description = indicator.description if indicator else None
+        
+        return FinancialChartData(
+            labels=labels,
+            datasets=datasets,
+            type="line",
+            title="Member Retention Rate",
+            description=description
+        )
+    
+    def get_standards_development_indicators(self, steward: str, tag: str) -> List[KPIIndicator]:
+        """Get indicators filtered by steward and tag (case insensitive)"""
+        if not self._data:
+            return []
+        
+        # Filter indicators: steward match (case insensitive) and tag match (case insensitive)
+        indicators = []
+        steward_lower = steward.lower()
+        tag_lower = tag.lower()
+        
+        for indicator in self._data.indicators.values():
+            # Check if steward matches (case insensitive)
+            steward_match = any(steward_lower in s.lower() for s in indicator.stewards)
+            # Check if tag matches (case insensitive)
+            tag_match = any(tag_lower in t.lower() for t in indicator.tags)
+            
+            if steward_match and tag_match:
+                indicators.append(indicator)
+        
+        # Sort by name for consistent ordering
+        indicators.sort(key=lambda x: x.name)
+        
+        return indicators
+    
+    def get_indicator_chart_data(self, indicator: KPIIndicator) -> FinancialChartData:
+        """Get chart data for a single indicator"""
+        if not indicator:
+            return FinancialChartData(labels=[], datasets=[], type="line", title="")
+        
+        # Get all measurements sorted by time period
+        periods = sorted(indicator.measurements.keys())
+        labels = []
+        values = []
+        
+        for period in periods:
+            measurement = indicator.measurements[period]
+            if measurement and measurement.value is not None:
+                labels.append(period)
+                values.append(measurement.value)
+            else:
+                labels.append(period)
+                values.append(None)
+        
+        # Get target value if available
+        target_value = None
+        if indicator.targets:
+            # Get the most recent year's target, or use any available target
+            target_value = list(indicator.targets.values())[0] if indicator.targets else None
+        elif indicator.target is not None:
+            target_value = indicator.target
+        
+        # Format label with unit in parentheses
+        unit = indicator.unit if indicator.unit else ""
+        label_with_unit = indicator.name
+        if unit:
+            label_with_unit = f"{indicator.name} ({unit})"
+        
+        # Create datasets for Chart.js format
+        datasets = [
+            {
+                "label": label_with_unit,
+                "data": values,
+                "borderColor": "#dc2626",  # HL7 brand red
+                "backgroundColor": "transparent",
+                "borderWidth": 3,
+                "fill": False,
+                "tension": 0.4,
+                "pointRadius": 5,
+                "pointHoverRadius": 7
+            }
+        ]
+        
+        # Add target line if target exists
+        if target_value is not None:
+            target_line = [target_value] * len(labels)
+            datasets.append({
+                "label": f"Target ({target_value})",
+                "data": target_line,
+                "borderColor": "#16a34a",  # HL7 success green
+                "backgroundColor": "transparent",
+                "borderWidth": 2,
+                "borderDash": [5, 5],
+                "fill": False,
+                "pointRadius": 0,
+                "pointHoverRadius": 0
+            })
+        
+        return FinancialChartData(
+            labels=labels,
+            datasets=datasets,
+            type="line",
+            title=indicator.name,
+            description=indicator.description
+        )
+
+    def get_composite_package_versions_chart(
+        self,
+        chart_type: str,
+        indicator_ids: List[str],
+        colors: List[str],
+        labels: List[str]
+    ) -> FinancialChartData:
+        """Get composite chart data combining multiple package version indicators.
+        
+        chart_type: 'new' or 'total'
+        indicator_ids: List of indicator IDs (e.g., ['49', '50', '51'] for New R4, R4B, R5)
+        colors: HL7 colors for each line (e.g., ['#ea7125', '#5f9baf', '#0f8e48'])
+        labels: Display labels for each line (e.g., ['R4', 'R4B', 'R5'])
+        """
+        if not self._data or len(indicator_ids) != len(colors) or len(indicator_ids) != len(labels):
+            return FinancialChartData(labels=[], datasets=[], type="line", title="")
+
+        # Collect all periods from all indicators
+        all_periods = set()
+        for indicator_id in indicator_ids:
+            indicator = self._data.indicators.get(indicator_id)
+            if indicator:
+                all_periods.update(indicator.measurements.keys())
+
+        periods = sorted(all_periods)
+        if not periods:
+            return FinancialChartData(labels=[], datasets=[], type="line", title="")
+
+        datasets = []
+        for i, indicator_id in enumerate(indicator_ids):
+            indicator = self._data.indicators.get(indicator_id)
+            if not indicator:
+                continue
+
+            values = []
+            for period in periods:
+                measurement = indicator.measurements.get(period)
+                values.append(
+                    measurement.value if measurement and measurement.value is not None else None
+                )
+
+            datasets.append({
+                "label": labels[i],
+                "data": values,
+                "borderColor": colors[i],
+                "backgroundColor": "transparent",
+                "borderWidth": 3,
+                "fill": False,
+                "tension": 0.4,
+                "pointRadius": 4,
+                "pointHoverRadius": 6
+            })
+
+        title = "Package versions: New R4, R4B, R5" if chart_type == "new" else "Package versions: Total R4, R4B, R5"
+        return FinancialChartData(
+            labels=periods,
+            datasets=datasets,
+            type="line",
+            title=title,
+            description=title
+        )

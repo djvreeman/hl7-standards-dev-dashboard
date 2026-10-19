@@ -1,0 +1,23 @@
+{
+  "attendees": [
+    {
+      "name": "Virginia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "HL7 director of communications",
+      "organization": "HL7",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "HL7 director of marketing",
+      "organization": "HL7",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 0.9
+}

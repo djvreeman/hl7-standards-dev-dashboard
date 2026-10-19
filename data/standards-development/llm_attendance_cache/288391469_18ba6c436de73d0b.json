@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Michelle Currie",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Bruce Bray",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Russ Leftwich",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Emma Jones",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

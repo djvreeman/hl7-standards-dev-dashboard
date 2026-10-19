@@ -1,0 +1,89 @@
+{
+  "attendees": [
+    {
+      "name": "Ken Fuchs",
+      "organization": "IEEE",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Rhoads",
+      "organization": "HL7",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Todd Cooper",
+      "organization": "HL7",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Chris Courville",
+      "organization": "HL7",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Garguilo",
+      "organization": "HL7",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Michael Kirwin",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Martin Rosner",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Brian Rinehart",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Scott Gearhart",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Walter Suarez",
+      "organization": "Kaiser Permanente",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Bernardo Mariano",
+      "organization": "World Health Organization",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Renato Sabbatini",
+      "organization": "Edumet Institute",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Amy Abernethy",
+      "organization": "US Food & Drug Administration",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Ken Goodman",
+      "organization": "University of Miami",
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

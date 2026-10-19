@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "LC",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "SL",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Bryn",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Georgio Cangioli",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "LB",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Ken",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Ron Parker",
+      "organization": "VA",
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

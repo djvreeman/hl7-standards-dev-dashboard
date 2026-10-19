@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en" class="wa-theme-default wa-palette-default wa-brand-red wa-neutral-gray wa-success-green wa-warning-yellow wa-danger-orange">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>HL7 Financial Health - Geographic Insights</title>
+    
+    <!-- Force cache refresh -->
+    <script>
+        // Add version parameter to force refresh
+        const CACHE_VERSION = 'v2.1-' + Date.now();
+    </script>
+    
+    <!-- WebAwesome CSS -->
+    <link rel="stylesheet" href="https://cdn.webawesome.com/css/webawesome.min.css">
+    
+    <!-- HL7 Brand Fonts -->
+    <link rel="stylesheet" href="/static/css/fonts.css">
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    
+    <!-- SimpleMaps for World Map Visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson@3"></script>
+    
+    <style>
+        :root {
+            /* WebAwesome Theme Colors */
+            --wa-brand: #dc2626;
+            --wa-neutral: #6b7280;
+            --wa-success: #16a34a;
+            --wa-warning: #ca8a04;
+            --wa-danger: #ea580c;
+            --wa-primary: #dc2626;
+            --wa-secondary: #6b7280;
+            --font-family-primary: 'Gotham', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            
+            /* Legacy variables for compatibility */
+            --primary-color: var(--wa-brand);
+            --secondary-color: var(--wa-neutral);
+            --success-color: var(--wa-success);
+            --warning-color: var(--wa-warning);
+            --danger-color: var(--wa-danger);
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+            --border-color: #e2e8f0;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            font-family: var(--font-family-primary);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .dashboard-header {
+            background: white;
+            color: #1f2937;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            padding: 2rem 2rem 1rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .header-logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-image {
+            height: 80px;
+            width: auto;
+        }
+        
+        .header-title {
+            flex: 1;
+        }
+        
+        .dashboard-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 0;
+        }
+        
+        .dashboard-subtitle {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-top: 0.5rem;
+        }
+        
+        .navigation-container {
+            background: linear-gradient(135deg, var(--wa-brand), #b91c1c);
+            padding: 1rem 2rem;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .nav-dropdown .nav-link {
+            display: inline-block;
+        }
+        
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 180px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+            z-index: 1000;
+            border: 1px solid var(--border-color);
+            margin-top: 2px;
+        }
+        
+        .dropdown-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #374151;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f9fafb;
+            color: var(--primary-color);
+        }
+        
+        .dropdown-item.active {
+            background-color: rgba(220, 38, 38, 0.1);
+            color: var(--wa-brand);
+            font-weight: 600;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .summary-card {
+            background: var(--card-background);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        
+        .summary-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--wa-brand);
+            margin: 0;
+        }
+        
+        .summary-label {
+            color: var(--wa-neutral);
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+        
+        .summary-trend {
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .trend-icon {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .trend-up {
+            color: var(--wa-success);
+        }
+        
+        .trend-down {
+            color: var(--wa-danger);
+        }
+        
+        .trend-stable {
+            color: var(--wa-neutral);
+        }
+        
+        .trend-text {
+            font-weight: 500;
+        }
+        
+        .trend-previous {
+            margin-left: 0.5rem;
+            padding-left: 0.5rem;
+            border-left: 1px solid var(--border-color);
+            font-size: 0.75rem;
+            color: var(--wa-neutral);
+        }
+        
+        .trend-previous-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            margin-bottom: 0.125rem;
+        }
+        
+        .trend-previous-value {
+            font-weight: 600;
+        }
+        
+        .map-container {
+            background: var(--card-background);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            overflow: hidden; /* Prevent content from extending past container */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+        
+        .map-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .map-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 0;
+        }
+        
+        .map-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .map-type-selector {
+            display: flex;
+            gap: 0.5rem;
+            background: #f3f4f6;
+            padding: 0.25rem;
+            border-radius: 6px;
+        }
+        
+        .map-type-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: transparent;
+            color: #6b7280;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .map-type-btn:hover {
+            background: white;
+            color: var(--wa-brand);
+        }
+        
+        .map-type-btn.active {
+            background: var(--wa-brand);
+            color: white;
+        }
+        
+        .year-selector {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.875rem;
+            background: white;
+            color: #374151;
+            cursor: pointer;
+        }
+        
+        #worldMapContainer {
+            width: 100%;
+            min-height: 500px;
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 1rem;
+            overflow: hidden; /* Prevent map from extending past container */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+        
+        #world-map {
+            width: 100%;
+            height: 500px;
+            overflow: hidden; /* Prevent SVG content from overflowing */
+        }
+        
+        #world-map svg {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Ensure SVG doesn't overflow */
+            display: block; /* Remove any inline spacing */
+        }
+        
+        #world-map .country {
+            fill: #e5e7eb;
+            stroke: #ffffff;
+            stroke-width: 0.5;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        #world-map .country:hover {
+            stroke: #dc2626;
+            stroke-width: 1.5;
+        }
+        
+        #world-map .country.has-data {
+            stroke: #ffffff;
+        }
+        
+        #mapTooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-family: var(--font-family-primary);
+            font-size: 0.875rem;
+            pointer-events: none;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .map-legend-container {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .map-legend-container .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .map-legend-container .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .map-legend-container .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 1px solid #ffffff;
+            flex-shrink: 0;
+        }
+        
+        .map-legend-container .legend-label {
+            font-size: 11px;
+            color: #374151;
+            font-family: var(--font-family-primary);
+        }
+        
+        .map-tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            pointer-events: none;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--wa-neutral);
+        }
+        
+        .refresh-button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+            font-family: var(--font-family-primary);
+        }
+        
+        .refresh-button:hover {
+            background: #b91c1c;
+        }
+        
+        .refresh-button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+        
+        .revenue-input:focus {
+            outline: 2px solid var(--wa-brand);
+            outline-offset: 2px;
+        }
+        
+        .delete-country-btn:hover {
+            background: #c2410c !important;
+        }
+        
+        #editorMessage {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        #countriesTable {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+        
+        #countriesTable tbody tr:hover {
+            background: #f9fafb;
+        }
+        
+        @media (max-width: 1400px) {
+            .summary-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .summary-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="/static/hl7-international-logo.png" alt="HL7 International" class="logo-image">
+            </div>
+            <div class="header-title">
+                <h1 class="dashboard-title">Financial Health - Geographic Insights</h1>
+                <p class="dashboard-subtitle">HL7 International Financial Performance Analysis</p>
+            </div>
+        </div>
+        <div class="navigation-container">
+            <div class="navigation" id="steward-navigation">
+                <!-- Dynamic steward navigation will be loaded here -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="dashboard-container">
+        <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+            <a href="/financial-data-editor" class="refresh-button" style="background: var(--wa-brand); text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+                <i class="wa-icon-edit" style="margin-right: 0.5rem;"></i>
+                Edit Financial Data
+            </a>
+            <button class="refresh-button" id="generatePromptBtn" style="background: var(--wa-success);">
+                Generate LLM Prompt
+            </button>
+        </div>
+        
+        <!-- Key Indicators -->
+        <div class="summary-stats" id="keyIndicators">
+            <div class="summary-card">
+                <div class="loading">Loading...</div>
+            </div>
+            <div class="summary-card">
+                <div class="loading">Loading...</div>
+            </div>
+            <div class="summary-card">
+                <div class="loading">Loading...</div>
+            </div>
+            <div class="summary-card">
+                <div class="loading">Loading...</div>
+            </div>
+        </div>
+        
+        <!-- World Map Visualization -->
+        <div class="map-container">
+            <div class="map-header">
+                <h2 class="map-title">Revenue by Country</h2>
+                <div class="map-controls">
+                    <div class="map-type-selector">
+                        <button class="map-type-btn active" data-type="combined">Combined</button>
+                        <button class="map-type-btn" data-type="membership">Membership</button>
+                        <button class="map-type-btn" data-type="affiliate">Affiliate</button>
+                    </div>
+                    <select class="year-selector" id="yearSelector">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+            </div>
+            <div id="worldMapContainer">
+                <div class="loading">Loading map data...</div>
+            </div>
+            <!-- Legend will be dynamically created below the map -->
+        </div>
+    </div>
+    
+    <div class="map-tooltip" id="mapTooltip"></div>
+    
+    <script>
+        // Global state
+        let currentYear = null;
+        let currentDataType = 'combined';
+        let countryData = {};
+        let yearsAvailable = [];
+        let worldMap = null;
+        let worldGeoData = null;
+        
+        // Country name to ISO code mapping
+        const countryCodeMap = {
+            "United States": "US",
+            "United Kingdom": "GB",
+            "Canada": "CA",
+            "Australia": "AU",
+            "Germany": "DE",
+            "France": "FR",
+            "Japan": "JP",
+            "Netherlands": "NL",
+            "Switzerland": "CH",
+            "India": "IN",
+            "Brazil": "BR",
+            "China": "CN",
+            "South Korea": "KR",
+            "Korea": "KR",
+            "Spain": "ES",
+            "Italy": "IT",
+            "Poland": "PL",
+            "Sweden": "SE",
+            "Norway": "NO",
+            "Denmark": "DK",
+            "Finland": "FI",
+            "Belgium": "BE",
+            "Austria": "AT",
+            "Portugal": "PT",
+            "Greece": "GR",
+            "Ireland": "IE",
+            "New Zealand": "NZ",
+            "Singapore": "SG",
+            "Taiwan": "TW",
+            "Hong Kong": "HK",
+            "Malaysia": "MY",
+            "Thailand": "TH",
+            "Philippines": "PH",
+            "Indonesia": "ID",
+            "South Africa": "ZA",
+            "Mexico": "MX",
+            "Argentina": "AR",
+            "Chile": "CL",
+            "Colombia": "CO",
+            "Peru": "PE",
+            "Ecuador": "EC",
+            "Costa Rica": "CR",
+            "Bulgaria": "BG",
+            "Croatia": "HR",
+            "Estonia": "EE",
+            "Luxembourg": "LU",
+            "Malta": "MT",
+            "Montenegro": "ME",
+            "Romania": "RO",
+            "Slovenia": "SI",
+            "Slovak Republic": "SK",
+            "Czech Republic": "CZ",
+            "Russia": "RU",
+            "Ukraine": "UA",
+            "Saudi Arabia": "SA",
+            "UAE": "AE",
+            "Central America": null,
+        };
+        
+        // Map from map data country names to our data country names
+        const countryNameMapping = {
+            // Common variations
+            "United States of America": "United States",
+            "USA": "United States",
+            "U.S.A.": "United States",
+            "U.S.": "United States",
+            "United Kingdom": "United Kingdom",
+            "UK": "United Kingdom",
+            "Great Britain": "United Kingdom",
+            "South Korea": "Korea",
+            "Republic of Korea": "Korea",
+            "Korea, Republic of": "Korea",
+            "Czechia": "Czech Republic",
+            "Czech Rep.": "Czech Republic",
+            "Slovakia": "Slovak Republic",
+            "Russian Federation": "Russia",
+            "UAE": "UAE",
+            "United Arab Emirates": "UAE",
+        };
+        
+        // Format currency
+        function formatCurrency(value) {
+            // Ensure value is numeric (remove any existing $ signs or formatting)
+            const numValue = typeof value === 'string' ? parseFloat(value.replace(/[^0-9.-]/g, '')) : value;
+            if (isNaN(numValue) || numValue === null || numValue === undefined) {
+                return '$0';
+            }
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(numValue);
+        }
+        
+        // Get ISO code for country name
+        function getCountryCode(countryName) {
+            return countryCodeMap[countryName] || null;
+        }
+        
+        // Format percentage
+        function formatPercentage(value) {
+            return new Intl.NumberFormat('en-US', {
+                style: 'percent',
+                minimumFractionDigits: 1,
+                maximumFractionDigits: 1
+            }).format(value / 100);
+        }
+        
+        // Format trend HTML
+        function formatTrendHTML(trend, previousValue, format, previousYear) {
+            if (!trend || previousYear === null) {
+                return '';
+            }
+            
+            const trendClass = `trend-${trend.trend}`;
+            const trendIcon = trend.trend === 'up' ? '↗' : trend.trend === 'down' ? '↘' : '→';
+            const changeSign = trend.change_pct > 0 ? '+' : '';
+            const changeText = `${changeSign}${trend.change_pct.toFixed(1)}%`;
+            
+            const previousDisplayValue = format === 'percentage' 
+                ? formatPercentage(previousValue) 
+                : formatCurrency(previousValue);
+            
+            return `
+                <div class="summary-trend">
+                    <span class="trend-icon ${trendClass}">${trendIcon}</span>
+                    <span class="trend-text ${trendClass}">${changeText}</span>
+                    <div class="trend-previous">
+                        <div class="trend-previous-label">Previous (${previousYear})</div>
+                        <div class="trend-previous-value">${previousDisplayValue}</div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Load key indicators
+        async function loadKeyIndicators(year = null) {
+            try {
+                const url = year ? `/api/geographic-financial/key-indicators?year=${year}` : '/api/geographic-financial/key-indicators';
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                const indicators = [
+                    { 
+                        key: 'total_revenue',
+                        value: data.total_revenue, 
+                        label: 'Total Membership and Affiliate Revenue', 
+                        format: 'currency' 
+                    },
+                    { 
+                        key: 'non_us_membership_revenue',
+                        value: data.non_us_membership_revenue, 
+                        label: 'Non-US Membership Revenue', 
+                        format: 'currency' 
+                    },
+                    { 
+                        key: 'non_us_membership_revenue_pct',
+                        value: data.non_us_membership_revenue_pct, 
+                        label: 'Non-US Membership Revenue (%)', 
+                        format: 'percentage' 
+                    },
+                    { 
+                        key: 'affiliate_revenue',
+                        value: data.affiliate_revenue, 
+                        label: 'Affiliate Revenue', 
+                        format: 'currency' 
+                    }
+                ];
+                
+                const container = document.getElementById('keyIndicators');
+                const trends = data.trends || {};
+                const previousYear = data.previous_year || null;
+                
+                container.innerHTML = indicators.map(ind => {
+                    const displayValue = ind.format === 'percentage' 
+                        ? formatPercentage(ind.value) 
+                        : formatCurrency(ind.value);
+                    const trend = trends[ind.key];
+                    const trendHTML = formatTrendHTML(trend, trend?.previous, ind.format, previousYear);
+                    
+                    return `
+                        <div class="summary-card">
+                            <h3 class="summary-value">${displayValue}</h3>
+                            <p class="summary-label">${ind.label}</p>
+                            ${trendHTML}
+                        </div>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('Error loading key indicators:', error);
+            }
+        }
+        
+        // Load years
+        async function loadYears() {
+            try {
+                const response = await fetch('/api/geographic-financial/years');
+                const data = await response.json();
+                yearsAvailable = data.years;
+                currentYear = data.latest_year;
+                
+                const selector = document.getElementById('yearSelector');
+                selector.innerHTML = yearsAvailable.map(year => 
+                    `<option value="${year}" ${year === currentYear ? 'selected' : ''}>${year}</option>`
+                ).join('');
+                
+                // Remove existing event listeners and add new one
+                const newSelector = selector.cloneNode(true);
+                selector.parentNode.replaceChild(newSelector, selector);
+                newSelector.addEventListener('change', (e) => {
+                    currentYear = parseInt(e.target.value);
+                    loadMapData();
+                    loadKeyIndicators(currentYear);
+                });
+            } catch (error) {
+                console.error('Error loading years:', error);
+            }
+        }
+        
+        // Load country data
+        async function loadMapData() {
+            try {
+                const url = `/api/geographic-financial/country-data?data_type=${currentDataType}${currentYear ? `&year=${currentYear}` : ''}`;
+                const response = await fetch(url);
+                countryData = await response.json();
+                
+                renderMap();
+            } catch (error) {
+                console.error('Error loading map data:', error);
+            }
+        }
+        
+        // Render world map using D3.js and TopoJSON
+        async function renderMap() {
+            const container = document.getElementById('worldMapContainer');
+            
+            if (!countryData || Object.keys(countryData).length === 0) {
+                container.innerHTML = '<div class="loading">No data available for the selected filters.</div>';
+                return;
+            }
+            
+            // Check if D3 is loaded
+            if (typeof d3 === 'undefined') {
+                console.error('D3.js library not loaded');
+                renderListFallback();
+                return;
+            }
+            
+            // Prepare data - create a lookup map using multiple keys
+            const mapValues = {};
+            
+            // Calculate max revenue and detect outliers for better color band distribution
+            // If there's a highly skewed distribution, only the outlier gets the darkest color
+            const allRevenues = Object.values(countryData).filter(r => r > 0).sort((a, b) => b - a);
+            const maxRevenue = allRevenues.length > 0 ? allRevenues[0] : 0;
+            const secondMaxRevenue = allRevenues.length > 1 ? allRevenues[1] : 0;
+            
+            // Detect outliers: if max is significantly larger than the second-highest
+            // We consider it an outlier if max is > 1.5x the second-highest (50% more)
+            // This ensures we only separate outliers when there's a clear skew
+            const isOutlier = secondMaxRevenue > 0 && maxRevenue > (secondMaxRevenue * 1.5);
+            
+            // Find which country is the outlier
+            let outlierCountry = null;
+            if (isOutlier) {
+                const outlierEntry = Object.entries(countryData).find(([name, revenue]) => revenue === maxRevenue);
+                outlierCountry = outlierEntry ? outlierEntry[0] : null;
+            }
+            
+            // Set scale max revenue: if there's an outlier, use second-highest as upper bound for color bands
+            // This ensures other countries are better represented in the color scale
+            // Otherwise, use the max revenue
+            let scaleMaxRevenue;
+            if (isOutlier && secondMaxRevenue > 0) {
+                // Use second-highest as the upper bound for color bands
+                // This ensures only the outlier gets the darkest color
+                scaleMaxRevenue = secondMaxRevenue;
+            } else {
+                scaleMaxRevenue = maxRevenue > 0 ? maxRevenue : 0;
+            }
+            
+            console.log('Revenue analysis:', {
+                maxRevenue,
+                secondMaxRevenue,
+                isOutlier,
+                outlierCountry,
+                scaleMaxRevenue,
+                outlierRatio: secondMaxRevenue > 0 ? (maxRevenue / secondMaxRevenue).toFixed(2) : 'N/A'
+            });
+            
+            // Create lookup by country name, ISO codes, and common variations
+            Object.entries(countryData).forEach(([countryName, revenue]) => {
+                const countryCode = getCountryCode(countryName);
+                // Store by multiple keys for better matching
+                if (countryCode) {
+                    mapValues[countryCode] = revenue;
+                    mapValues[countryCode.toLowerCase()] = revenue;
+                    mapValues[countryName] = revenue;
+                }
+                // Also store by original name
+                mapValues[countryName] = revenue;
+            });
+            
+            console.log('Map values prepared:', mapValues);
+            console.log('Max revenue (all):', maxRevenue);
+            console.log('Scale max revenue (excluding US):', scaleMaxRevenue);
+            
+            // Determine data type label
+            const dataTypeLabel = currentDataType === 'membership' ? 'Membership Revenue' : 
+                                 currentDataType === 'affiliate' ? 'Affiliate Revenue' : 
+                                 'Total Revenue';
+            
+            // Clear container
+            container.innerHTML = '<div id="world-map"></div>';
+            const svgContainer = d3.select('#world-map');
+            
+            // Calculate width accounting for container padding (1rem = 16px on each side)
+            const containerPadding = 32; // 16px padding on each side
+            const width = Math.max(400, container.clientWidth - containerPadding);
+            const height = 500;
+            
+            // Ensure map fits in viewport
+            const aspectRatio = 2; // World map is roughly 2:1 aspect ratio
+            const maxHeight = Math.min(height, (width / aspectRatio) * 0.9);
+            const adjustedHeight = Math.max(400, maxHeight);
+            
+            // Create the main SVG element
+            const svg = svgContainer.append('svg')
+                .attr('width', width)
+                .attr('height', adjustedHeight)
+                .style('max-width', '100%') // Ensure SVG doesn't exceed container
+                .style('overflow', 'hidden'); // Prevent content overflow
+            
+            // Create a group for the map content that will be transformed by zoom
+            const mapContent = svg.append('g').attr('class', 'map-content');
+            
+            // Add water background (inside the transformable group)
+            mapContent.append('rect')
+                .attr('class', 'water')
+                .attr('width', width)
+                .attr('height', adjustedHeight)
+                .style('fill', '#e3f2fd');
+            
+            // Remove existing tooltip if it exists
+            d3.select('#mapTooltip').remove();
+            
+            const tooltip = d3.select('body').append('div')
+                .attr('id', 'mapTooltip')
+                .style('opacity', 0)
+                .style('position', 'absolute')
+                .style('background', 'rgba(0, 0, 0, 0.9)')
+                .style('color', 'white')
+                .style('padding', '0.5rem 1rem')
+                .style('border-radius', '6px')
+                .style('pointer-events', 'none')
+                .style('z-index', '10000')
+                .style('font-family', 'var(--font-family-primary)')
+                .style('font-size', '0.875rem')
+                .style('display', 'none');
+            
+            // Load world map data
+            try {
+                const worldData = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
+                const countries = topojson.feature(worldData, worldData.objects.countries);
+                
+                // Debug: Log French Guiana properties
+                countries.features.forEach(d => {
+                    const iso3 = d.properties.ISO_A3 || d.properties.iso_a3 || d.properties.ISO3 || d.properties.iso3;
+                    const iso2 = d.properties.ISO_A2 || d.properties.iso_a2 || d.properties.ISO2 || d.properties.iso2;
+                    const name = d.properties.name || d.properties.NAME || d.properties.NAME_LONG;
+                    if ((iso3 === 'GUF' || iso2 === 'GF') || (name && name.toLowerCase().includes('french guiana'))) {
+                        console.log('French Guiana map feature:', {
+                            allProperties: Object.keys(d.properties),
+                            ISO_A3: d.properties.ISO_A3,
+                            iso_a3: d.properties.iso_a3,
+                            ISO3: d.properties.ISO3,
+                            iso3: d.properties.iso3,
+                            ISO_A2: d.properties.ISO_A2,
+                            iso_a2: d.properties.iso_a2,
+                            ISO2: d.properties.ISO2,
+                            iso2: d.properties.iso2,
+                            name: d.properties.name,
+                            NAME: d.properties.NAME,
+                            NAME_LONG: d.properties.NAME_LONG,
+                            id: d.id
+                        });
+                    }
+                });
+                
+                // Adjust projection to fit entire world map
+                const projection = d3.geoMercator()
+                    .scale(width / 6.2)  // Slightly smaller scale to fit entire map
+                    .center([0, 10])     // Adjusted center to show more of the world
+                    .translate([width / 2, adjustedHeight / 2]);
+                
+                const path = d3.geoPath().projection(projection);
+                
+                // Set up zoom behavior
+                const zoom = d3.zoom()
+                    .scaleExtent([0.5, 8])  // Allow zoom from 0.5x to 8x
+                    .on('zoom', function(event) {
+                        // Apply zoom transform to the map content group
+                        mapContent.attr('transform', event.transform);
+                    });
+                
+                // Apply zoom to the SVG element
+                svg.call(zoom);
+                
+                // Add zoom controls (outside the transformable group so they stay fixed)
+                const zoomControls = svg.append('g')
+                    .attr('class', 'zoom-controls')
+                    .attr('transform', `translate(${width - 100}, 20)`);
+                
+                // Zoom in button
+                const zoomIn = zoomControls.append('rect')
+                    .attr('x', 0)
+                    .attr('y', 0)
+                    .attr('width', 30)
+                    .attr('height', 30)
+                    .attr('rx', 4)
+                    .style('fill', 'white')
+                    .style('stroke', '#e2e8f0')
+                    .style('stroke-width', 1)
+                    .style('cursor', 'pointer')
+                    .on('click', function() {
+                        svg.transition().call(zoom.scaleBy, 1.5);
+                    });
+                
+                zoomControls.append('text')
+                    .attr('x', 15)
+                    .attr('y', 20)
+                    .attr('text-anchor', 'middle')
+                    .attr('font-size', '18px')
+                    .attr('fill', '#374151')
+                    .style('pointer-events', 'none')
+                    .text('+');
+                
+                // Zoom out button
+                const zoomOut = zoomControls.append('rect')
+                    .attr('x', 35)
+                    .attr('y', 0)
+                    .attr('width', 30)
+                    .attr('height', 30)
+                    .attr('rx', 4)
+                    .style('fill', 'white')
+                    .style('stroke', '#e2e8f0')
+                    .style('stroke-width', 1)
+                    .style('cursor', 'pointer')
+                    .on('click', function() {
+                        svg.transition().call(zoom.scaleBy, 0.75);
+                    });
+                
+                zoomControls.append('text')
+                    .attr('x', 50)
+                    .attr('y', 20)
+                    .attr('text-anchor', 'middle')
+                    .attr('font-size', '18px')
+                    .attr('fill', '#374151')
+                    .style('pointer-events', 'none')
+                    .text('−');
+                
+                // Reset zoom button
+                const resetZoom = zoomControls.append('rect')
+                    .attr('x', 70)
+                    .attr('y', 0)
+                    .attr('width', 30)
+                    .attr('height', 30)
+                    .attr('rx', 4)
+                    .style('fill', 'white')
+                    .style('stroke', '#e2e8f0')
+                    .style('stroke-width', 1)
+                    .style('cursor', 'pointer')
+                    .on('click', function() {
+                        svg.transition()
+                            .duration(750)
+                            .call(zoom.transform, d3.zoomIdentity);
+                    });
+                
+                zoomControls.append('text')
+                    .attr('x', 85)
+                    .attr('y', 20)
+                    .attr('text-anchor', 'middle')
+                    .attr('font-size', '14px')
+                    .attr('fill', '#374151')
+                    .style('pointer-events', 'none')
+                    .text('⌂');
+                
+                // Add hover effects for zoom controls
+                zoomControls.selectAll('rect')
+                    .on('mouseover', function() {
+                        d3.select(this).style('fill', '#f9fafb');
+                    })
+                    .on('mouseout', function() {
+                        d3.select(this).style('fill', 'white');
+                    });
+                
+                // Create quantized color scale for better distinction with darker colors
+                // Use scaleMaxRevenue for color band boundaries (excludes outliers for better resolution)
+                // Calculate thresholds for 5 revenue buckets (excluding "No Data")
+                const numBuckets = 5;
+                const step = scaleMaxRevenue > 0 ? scaleMaxRevenue / numBuckets : 0;
+                const thresholds = [];
+                if (scaleMaxRevenue > 0) {
+                    for (let i = 1; i < numBuckets; i++) {
+                        thresholds.push(step * i);
+                    }
+                }
+                
+                // Define colors with clear visual distinction
+                const veryHighColor = '#b91c1c'; // Dark red for "Very High" band
+                const outlierColor = '#7f1d1d'; // Very dark red for outlier - creates clear visual distinction
+                
+                const quantizeScale = d3.scaleThreshold()
+                    .domain(thresholds)
+                    .range([
+                        '#fca5a5',      // Low - light red
+                        '#f87171',      // Medium-Low - medium red
+                        '#ef4444',      // Medium - darker red
+                        '#dc2626',      // High - HL7 brand red
+                        veryHighColor   // Very High - dark red (distinct from outlier)
+                    ]);
+                
+                // Special handling for outliers - only outliers get the darkest color
+                // Use a much darker shade to create clear visual distinction
+                function getCountryColor(revenue, countryName) {
+                    if (revenue === 0) return '#e5e7eb';
+                    // Check if this revenue matches the outlier's revenue (more reliable than name matching)
+                    // Also check if it exceeds scaleMaxRevenue to ensure it's the outlier
+                    if (isOutlier && outlierCountry && revenue === maxRevenue && revenue > scaleMaxRevenue) {
+                        return outlierColor; // Very dark red - only for outlier, visually distinct
+                    }
+                    // For all other countries, use the quantized scale (capped at scaleMaxRevenue)
+                    return quantizeScale(Math.min(revenue, scaleMaxRevenue));
+                }
+                
+                // Function to find revenue for a country
+                // Important: This function must NOT match territories to their parent countries
+                // e.g., French Guiana should NOT match to France
+                function findRevenue(d) {
+                    // Try multiple property names - map data formats vary
+                    const iso3 = d.properties.ISO_A3 || d.properties.iso_a3 || d.properties.ISO3 || d.properties.iso3;
+                    const iso2 = d.properties.ISO_A2 || d.properties.iso_a2 || d.properties.ISO2 || d.properties.iso2;
+                    const id = d.id;
+                    let countryName = d.properties.name || d.properties.NAME || d.properties.NAME_LONG || d.properties.NAME_EN || d.properties.name_en;
+                    const countryNameAlt = d.properties.NAME || d.properties.name;
+                    
+                    // Debug: Log French Guiana detection
+                    if (iso3 === 'GUF' || iso2 === 'GF' || (countryName && countryName.toLowerCase().includes('french guiana'))) {
+                        console.log('French Guiana detected in findRevenue:', {
+                            iso3: iso3,
+                            iso2: iso2,
+                            id: id,
+                            name: countryName,
+                            properties: Object.keys(d.properties)
+                        });
+                    }
+                    
+                    // CRITICAL: Check ISO codes FIRST before ANY name matching
+                    // This is the most reliable way to identify territories, even if they're mislabeled as parent countries
+                    const frenchTerritoryMap = {
+                        'GUF': 'French Guiana',
+                        'GF': 'French Guiana',
+                        'PYF': 'French Polynesia',
+                        'PF': 'French Polynesia',
+                        'MAF': 'St. Martin (French part)',
+                        'MF': 'St. Martin (French part)',
+                        'GLP': 'Guadeloupe',
+                        'GP': 'Guadeloupe',
+                        'MTQ': 'Martinique',
+                        'MQ': 'Martinique',
+                        'REU': 'Réunion',
+                        'RE': 'Réunion'
+                    };
+                    
+                    // Check ISO codes first - if it's a French territory, handle it and return immediately
+                    let territoryName = null;
+                    if (iso3 && frenchTerritoryMap[iso3]) {
+                        territoryName = frenchTerritoryMap[iso3];
+                    } else if (iso2 && frenchTerritoryMap[iso2]) {
+                        territoryName = frenchTerritoryMap[iso2];
+                    } else if (id && frenchTerritoryMap[id.toString()]) {
+                        territoryName = frenchTerritoryMap[id.toString()];
+                    }
+                    
+                    // If this is a French territory (by ISO code), ONLY return data for that territory
+                    // NEVER match to France, even if the name says "France"
+                    if (territoryName) {
+                        if (mapValues[territoryName]) {
+                            return mapValues[territoryName];
+                        }
+                        // Return 0 immediately - do NOT continue to any name matching
+                        return 0;
+                    }
+                    
+                    // Special handling for Central America and Dominican Republic
+                    // This is a multi-country region that should all show the same revenue value
+                    const centralAmericaCountries = {
+                        // ISO3 codes
+                        'BLZ': 'Central America and Dominican Republic',  // Belize
+                        'CRI': 'Central America and Dominican Republic',  // Costa Rica
+                        'SLV': 'Central America and Dominican Republic',  // El Salvador
+                        'GTM': 'Central America and Dominican Republic',  // Guatemala
+                        'HND': 'Central America and Dominican Republic',  // Honduras
+                        'NIC': 'Central America and Dominican Republic',  // Nicaragua
+                        'PAN': 'Central America and Dominican Republic',  // Panama
+                        'DOM': 'Central America and Dominican Republic',  // Dominican Republic
+                        // ISO2 codes
+                        'BZ': 'Central America and Dominican Republic',  // Belize
+                        'CR': 'Central America and Dominican Republic',  // Costa Rica
+                        'SV': 'Central America and Dominican Republic',  // El Salvador
+                        'GT': 'Central America and Dominican Republic',  // Guatemala
+                        'HN': 'Central America and Dominican Republic',  // Honduras
+                        'NI': 'Central America and Dominican Republic',  // Nicaragua
+                        'PA': 'Central America and Dominican Republic',  // Panama
+                        'DO': 'Central America and Dominican Republic',  // Dominican Republic
+                    };
+                    
+                    // Check if this is a Central America country by ISO code
+                    let centralAmericaRegion = null;
+                    if (iso3 && centralAmericaCountries[iso3]) {
+                        centralAmericaRegion = centralAmericaCountries[iso3];
+                    } else if (iso2 && centralAmericaCountries[iso2]) {
+                        centralAmericaRegion = centralAmericaCountries[iso2];
+                    }
+                    
+                    // If this is a Central America country, return the shared revenue value
+                    if (centralAmericaRegion && mapValues[centralAmericaRegion]) {
+                        return mapValues[centralAmericaRegion];
+                    }
+                    
+                    if (!countryName) return 0;
+                    
+                    const countryNameLower = countryName.toLowerCase().trim();
+                    
+                    // Also check by name pattern as fallback (in case ISO codes aren't available)
+                    const territoryPatterns = [
+                        { 
+                            pattern: /^french guiana|^guyane|^guf$/i, 
+                            name: 'French Guiana'
+                        },
+                        { 
+                            pattern: /^french polynesia|^pyf$/i, 
+                            name: 'French Polynesia'
+                        },
+                        { 
+                            pattern: /^st\.?\s*martin.*french|^maf$/i, 
+                            name: 'St. Martin (French part)'
+                        },
+                        { 
+                            pattern: /^guadeloupe|^glp$/i, 
+                            name: 'Guadeloupe'
+                        },
+                        { 
+                            pattern: /^martinique|^mtq$/i, 
+                            name: 'Martinique'
+                        },
+                        { 
+                            pattern: /^réunion|^reunion|^reu$/i, 
+                            name: 'Réunion'
+                        },
+                    ];
+                    
+                    // Check by name pattern (fallback if ISO codes weren't available)
+                    for (const { pattern, name } of territoryPatterns) {
+                        if (pattern.test(countryName) || (countryNameAlt && pattern.test(countryNameAlt))) {
+                            // Only return data if we have explicit data for this territory
+                            if (mapValues[name]) return mapValues[name];
+                            // Explicitly return 0 - do NOT fall through to match parent country
+                            return 0;
+                        }
+                    }
+                    
+                    // Check by name pattern
+                    for (const { pattern, name, parent } of territoryPatterns) {
+                        if (pattern.test(countryName) || (countryNameAlt && pattern.test(countryNameAlt))) {
+                            // Only return data if we have explicit data for this territory
+                            if (mapValues[name]) return mapValues[name];
+                            // Explicitly return 0 - do NOT fall through to match parent country
+                            return 0;
+                        }
+                    }
+                    
+                    // IMPORTANT: If the map data labels a territory as the parent country name,
+                    // we need to check the geographic location or other properties
+                    // For now, we'll be strict: if it's not an exact match and not a territory, proceed carefully
+                    
+                    // Now do normal matching, but ensure exact matches only
+                    // First, try exact matches (case-sensitive)
+                    if (mapValues[countryName]) {
+                        // Double-check: if this would match "France", verify it's not actually a territory
+                        if (countryName === 'France' || countryNameLower === 'france') {
+                            // Check if this might actually be a French territory based on ISO codes
+                            if (iso3 === 'GUF' || iso2 === 'GF' || iso3 === 'PYF' || iso2 === 'PF' ||
+                                iso3 === 'MAF' || iso2 === 'MF' || iso3 === 'GLP' || iso2 === 'GP' ||
+                                iso3 === 'MTQ' || iso2 === 'MQ' || iso3 === 'REU' || iso2 === 'RE') {
+                                return 0; // This is a territory, not France
+                            }
+                        }
+                        return mapValues[countryName];
+                    }
+                    if (countryNameAlt && mapValues[countryNameAlt]) {
+                        // Same check for alt name
+                        if (countryNameAlt === 'France' || countryNameAlt.toLowerCase() === 'france') {
+                            if (iso3 === 'GUF' || iso2 === 'GF' || iso3 === 'PYF' || iso2 === 'PF' ||
+                                iso3 === 'MAF' || iso2 === 'MF' || iso3 === 'GLP' || iso2 === 'GP' ||
+                                iso3 === 'MTQ' || iso2 === 'MQ' || iso3 === 'REU' || iso2 === 'RE') {
+                                return 0;
+                            }
+                        }
+                        return mapValues[countryNameAlt];
+                    }
+                    
+                    // Try exact case-insensitive match (EXACT match only, no partial/substring matches)
+                    for (const [key, value] of Object.entries(mapValues)) {
+                        if (key && typeof key === 'string') {
+                            const keyLower = key.toLowerCase().trim();
+                            // Exact match only - do NOT do partial matches
+                            if (countryNameLower === keyLower) {
+                                // Same territory check for case-insensitive matches
+                                if (keyLower === 'france') {
+                                    if (iso3 === 'GUF' || iso2 === 'GF' || iso3 === 'PYF' || iso2 === 'PF' ||
+                                        iso3 === 'MAF' || iso2 === 'MF' || iso3 === 'GLP' || iso2 === 'GP' ||
+                                        iso3 === 'MTQ' || iso2 === 'MQ' || iso3 === 'REU' || iso2 === 'RE') {
+                                        return 0;
+                                    }
+                                }
+                                return value;
+                            }
+                            if (countryNameAlt && countryNameAlt.toLowerCase().trim() === keyLower) {
+                                if (keyLower === 'france') {
+                                    if (iso3 === 'GUF' || iso2 === 'GF' || iso3 === 'PYF' || iso2 === 'PF' ||
+                                        iso3 === 'MAF' || iso2 === 'MF' || iso3 === 'GLP' || iso2 === 'GP' ||
+                                        iso3 === 'MTQ' || iso2 === 'MQ' || iso3 === 'REU' || iso2 === 'RE') {
+                                        return 0;
+                                    }
+                                }
+                                return value;
+                            }
+                        }
+                    }
+                    
+                    // Try country name mapping (explicit mappings only)
+                    const mappedName = countryNameMapping[countryName] || countryNameMapping[countryNameAlt];
+                    if (mappedName && mapValues[mappedName]) {
+                        // Territory check for mapped names too
+                        if (mappedName === 'France') {
+                            if (iso3 === 'GUF' || iso2 === 'GF' || iso3 === 'PYF' || iso2 === 'PF' ||
+                                iso3 === 'MAF' || iso2 === 'MF' || iso3 === 'GLP' || iso2 === 'GP' ||
+                                iso3 === 'MTQ' || iso2 === 'MQ' || iso3 === 'REU' || iso2 === 'RE') {
+                                return 0;
+                            }
+                        }
+                        return mapValues[mappedName];
+                    }
+                    
+                    // Try ISO codes (exact matches only) - but skip if it's a territory ISO
+                    const territoryIsos = ['GUF', 'GF', 'PYF', 'PF', 'MAF', 'MF', 'GLP', 'GP', 'MTQ', 'MQ', 'REU', 'RE'];
+                    if (iso3 && !territoryIsos.includes(iso3) && mapValues[iso3]) return mapValues[iso3];
+                    if (iso3 && !territoryIsos.includes(iso3.toUpperCase()) && mapValues[iso3.toLowerCase()]) return mapValues[iso3.toLowerCase()];
+                    if (iso2 && !territoryIsos.includes(iso2) && mapValues[iso2]) return mapValues[iso2];
+                    if (iso2 && !territoryIsos.includes(iso2.toUpperCase()) && mapValues[iso2.toLowerCase()]) return mapValues[iso2.toLowerCase()];
+                    if (id && !territoryIsos.includes(id.toString()) && mapValues[id]) return mapValues[id];
+                    if (id && !territoryIsos.includes(id.toString().toUpperCase()) && mapValues[id.toString().toLowerCase()]) return mapValues[id.toString().toLowerCase()];
+                    
+                    // If we get here, no match found - return 0 (no data)
+                    return 0;
+                }
+                
+                // Debug: Log matched countries and territory detection
+                let matchedCount = 0;
+                countries.features.forEach(d => {
+                    const iso3 = d.properties.ISO_A3;
+                    const iso2 = d.properties.ISO_A2;
+                    const name = d.properties.name || d.properties.NAME || d.properties.NAME_LONG;
+                    const revenue = findRevenue(d);
+                    
+                    // Log French Guiana specifically for debugging
+                    if ((iso3 === 'GUF' || iso2 === 'GF') || 
+                        (name && (name.toLowerCase().includes('french guiana') || name.toLowerCase().includes('guyane')))) {
+                        console.log(`French Guiana detected - ISO3: ${iso3}, ISO2: ${iso2}, Name: ${name}, Revenue: ${revenue}`);
+                    }
+                    
+                    if (revenue > 0) {
+                        matchedCount++;
+                        console.log(`Matched: ${name} (ISO: ${iso3}/${iso2}) = ${formatCurrency(revenue)}`);
+                    }
+                });
+                console.log(`Total countries matched: ${matchedCount} out of ${Object.keys(mapValues).length} data entries`);
+                
+                // Draw countries (inside the transformable map-content group)
+                // First, let's log what properties are available for debugging
+                console.log('Sample country feature:', countries.features[0]);
+                console.log('Sample country properties:', countries.features[0]?.properties);
+                
+                // Find French Guiana in the features
+                const frenchGuianaFeature = countries.features.find(d => {
+                    const iso3 = d.properties?.ISO_A3 || d.properties?.iso_a3 || d.properties?.ISO3 || d.properties?.iso3;
+                    const iso2 = d.properties?.ISO_A2 || d.properties?.iso_a2 || d.properties?.ISO2 || d.properties?.iso2;
+                    const name = d.properties?.name || d.properties?.NAME || d.properties?.NAME_LONG || '';
+                    return (iso3 === 'GUF' || iso2 === 'GF') || 
+                           name.toLowerCase().includes('french guiana') || 
+                           name.toLowerCase().includes('guyane');
+                });
+                
+                if (frenchGuianaFeature) {
+                    console.log('French Guiana feature found:', frenchGuianaFeature);
+                    console.log('French Guiana properties:', frenchGuianaFeature.properties);
+                } else {
+                    console.log('French Guiana NOT found as separate feature - may be part of France');
+                    // Check if France has multiple geometries
+                    const franceFeature = countries.features.find(d => {
+                        const name = d.properties?.name || d.properties?.NAME || d.properties?.NAME_LONG || '';
+                        return name && (name.toLowerCase() === 'france' || name.toLowerCase().includes('france'));
+                    });
+                    if (franceFeature) {
+                        console.log('France feature:', franceFeature);
+                        console.log('France properties:', franceFeature.properties);
+                        // Check if France has multiple parts (mainland + territories)
+                        if (franceFeature.geometry && franceFeature.geometry.type === 'MultiPolygon') {
+                            console.log('France has MultiPolygon geometry with', franceFeature.geometry.coordinates.length, 'parts');
+                        }
+                    }
+                }
+                
+                const countryPaths = mapContent.selectAll('.country')
+                    .data(countries.features)
+                    .enter()
+                    .append('path')
+                    .attr('class', 'country')
+                    .attr('d', path)
+                    .attr('data-iso3', d => d.properties?.ISO_A3 || d.properties?.iso_a3 || d.properties?.ISO3 || d.properties?.iso3 || '')
+                    .attr('data-iso2', d => d.properties?.ISO_A2 || d.properties?.iso_a2 || d.properties?.ISO2 || d.properties?.iso2 || '')
+                    .attr('data-name', d => d.properties?.name || d.properties?.NAME || d.properties?.NAME_LONG || '')
+                    .style('fill', d => {
+                        const revenue = findRevenue(d);
+                        const countryName = d.properties.name || d.properties.NAME || d.properties.NAME_LONG || '';
+                        return getCountryColor(revenue, countryName);
+                    })
+                    .style('stroke', '#ffffff')
+                    .style('stroke-width', 0.5)
+                    .style('cursor', 'pointer');
+                
+                // Helper function to get the correct display name for a territory
+                function getDisplayName(d) {
+                    const iso3 = d.properties.ISO_A3;
+                    const iso2 = d.properties.ISO_A2;
+                    const id = d.id;
+                    let countryName = d.properties.name || d.properties.NAME || d.properties.NAME_LONG || 'Unknown';
+                    
+                    // Check if this is a Central America country - show as "Central America and Dominican Republic" if it has revenue
+                    const centralAmericaISO = {
+                        'BLZ': 'Central America and Dominican Republic',  // Belize
+                        'CRI': 'Central America and Dominican Republic',  // Costa Rica
+                        'SLV': 'Central America and Dominican Republic',  // El Salvador
+                        'GTM': 'Central America and Dominican Republic',  // Guatemala
+                        'HND': 'Central America and Dominican Republic',  // Honduras
+                        'NIC': 'Central America and Dominican Republic',  // Nicaragua
+                        'PAN': 'Central America and Dominican Republic',  // Panama
+                        'DOM': 'Central America and Dominican Republic',  // Dominican Republic
+                        'BZ': 'Central America and Dominican Republic',
+                        'CR': 'Central America and Dominican Republic',
+                        'SV': 'Central America and Dominican Republic',
+                        'GT': 'Central America and Dominican Republic',
+                        'HN': 'Central America and Dominican Republic',
+                        'NI': 'Central America and Dominican Republic',
+                        'PA': 'Central America and Dominican Republic',
+                        'DO': 'Central America and Dominican Republic',
+                    };
+                    
+                    // Check if this is a Central America country and has revenue data
+                    let centralAmericaRegion = null;
+                    if (iso3 && centralAmericaISO[iso3]) {
+                        centralAmericaRegion = centralAmericaISO[iso3];
+                    } else if (iso2 && centralAmericaISO[iso2]) {
+                        centralAmericaRegion = centralAmericaISO[iso2];
+                    }
+                    
+                    if (centralAmericaRegion && mapValues[centralAmericaRegion]) {
+                        return centralAmericaRegion;
+                    }
+                    
+                    // Check if this is a French territory by ISO code and correct the name
+                    const territoryMap = {
+                        'GUF': 'French Guiana',
+                        'GF': 'French Guiana',
+                        'PYF': 'French Polynesia',
+                        'PF': 'French Polynesia',
+                        'MAF': 'St. Martin (French part)',
+                        'MF': 'St. Martin (French part)',
+                        'GLP': 'Guadeloupe',
+                        'GP': 'Guadeloupe',
+                        'MTQ': 'Martinique',
+                        'MQ': 'Martinique',
+                        'REU': 'Réunion',
+                        'RE': 'Réunion'
+                    };
+                    
+                    // Check ISO codes first (most reliable)
+                    if (iso3 && territoryMap[iso3]) return territoryMap[iso3];
+                    if (iso2 && territoryMap[iso2]) return territoryMap[iso2];
+                    if (id && territoryMap[id.toString()]) return territoryMap[id.toString()];
+                    
+                    // Check by name pattern as fallback
+                    const countryNameLower = countryName.toLowerCase();
+                    if (countryNameLower.includes('french guiana') || countryNameLower.includes('guyane')) {
+                        return 'French Guiana';
+                    }
+                    if (countryNameLower.includes('french polynesia')) {
+                        return 'French Polynesia';
+                    }
+                    if (countryNameLower.includes('st. martin') && countryNameLower.includes('french')) {
+                        return 'St. Martin (French part)';
+                    }
+                    if (countryNameLower.includes('guadeloupe')) {
+                        return 'Guadeloupe';
+                    }
+                    if (countryNameLower.includes('martinique')) {
+                        return 'Martinique';
+                    }
+                    if (countryNameLower.includes('réunion') || countryNameLower.includes('reunion')) {
+                        return 'Réunion';
+                    }
+                    
+                    return countryName;
+                }
+                
+                // Helper function to check if coordinates are in French Guiana
+                // French Guiana is approximately: longitude -53° to -51°, latitude 2° to 6°
+                function isFrenchGuiana(coords) {
+                    if (!coords || !coords[0] || !coords[1]) return false;
+                    const lon = coords[0];
+                    const lat = coords[1];
+                    // French Guiana geographic bounds: roughly -54° to -51° longitude, 2° to 6° latitude
+                    return lon >= -54 && lon <= -51 && lat >= 2 && lat <= 6;
+                }
+                
+                // Add mouse events
+                countryPaths
+                    .on('mouseover', function(event, d) {
+                        // Get ALL possible property names - map data formats vary
+                        const allProps = d.properties || {};
+                        const name = allProps.name || allProps.NAME || allProps.NAME_LONG || allProps.NAME_EN || allProps.name_en || allProps.NAME_SORT || allProps.NAME_ALT;
+                        
+                        // Extract ISO codes and ID
+                        const iso3 = allProps.ISO_A3 || allProps.iso_a3 || allProps.ISO3 || allProps.iso3;
+                        const iso2 = allProps.ISO_A2 || allProps.iso_a2 || allProps.ISO2 || allProps.iso2;
+                        const id = d.id;
+                        
+                        // Get mouse coordinates to determine geographic location
+                        const [mouseX, mouseY] = d3.pointer(event, this);
+                        const coords = projection.invert ? projection.invert([mouseX, mouseY]) : null;
+                        
+                        // CRITICAL: Check if this is French Guiana by geographic location
+                        // Since French Guiana is part of France's MultiPolygon, we need to detect it by coordinates
+                        const isGuiana = isFrenchGuiana(coords);
+                        
+                        // If this is France AND we're hovering over French Guiana's geographic region
+                        if (name && name.toLowerCase() === 'france' && isGuiana) {
+                            console.log('=== FRENCH GUIANA DETECTED BY LOCATION ===');
+                            console.log('Coordinates:', coords);
+                            console.log('France feature, but in French Guiana region');
+                            
+                            // Override to show French Guiana data (which is 0 - no data)
+                            const displayName = 'French Guiana';
+                            const revenue = mapValues['French Guiana'] || 0;
+                            
+                            d3.select(this)
+                                .style('stroke', '#dc2626')
+                                .style('stroke-width', 2)
+                                .style('opacity', 0.85);
+                            
+                            const tooltipX = event.pageX + 10;
+                            const tooltipY = event.pageY - 10;
+                            
+                            tooltip.html(`<strong>${displayName}</strong><br/>No data available`)
+                                .style('left', tooltipX + 'px')
+                                .style('top', tooltipY + 'px')
+                                .style('display', 'block')
+                                .style('opacity', 0)
+                                .transition()
+                                .duration(100)
+                                .style('opacity', 0.95);
+                            
+                            return; // Exit early, don't process as France
+                        }
+                        
+                        // Check if this is French Guiana FIRST before calling findRevenue
+                        // Check by ISO codes, ID, and name patterns
+                        const frenchTerritoryMap = {
+                            'GUF': 'French Guiana',
+                            'GF': 'French Guiana',
+                            'PYF': 'French Polynesia',
+                            'PF': 'French Polynesia',
+                            'MAF': 'St. Martin (French part)',
+                            'MF': 'St. Martin (French part)',
+                            'GLP': 'Guadeloupe',
+                            'GP': 'Guadeloupe',
+                            'MTQ': 'Martinique',
+                            'MQ': 'Martinique',
+                            'REU': 'Réunion',
+                            'RE': 'Réunion'
+                        };
+                        
+                        let territoryName = null;
+                        const nameLower = (name || '').toLowerCase();
+                        
+                        // Check for Central America countries first
+                        const centralAmericaMap = {
+                            'BLZ': 'Central America and Dominican Republic',  // Belize
+                            'CRI': 'Central America and Dominican Republic',  // Costa Rica
+                            'SLV': 'Central America and Dominican Republic',  // El Salvador
+                            'GTM': 'Central America and Dominican Republic',  // Guatemala
+                            'HND': 'Central America and Dominican Republic',  // Honduras
+                            'NIC': 'Central America and Dominican Republic',  // Nicaragua
+                            'PAN': 'Central America and Dominican Republic',  // Panama
+                            'DOM': 'Central America and Dominican Republic',  // Dominican Republic
+                            'BZ': 'Central America and Dominican Republic',
+                            'CR': 'Central America and Dominican Republic',
+                            'SV': 'Central America and Dominican Republic',
+                            'GT': 'Central America and Dominican Republic',
+                            'HN': 'Central America and Dominican Republic',
+                            'NI': 'Central America and Dominican Republic',
+                            'PA': 'Central America and Dominican Republic',
+                            'DO': 'Central America and Dominican Republic',
+                        };
+                        
+                        let centralAmericaRegion = null;
+                        if (iso3 && centralAmericaMap[iso3]) {
+                            centralAmericaRegion = centralAmericaMap[iso3];
+                        } else if (iso2 && centralAmericaMap[iso2]) {
+                            centralAmericaRegion = centralAmericaMap[iso2];
+                        }
+                        
+                        // Check ISO codes first for French territories
+                        if (iso3 && frenchTerritoryMap[iso3]) {
+                            territoryName = frenchTerritoryMap[iso3];
+                        } else if (iso2 && frenchTerritoryMap[iso2]) {
+                            territoryName = frenchTerritoryMap[iso2];
+                        } else if (id && frenchTerritoryMap[id.toString()]) {
+                            territoryName = frenchTerritoryMap[id.toString()];
+                        }
+                        // Check by name patterns as fallback
+                        else if (nameLower.includes('french guiana') || nameLower.includes('guyane')) {
+                            territoryName = 'French Guiana';
+                        } else if (nameLower.includes('french polynesia')) {
+                            territoryName = 'French Polynesia';
+                        } else if (nameLower.includes('st. martin') && nameLower.includes('french')) {
+                            territoryName = 'St. Martin (French part)';
+                        } else if (nameLower.includes('guadeloupe')) {
+                            territoryName = 'Guadeloupe';
+                        } else if (nameLower.includes('martinique')) {
+                            territoryName = 'Martinique';
+                        } else if (nameLower.includes('réunion') || nameLower.includes('reunion')) {
+                            territoryName = 'Réunion';
+                        }
+                        
+                        // If this is a territory or Central America region, use its specific data
+                        let revenue = 0;
+                        let displayName = name || 'Unknown';
+                        
+                        // Check for Central America first
+                        if (centralAmericaRegion && mapValues[centralAmericaRegion]) {
+                            displayName = centralAmericaRegion;
+                            revenue = mapValues[centralAmericaRegion] || 0;
+                            console.log(`✓ Central America country detected: ${name}, ISO: ${iso3}/${iso2}, Revenue: ${revenue}`);
+                        } else if (territoryName) {
+                            // This is a French territory - get its specific data
+                            displayName = territoryName;
+                            revenue = mapValues[territoryName] || 0;
+                            console.log(`✓ Territory detected: ${territoryName}, ISO: ${iso3}/${iso2}, Revenue: ${revenue}, Will NOT show France data`);
+                        } else {
+                            // Not a territory or Central America, use normal lookup
+                            // BUT: Double-check it's not France being misidentified
+                            if ((nameLower === 'france' || nameLower.includes('france')) && 
+                                (iso3 === 'GUF' || iso2 === 'GF')) {
+                                // This is French Guiana mislabeled as France!
+                                displayName = 'French Guiana';
+                                revenue = mapValues['French Guiana'] || 0;
+                                console.log('⚠ French Guiana mislabeled as France - corrected');
+                            } else {
+                                revenue = findRevenue(d);
+                                displayName = getDisplayName(d);
+                            }
+                        }
+                        
+                        d3.select(this)
+                            .style('stroke', '#dc2626')
+                            .style('stroke-width', 2)
+                            .style('opacity', 0.85);
+                        
+                        // Get mouse position relative to page
+                        const tooltipX = event.pageX + 10;
+                        const tooltipY = event.pageY - 10;
+                        
+                        if (revenue > 0) {
+                            tooltip.html(`<strong>${displayName}</strong><br/>${dataTypeLabel}: ${formatCurrency(revenue)}`)
+                                .style('left', tooltipX + 'px')
+                                .style('top', tooltipY + 'px')
+                                .style('display', 'block')
+                                .style('opacity', 0)
+                                .transition()
+                                .duration(100)
+                                .style('opacity', 0.95);
+                        } else {
+                            tooltip.html(`<strong>${displayName}</strong><br/>No data available`)
+                                .style('left', tooltipX + 'px')
+                                .style('top', tooltipY + 'px')
+                                .style('display', 'block')
+                                .style('opacity', 0)
+                                .transition()
+                                .duration(100)
+                                .style('opacity', 0.95);
+                        }
+                    })
+                    .on('mousemove', function(event) {
+                        // Position tooltip right next to the mouse pointer
+                        const tooltipX = event.pageX + 10;
+                        const tooltipY = event.pageY - 10;
+                        
+                        tooltip
+                            .style('left', tooltipX + 'px')
+                            .style('top', tooltipY + 'px');
+                    })
+                    .on('mouseout', function() {
+                        d3.select(this)
+                            .style('stroke', '#ffffff')
+                            .style('stroke-width', 0.5)
+                            .style('opacity', 1);
+                        
+                        tooltip.transition()
+                            .duration(100)
+                            .style('opacity', 0)
+                            .on('end', function() {
+                                d3.select(this).style('display', 'none');
+                            });
+                    });
+                
+                // Create legend container below the map (outside SVG, in the main container)
+                const legendContainer = container;
+                const legendDiv = d3.select(legendContainer)
+                    .append('div')
+                    .attr('class', 'map-legend-container')
+                    .style('margin-top', '1rem')
+                    .style('padding', '1rem')
+                    .style('background', 'white')
+                    .style('border-radius', '8px')
+                    .style('border', '1px solid var(--border-color)');
+                
+                // Legend title
+                legendDiv.append('div')
+                    .style('font-size', '13px')
+                    .style('font-weight', '600')
+                    .style('color', '#1f2937')
+                    .style('margin-bottom', '0.75rem')
+                    .style('font-family', 'var(--font-family-primary)')
+                    .text(dataTypeLabel + ' - Value Ranges');
+                
+                // Create legend items container
+                const legendItems = legendDiv.append('div')
+                    .style('display', 'flex')
+                    .style('flex-wrap', 'wrap')
+                    .style('gap', '1.5rem')
+                    .style('align-items', 'center');
+                
+                // Calculate value ranges for each color bucket
+                const ranges = [];
+                
+                if (scaleMaxRevenue > 0) {
+                    // No Data
+                    ranges.push({ min: 0, max: 0, label: 'No Data', color: '#e5e7eb' });
+                    
+                    // Revenue buckets based on scaleMaxRevenue (excluding US for Combined/Membership)
+                    ranges.push({ 
+                        min: 0, 
+                        max: thresholds[0] || step, 
+                        label: 'Low', 
+                        color: '#fca5a5' 
+                    });
+                    
+                    for (let i = 0; i < thresholds.length - 1; i++) {
+                        const labels = ['Medium-Low', 'Medium', 'High'];
+                        ranges.push({
+                            min: thresholds[i],
+                            max: thresholds[i + 1],
+                            label: labels[i] || 'High',
+                            color: quantizeScale.range()[i + 1]
+                        });
+                    }
+                    
+                    // For the highest bucket, show scaleMaxRevenue as max
+                    // If there's an outlier, create a separate band for it
+                    const highestThreshold = thresholds[thresholds.length - 1] || step * 4;
+                    
+                    // Regular "Very High" band (up to scaleMaxRevenue)
+                    ranges.push({
+                        min: highestThreshold,
+                        max: scaleMaxRevenue,
+                        label: 'Very High',
+                        color: veryHighColor // Dark red - visually distinct from outlier
+                    });
+                    
+                    // If there's an outlier, add a separate band for it with distinct color
+                    if (isOutlier && outlierCountry && maxRevenue > scaleMaxRevenue) {
+                        ranges.push({
+                            min: scaleMaxRevenue,
+                            max: maxRevenue,
+                            label: `Highest (${outlierCountry}: ${formatCurrency(maxRevenue)})`,
+                            color: outlierColor // Very dark red - visually distinct from "Very High" band
+                        });
+                    }
+                }
+                
+                // Draw legend items as HTML elements
+                ranges.forEach((range) => {
+                    const legendItem = legendItems.append('div')
+                        .style('display', 'flex')
+                        .style('align-items', 'center')
+                        .style('gap', '0.5rem');
+                    
+                    // Color box
+                    legendItem.append('div')
+                        .style('width', '20px')
+                        .style('height', '20px')
+                        .style('background', range.color)
+                        .style('border', '1px solid #ffffff')
+                        .style('border-radius', '4px')
+                        .style('flex-shrink', '0');
+                    
+                    // Label with dollar range
+                    let labelText;
+                    if (range.min === 0 && range.max === 0) {
+                        labelText = 'No Data';
+                    } else {
+                        labelText = `${formatCurrency(range.min)} - ${formatCurrency(range.max)}`;
+                    }
+                    
+                    legendItem.append('span')
+                        .style('font-size', '11px')
+                        .style('color', '#374151')
+                        .style('font-family', 'var(--font-family-primary)')
+                        .text(labelText);
+                });
+                
+                console.log('Map rendered with', countries.features.length, 'countries');
+                
+            } catch (error) {
+                console.error('Error loading world map data:', error);
+                renderListFallback();
+            }
+        }
+        
+        // Fallback list view if map fails
+        function renderListFallback() {
+            const container = document.getElementById('worldMapContainer');
+            // Filter out "Other" category as it's not mappable
+            const mappableData = Object.fromEntries(
+                Object.entries(countryData).filter(([country]) => country !== 'Other (International Affiliates)')
+            );
+            const maxRevenue = Math.max(...Object.values(mappableData), 0);
+            const dataTypeLabel = currentDataType === 'membership' ? 'Membership Revenue' : 
+                                 currentDataType === 'affiliate' ? 'Affiliate Revenue' : 
+                                 'Total Revenue';
+            
+            container.innerHTML = `
+                <div style="margin-top: 1rem;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #1f2937;">${dataTypeLabel} by Country</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem;">
+                        ${Object.entries(mappableData)
+                            .sort((a, b) => b[1] - a[1])
+                            .map(([country, revenue]) => {
+                                const percentage = maxRevenue > 0 ? (revenue / maxRevenue) * 100 : 0;
+                                const opacity = Math.max(0.1, Math.min(0.9, percentage / 100));
+                                return `
+                                    <div style="background: rgba(220, 38, 38, ${opacity}); padding: 1rem; border-radius: 6px; border: 1px solid rgba(220, 38, 38, 0.3);">
+                                        <div style="font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">${country}</div>
+                                        <div style="font-size: 1.25rem; font-weight: 700; color: var(--wa-brand);">${formatCurrency(revenue)}</div>
+                                    </div>
+                                `;
+                            })
+                            .join('')}
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Initialize map type selector
+        function initMapTypeSelector() {
+            document.querySelectorAll('.map-type-btn').forEach(btn => {
+                // Remove existing listeners by cloning
+                const newBtn = btn.cloneNode(true);
+                btn.parentNode.replaceChild(newBtn, btn);
+                newBtn.addEventListener('click', () => {
+                    document.querySelectorAll('.map-type-btn').forEach(b => b.classList.remove('active'));
+                    newBtn.classList.add('active');
+                    currentDataType = newBtn.dataset.type;
+                    loadMapData();
+                });
+            });
+        }
+        
+        // Load steward navigation dynamically
+        async function loadStewardNavigation() {
+            try {
+                const response = await fetch('/api/stewards');
+                const stewards = await response.json();
+                
+                const navigationHtml = stewards.map(steward => {
+                    const isActive = steward === 'HL7 International' || steward === 'HL7' ? 'active' : '';
+                    
+                    // Special handling for Finance steward - create dropdown instead of direct link
+                    if (steward === 'Finance') {
+                        const currentPath = window.location.pathname;
+                        const isFinancialHealth = currentPath === '/financial-health';
+                        const isGeographic = currentPath === '/financial-geographic';
+                        return `<div class="nav-dropdown"><a href="/Finance" class="nav-link active" id="nav-finance">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item ${isFinancialHealth ? 'active' : ''}">Financial Health Trends and Insights</a><a href="/financial-geographic" class="dropdown-item ${isGeographic ? 'active' : ''}">Geographic Insights</a></div></div>`;
+                    }
+                    
+                    // Special handling for Membership steward - create dropdown
+                    if (steward === 'Membership') {
+                        const currentPath = window.location.pathname;
+                        const isMembershipHealth = currentPath === '/membership-health';
+                        return `<div class="nav-dropdown"><a href="/Membership" class="nav-link" id="nav-membership">Membership</a><div class="dropdown-menu"><a href="/membership-health" class="dropdown-item ${isMembershipHealth ? 'active' : ''}">Membership Health</a></div></div>`;
+                    }
+                    
+                    // Special handling for Standards Development steward - create dropdown
+                    if (steward === 'Standards Development') {
+                        const currentPath = window.location.pathname;
+                        const isStandardsDevelopmentInsights = currentPath === '/standards-development-insights';
+                        const isWgHealthHistory = currentPath === '/wg-health-history';
+                        const isWgMeetingParticipation = currentPath === '/wg-meeting-participation';
+                        return `<div class="nav-dropdown"><a href="/Standards Development" class="nav-link" id="nav-standards-development">Standards Development</a><div class="dropdown-menu"><a href="/standards-development-insights" class="dropdown-item ${isStandardsDevelopmentInsights ? 'active' : ''}">Standards Development Insights</a><a href="/wg-health-history" class="dropdown-item ${isWgHealthHistory ? 'active' : ''}">Work Group Health History</a><a href="/wg-meeting-participation" class="dropdown-item ${isWgMeetingParticipation ? 'active' : ''}">Meeting Participation</a></div></div>`;
+                    }
+                    
+                    const href = (steward === 'HL7 International' || steward === 'HL7') ? '/' : `/${steward}`;
+                    return `<a href="${href}" class="nav-link ${isActive}" id="nav-${steward.toLowerCase().replace(/\s+/g, '-')}">${steward}</a>`;
+                }).join('');
+                
+                document.getElementById('steward-navigation').innerHTML = navigationHtml;
+            } catch (error) {
+                console.error('Error loading steward navigation:', error);
+                // Fallback to basic navigation
+                const currentPath = window.location.pathname;
+                const isGeographic = currentPath === '/financial-geographic';
+                document.getElementById('steward-navigation').innerHTML = `
+                    <a href="/" class="nav-link">HL7 International</a>
+                    <a href="/CSDO" class="nav-link">CSDO</a>
+                    <div class="nav-dropdown"><a href="/Finance" class="nav-link active">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item">Financial Health Trends and Insights</a><a href="/financial-geographic" class="dropdown-item ${isGeographic ? 'active' : ''}">Geographic Insights</a></div></div>
+                `;
+            }
+        }
+        
+        // Generate LLM Prompt functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const generatePromptBtn = document.getElementById('generatePromptBtn');
+            if (generatePromptBtn) {
+                generatePromptBtn.addEventListener('click', async function() {
+                    try {
+                        this.disabled = true;
+                        this.textContent = 'Generating...';
+                        
+                        const response = await fetch('/api/financial/llm-prompt');
+                        const data = await response.json();
+                        
+                        if (response.ok && data.prompt_file) {
+                            this.textContent = 'Prompt Generated!';
+                            alert(`LLM prompt generated successfully!\n\nFile saved to: ${data.prompt_file}\n\nNext steps:\n1. Copy the prompt from the file\n2. Paste it into your favorite LLM (ChatGPT, Claude, etc.)\n3. The LLM will generate a markdown-formatted analysis\n4. Save the LLM's response as 'data/processed/financial_insights.md'\n5. Refresh the dashboard to see the formatted insights\n\nNote: The LLM has been instructed to create a complete markdown file with proper formatting.`);
+                        } else {
+                            throw new Error(data.message || 'Failed to generate prompt');
+                        }
+                        
+                        setTimeout(() => {
+                            this.textContent = 'Generate LLM Prompt';
+                            this.disabled = false;
+                        }, 3000);
+                        
+                    } catch (error) {
+                        console.error('Error generating prompt:', error);
+                        this.textContent = 'Generation Failed';
+                        alert('Failed to generate LLM prompt: ' + error.message);
+                        setTimeout(() => {
+                            this.textContent = 'Generate LLM Prompt';
+                            this.disabled = false;
+                        }, 2000);
+                    }
+                });
+            }
+        });
+        
+        // Initialize
+        async function init() {
+            await loadStewardNavigation();
+            await loadYears();
+            await loadKeyIndicators(currentYear);
+            await loadMapData();
+            // Initialize map type selector after map is rendered
+            setTimeout(() => {
+                initMapTypeSelector();
+            }, 100);
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            init();
+        });
+    </script>
+</body>
+</html>
+

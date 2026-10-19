@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Chuck Jaffee",
+      "organization": "ONC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael T",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

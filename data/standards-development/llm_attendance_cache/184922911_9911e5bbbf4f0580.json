@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "Paula Braun",
+      "organization": "ONC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Nathan Betts",
+      "organization": "Mobile Health WG/Westat",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alison Kemp",
+      "organization": "ONC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Amanda Deering",
+      "organization": "CDC/NIOSH",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Martin Rosner",
+      "organization": "Philips",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Elliot Silver",
+      "organization": "ResMed/MatrixCare",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rita Torkzadeh",
+      "organization": "AEGIS",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

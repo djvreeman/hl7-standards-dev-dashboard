@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Lisa Nelson",
+      "organization": "DirectTrust",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Benjamin",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Gay",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "RussQ",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Joanne",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Khalid",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

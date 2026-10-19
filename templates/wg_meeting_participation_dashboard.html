@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en" class="wa-theme-default wa-palette-default wa-brand-red wa-neutral-gray wa-success-green wa-warning-yellow wa-danger-orange">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HL7 Meeting Participation</title>
+
+    <link rel="stylesheet" href="https://cdn.webawesome.com/css/webawesome.min.css">
+    <script type="module" src="https://cdn.webawesome.com/js/webawesome.min.js"></script>
+    <script src="https://kit.fontawesome.com/56329dcbf7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/fonts.css">
+    <link rel="stylesheet" href="/static/css/dashboard.css?v=20261008b">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /*
+         * Page color semantics (HL7 palette only) — match /wg-health-history:
+         *   Green  #16a34a / #0f8e48  — healthy participation
+         *   Yellow #ca8a04            — caution
+         *   Red    #dc2626            — concern / low participation
+         *   Blue   #5f9baf            — volume / intensity ramps
+         *   Gray   #747679 / #6b7280  — absent, sunset, data-quality tone
+         */
+        .info-banner {
+            background: rgba(95, 155, 175, 0.08);
+            border: 1px solid rgba(95, 155, 175, 0.35);
+            border-left: 4px solid #5f9baf;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+            color: #374151;
+            line-height: 1.45;
+        }
+        .info-banner strong { color: #1f2937; }
+        .type-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.9rem;
+            color: #374151;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 0.35rem 0.7rem;
+            cursor: pointer;
+            user-select: none;
+        }
+        .type-chip input { accent-color: #dc2626; }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .summary-card {
+            background: #fff;
+            border: 1px solid var(--border-color, #e2e8f0);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            border-top: 3px solid #dc2626;
+        }
+        .summary-card.tone-quality { border-top-color: #747679; }
+        .summary-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        .summary-label {
+            margin-top: 0.35rem;
+            font-size: 0.8rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .summary-note {
+            margin-top: 0.35rem;
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+
+        .panel {
+            background: #fff;
+            border: 1px solid var(--border-color, #e2e8f0);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .panel-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 0 0 0.35rem;
+        }
+        .panel-subtitle {
+            color: #6b7280;
+            font-size: 0.925rem;
+            margin: 0 0 1rem;
+        }
+
+        .controls-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1rem;
+            align-items: end;
+            margin-bottom: 1rem;
+        }
+        .control-group label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #6b7280;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+        .control-group select {
+            min-width: 14rem;
+            padding: 0.45rem 0.65rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background: #fff;
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1.25rem;
+            margin-bottom: 0.85rem;
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+        .legend-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .swatch {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 3px;
+            border: 1px solid rgba(0,0,0,0.08);
+            display: inline-block;
+        }
+        .band-good { background: rgba(22, 163, 74, 0.28); }
+        .band-caution { background: rgba(202, 138, 4, 0.3); }
+        .band-concern { background: rgba(220, 38, 38, 0.22); }
+        .band-absent { background: rgba(116, 118, 121, 0.12); }
+
+        .chart-wrap {
+            position: relative;
+            height: 300px;
+            margin-top: 0.5rem;
+        }
+        .chart-wrap.tall { height: 360px; }
+
+        .heatmap-scroll {
+            overflow-x: auto;
+            overflow-y: visible;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+        }
+        .heatmap-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 0.75rem;
+            min-width: 100%;
+        }
+        .heatmap-table th,
+        .heatmap-table td {
+            padding: 0.4rem 0.4rem;
+            border-bottom: 1px solid #f3f4f6;
+            border-right: 1px solid #f3f4f6;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .heatmap-table th {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 2;
+            font-weight: 600;
+            color: #6b7280;
+            font-size: 0.68rem;
+        }
+        .heatmap-table th.sortable {
+            cursor: pointer;
+            user-select: none;
+        }
+        .heatmap-table th.sortable:hover,
+        .heatmap-table th.sortable.is-sorted {
+            color: #dc2626;
+            background: #f9fafb;
+        }
+        .heatmap-table th.sortable .sort-ind {
+            display: inline-block;
+            margin-left: 0.15rem;
+            font-size: 0.65rem;
+            opacity: 0.35;
+        }
+        .heatmap-table th.sortable.is-sorted .sort-ind { opacity: 1; }
+        .heatmap-table th.wg-col,
+        .heatmap-table td.wg-col {
+            position: sticky;
+            left: 0;
+            background: #fff;
+            z-index: 3;
+            text-align: left;
+            font-weight: 600;
+            color: #1f2937;
+            min-width: 18rem;
+            width: 18rem;
+            white-space: nowrap;
+            border-right: 1px solid #e5e7eb;
+        }
+        .heatmap-table th.wg-col { z-index: 4; }
+        .heatmap-table td.heat-cell {
+            cursor: pointer;
+            min-width: 2.6rem;
+            font-variant-numeric: tabular-nums;
+            font-weight: 600;
+        }
+        .heatmap-table td.heat-cell:hover {
+            outline: 2px solid #dc2626;
+            outline-offset: -2px;
+        }
+        .heatmap-table td.heat-cell.is-empty {
+            color: #9ca3af;
+            font-weight: 500;
+            background: #f9fafb;
+        }
+        .heatmap-table tr:hover td.wg-col { background: #f9fafb; }
+        .heatmap-table td.wg-col.is-sunset { color: #747679; }
+
+        .count-legend {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            flex-wrap: wrap;
+            margin: 0.35rem 0 0.75rem;
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        .count-legend .ramp {
+            display: inline-flex;
+            height: 0.85rem;
+            width: 7rem;
+            border-radius: 3px;
+            border: 1px solid rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .count-legend .ramp span { flex: 1; }
+        .count-legend.volume .ramp span:nth-child(1) { background: rgba(95, 155, 175, 0.12); }
+        .count-legend.volume .ramp span:nth-child(2) { background: rgba(95, 155, 175, 0.35); }
+        .count-legend.volume .ramp span:nth-child(3) { background: rgba(95, 155, 175, 0.65); }
+        .count-legend.volume .ramp span:nth-child(4) { background: #5f9baf; }
+        .count-legend.participation .ramp span:nth-child(1) { background: rgba(220, 38, 38, 0.22); }
+        .count-legend.participation .ramp span:nth-child(2) { background: rgba(202, 138, 4, 0.3); }
+        .count-legend.participation .ramp span:nth-child(3) { background: rgba(22, 163, 74, 0.35); }
+        .count-legend.participation .ramp span:nth-child(4) { background: rgba(22, 163, 74, 0.7); }
+
+        .sunset-mark {
+            display: inline-block;
+            margin-left: 0.35rem;
+            color: #747679;
+            font-weight: 700;
+            font-size: 0.85em;
+            vertical-align: 0.05em;
+        }
+        .sunset-legend-mark {
+            color: #747679;
+            font-weight: 700;
+            margin-right: 0.15rem;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .data-table th,
+        .data-table td {
+            text-align: left;
+            padding: 0.65rem 0.75rem;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+        .data-table th {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #6b7280;
+            font-weight: 600;
+        }
+        .data-table th.sortable {
+            cursor: pointer;
+            user-select: none;
+        }
+        .data-table th.sortable:hover,
+        .data-table th.sortable.is-sorted { color: #dc2626; }
+        .data-table th.sortable .sort-ind {
+            display: inline-block;
+            margin-left: 0.15rem;
+            font-size: 0.65rem;
+            opacity: 0.35;
+        }
+        .data-table th.sortable.is-sorted .sort-ind { opacity: 1; }
+        .data-table th.num,
+        .data-table td.num {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+        .data-table tr.clickable { cursor: pointer; }
+        .data-table tr.clickable:hover { background: #f9fafb; }
+        .data-table tr.is-selected { background: rgba(220, 38, 38, 0.06); }
+        .data-table tr.is-sunset td:first-child { color: #747679; }
+        .data-table tr.parse-gap td.parse-cell { font-weight: 600; }
+        .data-table td.parse-cell.parse-empty { color: #a16207; }
+        .data-table td.parse-cell.parse-unparseable { color: #b91c1c; }
+        .data-table td.parse-cell.parse-partial { color: #a16207; }
+        .data-table td.parse-cell.parse-ok { color: #166534; }
+        .data-table a {
+            color: #b91c1c;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .data-table a:hover { text-decoration: underline; }
+
+        .attention-banner {
+            background: #fffbeb;
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            margin-bottom: 1.25rem;
+            font-size: 0.92rem;
+            color: #78350f;
+        }
+        .attention-banner strong { color: #92400e; }
+        .attention-banner .attn-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 0.55rem;
+            margin-top: 0.55rem;
+        }
+        .attention-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: #fff;
+            border: 1px solid #fcd34d;
+            border-radius: 999px;
+            padding: 0.2rem 0.65rem;
+            font-size: 0.8rem;
+            color: #92400e;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .attention-chip:hover { border-color: #f59e0b; background: #fffbeb; }
+        .attention-chip .attn-meta { color: #a16207; font-variant-numeric: tabular-nums; }
+        .pill-review {
+            background: rgba(245, 158, 11, 0.2);
+            color: #92400e;
+        }
+
+        .band-pill {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            padding: 0.15rem 0.45rem;
+            border-radius: 999px;
+        }
+        .pill-good {
+            background: rgba(22, 163, 74, 0.18);
+            color: #0f8e48;
+        }
+        .pill-caution {
+            background: rgba(202, 138, 4, 0.2);
+            color: #ca8a04;
+        }
+        .pill-concern {
+            background: rgba(220, 38, 38, 0.16);
+            color: #dc2626;
+        }
+        .pill-quality {
+            background: rgba(116, 118, 121, 0.14);
+            color: #747679;
+        }
+        .pill-absent {
+            background: rgba(116, 118, 121, 0.12);
+            color: #747679;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+            gap: 0.65rem;
+            margin: 0.75rem 0 1rem;
+        }
+        .metric-card.tone-quality {
+            border-color: #f59e0b;
+            background: #fffbeb;
+        }
+        .metric-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 0.65rem 0.75rem;
+            background: #fafafa;
+        }
+        .metric-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: #6b7280;
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+        }
+        .metric-value {
+            font-size: 0.95rem;
+            color: #111827;
+            font-weight: 600;
+        }
+
+        .split-panels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .loading, .error {
+            padding: 1.5rem;
+            text-align: center;
+            color: #6b7280;
+        }
+        .error { color: #b91c1c; }
+
+        @media (max-width: 1100px) {
+            .summary-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .split-panels { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 900px) {
+            .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 640px) {
+            .summary-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="/static/hl7-international-logo.png" alt="HL7 International" class="logo-image">
+            </div>
+            <div class="header-title">
+                <h1 class="dashboard-title">{{ dashboard_title or "Meeting Participation" }}</h1>
+                <p class="dashboard-subtitle">Attendance from Confluence meeting minutes (WGM + telecon)</p>
+            </div>
+        </div>
+        <div class="navigation-container">
+            <div class="navigation" id="steward-navigation"></div>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="info-banner">
+            <strong>People / meeting participation.</strong>
+            Headcount is parsed from minutes attendance (co-chairs + participants), not ballot enrollment.
+            <strong>Coverage</strong> is data quality (how much of the minutes we could parse), not a health score.
+            Blank cells are unknown — not zero. Companion to
+            <a href="/wg-health-history" style="color:#b91c1c;font-weight:600;">Work Group Health History</a>.
+            Each meeting has one type: <strong>main</strong>, <strong>project</strong>, <strong>WGM</strong>, or <strong>other</strong>
+            (from ConCalls matching plus title heuristics).
+        </div>
+
+        <div class="controls-row" id="typeFilterBar" style="margin-bottom:1rem;flex-wrap:wrap;gap:0.75rem;align-items:center;">
+            <span style="font-size:0.8rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.04em;">Meeting type</span>
+            <label class="type-chip"><input type="checkbox" class="typeFilter" value="main" checked> Main</label>
+            <label class="type-chip"><input type="checkbox" class="typeFilter" value="project" checked> Project</label>
+            <label class="type-chip"><input type="checkbox" class="typeFilter" value="wgm" checked> WGM</label>
+            <label class="type-chip"><input type="checkbox" class="typeFilter" value="other" checked> Other</label>
+            <span id="typeFilterNote" style="font-size:0.8rem;color:#9ca3af;"></span>
+        </div>
+        <div class="info-banner" id="concallsDq" style="display:none;margin-bottom:1.25rem;"></div>
+        <div class="attention-banner" id="attendanceGapsBanner" style="display:none;"></div>
+
+        <div class="summary-grid" id="summaryGrid">
+            <div class="summary-card">
+                <div class="summary-value" id="statMedianHead">—</div>
+                <div class="summary-label">Median headcount</div>
+                <div class="summary-note" id="statMedianHeadNote">Portfolio median of WG medians</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-value" id="statGe5">—</div>
+                <div class="summary-label">Meetings ≥5 present</div>
+                <div class="summary-note">Mean across WGs with data · GOM-oriented</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-value" id="statBeyond">—</div>
+                <div class="summary-label">Beyond co-chairs</div>
+                <div class="summary-note">Mean % present who are not co-chairs</div>
+            </div>
+            <div class="summary-card tone-quality">
+                <div class="summary-value" id="statCoverage">—</div>
+                <div class="summary-label">Coverage (data quality)</div>
+                <div class="summary-note">Mean parse coverage · not a health score</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-value" id="statMapped">—</div>
+                <div class="summary-label">Mapped WGs</div>
+                <div class="summary-note" id="statMappedNote">With Confluence space</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2 class="panel-title">Work group ranking</h2>
+            <p class="panel-subtitle" id="rankingSubtitle">
+                Sorted toward quiet signals by default (low % meetings with ≥5 present).
+                <strong>Empty / Unparseable / Gap %</strong> flag minutes with missing attendance data.
+                Amber <span class="band-pill pill-review">review</span> = high gap share. Click a row to drill down. ⊘ = sunset / retired.
+            </p>
+            <div class="controls-row">
+                <div class="control-group">
+                    <label for="rankFilter">Show</label>
+                    <select id="rankFilter">
+                        <option value="mapped" selected>Mapped spaces only</option>
+                        <option value="needs-review">Needs attendance review</option>
+                        <option value="with-data">With attendance data</option>
+                        <option value="all">All work groups</option>
+                    </select>
+                </div>
+            </div>
+            <div id="rankingContainer"><div class="loading">Loading ranking…</div></div>
+        </div>
+
+        <div class="panel">
+            <h2 class="panel-title">Trimester heatmap</h2>
+            <p class="panel-subtitle">
+                Recent trimesters overlapping the trailing window. Color by the selected metric.
+                Null cells have no meetings (or no parseable attendance) in that trimester.
+            </p>
+            <div class="controls-row">
+                <div class="control-group">
+                    <label for="heatMetric">Color by</label>
+                    <select id="heatMetric">
+                        <option value="pct_meetings_ge_5" selected>% meetings ≥5</option>
+                        <option value="median_headcount">Median headcount</option>
+                        <option value="pct_present_beyond_cochairs">% beyond co-chairs</option>
+                        <option value="coverage_score">Coverage (quality)</option>
+                        <option value="meetings">Meeting count</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="heatWindow">Columns</label>
+                    <select id="heatWindow">
+                        <option value="8" selected>Last 8 trimesters</option>
+                        <option value="12">Last 12 trimesters</option>
+                        <option value="all">All trimesters</option>
+                    </select>
+                </div>
+            </div>
+            <div class="count-legend participation" id="heatLegend">
+                <span>Lower</span>
+                <span class="ramp" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+                <span>Higher</span>
+                <span class="legend-item" style="margin-left:0.5rem;"><span class="swatch band-absent"></span> No data</span>
+                <span class="legend-item"><span class="sunset-legend-mark" aria-hidden="true">⊘</span> Sunset / retired</span>
+            </div>
+            <div class="heatmap-scroll" id="heatmapContainer">
+                <div class="loading">Loading trimester matrix…</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2 class="panel-title">Work group drill-down</h2>
+            <p class="panel-subtitle">Headcount over meeting date for one work group. Series split by meeting type (respects the type filter above).</p>
+            <div class="controls-row">
+                <div class="control-group">
+                    <label for="wgSelect">Work group</label>
+                    <select id="wgSelect"></select>
+                </div>
+            </div>
+            <div id="wgMetrics" class="metric-grid"></div>
+            <div class="chart-wrap tall">
+                <canvas id="headcountChart"></canvas>
+            </div>
+            <div id="meetingsTableContainer" style="margin-top:1.25rem;">
+                <div class="loading">Select a work group…</div>
+            </div>
+            <div class="split-panels" style="margin-top:1.25rem;">
+                <div>
+                    <h3 class="panel-title" style="font-size:1rem;">Top people</h3>
+                    <p class="panel-subtitle" style="margin-bottom:0.65rem;">From minutes names (not Salesforce Contacts).</p>
+                    <div id="peopleContainer"><div class="loading">—</div></div>
+                </div>
+                <div>
+                    <h3 class="panel-title" style="font-size:1rem;">Top organizations</h3>
+                    <p class="panel-subtitle" style="margin-bottom:0.65rem;">When organization was reported on the attendance row.</p>
+                    <div id="orgsContainer"><div class="loading">—</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let summary = null;
+        let trimesterMatrix = null;
+        let selectedWg = null;
+        let headcountChart = null;
+        let currentMeetings = [];
+        let rankingSort = { col: 'pct_meetings_ge_5', dir: 'asc' };
+        let heatSort = { col: 'wg', dir: 'asc' };
+
+        const TYPE_COLORS = {
+            main: { border: '#5f9baf', bg: 'rgba(95, 155, 175, 0.15)' },
+            project: { border: '#0f8e48', bg: 'rgba(15, 142, 72, 0.12)' },
+            wgm: { border: '#dc2626', bg: 'rgba(220, 38, 38, 0.12)' },
+            other: { border: '#747679', bg: 'rgba(116, 118, 121, 0.15)' },
+        };
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadStewardNavigation();
+            await Promise.all([loadSummary(), loadTrimesters()]);
+            const params = new URLSearchParams(window.location.search);
+            const initialWg = params.get('wg');
+            populateWgSelect(initialWg);
+            document.getElementById('rankFilter').addEventListener('change', renderRanking);
+            document.getElementById('heatMetric').addEventListener('change', renderHeatmap);
+            document.getElementById('heatWindow').addEventListener('change', renderHeatmap);
+            document.getElementById('wgSelect').addEventListener('change', async (e) => {
+                await loadWorkgroup(e.target.value);
+            });
+            document.querySelectorAll('.typeFilter').forEach(el => {
+                el.addEventListener('change', () => {
+                    updateTypeFilterNote();
+                    if (currentMeetings.length) {
+                        const filtered = filterMeetingsByType(currentMeetings);
+                        renderHeadcountChart(filtered);
+                        renderMeetingsTable(filtered);
+                    }
+                });
+            });
+            updateTypeFilterNote();
+            if (document.getElementById('wgSelect').value) {
+                await loadWorkgroup(document.getElementById('wgSelect').value);
+            }
+        });
+
+        function selectedMeetingTypes() {
+            return [...document.querySelectorAll('.typeFilter:checked')].map(el => el.value);
+        }
+
+        function normalizeMeetingType(m) {
+            const t = (m && m.meeting_type) || 'other';
+            return ['main', 'project', 'wgm', 'other'].includes(t) ? t : 'other';
+        }
+
+        function filterMeetingsByType(meetings) {
+            const allowed = new Set(selectedMeetingTypes());
+            if (!allowed.size) return [];
+            return meetings.filter(m => allowed.has(normalizeMeetingType(m)));
+        }
+
+        function updateTypeFilterNote() {
+            const types = selectedMeetingTypes();
+            const note = document.getElementById('typeFilterNote');
+            if (!types.length) {
+                note.textContent = 'Select at least one type to show meetings.';
+                return;
+            }
+            note.textContent = `Showing ${types.join(', ')}`;
+        }
+
+        function sdDropdownHtml(navLinkActive) {
+            const currentPath = window.location.pathname;
+            const isInsights = currentPath === '/standards-development-insights';
+            const isHistory = currentPath === '/wg-health-history';
+            const isMeetings = currentPath === '/wg-meeting-participation';
+            return `<div class="nav-dropdown"><a href="/Standards Development" class="nav-link ${navLinkActive}" id="nav-standards-development">Standards Development</a><div class="dropdown-menu"><a href="/standards-development-insights" class="dropdown-item ${isInsights ? 'active' : ''}">Standards Development Insights</a><a href="/wg-health-history" class="dropdown-item ${isHistory ? 'active' : ''}">Work Group Health History</a><a href="/wg-meeting-participation" class="dropdown-item ${isMeetings ? 'active' : ''}">Meeting Participation</a></div></div>`;
+        }
+
+        async function loadStewardNavigation() {
+            try {
+                const response = await fetch('/api/stewards');
+                const stewards = await response.json();
+                const navigationHtml = stewards.map(steward => {
+                    if (steward === 'Finance') {
+                        const currentPath = window.location.pathname;
+                        const isFinancialHealth = currentPath === '/financial-health';
+                        const isGeographic = currentPath === '/financial-geographic';
+                        return `<div class="nav-dropdown"><a href="/Finance" class="nav-link" id="nav-finance">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item ${isFinancialHealth ? 'active' : ''}">Financial Health Trends and Insights</a><a href="/financial-geographic" class="dropdown-item ${isGeographic ? 'active' : ''}">Geographic Insights</a></div></div>`;
+                    }
+                    if (steward === 'Membership') {
+                        const currentPath = window.location.pathname;
+                        const isMembershipHealth = currentPath === '/membership-health';
+                        return `<div class="nav-dropdown"><a href="/Membership" class="nav-link" id="nav-membership">Membership</a><div class="dropdown-menu"><a href="/membership-health" class="dropdown-item ${isMembershipHealth ? 'active' : ''}">Membership Health</a></div></div>`;
+                    }
+                    if (steward === 'Standards Development') {
+                        return sdDropdownHtml('active');
+                    }
+                    const href = (steward === 'HL7 International' || steward === 'HL7') ? '/' : `/${steward}`;
+                    return `<a href="${href}" class="nav-link" id="nav-${steward.toLowerCase().replace(/\s+/g, '-')}">${steward}</a>`;
+                }).join('');
+                document.getElementById('steward-navigation').innerHTML = navigationHtml;
+            } catch (error) {
+                console.error(error);
+                document.getElementById('steward-navigation').innerHTML = `
+                    <a href="/" class="nav-link">HL7 International</a>
+                    <a href="/CSDO" class="nav-link">CSDO</a>
+                    ${sdDropdownHtml('active')}
+                `;
+            }
+        }
+
+        async function loadSummary() {
+            try {
+                const response = await fetch('/api/wg-meeting-participation/summary');
+                if (!response.ok) throw new Error(await response.text());
+                summary = await response.json();
+                renderPortfolio();
+                renderRanking();
+            } catch (error) {
+                console.error(error);
+                document.getElementById('rankingContainer').innerHTML =
+                    '<div class="error">Failed to load meeting participation summary.</div>';
+            }
+        }
+
+        async function loadTrimesters() {
+            try {
+                const response = await fetch('/api/wg-meeting-participation/trimesters');
+                if (!response.ok) throw new Error(await response.text());
+                trimesterMatrix = await response.json();
+                renderHeatmap();
+            } catch (error) {
+                console.error(error);
+                document.getElementById('heatmapContainer').innerHTML =
+                    '<div class="error">Failed to load trimester matrix.</div>';
+            }
+        }
+
+        function renderPortfolio() {
+            const p = summary.portfolio || {};
+            const meta = summary.meta || {};
+            const window = meta.window || {};
+            document.getElementById('statMedianHead').textContent = formatNumber(p.median_of_median_headcount, 1);
+            document.getElementById('statMedianHeadNote').textContent =
+                `Across ${p.wgs_reporting_median_headcount || 0} WGs with data · ${window.months || 24}mo window`;
+            document.getElementById('statGe5').textContent = formatPct(p.mean_pct_meetings_ge_5);
+            document.getElementById('statBeyond').textContent = formatPct(p.mean_pct_present_beyond_cochairs);
+            document.getElementById('statCoverage').textContent = formatPct(p.mean_coverage_score);
+            document.getElementById('statMapped').textContent =
+                `${p.workgroups_mapped ?? '—'}/${p.workgroups_total ?? '—'}`;
+            document.getElementById('statMappedNote').textContent =
+                `${p.workgroups_with_attendance || 0} with attendance in window · as of ${window.as_of || '—'}`;
+
+            const dq = document.getElementById('concallsDq');
+            const types = meta.meeting_types || {};
+            const match = meta.concalls_match || {};
+            const concalls = meta.concalls || {};
+            const totalTypes = Object.values(types).reduce((a, b) => a + (b || 0), 0);
+            const otherPct = totalTypes ? ((types.other || 0) / totalTypes) : null;
+            const linked = match.linked || concalls.linked_count || 0;
+            const parts = [];
+            if (totalTypes) {
+                parts.push(
+                    `Types: main ${types.main || 0}, project ${types.project || 0}, ` +
+                    `WGM ${types.wgm || 0}, other ${types.other || 0}` +
+                    (otherPct != null ? ` (${(otherPct * 100).toFixed(0)}% other)` : '')
+                );
+            }
+            if (concalls.series_count != null) {
+                parts.push(
+                    `ConCalls: ${concalls.match_pool_count ?? '—'} WG series in match pool ` +
+                    `(${concalls.series_count} total); ${linked} minutes linked` +
+                    (concalls.unmatched_scheduled_count != null
+                        ? `; ${concalls.unmatched_scheduled_count} scheduled-without-minutes (expanded)`
+                        : '')
+                );
+            }
+            if (parts.length) {
+                dq.style.display = 'block';
+                dq.innerHTML = `<strong>Meeting type / ConCalls DQ.</strong> ${parts.join(' · ')}`;
+            }
+            renderAttendanceGapsBanner(p);
+        }
+
+        function renderAttendanceGapsBanner(portfolio) {
+            const el = document.getElementById('attendanceGapsBanner');
+            if (!el || !portfolio) return;
+            const n = portfolio.needs_attendance_review_count || 0;
+            const top = portfolio.attendance_review_top || [];
+            if (!n || !top.length) {
+                el.style.display = 'none';
+                el.innerHTML = '';
+                return;
+            }
+            const empty = portfolio.meetings_empty_attendance_total || 0;
+            const unp = portfolio.meetings_unparseable_total || 0;
+            const chips = top.map(w => {
+                const gap = w.attendance_gap_rate != null
+                    ? `${Math.round(w.attendance_gap_rate * 100)}% gap`
+                    : 'gap';
+                const bits = [
+                    w.meetings_empty_attendance ? `${w.meetings_empty_attendance} empty` : null,
+                    w.meetings_unparseable ? `${w.meetings_unparseable} unparseable` : null,
+                ].filter(Boolean).join(', ');
+                return `<button type="button" class="attention-chip" data-wg="${escapeAttr(w.wg_key)}" title="${escapeAttr(bits || gap)}">
+                    ${escapeHtml(w.wg_name || w.wg_key)}
+                    <span class="attn-meta">${escapeHtml(gap)}</span>
+                </button>`;
+            }).join('');
+            el.style.display = 'block';
+            el.innerHTML = `
+                <strong>Attendance data gaps — ${n} work group${n === 1 ? '' : 's'} need review.</strong>
+                High share of minutes with empty or unparseable attendance (blank roster headers, templates, or layouts we still miss).
+                Portfolio: ${empty} empty · ${unp} unparseable.
+                Click a group to drill in; use ranking filter <em>Needs attendance review</em>.
+                <div class="attn-list">${chips}</div>
+            `;
+            el.querySelectorAll('.attention-chip').forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    const wg = btn.getAttribute('data-wg');
+                    document.getElementById('rankFilter').value = 'needs-review';
+                    rankingSort = { col: 'attendance_gap_rate', dir: 'desc' };
+                    renderRanking();
+                    const sel = document.getElementById('wgSelect');
+                    if (sel) sel.value = wg;
+                    await loadWorkgroup(wg);
+                });
+            });
+        }
+
+        function rankingRows() {
+            const filter = document.getElementById('rankFilter').value;
+            let rows = [...(summary.workgroups || [])];
+            if (filter === 'mapped') {
+                rows = rows.filter(w => w.space_key);
+            } else if (filter === 'needs-review') {
+                rows = rows.filter(w => w.space_key && w.needs_attendance_review);
+            } else if (filter === 'with-data') {
+                rows = rows.filter(w => w.space_key && w.meetings_with_attendance);
+            }
+            return rows;
+        }
+
+        function renderRanking() {
+            const container = document.getElementById('rankingContainer');
+            if (!summary) return;
+            const rows = rankingRows().sort((a, b) => {
+                const col = rankingSort.col;
+                if (col === 'wg') {
+                    const cmp = (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' });
+                    return rankingSort.dir === 'asc' ? cmp : -cmp;
+                }
+                const num = compareNullableNumber(a[col], b[col], rankingSort.dir);
+                if (num !== 0) return num;
+                return (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' });
+            });
+
+            const cols = [
+                { key: 'wg', label: 'Work group', num: false },
+                { key: 'meetings_with_attendance', label: 'With attendance', num: true },
+                { key: 'meetings_empty_attendance', label: 'Empty', num: true },
+                { key: 'meetings_unparseable', label: 'Unparseable', num: true },
+                { key: 'attendance_gap_rate', label: 'Gap %', num: true, pct: true, quality: true },
+                { key: 'median_headcount', label: 'Median HC', num: true },
+                { key: 'pct_meetings_ge_5', label: '% ≥5', num: true, pct: true },
+                { key: 'coverage_score', label: 'Coverage', num: true, pct: true, quality: true },
+                { key: 'last_meeting_date', label: 'Last meeting', num: false },
+            ];
+
+            const head = cols.map(c => {
+                const active = rankingSort.col === c.key ? ' is-sorted' : '';
+                const numCls = c.num ? ' num' : '';
+                return `<th class="sortable${numCls}${active}" data-col="${c.key}">${c.label}${sortIndicator(rankingSort, c.key)}</th>`;
+            }).join('');
+
+            const body = rows.map(w => {
+                const sunset = !!w.is_sunset;
+                const selected = w.wg_key === selectedWg ? ' is-selected' : '';
+                const ge5Band = participationBand(w.pct_meetings_ge_5);
+                const covBand = coverageBand(w.coverage_score);
+                const gapBand = coverageBand(
+                    w.attendance_gap_rate == null ? null : 1 - w.attendance_gap_rate
+                );
+                const reviewPill = w.needs_attendance_review
+                    ? ' <span class="band-pill pill-review" title="High empty/unparseable attendance share">review</span>'
+                    : '';
+                return `<tr class="clickable${sunset ? ' is-sunset' : ''}${selected}" data-wg="${escapeAttr(w.wg_key)}">
+                    <td>${formatWgLabel(w)}${w.space_key ? '' : ' <span class="band-pill pill-absent">unmapped</span>'}${reviewPill}</td>
+                    <td class="num">${formatInt(w.meetings_with_attendance)}</td>
+                    <td class="num">${formatInt(w.meetings_empty_attendance)}</td>
+                    <td class="num">${formatInt(w.meetings_unparseable)}</td>
+                    <td class="num">${formatPct(w.attendance_gap_rate)} ${bandPill(gapBand, true)}</td>
+                    <td class="num">${formatNumber(w.median_headcount, 1)}</td>
+                    <td class="num">${formatPct(w.pct_meetings_ge_5)} ${bandPill(ge5Band)}</td>
+                    <td class="num">${formatPct(w.coverage_score)} ${bandPill(covBand, true)}</td>
+                    <td>${escapeHtml(w.last_meeting_date || '—')}</td>
+                </tr>`;
+            }).join('');
+
+            container.innerHTML = `
+                <div class="heatmap-scroll">
+                    <table class="data-table">
+                        <thead><tr>${head}</tr></thead>
+                        <tbody>${body || '<tr><td colspan="8">No work groups match this filter.</td></tr>'}</tbody>
+                    </table>
+                </div>
+            `;
+
+            container.querySelectorAll('th.sortable').forEach(th => {
+                th.addEventListener('click', () => {
+                    const col = th.getAttribute('data-col');
+                    if (rankingSort.col === col) {
+                        rankingSort.dir = rankingSort.dir === 'asc' ? 'desc' : 'asc';
+                    } else {
+                        rankingSort.col = col;
+                        rankingSort.dir = col === 'wg' || col === 'last_meeting_date' ? 'asc' : 'asc';
+                        if (['median_headcount', 'pct_meetings_ge_5', 'pct_present_beyond_cochairs',
+                             'coverage_score', 'meetings_with_attendance',
+                             'meetings_empty_attendance', 'meetings_unparseable',
+                             'attendance_gap_rate'].includes(col)) {
+                            // Quiet signals first for participation/coverage; higher first for gaps & counts
+                            rankingSort.dir = (col === 'pct_meetings_ge_5' || col === 'pct_present_beyond_cochairs' || col === 'coverage_score')
+                                ? 'asc' : 'desc';
+                        }
+                    }
+                    renderRanking();
+                });
+            });
+
+            container.querySelectorAll('tr.clickable').forEach(tr => {
+                tr.addEventListener('click', async () => {
+                    const wg = tr.getAttribute('data-wg');
+                    document.getElementById('wgSelect').value = wg;
+                    await loadWorkgroup(wg);
+                    document.getElementById('wgMetrics').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+        }
+
+        function renderHeatmap() {
+            const container = document.getElementById('heatmapContainer');
+            if (!trimesterMatrix) return;
+            const metric = document.getElementById('heatMetric').value;
+            const windowSel = document.getElementById('heatWindow').value;
+            const allTri = trimesterMatrix.trimesters || [];
+            const allLabels = trimesterMatrix.trimester_labels || [];
+            let start = 0;
+            if (windowSel !== 'all') {
+                const n = Number(windowSel);
+                start = Math.max(0, allTri.length - n);
+            }
+            const trimesters = allTri.slice(start);
+            const labels = allLabels.slice(start);
+            const isVolume = metric === 'meetings' || metric === 'median_headcount';
+            const legend = document.getElementById('heatLegend');
+            legend.className = `count-legend ${isVolume ? 'volume' : 'participation'}`;
+
+            let max = 0;
+            (trimesterMatrix.rows || []).forEach(row => {
+                (row.cells || []).slice(start).forEach(cell => {
+                    const v = cell[metric];
+                    if (v != null && v > max) max = v;
+                });
+            });
+
+            const rows = [...(trimesterMatrix.rows || [])].sort((a, b) => {
+                if (heatSort.col === 'wg') {
+                    const cmp = (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' });
+                    return heatSort.dir === 'asc' ? cmp : -cmp;
+                }
+                const ai = (a.cells || [])[start + heatSort.col];
+                const bi = (b.cells || [])[start + heatSort.col];
+                const av = ai ? ai[metric] : null;
+                const bv = bi ? bi[metric] : null;
+                const num = compareNullableNumber(av, bv, heatSort.dir);
+                if (num !== 0) return num;
+                return (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' });
+            });
+
+            const wgActive = heatSort.col === 'wg' ? ' is-sorted' : '';
+            const head = trimesters.map((t, i) => {
+                const label = labels[i] || t;
+                const active = heatSort.col === i ? ' is-sorted' : '';
+                return `<th class="sortable${active}" data-col="${i}" title="${escapeAttr(t)}">${escapeHtml(label)}${sortIndicator(heatSort, i)}</th>`;
+            }).join('');
+
+            const body = rows.map(row => {
+                const cells = (row.cells || []).slice(start).map((cell, i) => {
+                    const v = cell[metric];
+                    const empty = v == null;
+                    const style = empty ? '' : heatStyle(v, max, metric);
+                    const label = empty ? '' : (metric.startsWith('pct_') || metric === 'coverage_score'
+                        ? formatPct(v, 0)
+                        : (metric === 'median_headcount' ? formatNumber(v, 1) : String(v)));
+                    const title = `${row.wg_name} · ${cell.label || trimesters[i]}: ${empty ? 'no data' : label}`
+                        + (cell.meetings != null ? ` · ${cell.meetings} meeting${cell.meetings === 1 ? '' : 's'}` : '');
+                    return `<td class="heat-cell${empty ? ' is-empty' : ''}" style="${style}" title="${escapeAttr(title)}" data-wg="${escapeAttr(row.wg_key)}">${label}</td>`;
+                }).join('');
+                const sunset = !!row.is_sunset;
+                return `<tr>
+                    <td class="wg-col${sunset ? ' is-sunset' : ''}" title="${escapeAttr(row.wg_name)}">${formatWgLabel(row)}</td>
+                    ${cells}
+                </tr>`;
+            }).join('');
+
+            container.innerHTML = `
+                <table class="heatmap-table">
+                    <thead><tr>
+                        <th class="wg-col sortable${wgActive}" data-col="wg">Work group${sortIndicator(heatSort, 'wg')}</th>
+                        ${head}
+                    </tr></thead>
+                    <tbody>${body}</tbody>
+                </table>
+            `;
+
+            container.querySelectorAll('th.sortable').forEach(th => {
+                th.addEventListener('click', () => {
+                    const raw = th.getAttribute('data-col');
+                    const col = raw === 'wg' ? 'wg' : Number(raw);
+                    if (heatSort.col === col) {
+                        heatSort.dir = heatSort.dir === 'asc' ? 'desc' : 'asc';
+                    } else {
+                        heatSort.col = col;
+                        heatSort.dir = col === 'wg' ? 'asc' : 'desc';
+                    }
+                    renderHeatmap();
+                });
+            });
+
+            container.querySelectorAll('td.heat-cell').forEach(td => {
+                td.addEventListener('click', async () => {
+                    const wg = td.getAttribute('data-wg');
+                    document.getElementById('wgSelect').value = wg;
+                    await loadWorkgroup(wg);
+                    document.getElementById('wgMetrics').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+        }
+
+        function heatStyle(value, max, metric) {
+            if (value == null || !max) return '';
+            if (metric === 'meetings' || metric === 'median_headcount') {
+                const t = Math.min(1, value / max);
+                const alpha = 0.12 + t * 0.88;
+                const text = alpha > 0.55 ? '#ffffff' : '#1f2937';
+                return `background: rgba(95, 155, 175, ${alpha.toFixed(3)}); color: ${text};`;
+            }
+            // Rate metrics 0–1: concern → caution → good
+            const t = Math.max(0, Math.min(1, value));
+            let r, g, b;
+            if (t < 0.5) {
+                const u = t / 0.5;
+                r = Math.round(220 + (202 - 220) * u);
+                g = Math.round(38 + (138 - 38) * u);
+                b = Math.round(38 + (4 - 38) * u);
+            } else {
+                const u = (t - 0.5) / 0.5;
+                r = Math.round(202 + (22 - 202) * u);
+                g = Math.round(138 + (163 - 138) * u);
+                b = Math.round(4 + (74 - 4) * u);
+            }
+            const alpha = 0.18 + t * 0.45;
+            return `background: rgba(${r}, ${g}, ${b}, ${alpha.toFixed(3)}); color: #1f2937;`;
+        }
+
+        function populateWgSelect(preferred) {
+            const select = document.getElementById('wgSelect');
+            const rows = [...(summary?.workgroups || [])]
+                .filter(w => w.space_key)
+                .sort((a, b) => (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' }));
+            select.innerHTML = rows.map(w =>
+                `<option value="${escapeAttr(w.wg_key)}">${escapeHtml(w.wg_name)}</option>`
+            ).join('');
+            if (preferred && rows.some(w => w.wg_key === preferred)) {
+                select.value = preferred;
+            } else if (rows.length) {
+                // Prefer a mapped WG with attendance for first paint
+                const withData = rows.find(w => w.meetings_with_attendance);
+                select.value = withData ? withData.wg_key : rows[0].wg_key;
+            }
+        }
+
+        async function loadWorkgroup(wgKey) {
+            if (!wgKey) return;
+            selectedWg = wgKey;
+            const url = new URL(window.location.href);
+            url.searchParams.set('wg', wgKey);
+            window.history.replaceState({}, '', url);
+
+            document.getElementById('meetingsTableContainer').innerHTML = '<div class="loading">Loading meetings…</div>';
+            document.getElementById('peopleContainer').innerHTML = '<div class="loading">Loading…</div>';
+            document.getElementById('orgsContainer').innerHTML = '<div class="loading">Loading…</div>';
+
+            try {
+                const response = await fetch(`/api/wg-meeting-participation/workgroups/${encodeURIComponent(wgKey)}`);
+                if (!response.ok) throw new Error(await response.text());
+                const data = await response.json();
+                currentMeetings = data.meetings || [];
+                const filtered = filterMeetingsByType(currentMeetings);
+                renderWgMetrics(data.workgroup);
+                renderHeadcountChart(filtered);
+                renderMeetingsTable(filtered);
+                renderPeople(data.people || []);
+                renderOrgs(data.organizations || []);
+                renderRanking();
+            } catch (error) {
+                console.error(error);
+                document.getElementById('meetingsTableContainer').innerHTML =
+                    '<div class="error">Failed to load work group detail.</div>';
+            }
+        }
+
+        function renderWgMetrics(w) {
+            if (!w) {
+                document.getElementById('wgMetrics').innerHTML = '';
+                return;
+            }
+            const items = [
+                ['Meetings indexed', formatInt(w.meetings_indexed)],
+                ['Main / project / WGM', `${formatInt(w.meetings_main)} / ${formatInt(w.meetings_project)} / ${formatInt(w.meetings_type_wgm ?? w.meetings_wgm)}`],
+                ['ConCalls linked', formatInt(w.meetings_concalls_linked)],
+                ['With attendance', formatInt(w.meetings_with_attendance)],
+                ['Empty attendance', formatInt(w.meetings_empty_attendance)],
+                ['Unparseable', formatInt(w.meetings_unparseable)],
+                ['Attendance gap', formatPct(w.attendance_gap_rate)],
+                ['Needs review', w.needs_attendance_review ? 'Yes' : (w.needs_attendance_review === false ? 'No' : '—')],
+                ['Median headcount', formatNumber(w.median_headcount, 1)],
+                ['% meetings ≥5', formatPct(w.pct_meetings_ge_5)],
+                ['% beyond co-chairs', formatPct(w.pct_present_beyond_cochairs)],
+                ['Coverage', formatPct(w.coverage_score)],
+                ['Distinct participants', formatInt(w.distinct_participants)],
+                ['Distinct orgs', formatInt(w.distinct_organizations)],
+                ['Last meeting', w.last_meeting_date || '—'],
+                ['Space', w.space_key || '—'],
+            ];
+            document.getElementById('wgMetrics').innerHTML = items.map(([label, value]) => `
+                <div class="metric-card${label === 'Needs review' && w.needs_attendance_review ? ' tone-quality' : ''}">
+                    <div class="metric-label">${escapeHtml(label)}</div>
+                    <div class="metric-value">${value}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderHeadcountChart(meetings) {
+            const ctx = document.getElementById('headcountChart');
+            if (headcountChart) headcountChart.destroy();
+
+            const dated = meetings
+                .filter(m => m.meeting_date && m.headcount != null)
+                .sort((a, b) => a.meeting_date.localeCompare(b.meeting_date));
+
+            if (!dated.length) {
+                headcountChart = new Chart(ctx, {
+                    type: 'line',
+                    data: { labels: [], datasets: [] },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: { display: true, text: 'No dated meetings with headcount in window' },
+                            legend: { display: false },
+                        },
+                    },
+                });
+                return;
+            }
+
+            const typeOrder = ['main', 'project', 'wgm', 'other'];
+            const datasets = typeOrder.map(type => {
+                const colors = TYPE_COLORS[type];
+                const isWgm = type === 'wgm';
+                return {
+                    label: type === 'wgm' ? 'WGM' : type.charAt(0).toUpperCase() + type.slice(1),
+                    data: dated.map(m => normalizeMeetingType(m) === type ? m.headcount : null),
+                    borderColor: colors.border,
+                    backgroundColor: colors.bg,
+                    spanGaps: false,
+                    pointRadius: isWgm ? 5 : 3,
+                    pointStyle: isWgm ? 'triangle' : 'circle',
+                    tension: type === 'main' || type === 'project' ? 0.15 : 0,
+                    showLine: type === 'main' || type === 'project',
+                };
+            }).filter(ds => ds.data.some(v => v != null));
+
+            headcountChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: dated.map(m => m.meeting_date),
+                    datasets,
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'nearest', intersect: false },
+                    plugins: {
+                        legend: { position: 'top' },
+                        tooltip: {
+                            callbacks: {
+                                afterLabel: (item) => {
+                                    const m = dated[item.dataIndex];
+                                    if (!m) return '';
+                                    const bits = [
+                                        m.title || '',
+                                        `type: ${normalizeMeetingType(m)}`,
+                                        `parse: ${m.parse_status || '—'}`,
+                                        m.match_status && m.match_status !== 'not_applicable'
+                                            ? `concalls: ${m.match_status}`
+                                            : null,
+                                        `CC ${m.cochair_count ?? '—'} · participants ${m.participant_count ?? '—'}`,
+                                    ];
+                                    return bits.filter(Boolean);
+                                },
+                            },
+                        },
+                    },
+                    scales: {
+                        x: {
+                            ticks: { maxTicksLimit: 10, maxRotation: 0 },
+                            grid: { display: false },
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Headcount' },
+                        },
+                    },
+                },
+            });
+        }
+
+        function renderMeetingsTable(meetings) {
+            const container = document.getElementById('meetingsTableContainer');
+            const rows = [...meetings]
+                .filter(m => m.meeting_date)
+                .sort((a, b) => (b.meeting_date || '').localeCompare(a.meeting_date || ''))
+                .slice(0, 40);
+
+            if (!rows.length) {
+                container.innerHTML = '<div class="loading">No meetings with resolved dates in this window.</div>';
+                return;
+            }
+
+            const gapCount = meetings.filter(m =>
+                m.meeting_date && (m.parse_status === 'empty' || m.parse_status === 'unparseable')
+            ).length;
+            const body = rows.map(m => {
+                const title = m.url
+                    ? `<a href="${escapeAttr(m.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(m.title || m.page_id)}</a>`
+                    : escapeHtml(m.title || m.page_id || '—');
+                const concallsLabel = formatConcallsStatus(m.match_status);
+                const parse = m.parse_status || '';
+                const parseCls = parse ? ` parse-${escapeAttr(parse)}` : '';
+                const gapRow = (parse === 'empty' || parse === 'unparseable') ? ' parse-gap' : '';
+                const sibs = (m.sibling_pages || []).length
+                    ? ` <span class="band-pill pill-absent" title="${escapeAttr((m.sibling_pages || []).map(s => s.title).join(' · '))}">+${(m.sibling_pages || []).length} pages</span>`
+                    : '';
+                return `<tr class="${gapRow.trim()}">
+                    <td>${escapeHtml(m.meeting_date || '—')}</td>
+                    <td>${escapeHtml(normalizeMeetingType(m))}</td>
+                    <td class="num">${formatInt(m.headcount)}</td>
+                    <td class="num">${formatInt(m.cochair_count)}</td>
+                    <td class="num">${formatInt(m.participant_count)}</td>
+                    <td class="parse-cell${parseCls}">${escapeHtml(formatParseStatus(m.parse_status))}</td>
+                    <td>${escapeHtml(concallsLabel)}</td>
+                    <td>${title}${sibs}</td>
+                </tr>`;
+            }).join('');
+
+            const gapNote = gapCount
+                ? ` · <span style="color:#92400e;font-weight:600;">${gapCount} empty/unparseable in type filter</span> (amber/red Parse column)`
+                : '';
+            container.innerHTML = `
+                <h3 class="panel-title" style="font-size:1rem;margin-bottom:0.5rem;">Recent meetings</h3>
+                <p class="panel-subtitle">Up to 40 most recent dated meetings (type filter applied). Open title for Confluence page.${gapNote}</p>
+                <div class="heatmap-scroll">
+                    <table class="data-table">
+                        <thead><tr>
+                            <th>Date</th><th>Type</th>
+                            <th class="num">HC</th><th class="num">CC</th><th class="num">Participants</th>
+                            <th>Parse</th><th>ConCalls</th><th>Title</th>
+                        </tr></thead>
+                        <tbody>${body}</tbody>
+                    </table>
+                </div>
+            `;
+        }
+
+        function formatConcallsStatus(status) {
+            if (!status || status === 'not_applicable') return '—';
+            if (status === 'unmatched_minutes') return 'unmatched';
+            if (status === 'linked') return 'linked';
+            if (status === 'review') return 'review';
+            return status;
+        }
+
+        function renderPeople(people) {
+            const top = people.slice(0, 12);
+            if (!top.length) {
+                document.getElementById('peopleContainer').innerHTML = '<div class="loading">No people extracted.</div>';
+                return;
+            }
+            const body = top.map(p => `<tr>
+                <td>${escapeHtml(p.display_name || p.name_norm || '—')}</td>
+                <td>${escapeHtml(p.role_primary || '—')}</td>
+                <td class="num">${formatInt(p.meetings_present)}</td>
+            </tr>`).join('');
+            document.getElementById('peopleContainer').innerHTML = `
+                <table class="data-table">
+                    <thead><tr><th>Name</th><th>Role</th><th class="num">Meetings</th></tr></thead>
+                    <tbody>${body}</tbody>
+                </table>
+            `;
+        }
+
+        function renderOrgs(orgs) {
+            const top = orgs.slice(0, 12);
+            if (!top.length) {
+                document.getElementById('orgsContainer').innerHTML = '<div class="loading">No organizations reported.</div>';
+                return;
+            }
+            const body = top.map(o => `<tr>
+                <td>${escapeHtml(o.display_name || o.organization_norm || '—')}</td>
+                <td class="num">${formatInt(o.meetings_represented)}</td>
+                <td class="num">${formatInt(o.distinct_people)}</td>
+            </tr>`).join('');
+            document.getElementById('orgsContainer').innerHTML = `
+                <table class="data-table">
+                    <thead><tr><th>Organization</th><th class="num">Meetings</th><th class="num">People</th></tr></thead>
+                    <tbody>${body}</tbody>
+                </table>
+            `;
+        }
+
+        function formatWgLabel(row) {
+            const name = escapeHtml(row.wg_name || row.wg_key || '');
+            if (!row.is_sunset) return name;
+            return `${name}<span class="sunset-mark" title="Sunset / retired" aria-label="Sunset">⊘</span>`;
+        }
+
+        function participationBand(pct) {
+            if (pct == null) return 'absent';
+            if (pct >= 0.7) return 'good';
+            if (pct >= 0.4) return 'caution';
+            return 'concern';
+        }
+
+        function coverageBand(pct) {
+            if (pct == null) return 'absent';
+            if (pct >= 0.7) return 'good';
+            if (pct >= 0.4) return 'caution';
+            return 'quality';
+        }
+
+        function bandPill(band, quality) {
+            if (!band || band === 'absent') return '';
+            const cls = band === 'quality' || (quality && band === 'concern')
+                ? 'pill-quality'
+                : `pill-${band === 'quality' ? 'quality' : band}`;
+            const label = band === 'quality' ? 'low cov' : band;
+            return `<span class="band-pill ${cls}">${label}</span>`;
+        }
+
+        function formatParseStatus(status) {
+            if (!status) return '—';
+            if (status === 'linked') return 'linked (roster)';
+            if (status === 'ok') return 'ok';
+            return status;
+        }
+
+        function formatPct(value, digits = 0) {
+            if (value == null || Number.isNaN(value)) return '—';
+            return `${(value * 100).toFixed(digits)}%`;
+        }
+
+        function formatNumber(value, digits = 0) {
+            if (value == null || Number.isNaN(value)) return '—';
+            return Number(value).toFixed(digits);
+        }
+
+        function formatInt(value) {
+            if (value == null || Number.isNaN(value)) return '—';
+            return String(value);
+        }
+
+        function compareNullableNumber(a, b, dir) {
+            const aNull = a == null || Number.isNaN(a);
+            const bNull = b == null || Number.isNaN(b);
+            if (aNull && bNull) return 0;
+            if (aNull) return 1;
+            if (bNull) return -1;
+            const cmp = a === b ? 0 : (a < b ? -1 : 1);
+            return dir === 'asc' ? cmp : -cmp;
+        }
+
+        function sortIndicator(sort, col) {
+            if (sort.col !== col) return '<span class="sort-ind">↕</span>';
+            return `<span class="sort-ind">${sort.dir === 'asc' ? '↑' : '↓'}</span>`;
+        }
+
+        function escapeHtml(str) {
+            return String(str ?? '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function escapeAttr(str) {
+            return escapeHtml(str).replace(/'/g, '&#39;');
+        }
+    </script>
+</body>
+</html>

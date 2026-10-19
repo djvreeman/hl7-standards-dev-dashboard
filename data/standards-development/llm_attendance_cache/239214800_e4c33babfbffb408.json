@@ -1,0 +1,23 @@
+{
+  "attendees": [
+    {
+      "name": "Robert Jenders",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Juliet Rubini",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Csarmann",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

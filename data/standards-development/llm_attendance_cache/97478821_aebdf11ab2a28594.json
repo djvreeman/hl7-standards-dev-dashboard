@@ -1,0 +1,59 @@
+{
+  "attendees": [
+    {
+      "name": "Jamie Jones",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Patrick Werner",
+      "organization": "MOLIT Institute",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kevin Power",
+      "organization": "Cerner",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Rachel Kutner",
+      "organization": "Epic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bob Dolin",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Grant Wood",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Tracy Okubo",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mary Terry",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "James Chen",
+      "organization": "MITRE",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

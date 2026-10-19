@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Gary Dickinson, FHL7",
+      "organization": "EHR Standards Consulting",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Ritter, FHL7",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Mark Janczewski, MD, MPH",
+      "organization": "Medical Networks, LLC",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Lincoln Weed JD",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Bernd Blobel",
+      "organization": "Univ. Regensburg",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Michelle Zancan",
+      "organization": "Next Level",
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

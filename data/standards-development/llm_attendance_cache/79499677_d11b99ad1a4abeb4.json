@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Juliet Rubini",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Yan Heras",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sam Sayer",
+      "organization": "MITRE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bryn Rhodes",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Denning",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Floyd Eisenberg",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,59 @@
+{
+  "attendees": [
+    {
+      "name": "Bruce Bray",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kurt Allen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jay Lyle",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lori Forquet",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Laura Heermann",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ruby Nash",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Chris Melo",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kurt Allen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mark Kramer",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

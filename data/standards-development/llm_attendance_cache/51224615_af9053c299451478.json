@@ -1,0 +1,65 @@
+{
+  "attendees": [
+    {
+      "name": "Michelle",
+      "organization": "PC",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Michael Tan",
+      "organization": "PC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Emma",
+      "organization": "PC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Stephen",
+      "organization": "PC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Padula",
+      "organization": "PC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jay",
+      "organization": "PC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Laura",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Claude",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Amit Popat",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Marc de Graauw",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

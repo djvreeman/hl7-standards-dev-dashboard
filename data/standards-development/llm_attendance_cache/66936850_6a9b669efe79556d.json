@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Becky Gradl",
+      "organization": "Academy of Nutrition and Dietetics",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Yanyan Hu",
+      "organization": "The Joint Commission",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lisa Nelson",
+      "organization": "MDMax",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Margaret Dittloff",
+      "organization": "Junum",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

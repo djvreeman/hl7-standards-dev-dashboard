@@ -1,0 +1,65 @@
+{
+  "attendees": [
+    {
+      "name": "Michael Faughn",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Elliot Silver",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ken Fuchs",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Garguilo",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Patrycja Jarosz",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kosta",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Malcolm Clarke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Hans Buitendijk",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Robert Hausam",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ralf Herzog",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

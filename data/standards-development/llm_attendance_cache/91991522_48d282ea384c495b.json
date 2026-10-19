@@ -1,0 +1,59 @@
+{
+  "attendees": [
+    {
+      "name": "Craig Newman",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Laura Rappleye",
+      "organization": null,
+      "present": true,
+      "role": "scribe"
+    },
+    {
+      "name": "Dave deRoode",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sarah Gaunt",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Loonsk",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Cindy",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kishore Bashyam",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Wendy Blumenthal",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Danny Wise",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

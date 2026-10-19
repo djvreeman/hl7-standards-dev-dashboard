@@ -1,0 +1,65 @@
+{
+  "attendees": [
+    {
+      "name": "Nathan Bunker",
+      "organization": "AIRA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rob Snelick",
+      "organization": "NIST",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Carie Hammon",
+      "organization": "AEGIS",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Wendy Gerek",
+      "organization": "AEGIS",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ioana Singureanu",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Hossam Tamri",
+      "organization": "NIST",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Benjamin Cordebar",
+      "organization": "NIST",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Richard Ettema",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Didi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Chris Shawn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

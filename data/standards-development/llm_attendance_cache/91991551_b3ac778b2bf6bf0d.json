@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "Laura Rappleye",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Craig Newman",
+      "organization": null,
+      "present": true,
+      "role": "scribe"
+    },
+    {
+      "name": "AbdulMalik Shakir",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Thanh Cheng",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Sarah Gaunt",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Melva Peters",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Danny Wise",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

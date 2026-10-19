@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Chris Courville",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Garguilo",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Rhoads",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Ken Fuchs",
+      "organization": null,
+      "present": true,
+      "role": "chair"
+    }
+  ],
+  "confidence": 1
+}

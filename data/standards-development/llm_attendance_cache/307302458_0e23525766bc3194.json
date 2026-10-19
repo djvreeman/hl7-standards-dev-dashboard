@@ -1,0 +1,65 @@
+{
+  "attendees": [
+    {
+      "name": "Sarah Gaunt",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Bryn Rhodes",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Dan Vreeman",
+      "organization": "CSDO",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Jeff Brown",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Grahame Grieve",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ewout Kramer Ward Weistra",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gino Canessa",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rob Hausam",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lloyd McKenzie",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gay Dolin",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

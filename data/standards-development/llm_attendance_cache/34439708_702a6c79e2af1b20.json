@@ -1,0 +1,167 @@
+{
+  "attendees": [
+    {
+      "name": "Melva Peters",
+      "organization": "HL7 Canada",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Hatem",
+      "organization": "Independent Consultant",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jean Duteau",
+      "organization": "DDI",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Scott Robertson",
+      "organization": "Kaiser Permanente",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Tim McNeil",
+      "organization": "Surescripts",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Margaret Weiker",
+      "organization": "NCPDP",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dennis Tribble",
+      "organization": "BD",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Daniel Zhang",
+      "organization": "Epic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Christof Gessner",
+      "organization": "HL7 Germany",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ock Hee Oh",
+      "organization": "FirstDIS",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Marc Duteau",
+      "organization": "DDI",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Grahame Grieve",
+      "organization": "HL7",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Julie James",
+      "organization": "Blue Wave Informatics",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Isabelle Gibaud",
+      "organization": "Phast/HL7 France",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Clem McDonald",
+      "organization": "NIH/NLM",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rik Smithies",
+      "organization": "HL7 UK",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Tan",
+      "organization": "Nictiz",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Giorgio Cangioli",
+      "organization": "HL7 Italy",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Myron Finseth",
+      "organization": "Medtronic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Christian Hay",
+      "organization": "GS1",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michelle Miller",
+      "organization": "Cerner",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Danielle Friend",
+      "organization": "Epic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jenni Syed",
+      "organization": "Cerner",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Shelly Spiro",
+      "organization": "PHIT",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Tony Schueth",
+      "organization": "Point of Care Partners",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Clifton",
+      "organization": "Epic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

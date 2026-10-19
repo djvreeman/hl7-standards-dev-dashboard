@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Craig",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Forrest",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Erin Holt",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Keith Boone",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kristi Eckerson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

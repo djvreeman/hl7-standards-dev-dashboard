@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "BVH",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "PL",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "RP",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "SL",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "VM",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

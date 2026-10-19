@@ -1,0 +1,71 @@
+{
+  "attendees": [
+    {
+      "name": "Trish",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Matt",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mike Davis",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Craig Newman",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Matt Lord",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Brett Marquard",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Russ Ott",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kathleen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alex Mense",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Giorgio Cangioli",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

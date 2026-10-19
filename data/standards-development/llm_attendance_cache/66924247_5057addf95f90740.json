@@ -1,0 +1,77 @@
+{
+  "attendees": [
+    {
+      "name": "Ryan Clark",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Tyburski",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Matt S",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "lhoggle",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "gdolin",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "landerson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "avinash.shanbhag",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "rmcclure",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "tmk000",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "craig.newman",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "martha.velezis",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "drew.torres",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

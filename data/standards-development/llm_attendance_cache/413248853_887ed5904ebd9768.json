@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Danny Laurent",
+      "organization": "HL7 HQ",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "David Pyke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Keith",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sarah",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

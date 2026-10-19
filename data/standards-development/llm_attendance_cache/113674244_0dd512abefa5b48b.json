@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Stefano Lotti",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Giorgio",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Vincent McCauley",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Ron Parker",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ken",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jerry Goodnough",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    }
+  ],
+  "confidence": 1
+}

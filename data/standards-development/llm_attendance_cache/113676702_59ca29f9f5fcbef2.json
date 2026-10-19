@@ -1,0 +1,65 @@
+{
+  "attendees": [
+    {
+      "name": "Virginia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Hill",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Maria",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Casey",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Andrea Kent",
+      "organization": "Cover My Meds",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Ritter",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lenel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Charles",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rachel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Keith",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

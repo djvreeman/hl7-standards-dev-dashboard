@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Floyd",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "SD",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Michael",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gay",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

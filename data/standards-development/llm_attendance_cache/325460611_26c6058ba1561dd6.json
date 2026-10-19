@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Corey",
+      "organization": "ITS",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Corey",
+      "organization": "EHR",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Corey",
+      "organization": "FM",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lloyd",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,77 @@
+{
+  "attendees": [
+    {
+      "name": "Patrick",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Kevin",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Mullai",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "KP",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "AH",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "JJ",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "LA",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Mitch",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "JD",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Bob F",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "May Terry",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Liz Amos",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

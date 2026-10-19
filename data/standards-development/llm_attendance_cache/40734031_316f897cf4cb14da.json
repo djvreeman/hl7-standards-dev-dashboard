@@ -1,0 +1,77 @@
+{
+  "attendees": [
+    {
+      "name": "Emma",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Michelle",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Jay",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Floyd Eisenberg",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "George Dixon",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lisa Nelson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Russ Leftwich",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Becky Gradl",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Carlson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jeff Danford",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,5200 @@
+{
+  "meta": {
+    "generated_at": "2026-10-08T12:25:40.796789+00:00",
+    "description": "Number of distinct specifications balloted by each work group per HL7 trimester. Sponsorship via SPECS.json defaultWorkgroup.",
+    "source_file": "wg_ballot_specs_detail.csv",
+    "count_unit": "unique specifications per trimester",
+    "trimester_rule": "T1 Jan\u2013Apr, T2 May\u2013Aug, T3 Sep\u2013Dec",
+    "coverage_from": "2018T1",
+    "work_group_master": "Display names and keys from WGH master data (normalize-wgh-finals WG_DISPLAY)."
+  },
+  "trimesters": [
+    "2018T1",
+    "2018T2",
+    "2018T3",
+    "2019T1",
+    "2019T2",
+    "2019T3",
+    "2020T1",
+    "2020T2",
+    "2020T3",
+    "2021T1",
+    "2021T2",
+    "2021T3",
+    "2022T1",
+    "2022T2",
+    "2022T3",
+    "2023T1",
+    "2023T2",
+    "2023T3",
+    "2024T1",
+    "2024T2",
+    "2024T3",
+    "2025T1",
+    "2025T2",
+    "2025T3",
+    "2026T1",
+    "2026T2",
+    "2026T3"
+  ],
+  "trimester_labels": [
+    "18T1",
+    "18T2",
+    "18T3",
+    "19T1",
+    "19T2",
+    "19T3",
+    "20T1",
+    "20T2",
+    "20T3",
+    "21T1",
+    "21T2",
+    "21T3",
+    "22T1",
+    "22T2",
+    "22T3",
+    "23T1",
+    "23T2",
+    "23T3",
+    "24T1",
+    "24T2",
+    "24T3",
+    "25T1",
+    "25T2",
+    "25T3",
+    "26T1",
+    "26T2",
+    "26T3"
+  ],
+  "trimester_totals": {
+    "2018T1": 8,
+    "2018T2": 7,
+    "2018T3": 20,
+    "2019T1": 3,
+    "2019T2": 16,
+    "2019T3": 16,
+    "2020T1": 9,
+    "2020T2": 6,
+    "2020T3": 10,
+    "2021T1": 19,
+    "2021T2": 11,
+    "2021T3": 18,
+    "2022T1": 26,
+    "2022T2": 13,
+    "2022T3": 17,
+    "2023T1": 15,
+    "2023T2": 8,
+    "2023T3": 12,
+    "2024T1": 26,
+    "2024T2": 15,
+    "2024T3": 23,
+    "2025T1": 14,
+    "2025T2": 20,
+    "2025T3": 25,
+    "2026T1": 15,
+    "2026T2": 21,
+    "2026T3": 13
+  },
+  "rows": [
+    {
+      "wg_key": "arden-syntax",
+      "wg_name": "Arden Syntax",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": 1,
+          "events": 1
+        }
+      ],
+      "total_specs_events": 6,
+      "total_unique_specs": 2
+    },
+    {
+      "wg_key": "biomedical-research-regulation",
+      "wg_name": "Biomedical Research & Regulation",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": 1,
+          "events": 1
+        }
+      ],
+      "total_specs_events": 20,
+      "total_unique_specs": 15
+    },
+    {
+      "wg_key": "clinical-decision-support",
+      "wg_name": "Clinical Decision Support",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 4,
+          "events": 4
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 4,
+          "events": 4
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": 1,
+          "events": 1
+        }
+      ],
+      "total_specs_events": 26,
+      "total_unique_specs": 11
+    },
+    {
+      "wg_key": "clinical-genomics",
+      "wg_name": "Clinical Genomics",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 4,
+      "total_unique_specs": 1
+    },
+    {
+      "wg_key": "clinical-information-modeling-initiative",
+      "wg_name": "Clinical Information Modeling Initiative",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 3,
+      "total_unique_specs": 2
+    },
+    {
+      "wg_key": "clinical-interoperability-council",
+      "wg_name": "Clinical Interoperability Council",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 19,
+      "total_unique_specs": 11
+    },
+    {
+      "wg_key": "clinical-quality-information",
+      "wg_name": "Clinical Quality Information",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": 1,
+          "events": 1
+        }
+      ],
+      "total_specs_events": 29,
+      "total_unique_specs": 10
+    },
+    {
+      "wg_key": "community-based-care-and-privacy",
+      "wg_name": "Community-Based Care and Privacy",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 2,
+      "total_unique_specs": 2
+    },
+    {
+      "wg_key": "cross-group-projects",
+      "wg_name": "Cross-Group Projects",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": 1,
+          "events": 1
+        }
+      ],
+      "total_specs_events": 20,
+      "total_unique_specs": 8
+    },
+    {
+      "wg_key": "devices",
+      "wg_name": "Devices",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": 2,
+          "events": 2
+        }
+      ],
+      "total_specs_events": 14,
+      "total_unique_specs": 3
+    },
+    {
+      "wg_key": "electronic-health-records",
+      "wg_name": "Electronic Health Records",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": 4,
+          "events": 4
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": 1,
+          "events": 1
+        }
+      ],
+      "total_specs_events": 17,
+      "total_unique_specs": 14
+    },
+    {
+      "wg_key": "fhir-infrastructure",
+      "wg_name": "FHIR Infrastructure",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": 1,
+          "events": 5
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 3,
+          "events": 10
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": 3,
+          "events": 4
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 4,
+          "events": 4
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 4,
+          "events": 4
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": 3,
+          "events": 3
+        }
+      ],
+      "total_specs_events": 46,
+      "total_unique_specs": 13
+    },
+    {
+      "wg_key": "financial-management",
+      "wg_name": "Financial Management",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 18,
+      "total_unique_specs": 8
+    },
+    {
+      "wg_key": "human-and-social-services",
+      "wg_name": "Human and Social Services",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 3,
+      "total_unique_specs": 2
+    },
+    {
+      "wg_key": "imaging-integration",
+      "wg_name": "Imaging Integration",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 2,
+      "total_unique_specs": 2
+    },
+    {
+      "wg_key": "implementable-technology-specifications",
+      "wg_name": "Implementable Technology Specifications",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 5,
+      "total_unique_specs": 2
+    },
+    {
+      "wg_key": "infrastructure-and-messaging",
+      "wg_name": "Infrastructure and Messaging",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 7,
+      "total_unique_specs": 4
+    },
+    {
+      "wg_key": "learning-health-systems",
+      "wg_name": "Learning Health Systems",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 2,
+      "total_unique_specs": 1
+    },
+    {
+      "wg_key": "mobile-health",
+      "wg_name": "Mobile Health",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 2,
+      "total_unique_specs": 2
+    },
+    {
+      "wg_key": "orchestration-services-architecture",
+      "wg_name": "Orchestration, Services, and Architecture",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 5,
+      "total_unique_specs": 4
+    },
+    {
+      "wg_key": "orders-and-observations",
+      "wg_name": "Orders & Observations",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": 4,
+          "events": 4
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 4,
+          "events": 4
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": 4,
+          "events": 4
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 23,
+      "total_unique_specs": 14
+    },
+    {
+      "wg_key": "patient-administration",
+      "wg_name": "Patient Administration",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 11,
+      "total_unique_specs": 8
+    },
+    {
+      "wg_key": "patient-care",
+      "wg_name": "Patient Care",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 4,
+          "events": 4
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": 1,
+          "events": 1
+        }
+      ],
+      "total_specs_events": 23,
+      "total_unique_specs": 14
+    },
+    {
+      "wg_key": "patient-empowerment",
+      "wg_name": "Patient Empowerment",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 6,
+      "total_unique_specs": 4
+    },
+    {
+      "wg_key": "payer-provider-information-exchange",
+      "wg_name": "Payer/Provider Information Exchange",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": 1,
+          "events": 1
+        }
+      ],
+      "total_specs_events": 9,
+      "total_unique_specs": 5
+    },
+    {
+      "wg_key": "pharmacy",
+      "wg_name": "Pharmacy",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 19,
+      "total_unique_specs": 13
+    },
+    {
+      "wg_key": "public-health",
+      "wg_name": "Public Health",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": 7,
+          "events": 7
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 4,
+          "events": 4
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 4,
+          "events": 4
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": 5,
+          "events": 5
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 48,
+      "total_unique_specs": 31
+    },
+    {
+      "wg_key": "security",
+      "wg_name": "Security",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 7,
+      "total_unique_specs": 4
+    },
+    {
+      "wg_key": "structured-documents",
+      "wg_name": "Structured Documents",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": 2,
+          "events": 2
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": 3,
+          "events": 3
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 18,
+      "total_unique_specs": 12
+    },
+    {
+      "wg_key": "terminology-infrastructure",
+      "wg_name": "Terminology Infrastructure",
+      "cells": [
+        {
+          "trimester": "2018T1",
+          "label": "18T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T2",
+          "label": "18T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2018T3",
+          "label": "18T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T1",
+          "label": "19T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T2",
+          "label": "19T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2019T3",
+          "label": "19T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T1",
+          "label": "20T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T2",
+          "label": "20T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2020T3",
+          "label": "20T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T1",
+          "label": "21T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2021T2",
+          "label": "21T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2021T3",
+          "label": "21T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T1",
+          "label": "22T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T2",
+          "label": "22T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2022T3",
+          "label": "22T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2023T1",
+          "label": "23T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T2",
+          "label": "23T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2023T3",
+          "label": "23T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T1",
+          "label": "24T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T2",
+          "label": "24T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2024T3",
+          "label": "24T3",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2025T1",
+          "label": "25T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T2",
+          "label": "25T2",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2025T3",
+          "label": "25T3",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T1",
+          "label": "26T1",
+          "count": null,
+          "events": null
+        },
+        {
+          "trimester": "2026T2",
+          "label": "26T2",
+          "count": 1,
+          "events": 1
+        },
+        {
+          "trimester": "2026T3",
+          "label": "26T3",
+          "count": null,
+          "events": null
+        }
+      ],
+      "total_specs_events": 4,
+      "total_unique_specs": 4
+    }
+  ]
+}

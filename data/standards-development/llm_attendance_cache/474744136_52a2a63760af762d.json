@@ -1,0 +1,77 @@
+{
+  "attendees": [
+    {
+      "name": "John Moehrke",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Kathleen Connor",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Johnathan Coleman",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Pyke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mohammad",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lloyd",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Hans",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "EssienGe",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bernd",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Russell Leftwich",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Virginia Lorenzi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Brett Marquard",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

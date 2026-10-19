@@ -1,0 +1,59 @@
+{
+  "attendees": [
+    {
+      "name": "Ken Fuchs",
+      "organization": "IEEE",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Rhoads",
+      "organization": "IEEE",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Tom Thompson",
+      "organization": "IEEE-SA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Garguilo",
+      "organization": "IEEE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Schluter",
+      "organization": "CMI",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Faughn",
+      "organization": "Prometheus Computing, NIST Contractor",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bjoern Anderson",
+      "organization": "University in L\u00fcbeck, Germany",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Martin Kasparnick",
+      "organization": "University in L\u00fcbeck, Germany",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Trish Williams",
+      "organization": "Flinders University, Adelaide, Australia",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

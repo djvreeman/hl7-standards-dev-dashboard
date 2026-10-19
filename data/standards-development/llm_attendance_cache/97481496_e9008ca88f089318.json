@@ -1,0 +1,95 @@
+{
+  "attendees": [
+    {
+      "name": "Bruce Bray",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joe Bormel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Laura Heerman-Langford",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Matt Elrod",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Charles Gabrial",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lindsey Hoggle",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lenel James",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mark Kramer",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Russ Leftwich",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jim McClay",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Ruby Nash",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Nancy Orvis",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Angelo Pardo",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Shelly Spiro",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Marla Throckman",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,59 @@
+{
+  "attendees": [
+    {
+      "name": "Ken Lord",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Trish Williams",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dwayne Decouteau",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Stefano Lotti",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ron Parker",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "LC",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "LS",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "VM",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "JG",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

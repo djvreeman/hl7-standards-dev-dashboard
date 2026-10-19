@@ -1,0 +1,83 @@
+{
+  "attendees": [
+    {
+      "name": "Paul",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "MK",
+      "organization": null,
+      "present": true,
+      "role": "scribe"
+    },
+    {
+      "name": "MaryKay McDaniel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Celine Lefebvre",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Hill",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Corey Spears",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Laurie Burckhardt",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alex Beckner",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alix Goss",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Linda Michealson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bob Deiterle",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Nicole Pham",
+      "organization": "CMS/OEDA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Karl Davis",
+      "organization": "CMS",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

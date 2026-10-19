@@ -1,0 +1,203 @@
+{
+  "attendees": [
+    {
+      "name": "AbdulMalik Shakir",
+      "organization": "Hi3 Solutions",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Alexander Henket",
+      "organization": "Nictiz",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Andrew Statler",
+      "organization": "Cerner",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Austin Kreisler",
+      "organization": "Leidos",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Avinash Shanbhag",
+      "organization": "ONC",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Benjamin Flessner",
+      "organization": "Redox",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Brett Marquard",
+      "organization": "Waveone",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Calvin Beebe",
+      "organization": "Mayo Clinic",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Corey Spears",
+      "organization": "Infor",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Courtney Panaia-Rodi",
+      "organization": "Lantana",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "David Hay",
+      "organization": "orion",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Didi Davis",
+      "organization": "Sequoia",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Emma Jones",
+      "organization": "Allscripts",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Eric Haas",
+      "organization": "Health Data",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Espen Stranger Seland",
+      "organization": "HL7 Norway",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Gay Dolin",
+      "organization": "IMO",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "George Dixon",
+      "organization": "Allscripts",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Giorgio Cangioli",
+      "organization": "HL7 Italy",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Grahame Grieve",
+      "organization": "Health Intersections",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Jeff Brown",
+      "organization": "Pulse8",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Jen Blagg",
+      "organization": "Moxe Health",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Joe Lamy",
+      "organization": "AEGIS.net",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Keith Boone",
+      "organization": "VVC Holdings",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Kent Lemoine",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Linda Michaelsen",
+      "organization": "Optum",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Lisa Nelson",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Martin Rosner",
+      "organization": "Philips",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Matt Elrod",
+      "organization": "APTA",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Matt Graham",
+      "organization": "Mayo Clinic",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Matt Rahn",
+      "organization": "ONC",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Matthew Greene",
+      "organization": "VA",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Raghu YN",
+      "organization": "LANES",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Michael Clifton",
+      "organization": "Epic",
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

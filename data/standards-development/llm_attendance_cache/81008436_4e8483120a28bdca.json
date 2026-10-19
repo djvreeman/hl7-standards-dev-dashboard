@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "David Hay",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Lloyd McKenzie",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Wayne Kubick",
+      "organization": "CTO",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Grahame Grieve",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

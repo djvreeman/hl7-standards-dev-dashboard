@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "John D'Amore",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "David Pyke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gino Canessa",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Grahame",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

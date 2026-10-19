@@ -1,0 +1,197 @@
+{
+  "attendees": [
+    {
+      "name": "Lloyd McKenzie",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bruce Bray",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Catherine Hoang",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Shahim Essaid",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Stephen Chu",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Seung-Jong Yu",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Russ Leftwich",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lisa Anderson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Watkins",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kevin Power",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Matt Molenda",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Maryam Garza",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ming Dunajick",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Nathan Davis",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Tom Oniki",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Filippo Napoli",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Marian Moen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Aly Khalifa",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sandra Sabaratnam",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rachel Richesson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Raja Kathirvel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Akash Rampersad",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sarah Tonn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joanne Dehnbostel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Virginia Lorenzi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rob Hausam",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Patrick McLaughlin",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jim McClay",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jean Duteau",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Stan Huff",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lorraine Constable",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sarah Danziger",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

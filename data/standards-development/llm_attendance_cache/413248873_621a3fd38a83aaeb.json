@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Maria Moen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lisa Nelson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dr. Stephen Chu",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Steven",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,11 @@
+{
+  "attendees": [
+    {
+      "name": "Lynn Lasko",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

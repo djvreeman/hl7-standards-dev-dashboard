@@ -1,0 +1,23 @@
+{
+  "attendees": [
+    {
+      "name": "Yanyan Hu",
+      "organization": "The Joint Commission",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Della Dunbar",
+      "organization": "DM&A",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Becky Gradl",
+      "organization": "Academy of Nutrition and Dietetics",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

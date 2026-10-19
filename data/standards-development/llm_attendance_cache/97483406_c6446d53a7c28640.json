@@ -1,0 +1,89 @@
+{
+  "attendees": [
+    {
+      "name": "Laura Heerman-Langford",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bruce Bray",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Wendy Bloomenthal",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Keith Boone",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Steve Bratt",
+      "organization": "MITRE Health Innovation Center",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "David DeRoode",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lindsey Hoggle",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "David Jones",
+      "organization": "CDC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sandy Jones",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Russ Leftwich",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Wendy Scharber",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Spinosa",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Marla Throckmorton",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ruby Nash",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

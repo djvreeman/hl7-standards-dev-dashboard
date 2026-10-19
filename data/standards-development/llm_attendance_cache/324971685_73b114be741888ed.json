@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "Yan Heras",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Anne Smith",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Juliet Rubini",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bryn Rhodes",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Julia Skapik",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Denning",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jen Seeman",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Matt Tiller",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

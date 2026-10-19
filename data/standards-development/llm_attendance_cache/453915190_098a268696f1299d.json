@@ -1,0 +1,113 @@
+{
+  "attendees": [
+    {
+      "name": "John Moehrke",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Johnathan Coleman",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Joe Lamy",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Mohammad Jafari",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Pyke",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Abderrazek Boufahja",
+      "organization": "GE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alex Kontur",
+      "organization": "HHS",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Craig Newman",
+      "organization": "J. Michael Consulting",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "David Hill",
+      "organization": "MITRE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Erik Moll",
+      "organization": "Philips",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Essien Ge",
+      "organization": "Philips",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Hans Buitendijk",
+      "organization": "Oracle",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joseph Lamy",
+      "organization": "Aegis",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Luke Breyer",
+      "organization": "Epic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Aaron Nusstein",
+      "organization": "Lantana Group",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Richard Ettema",
+      "organization": "Aegis",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sarah Tonn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Virginia Lorenzi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

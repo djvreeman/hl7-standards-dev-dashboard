@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Hugh Campos",
+      "organization": "Patient Advocate",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "James Cummings",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Marc Sabourdin",
+      "organization": "Spain",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alison Kemp",
+      "organization": "ONC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Marc Scrimshire",
+      "organization": "Onyx Health",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

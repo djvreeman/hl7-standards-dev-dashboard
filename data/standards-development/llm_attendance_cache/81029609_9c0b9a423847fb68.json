@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Bob M",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Patrick Werner",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Mullai Murugan",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kevin",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bob F",
+      "organization": "Mayo",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alex Mays",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

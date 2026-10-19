@@ -10,6 +10,9 @@
     
     <!-- HL7 Brand Fonts -->
     <link rel="stylesheet" href="/static/css/fonts.css">
+    <!-- html2canvas and JSZip for PNG export -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
     
     <!-- Custom styles -->
     <style>
@@ -485,6 +488,22 @@
             color: #6b7280;
             margin-left: 0.25rem;
         }
+
+        .kpi-history-link-wrap {
+            text-align: center;
+            margin: 0 0 0.85rem;
+        }
+
+        .kpi-history-link {
+            color: var(--primary-color);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .kpi-history-link:hover {
+            text-decoration: underline;
+        }
         
         .trend-section {
             display: flex;
@@ -885,6 +904,17 @@
         .wa-button:hover {
             background: #b91c1c;
         }
+
+        .llm-prompt-create,
+        .llm-prompt-create:hover,
+        .llm-prompt-create:focus {
+            background: #16a34a;
+            color: #ffffff;
+        }
+
+        .llm-prompt-create:hover {
+            background: #15803d;
+        }
         
         .wa-card {
             background: var(--card-background);
@@ -925,6 +955,20 @@
                 padding-top: 0.5rem;
                 margin-top: 0.5rem;
             }
+        }
+
+        /* Desktop 3-column layout for PNG export, independent of viewport */
+        .kpi-export-stage .trend-section {
+            flex-direction: row !important;
+        }
+
+        .kpi-export-stage .previous-value {
+            margin-left: 1rem !important;
+            padding-left: 1rem !important;
+            border-left: 1px solid #e5e7eb !important;
+            border-top: none !important;
+            padding-top: 0 !important;
+            margin-top: 0 !important;
         }
     </style>
 </head>
@@ -969,6 +1013,14 @@
             <button class="wa-button" id="refreshBtn">
                 Refresh Data
             </button>
+            {% if steward == 'Standards Development' %}
+            <button class="wa-button llm-prompt-create" id="createLlmPromptBtn" type="button">
+                Create LLM Prompt
+            </button>
+            {% endif %}
+            <button class="wa-button" id="exportPngBtn" style="margin-left: auto;">
+                Export as PNG
+            </button>
         </div>
         
         <!-- KPI Cards -->
@@ -1010,7 +1062,26 @@
                     
                     // Special handling for Finance steward - create dropdown instead of direct link
                     if (steward === 'Finance') {
-                        return `<div class="nav-dropdown"><a href="/Finance" class="nav-link ${isActive}" id="nav-finance">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item">Financial Health Trends and Insights</a></div></div>`;
+                        const currentPath = window.location.pathname;
+                        const isFinancialHealth = currentPath === '/financial-health';
+                        const isGeographic = currentPath === '/financial-geographic';
+                        return `<div class="nav-dropdown"><a href="/Finance" class="nav-link ${isActive}" id="nav-finance">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item ${isFinancialHealth ? 'active' : ''}">Financial Health Trends and Insights</a><a href="/financial-geographic" class="dropdown-item ${isGeographic ? 'active' : ''}">Geographic Insights</a></div></div>`;
+                    }
+                    
+                    // Special handling for Membership steward - create dropdown
+                    if (steward === 'Membership') {
+                        const currentPath = window.location.pathname;
+                        const isMembershipHealth = currentPath === '/membership-health';
+                        return `<div class="nav-dropdown"><a href="/Membership" class="nav-link ${isActive}" id="nav-membership">Membership</a><div class="dropdown-menu"><a href="/membership-health" class="dropdown-item ${isMembershipHealth ? 'active' : ''}">Membership Health</a></div></div>`;
+                    }
+                    
+                    // Special handling for Standards Development steward - create dropdown
+                    if (steward === 'Standards Development') {
+                        const currentPath = window.location.pathname;
+                        const isStandardsDevelopmentInsights = currentPath === '/standards-development-insights';
+                        const isWgHealthHistory = currentPath === '/wg-health-history';
+                        const isWgMeetingParticipation = currentPath === '/wg-meeting-participation';
+                        return `<div class="nav-dropdown"><a href="/Standards Development" class="nav-link ${isActive}" id="nav-standards-development">Standards Development</a><div class="dropdown-menu"><a href="/standards-development-insights" class="dropdown-item ${isStandardsDevelopmentInsights ? 'active' : ''}">Standards Development Insights</a><a href="/wg-health-history" class="dropdown-item ${isWgHealthHistory ? 'active' : ''}">Work Group Health History</a><a href="/wg-meeting-participation" class="dropdown-item ${isWgMeetingParticipation ? 'active' : ''}">Meeting Participation</a></div></div>`;
                     }
                     
                     const href = (steward === 'HL7 International' || steward === 'HL7') ? '/' : `/${steward}`;
@@ -1021,10 +1092,13 @@
             } catch (error) {
                 console.error('Error loading steward navigation:', error);
                 // Fallback to basic navigation
+                const currentPath = window.location.pathname;
+                const isGeographic = currentPath === '/financial-geographic';
                 document.getElementById('steward-navigation').innerHTML = `
                     <a href="/" class="nav-link ${(currentSteward === 'HL7 International' || currentSteward === 'HL7') ? 'active' : ''}">HL7 International</a>
                     <a href="/CSDO" class="nav-link ${currentSteward === 'CSDO' ? 'active' : ''}">CSDO</a>
-                    <div class="nav-dropdown"><a href="/Finance" class="nav-link ${currentSteward === 'Finance' ? 'active' : ''}">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item">Financial Health Trends and Insights</a></div></div>
+                    <div class="nav-dropdown"><a href="/Finance" class="nav-link ${currentSteward === 'Finance' ? 'active' : ''}">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item">Financial Health Trends and Insights</a><a href="/financial-geographic" class="dropdown-item ${isGeographic ? 'active' : ''}">Geographic Insights</a></div></div>
+                    <div class="nav-dropdown"><a href="/Standards Development" class="nav-link ${currentSteward === 'Standards Development' ? 'active' : ''}">Standards Development</a><div class="dropdown-menu"><a href="/standards-development-insights" class="dropdown-item">Standards Development Insights</a><a href="/wg-health-history" class="dropdown-item">Work Group Health History</a><a href="/wg-meeting-participation" class="dropdown-item">Meeting Participation</a></div></div>
                 `;
             }
         }
@@ -1247,14 +1321,52 @@
             }
             return num.toLocaleString();
         }
+
+        // Format KPI values based on indicator Type/Unit rules
+        const UPTIME_INDICATOR_IDS = new Set(['12', '13', '14', '15']);
+        function formatIndicatorValue(value, indicator) {
+            if (value === null || value === undefined || value === 'N/A') {
+                return 'N/A';
+            }
+            if (typeof value === 'string') {
+                return value;
+            }
+
+            const num = Number(value);
+            if (!Number.isFinite(num)) {
+                return 'N/A';
+            }
+
+            const type = (indicator?.type || '').trim();
+            const unit = (indicator?.unit || '').trim().toLowerCase();
+            const indicatorId = String(indicator?.id ?? '');
+
+            // Type = N -> always whole number
+            if (type === 'N') {
+                return Math.round(num).toLocaleString(undefined, { maximumFractionDigits: 0 });
+            }
+
+            // Type = % with Unit = % or average -> fixed decimals (uptime gets 2)
+            if (type === '%' && (unit === '%' || unit === 'average')) {
+                const decimals = UPTIME_INDICATOR_IDS.has(indicatorId) ? 2 : 1;
+                // Use toFixed to force trailing zeros (e.g., 99.30)
+                return num.toFixed(decimals);
+            }
+
+            // Default: locale formatting without forcing trailing zeros
+            return num.toLocaleString();
+        }
         
         // Create KPI card HTML
         function createKPICardHTML(card) {
-            const currentValue = formatNumber(card.current_value);
-            const previousValue = formatNumber(card.previous_value);
+            const currentValue = formatIndicatorValue(card.current_value, card.indicator);
+            const previousValue = formatIndicatorValue(card.previous_value, card.indicator);
             const unit = card.indicator.unit;
-            const currentPeriod = card.indicator.measurements ? Object.keys(card.indicator.measurements).slice(-1)[0] : 'N/A';
-            const previousPeriod = card.indicator.measurements ? Object.keys(card.indicator.measurements).slice(-2, -1)[0] : 'N/A';
+            
+            // Get periods sorted to ensure correct ordering
+            const periods = card.indicator.measurements ? Object.keys(card.indicator.measurements).sort() : [];
+            const currentPeriod = periods.length > 0 ? periods[periods.length - 1] : 'N/A';
+            const previousPeriod = periods.length > 1 ? periods[periods.length - 2] : 'N/A';
             
             // Image section - only show if image exists
             let imageHtml = '';
@@ -1326,7 +1438,7 @@
                             yearValue += measurement.value;
                         }
                     }
-                    displayValue = formatNumber(yearValue);
+                    displayValue = formatIndicatorValue(yearValue, card.indicator);
                 }
                 
                 targetHtml = `
@@ -1335,7 +1447,7 @@
                         <div class="target-progress">
                             <div class="target-progress-bar" style="width: ${Math.min(progress, 100)}%"></div>
                         </div>
-                        <div class="target-text">${displayValue} / ${formatNumber(targetValue)} ${unit} (${progress.toFixed(1)}%)</div>
+                        <div class="target-text">${displayValue} / ${formatIndicatorValue(targetValue, card.indicator)} ${unit} (${progress.toFixed(1)}%)</div>
                     </div>
                 `;
             }
@@ -1389,8 +1501,14 @@
                 `;
             }
             
+            // Indicator 31 (Work Groups in good health) links to Final scorecard history
+            const indicatorId = String(card.indicator.id);
+            const historyLinkHtml = indicatorId === '31'
+                ? `<div class="kpi-history-link-wrap"><a class="kpi-history-link" href="/wg-health-history">View Final scorecard history →</a></div>`
+                : '';
+
             return `
-                <div class="kpi-card">
+                <div class="kpi-card" data-indicator-id="${card.indicator.id}" data-period="${currentPeriod}">
                     <div class="kpi-header">
                         <h3 class="kpi-title" data-tooltip="${card.indicator.description.replace(/"/g, '&quot;')}">${card.indicator.name}</h3>
                         ${stewardHtml}
@@ -1400,6 +1518,7 @@
                         <div class="main-value-label">Current (${currentPeriod})</div>
                         <div class="main-value-number">${currentValue}<span class="main-value-unit">${unit}</span></div>
                     </div>
+                    ${historyLinkHtml}
                     ${trendHtml}
                     ${targetHtml}
                     ${notesHtml}
@@ -1435,6 +1554,305 @@
             }
         }
         
+        function slugifyFilename(text) {
+            return String(text || 'card')
+                .trim()
+                .replace(/[<>:"/\\|?*\x00-\x1f]/g, '')
+                .replace(/\s+/g, '_')
+                .replace(/_+/g, '_')
+                .replace(/^_+|_+$/g, '')
+                .slice(0, 80) || 'card';
+        }
+
+        function padIndicatorId(id, fallback) {
+            const raw = String(id || fallback || '').trim();
+            if (/^\d+$/.test(raw)) {
+                return raw.padStart(3, '0');
+            }
+            return raw || '000';
+        }
+
+        function formatPeriodForFilename(period) {
+            return String(period || '')
+                .trim()
+                .replace(/-/g, '')
+                .replace(/\s+/g, '') || 'Period';
+        }
+
+        function trimCanvasToEqualPadding(canvas, paddingPx) {
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+            const data = ctx.getImageData(0, 0, width, height).data;
+
+            let minX = width;
+            let minY = height;
+            let maxX = -1;
+            let maxY = -1;
+
+            for (let y = 0; y < height; y++) {
+                for (let x = 0; x < width; x++) {
+                    if (data[(y * width + x) * 4 + 3] > 8) {
+                        if (x < minX) minX = x;
+                        if (x > maxX) maxX = x;
+                        if (y < minY) minY = y;
+                        if (y > maxY) maxY = y;
+                    }
+                }
+            }
+
+            if (maxX < 0) {
+                return canvas;
+            }
+
+            const contentW = maxX - minX + 1;
+            const contentH = maxY - minY + 1;
+            const trimmed = document.createElement('canvas');
+            trimmed.width = contentW + paddingPx * 2;
+            trimmed.height = contentH + paddingPx * 2;
+            const trimmedCtx = trimmed.getContext('2d');
+            trimmedCtx.clearRect(0, 0, trimmed.width, trimmed.height);
+            trimmedCtx.drawImage(
+                canvas,
+                minX, minY, contentW, contentH,
+                paddingPx, paddingPx, contentW, contentH
+            );
+            return trimmed;
+        }
+
+        async function waitForImages(root) {
+            const images = Array.from(root.querySelectorAll('img'));
+            await Promise.all(images.map(img => {
+                if (img.complete && img.naturalWidth > 0) {
+                    return Promise.resolve();
+                }
+                return img.decode ? img.decode().catch(() => {}) : new Promise(resolve => {
+                    img.onload = resolve;
+                    img.onerror = resolve;
+                });
+            }));
+        }
+
+        function getThreeColumnCardWidth() {
+            const grid = document.getElementById('kpi-grid');
+            const container = document.querySelector('.dashboard-container');
+            const containerStyles = container ? getComputedStyle(container) : null;
+            const gridStyles = grid ? getComputedStyle(grid) : null;
+
+            const maxWidth = parseFloat(containerStyles?.maxWidth) || 1400;
+            const paddingLeft = parseFloat(containerStyles?.paddingLeft) || 32;
+            const paddingRight = parseFloat(containerStyles?.paddingRight) || 32;
+            const gap = parseFloat(gridStyles?.columnGap || gridStyles?.gap) || 24;
+            const minColumn = 350;
+
+            const gridWidth = Math.max(maxWidth - paddingLeft - paddingRight, minColumn * 3 + gap * 2);
+            const columnWidth = (gridWidth - gap * 2) / 3;
+            return Math.max(minColumn, Math.floor(columnWidth));
+        }
+
+        async function captureElementToCanvas(element, options = {}) {
+            const transparent = Boolean(options.transparent);
+            const sourceWidth = Math.ceil(
+                (typeof options.width === 'number' && options.width > 0)
+                    ? options.width
+                    : (element.getBoundingClientRect().width || 350)
+            );
+
+            const host = document.createElement('div');
+            host.setAttribute('aria-hidden', 'true');
+            host.style.position = 'absolute';
+            host.style.left = '0';
+            host.style.top = `${Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) + 200}px`;
+            host.style.zIndex = '-8000';
+            host.style.pointerEvents = 'none';
+
+            const wrapper = document.createElement('div');
+            wrapper.className = 'kpi-export-stage';
+            wrapper.style.background = transparent ? 'transparent' : '#ffffff';
+            wrapper.style.padding = '0';
+            wrapper.style.display = 'block';
+            wrapper.style.width = `${sourceWidth}px`;
+            wrapper.style.boxSizing = 'border-box';
+
+            const clone = element.cloneNode(true);
+            clone.style.display = 'block';
+            clone.style.margin = '0';
+            clone.style.width = `${sourceWidth}px`;
+            clone.style.maxWidth = `${sourceWidth}px`;
+            clone.style.height = 'auto';
+            clone.style.maxHeight = 'none';
+            clone.style.transform = 'none';
+            clone.style.transition = 'none';
+            clone.style.overflow = 'hidden';
+            clone.style.boxSizing = 'border-box';
+            if (transparent) {
+                clone.style.boxShadow = 'none';
+            }
+            clone.querySelectorAll('img').forEach(img => {
+                img.style.maxWidth = '100%';
+                img.style.width = '100%';
+                img.style.height = 'auto';
+                img.style.objectFit = 'contain';
+                img.style.display = 'block';
+            });
+            wrapper.appendChild(clone);
+            host.appendChild(wrapper);
+            document.body.appendChild(host);
+
+            await waitForImages(clone);
+            if (document.fonts && document.fonts.ready) {
+                await document.fonts.ready.catch(() => {});
+            }
+            await new Promise(resolve => setTimeout(resolve, 150));
+
+            const cloneHeight = Math.ceil(Math.max(clone.scrollHeight, clone.getBoundingClientRect().height));
+            clone.style.height = `${cloneHeight}px`;
+            wrapper.style.width = `${sourceWidth}px`;
+            wrapper.style.height = `${cloneHeight}px`;
+
+            try {
+                const rect = wrapper.getBoundingClientRect();
+                const rawCanvas = await html2canvas(wrapper, {
+                    backgroundColor: transparent ? null : '#ffffff',
+                    scale: 2,
+                    logging: false,
+                    useCORS: true,
+                    allowTaint: false,
+                    x: 0,
+                    y: 0,
+                    width: sourceWidth,
+                    height: cloneHeight,
+                    windowWidth: sourceWidth,
+                    windowHeight: cloneHeight,
+                    scrollX: -rect.left,
+                    scrollY: -rect.top,
+                    onclone: function(_doc, clonedWrapper) {
+                        clonedWrapper.style.width = `${sourceWidth}px`;
+                        clonedWrapper.style.height = `${cloneHeight}px`;
+                        clonedWrapper.style.overflow = 'hidden';
+                        const clonedCard = clonedWrapper.querySelector('.kpi-card');
+                        if (clonedCard) {
+                            clonedCard.style.width = `${sourceWidth}px`;
+                            clonedCard.style.maxWidth = `${sourceWidth}px`;
+                            clonedCard.style.height = 'auto';
+                            clonedCard.style.maxHeight = 'none';
+                            clonedCard.style.overflow = 'hidden';
+                            clonedCard.style.boxSizing = 'border-box';
+                        }
+                        clonedWrapper.querySelectorAll('img').forEach(img => {
+                            img.style.maxWidth = '100%';
+                            img.style.width = '100%';
+                            img.style.height = 'auto';
+                            img.style.objectFit = 'contain';
+                            img.style.display = 'block';
+                        });
+                    }
+                });
+                if (transparent) {
+                    return trimCanvasToEqualPadding(rawCanvas, 24);
+                }
+                return rawCanvas;
+            } finally {
+                document.body.removeChild(host);
+            }
+        }
+
+        function canvasToPngBlob(canvas) {
+            return new Promise((resolve, reject) => {
+                canvas.toBlob(function(blob) {
+                    if (!blob) {
+                        reject(new Error('Failed to create PNG'));
+                        return;
+                    }
+                    resolve(blob);
+                }, 'image/png');
+            });
+        }
+
+        async function exportKpiCardsZip() {
+            const cards = Array.from(document.querySelectorAll('#kpi-grid .kpi-card'));
+            const exportBtn = document.getElementById('exportPngBtn');
+            const originalText = exportBtn ? exportBtn.innerHTML : '';
+
+            if (!cards.length) {
+                alert('No KPI cards to export. Wait for the dashboard to finish loading.');
+                return;
+            }
+
+            if (typeof html2canvas !== 'function' || typeof JSZip === 'undefined') {
+                alert('Export libraries failed to load. Please refresh and try again.');
+                return;
+            }
+
+            try {
+                if (exportBtn) {
+                    exportBtn.disabled = true;
+                    exportBtn.textContent = `Exporting 0/${cards.length}...`;
+                }
+
+                const zip = new JSZip();
+                const stewardSlug = slugifyFilename(currentSteward || 'Dashboard');
+                const dateStamp = new Date().toISOString().split('T')[0];
+                const folder = zip.folder(`HL7_${stewardSlug}_KPI_Cards`);
+                const usedNames = new Set();
+
+                const columnWidth = getThreeColumnCardWidth();
+
+                for (let i = 0; i < cards.length; i++) {
+                    if (exportBtn) {
+                        exportBtn.textContent = `Exporting ${i + 1}/${cards.length}...`;
+                    }
+
+                    const card = cards[i];
+                    const canvas = await captureElementToCanvas(card, {
+                        transparent: true,
+                        width: columnWidth
+                    });
+                    const blob = await canvasToPngBlob(canvas);
+                    const indicatorId = padIndicatorId(card.getAttribute('data-indicator-id'), i + 1);
+                    const period = formatPeriodForFilename(card.getAttribute('data-period'));
+                    const title = card.querySelector('.kpi-title')?.textContent || `card_${i + 1}`;
+                    let filename = `${period}_${indicatorId}_${slugifyFilename(title)}.png`;
+                    if (usedNames.has(filename)) {
+                        filename = `${period}_${indicatorId}_${i + 1}_${slugifyFilename(title)}.png`;
+                    }
+                    usedNames.add(filename);
+                    folder.file(filename, blob);
+                }
+
+                if (exportBtn) {
+                    exportBtn.textContent = 'Creating zip...';
+                }
+
+                const zipBlob = await zip.generateAsync({ type: 'blob' });
+                const url = URL.createObjectURL(zipBlob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `HL7_${stewardSlug}_KPI_Cards_${dateStamp}.zip`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+
+                if (exportBtn) {
+                    exportBtn.disabled = false;
+                    exportBtn.innerHTML = originalText;
+                }
+            } catch (error) {
+                console.error('Error exporting KPI cards:', error);
+                alert('Failed to export images. Please try again.');
+                if (exportBtn) {
+                    exportBtn.disabled = false;
+                    exportBtn.innerHTML = originalText || 'Export as PNG';
+                }
+            }
+        }
+
+        const exportPngBtn = document.getElementById('exportPngBtn');
+        if (exportPngBtn) {
+            exportPngBtn.addEventListener('click', exportKpiCardsZip);
+        }
+
         // Refresh button
         document.getElementById('refreshBtn').addEventListener('click', async function() {
             try {
@@ -1528,5 +1946,11 @@
             document.getElementById('kpi-grid').innerHTML = `<div class="error">${message}</div>`;
         }
     </script>
+    {% if steward == 'Standards Development' %}
+    <script src="/static/js/standards-llm-prompt.js?v=20261002b"></script>
+    <script>
+        initStandardsLlmPrompt({ scope: 'cards', kpiFilterId: 'kpiFilter' });
+    </script>
+    {% endif %}
 </body>
 </html> 

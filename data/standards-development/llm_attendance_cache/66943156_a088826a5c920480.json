@@ -1,0 +1,65 @@
+{
+  "attendees": [
+    {
+      "name": "David Hay",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Lloyd McKenzie",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Wayne Kubick",
+      "organization": "CTO",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Hans Buitendijk",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Brian Postlethwaite",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Knapp",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Josh Mandel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Moehrke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Brian Pech",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Grahame Grieve",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

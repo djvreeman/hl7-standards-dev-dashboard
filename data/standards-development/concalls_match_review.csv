@@ -1,0 +1,313 @@
+call_name,concall_id,meeting_date,occurrence_date,page_id,similarity,title,wg_key
+CDA Management Group,85868,2026-10-14,2026-10-14,498535571,0.35,2026-10-14 CMG Meeting Notes,cda-management-group
+Clinical Interoperability Council,86348,2025-04-24,2025-04-24,325462508,0.35,2025-04-24 CIC Call Agenda/Minutes,clinical-interoperability-council
+Clinical Interoperability Council,86348,2025-07-24,2025-07-24,358880317,0.35,2025-07-24 CIC Call Agenda/Minutes,clinical-interoperability-council
+Conformance,85683,2024-11-12,2024-11-12,288391203,0.35,2024-11-12 Conference Call,conformance
+Conformance,85683,2024-11-26,2024-11-26,288069227,0.35,2024-11-26 Conference Call,conformance
+Conformance,85683,2024-12-10,2024-12-10,288072296,0.35,2024-12-10 Conference Call,conformance
+Conformance,85683,2025-01-07,2025-01-07,288073000,0.35,2025-01-07 Conference Call,conformance
+Conformance,85683,2025-01-21,2025-01-21,307298788,0.35,2025-01-21 Conference Call,conformance
+Conformance,85683,2025-02-04,2025-02-04,307304316,0.35,2025-02-04 Conference Call,conformance
+Conformance,85683,2025-02-18,2025-02-18,320995707,0.35,2025-02-18 Conference Call,conformance
+Conformance,85683,2025-03-04,2025-03-04,324963867,0.35,2025-03-04 Conference Call,conformance
+Conformance,85683,2025-03-18,2025-03-18,324965037,0.35,2025-03-18 Conference Call,conformance
+Conformance,85683,2025-04-15,2025-04-15,325461825,0.35,2025-04-15 Conference Call,conformance
+Conformance,85683,2025-05-27,2025-05-27,345088042,0.35,2025-05-27 Conference Call,conformance
+Conformance,85683,2025-06-10,2025-06-10,345545623,0.35,2025-06-10 Conference Call,conformance
+Conformance,85683,2025-06-24,2025-06-24,358878332,0.35,2025-06-24 Conference Call,conformance
+Conformance,85683,2025-07-08,2025-07-08,358880450,0.35,2025-07-08 Conference Call,conformance
+Conformance,85683,2025-07-22,2025-07-22,358261368,0.35,2025-07-22 Conference Call,conformance
+Conformance,85683,2025-08-19,2025-08-19,358888616,0.35,2025-08-19 Conference Call,conformance
+Conformance,85683,2025-09-02,2025-09-02,358891742,0.35,2025-09-02 Conference Call,conformance
+Conformance,85683,2025-09-30,2025-09-30,358898335,0.35,2025-09-30 Conference Call,conformance
+Conformance,85683,2025-11-25,2025-11-25,403868538,0.35,2025-11-25 Conference Call,conformance
+Conformance,85683,2025-12-09,2025-12-09,413240118,0.35,2025-12-09 Conference Call,conformance
+Conformance,85683,2026-06-09,2026-06-09,453928776,0.35,2026-06-09 Conference Call,conformance
+Conformance,85683,2026-06-23,2026-06-23,453928779,0.35,2026-06-23 Conference Call,conformance
+Conformance,85683,2026-07-07,2026-07-07,468259629,0.35,2026-07-07 Conference Call,conformance
+Conformance,85683,2026-07-21,2026-07-21,474745077,0.35,2026-07-21 Conference Call,conformance
+Conformance,85683,2026-08-04,2026-08-04,482412437,0.35,2026-08-04 Conference Call,conformance
+Conformance,85683,2026-08-18,2026-08-18,482418209,0.35,2026-08-18 Conference Call,conformance
+Conformance,85683,2026-09-01,2026-09-01,482424103,0.35,2026-09-01 Conference Call,conformance
+Conformance,85683,2026-09-29,2026-09-29,494871210,0.35,2026-09-29 Conference Call,conformance
+Structured Data Capture,83685,2025-03-27,2025-03-27,325460471,0.35,SMART Health Cards and Links Minutes CC 2025-03-27,fhir-infrastructure
+Structured Data Capture,83685,2025-04-03,2025-04-03,325462227,0.35,SMART Health Cards and Links Minutes CC 2025-04-03,fhir-infrastructure
+Structured Data Capture,83685,2025-04-10,2025-04-10,325462780,0.35,SMART Health Cards and Links Minutes CC 2025-04-10,fhir-infrastructure
+Structured Data Capture,83685,2025-05-01,2025-05-01,324973986,0.35,SMART Health Cards and Links Minutes CC 2025-05-01,fhir-infrastructure
+FHIR Management Group,85885,2024-10-09,2024-10-09,281280543,0.35,2024-10-09 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2024-10-16,2024-10-16,281216569,0.35,2024-10-16 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2024-10-23,2024-10-23,281218342,0.35,2024-10-23 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2024-10-30,2024-10-30,281220026,0.35,2024-10-30 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2024-11-06,2024-11-06,288391934,0.35,2024-11-06 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2024-11-13,2024-11-13,288393921,0.35,2024-11-13 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2024-11-20,2024-11-20,288395406,0.35,2024-11-20 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2024-11-20,2024-11-20,288395926,0.35,2024-11-20 FMG Attendance Log,fhir-management-group
+FHIR Management Group,85885,2024-11-27,2024-11-27,288395967,0.35,2024-11-27 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2024-12-04,2024-12-04,288397870,0.35,2024-12-04 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2024-12-11,2024-12-11,288399474,0.35,2024-12-11 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2024-12-18,2024-12-18,288401083,0.35,2024-12-18 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-01-08,2025-01-08,307298471,0.35,2025-01-08 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-01-22,2025-01-22,308971875,0.35,2025-01-22 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-02-05,2025-02-05,308979130,0.35,2025-02-05 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-02-12,2025-02-12,320996321,0.35,2025-02-12 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-02-19,2025-02-19,324960961,0.35,2025-02-19 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-02-26,2025-02-26,324962290,0.35,2025-02-26 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-03-05,2025-03-05,324963373,0.35,2025-03-05 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-03-12,2025-03-12,325457396,0.35,2025-03-12 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-03-19,2025-03-19,325459347,0.35,2025-03-19 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-03-26,2025-03-26,325460935,0.35,2025-03-26 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-04-02,2025-04-02,324970186,0.35,2025-04-02 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-04-09,2025-04-09,324972943,0.35,2025-04-09 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-04-16,2025-04-16,324974251,0.35,2025-04-16 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-04-23,2025-04-23,324975645,0.35,2025-04-23 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-04-30,2025-04-30,345539531,0.35,2025-04-30 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-05-07,2025-05-07,345540067,0.35,2025-05-07 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-05-21,2025-05-21,345086331,0.35,2025-05-21 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-05-28,2025-05-28,345544516,0.35,2025-05-28 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-06-11,2025-06-11,358253891,0.35,2025-06-11 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-06-18,2025-06-18,358255211,0.35,2025-06-18 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-06-25,2025-06-25,358878549,0.35,2025-06-25 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-07-02,2025-07-02,358878551,0.35,2025-07-02 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-07-09,2025-07-09,358880517,0.35,2025-07-09 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-07-16,2025-07-16,358261484,0.35,2025-07-16 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-07-23,2025-07-23,358263067,0.35,2025-07-23 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-07-30,2025-07-30,358885437,0.35,2025-07-30 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-08-06,2025-08-06,358886977,0.35,2025-08-06 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-08-13,2025-08-13,358888130,0.35,2025-08-13 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-08-20,2025-08-20,358889247,0.35,2025-08-20 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-08-27,2025-08-27,358892353,0.35,2025-08-27 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-09-03,2025-09-03,358893813,0.35,2025-09-03 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-09-10,2025-09-10,358274131,0.35,2025-09-10 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-09-24,2025-09-24,391643151,0.35,2025-09-24 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-10-01,2025-10-01,391644145,0.35,2025-10-01 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-10-08,2025-10-08,391189776,0.35,2025-10-08 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-10-15,2025-10-15,391191360,0.35,2025-10-15 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-10-22,2025-10-22,391650054,0.35,2025-10-22 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-10-29,2025-10-29,391651923,0.35,2025-10-29 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-11-05,2025-11-05,404096386,0.35,2025-11-05 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-11-12,2025-11-12,403868073,0.35,2025-11-12 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-11-19,2025-11-19,403869955,0.35,2025-11-19 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-11-26,2025-11-26,403870689,0.35,2025-11-26 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-12-03,2025-12-03,413238000,0.35,2025-12-03 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-12-10,2025-12-10,413042863,0.35,2025-12-10 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2025-12-17,2025-12-17,413242782,0.35,2025-12-17 FMG Agnda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-01-07,2026-01-07,413245250,0.35,2026-01-07 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-01-21,2026-01-21,413247734,0.35,2026-01-21 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-02-04,2026-02-04,413252111,0.35,2026-02-04 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-02-11,2026-02-11,413054994,0.35,2026-02-11 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-02-18,2026-02-18,413254702,0.35,2026-02-18 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-02-25,2026-02-25,413256414,0.35,2026-02-25 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-03-04,2026-03-04,441123494,0.35,2026-03-04 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-03-11,2026-03-11,441124740,0.35,2026-03-11 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-03-18,2026-03-18,441519757,0.35,2026-03-18 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-03-25,2026-03-25,441127939,0.35,2026-03-25 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-04-01,2026-04-01,441130082,0.35,2026-04-01 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-04-08,2026-04-08,441130083,0.35,2026-04-08 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-04-15,2026-04-15,453905890,0.35,2026-04-15 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-04-22,2026-04-22,453908468,0.35,2026-04-22 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-04-29,2026-04-29,453911667,0.35,2026-04-29 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-05-06,2026-05-06,453914180,0.35,2026-05-06 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-05-13,2026-05-13,453917531,0.35,2026-05-13 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-05-27,2026-05-27,453922970,0.35,2026-05-27 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-06-03,2026-06-03,453926268,0.35,2026-06-03 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-06-10,2026-06-10,453928617,0.35,2026-06-10 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-06-17,2026-06-17,468257069,0.35,2026-06-17 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-06-24,2026-06-24,468259860,0.35,2026-06-24 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-07-01,2026-07-01,473236593,0.35,2026-07-01 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-07-08,2026-07-08,474745325,0.35,2026-07-08 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-07-22,2026-07-22,477661700,0.35,2026-07-22 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-07-29,2026-07-29,481591734,0.35,2026-07-29 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-08-05,2026-08-05,482412666,0.35,2026-08-05 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-08-12,2026-08-12,482416793,0.35,2026-08-12 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-08-19,2026-08-19,482419078,0.35,2026-08-19 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-08-26,2026-08-26,482421584,0.35,2026-08-26 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-09-02,2026-09-02,482424403,0.35,2026-09-02 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-09-09,2026-09-09,489849138,0.35,2026-09-09 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-09-30,2026-09-30,498532465,0.35,2026-09-30 FMG Agenda/Minutes,fhir-management-group
+FHIR Management Group,85885,2026-10-07,2026-10-07,498536685,0.35,2026-10-07 FMG Agenda/Minutes,fhir-management-group
+Consumer Mobile Healthcare Application Functional Framework (cMHAFF),85130,2025-03-20,2025-03-20,239207516,0.35,2025-03-20 mFHAST Meeting Notes 2,mobile-health
+Consumer Mobile Healthcare Application Functional Framework (cMHAFF),85130,2025-03-20,2025-03-20,325460015,0.35,2025-03-20 mFHAST Meeting Notes,mobile-health
+Consumer Mobile Healthcare Application Functional Framework (cMHAFF),85130,2025-04-03,2025-04-03,325461562,0.35,2025-04-03 RCC-MH Meeting notes,mobile-health
+Consumer Mobile Healthcare Application Functional Framework (cMHAFF),85130,2025-05-01,2025-05-01,324975136,0.35,2025-05-01 mFHAST Meeting Notes,mobile-health
+Patient Administration,85408,2024-10-15,2024-10-15,281216427,0.35,2024-10-15 Conference Call Minutes,patient-administration
+Patient Administration,85408,2024-10-22,2024-10-22,281215230,0.35,2024-10-22 Conference Call Minutes,patient-administration
+Patient Administration,85408,2024-10-29,2024-10-29,281284091,0.35,2024-10-29 Conference Call Minutes,patient-administration
+Patient Administration,85408,2024-11-05,2024-11-05,288064419,0.35,2024-11-05 Conference Call Minutes,patient-administration
+Patient Administration,85408,2024-11-12,2024-11-12,288393899,0.35,2024-11-12 Conference Call Minutes,patient-administration
+Patient Administration,85408,2024-11-19,2024-11-19,281216622,0.35,2024-11-19 Conference Call Minutes,patient-administration
+Patient Administration,85408,2024-11-26,2024-11-26,288396777,0.35,2024-11-26 Conference Call Minutes,patient-administration
+Patient Administration,85408,2024-12-03,2024-12-03,288396792,0.35,2024-12-03 Conference Call Minutes,patient-administration
+Patient Administration,85408,2024-12-10,2024-12-10,288072348,0.35,2024-12-10 Conference Call Minutes,patient-administration
+Patient Administration,85408,2024-12-17,2024-12-17,288073875,0.35,2024-12-17 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-01-07,2025-01-07,307298436,0.35,2025-01-07 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-01-21,2025-01-21,307301290,0.35,2025-01-21 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-02-11,2025-02-11,307303450,0.35,2025-02-11 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-02-18,2025-02-18,324960886,0.35,2025-02-18 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-02-25,2025-02-25,325452879,0.35,2025-02-25 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-03-04,2025-03-04,325454414,0.35,2025-03-04 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-03-11,2025-03-11,324965270,0.35,2025-03-11 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-03-18,2025-03-18,324967445,0.35,2025-03-18 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-03-25,2025-03-25,325460837,0.35,2025-03-25 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-04-01,2025-04-01,325461385,0.35,2025-04-01 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-04-08,2025-04-08,325462989,0.35,2025-04-08 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-04-15,2025-04-15,325462987,0.35,2025-04-15 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-04-22,2025-04-22,325467469,0.35,2025-04-22 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-04-29,2025-04-29,345081281,0.35,2025-04-29 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-06-10,2025-06-10,345545238,0.35,2025-06-10 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-06-17,2025-06-17,358875895,0.35,2025-06-17 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-06-24,2025-06-24,358878323,0.35,2025-06-24 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-07-01,2025-07-01,358878515,0.35,2025-07-01 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-07-08,2025-07-08,358877034,0.35,2025-07-08 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-07-15,2025-07-15,358880303,0.35,2025-07-15 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-07-22,2025-07-22,358883184,0.35,2025-07-22 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-08-12,2025-08-12,358888119,0.35,2025-08-12 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-08-19,2025-08-19,358888278,0.35,2025-08-19 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-08-26,2025-08-26,358270395,0.35,2025-08-26 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-09-02,2025-09-02,358271261,0.35,2025-09-02 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-09-09,2025-09-09,358274095,0.35,2025-09-09 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-09-30,2025-09-30,391644087,0.35,2025-09-30 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-10-07,2025-10-07,391188338,0.35,2025-10-07 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-10-21,2025-10-21,391649866,0.35,2025-10-21 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-10-28,2025-10-28,391193841,0.35,2025-10-28 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-11-04,2025-11-04,404096279,0.35,2025-11-04 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-11-18,2025-11-18,403868015,0.35,2025-11-18 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-12-02,2025-12-02,404099356,0.35,2025-12-02 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-12-09,2025-12-09,413042810,0.35,2025-12-09 Conference Call Minutes,patient-administration
+Patient Administration,85408,2025-12-16,2025-12-16,413242619,0.35,2025-12-16 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-01-06,2026-01-06,413045554,0.35,2026-01-06 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-01-20,2026-01-20,413048072,0.35,2026-01-20 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-02-10,2026-02-10,413054498,0.35,2026-02-10 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-02-17,2026-02-17,413056429,0.35,2026-02-17 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-02-24,2026-02-24,413255980,0.35,2026-02-24 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-03-03,2026-03-03,441516878,0.35,2026-03-03 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-03-17,2026-03-17,441125105,0.35,2026-03-17 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-03-31,2026-03-31,441521945,0.35,2026-03-31 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-04-07,2026-04-07,453902946,0.35,2026-04-07 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-04-14,2026-04-14,453905566,0.35,2026-04-14 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-04-21,2026-04-21,453908362,0.35,2026-04-21 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-04-28,2026-04-28,453911267,0.35,2026-04-28 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-05-12,2026-05-12,453917160,0.35,2026-05-12 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-06-02,2026-06-02,453923889,0.35,2026-06-02 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-06-09,2026-06-09,453928679,0.35,2026-06-09 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-06-23,2026-06-23,468259525,0.35,2026-06-23 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-06-30,2026-06-30,473236738,0.35,2026-06-30 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-07-07,2026-07-07,474744737,0.35,2026-07-07 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-07-21,2026-07-21,474745497,0.35,2026-07-21 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-07-28,2026-07-28,479987747,0.35,2026-07-28 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-08-04,2026-08-04,482411984,0.35,2026-08-04 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-08-11,2026-08-11,482416750,0.35,2026-08-11 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-08-25,2026-08-25,482419025,0.35,2026-08-25 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-09-01,2026-09-01,482418247,0.35,2026-09-01 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-09-08,2026-09-08,482424356,0.35,2026-09-08 Conference Call Minutes,patient-administration
+Patient Administration,85408,2026-10-06,2026-10-06,494871253,0.35,2026-10-06 Conference Call Minutes,patient-administration
+Care plan DAM 2.0 and related topics,85354,2026-04-15,2026-04-15,453906479,0.417,2026-04-15 Ad-hoc Patient Care FHIR Conference Call (Discussion relating to Allergy Drug Event),patient-care
+Weekly Pharmacy WG call,85631,2024-10-14,2024-10-14,281215558,0.35,2024-10-14 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2024-10-21,2024-10-21,281216646,0.35,2024-10-21 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2024-10-28,2024-10-28,281283802,0.35,2024-10-28 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2024-11-04,2024-11-04,288064219,0.35,2024-11-04 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2024-11-11,2024-11-11,288065832,0.35,2024-11-11 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2024-11-18,2024-11-18,288067474,0.35,2024-11-18 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2024-11-25,2024-11-25,288068717,0.35,2024-11-25 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2024-12-09,2024-12-09,288399086,0.35,2024-12-09 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2024-12-16,2024-12-16,288400673,0.35,2024-12-16 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-01-06,2025-01-06,288074333,0.35,2025-01-06 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-01-13,2025-01-13,307299867,0.35,2025-01-13 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-02-17,2025-02-17,325451875,0.35,2025-02-17 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-02-24,2025-02-24,325452650,0.35,2025-02-24 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-03-03,2025-03-03,325454350,0.35,2025-03-03 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-03-10,2025-03-10,324964185,0.35,2025-03-10 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-03-17,2025-03-17,324965469,0.35,2025-03-17 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-03-24,2025-03-24,324967755,0.35,2025-03-24 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-03-31,2025-03-31,324968777,0.35,2025-03-31 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-04-14,2025-04-14,325463407,0.35,2025-04-14 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-04-28,2025-04-28,345539029,0.35,2025-04-28 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-05-05,2025-05-05,345082166,0.35,2025-05-05 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-06-02,2025-06-02,345545110,0.35,2025-06-02 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-06-09,2025-06-09,358254930,0.35,2025-06-09 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-06-16,2025-06-16,358254916,0.35,2025-06-16 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-06-23,2025-06-23,358255499,0.35,2025-06-23 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-06-30,2025-06-30,358879439,0.35,2025-06-30 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-07-07,2025-07-07,358880377,0.35,2025-07-07 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-07-21,2025-07-21,358883051,0.35,2025-07-21 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-07-28,2025-07-28,358264343,0.35,2025-07-28 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-08-04,2025-08-04,358265321,0.35,2025-08-04 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-08-11,2025-08-11,358887061,0.35,2025-08-11 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-08-18,2025-08-18,358269038,0.35,2025-08-18 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-08-25,2025-08-25,358269336,0.35,2025-08-25 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-09-08,2025-09-08,358273005,0.35,2025-09-08 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-09-29,2025-09-29,391186121,0.35,2025-09-29 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-10-06,2025-10-06,391188615,0.35,2025-10-06 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-10-20,2025-10-20,391191716,0.35,2025-10-20 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-10-27,2025-10-27,391192665,0.35,2025-10-27 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-11-03,2025-11-03,404095223,0.35,2025-11-03 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-11-10,2025-11-10,404096315,0.35,2025-11-10 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-11-17,2025-11-17,403868397,0.35,2025-11-17 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-12-08,2025-12-08,413239176,0.35,2025-12-08 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-12-15,2025-12-15,413043695,0.35,2025-12-15 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2025-12-22,2025-12-22,413244505,0.35,2025-12-22 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-01-05,2026-01-05,413244964,0.35,2026-01-05 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-01-12,2026-01-12,413245378,0.35,2026-01-12 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-01-19,2026-01-19,413047831,0.35,2026-01-19 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-02-09,2026-02-09,413053961,0.35,2026-02-09 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-02-16,2026-02-16,413254490,0.35,2026-02-16 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-02-23,2026-02-23,413255304,0.35,2026-02-23 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-03-02,2026-03-02,413255873,0.35,2026-03-02 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-03-09,2026-03-09,441517532,0.35,2026-03-09 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-03-16,2026-03-16,441125090,0.35,2026-03-16 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-03-23,2026-03-23,441520597,0.35,2026-03-23 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-03-30,2026-03-30,441521470,0.35,2026-03-30 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-04-06,2026-04-06,441130598,0.35,2026-04-06 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-04-13,2026-04-13,453904167,0.35,2026-04-13 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-04-20,2026-04-20,453906830,0.35,2026-04-20 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-04-27,2026-04-27,453909816,0.35,2026-04-27 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-05-04,2026-05-04,453912689,0.35,2026-05-04 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-05-11,2026-05-11,453915491,0.35,2026-05-11 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-06-01,2026-06-01,453925662,0.35,2026-06-01 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-06-15,2026-06-15,468256534,0.35,2026-06-15 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-06-22,2026-06-22,468258964,0.35,2026-06-22 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-06-29,2026-06-29,468260777,0.35,2026-06-29 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-07-06,2026-07-06,474744371,0.35,2026-07-06 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-07-13,2026-07-13,474746223,0.35,2026-07-13 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-07-20,2026-07-20,477659954,0.35,2026-07-20 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-08-03,2026-08-03,479986235,0.35,2026-08-03 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-08-10,2026-08-10,482413950,0.35,2026-08-10 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-08-17,2026-08-17,482417596,0.35,2026-08-17 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-08-24,2026-08-24,482420254,0.35,2026-08-24 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-08-31,2026-08-31,482422496,0.35,2026-08-31 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-09-14,2026-09-14,491915155,0.35,2026-09-14 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-10-05,2026-10-05,498535124,0.35,2026-10-05 Agenda/Meeting Notes,pharmacy
+Weekly Pharmacy WG call,85631,2026-10-12,2026-10-12,498536608,0.35,2026-10-12 Agenda/Meeting Notes,pharmacy
+TI Co-Chair Admin Call,86191,2026-05-04,2026-05-04,453913847,0.317,2026-05-04 TI Chair Agenda/Minutes (May the 4th be with you edition) (Dave Brubeck edition),terminology-infrastructure
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2024-11-14,2024-11-14,288394495,0.317,2024-11-14 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2024-12-12,2024-12-12,288399905,0.317,2024-12-12 TSMG Agenda and Minutes,terminology-services-management-group
+UTG/THO Subcommittee Call (for Terminology Services Management Group (TSMG)),86166,2025-01-08,2025-01-09,413245732,0.375,2025-01-08 THO/UTG Subcommittee Agenda and Minutes,terminology-services-management-group
+UTG/THO Subcommittee Call (for Terminology Services Management Group (TSMG)),86166,2025-01-22,2025-01-23,413048670,0.375,2025-01-22 THO/UTG Subcommittee Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-01-23,2025-01-23,307301783,0.317,2025-01-23 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-02-20,2025-02-20,324961364,0.317,2025-02-20 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-03-20,2025-03-20,324968023,0.317,2025-03-20 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-05-01,2025-05-01,345540342,0.317,2025-05-01 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-05-29,2025-05-29,345088699,0.317,2025-05-29 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-06-12,2025-06-12,358876063,0.317,2025-06-12 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-06-26,2025-06-26,358877232,0.293,2025-06-26 TSMG Agenda and Minutes (CANCELED),terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-07-24,2025-07-24,358263616,0.317,2025-07-24 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-08-07,2025-08-07,358265824,0.317,2025-08-07 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-08-21,2025-08-21,358269640,0.317,2025-08-21 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-10-02,2025-10-02,391187794,0.317,2025-10-02 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-10-16,2025-10-16,391191738,0.317,2025-10-16 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-10-30,2025-10-30,391194537,0.317,2025-10-30 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-11-13,2025-11-13,403868663,0.317,2025-11-13 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2025-12-11,2025-12-11,413043164,0.317,2025-12-11 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-01-08,2026-01-08,413245606,0.317,2026-01-08 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-01-22,2026-01-22,413048651,0.317,2026-01-22 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-02-19,2026-02-19,413057067,0.317,2026-02-19 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-03-05,2026-03-05,441517056,0.317,2026-03-05 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-04-02,2026-04-02,441522495,0.317,2026-04-02 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-04-30,2026-04-30,453912579,0.317,2026-04-30 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-06-11,2026-06-11,453929413,0.317,2026-06-11 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-06-25,2026-06-25,468260135,0.317,2026-06-25 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-07-09,2026-07-09,474745698,0.317,2026-07-09 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-07-23,2026-07-23,477661990,0.317,2026-07-23 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-08-06,2026-08-06,482412925,0.317,2026-08-06 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-08-20,2026-08-20,482419390,0.317,2026-08-20 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-09-03,2026-09-03,482424243,0.317,2026-09-03 TSMG Agenda and Minutes,terminology-services-management-group
+TSMG Weekly Main Call (for Terminology Services Management Group (TSMG)),86158,2026-09-17,2026-09-17,493127930,0.317,2026-09-17 TSMG Agenda and Minutes,terminology-services-management-group

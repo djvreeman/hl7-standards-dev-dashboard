@@ -1,0 +1,11 @@
+{
+  "attendees": [
+    {
+      "name": "Heather Grain",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    }
+  ],
+  "confidence": 1
+}

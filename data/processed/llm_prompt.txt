@@ -1,7 +1,7 @@
 # HL7 International Financial Analysis Request
 
 ## Organization Context
-HL7 International is a non-profit organization focused on healthcare interoperability standards. 
+HL7 International is a non-profit organization focused on healthcare interoperability standards.
 
 ### Key Organizational Changes:
 - **April 2013**: **MAJOR BUSINESS MODEL CHANGE** - HL7 decided to make its standards, domain analysis models, profiles and implementation guides available at no cost to all. Previously, access to these standards required being an HL7 member. This date marks a substantial change in the HL7 business model and significantly impacts revenue analysis.
@@ -15,206 +15,156 @@ Please analyze the following financial data and provide a structured assessment 
 1. **Critical Financial Concerns** - Issues that need attention
 2. **Positive Developments** - Areas showing improvement or strength
 
-## Financial Data (2014-2024)
+## Financial Data
+## Financial Data (2019-2024)
 
 ### Year-over-Year Summary
 
-**2014:**
-- Total Revenue: $5,044,024
-- Total Expenses: $5,005,838
-- Net Income: $38,186
-- Net Assets: $3,978,658
-- Employees: 2
-- Program Service Revenue: $5,031,103
-  - Membership Dues: $2,939,437
-  - Meetings & Conferences: $842,285
-  - Education & Certification: $85,714
-  - Project Management Fees: $0
-  - Other Program Services: $1,163,667
-- Contributions & Grants: $0
-- Investment Income: $9,959
-- Salaries & Compensation: $512,281
-- Other Expenses: $4,493,557
-- Management Services: $1,882,545
-
-**2015:**
-- Total Revenue: $5,731,069
-- Total Expenses: $5,171,605
-- Net Income: $559,464
-- Net Assets: $4,373,044
-- Employees: 0
-- Program Service Revenue: $5,638,255
-  - Membership Dues: $2,974,444
-  - Meetings & Conferences: $831,170
-  - Education & Certification: $1,060,812
-  - Project Management Fees: $0
-  - Other Program Services: $771,829
-- Contributions & Grants: $0
-- Investment Income: $72,050
-- Salaries & Compensation: $515,500
-- Other Expenses: $4,656,105
-- Management Services: $1,944,627
-
-**2016:**
-- Total Revenue: $5,536,231
-- Total Expenses: $5,584,446
-- Net Income: $-48,215
-- Net Assets: $4,486,673
-- Employees: 0
-- Program Service Revenue: $5,331,953
-  - Membership Dues: $3,008,969
-  - Meetings & Conferences: $1,184,017
-  - Education & Certification: $543,577
-  - Project Management Fees: $0
-  - Other Program Services: $595,390
-- Contributions & Grants: $0
-- Investment Income: $45,291
-- Salaries & Compensation: $450,956
-- Other Expenses: $5,133,240
-- Management Services: $1,971,965
-
-**2017:**
-- Total Revenue: $5,819,795
-- Total Expenses: $5,875,848
-- Net Income: $-56,053
-- Net Assets: $4,787,789
-- Employees: 0
-- Program Service Revenue: $5,484,173
-  - Membership Dues: $2,893,273
-  - Meetings & Conferences: $1,124,816
-  - Education & Certification: $582,405
-  - Project Management Fees: $0
-  - Other Program Services: $883,679
-- Contributions & Grants: $0
-- Investment Income: $106,839
-- Salaries & Compensation: $656,970
-- Other Expenses: $5,218,878
-- Management Services: $1,338,199
-
-**2018:**
-- Total Revenue: $8,771,301
-- Total Expenses: $7,813,787
-- Net Income: $957,514
-- Net Assets: $5,270,017
-- Employees: 0
-- Program Service Revenue: $8,474,532
-  - Membership Dues: $2,979,237
-  - Meetings & Conferences: $1,325,535
-  - Education & Certification: $1,379,267
-  - Project Management Fees: $0
-  - Other Program Services: $2,790,493
-- Contributions & Grants: $0
-- Investment Income: $170,097
-- Salaries & Compensation: $811,103
-- Other Expenses: $7,002,684
-- Management Services: $2,040,037
-
 **2019:**
-- Total Revenue: $9,382,013
-- Total Expenses: $7,863,893
-- Net Income: $1,518,120
+- Total Revenue: $9,935,064
+- Total Expenses: $7,820,815
+- Net Income: $2,114,249
 - Net Assets: $6,561,893
 - Employees: 0
 - Program Service Revenue: $7,387,086
-  - Membership Dues: $3,247,705
+  - Membership Dues (Total): $3,247,705
+    - Membership Dues - Organizational: $2,983,610
+    - Membership Dues - Individuals & Affiliates: $264,095
   - Meetings & Conferences: $2,698,811
   - Education & Certification: $1,099,741
   - Project Management Fees: $340,829
-  - Other Program Services: $0
-- Contributions & Grants: $1,517,454
-- Investment Income: $196,073
-- Salaries & Compensation: $855,648
-- Other Expenses: $7,008,245
-- Management Services: $2,220,522
+- Federal Grants and Contracts: $1,517,454
+- Investment Income: $749,124
+- Other Revenue: $281,400
+- Program Services Expenses: $5,271,577
+  - Membership, Meetings & Education: $2,518,905
+  - Standards Development, PMO & Tooling: $507,985
+  - Federal Grant Projects: $2,244,687
+- Supporting Services Expenses: $2,549,238
+  - Management & General: $2,549,238
+  - Membership Development: $0
 
 **2020:**
-- Total Revenue: $7,802,573
-- Total Expenses: $6,672,806
-- Net Income: $1,129,767
+- Total Revenue: $7,982,167
+- Total Expenses: $6,629,396
+- Net Income: $1,352,771
 - Net Assets: $7,850,745
 - Employees: 0
 - Program Service Revenue: $5,896,019
-  - Membership Dues: $3,327,479
+  - Membership Dues (Total): $3,327,479
+    - Membership Dues - Organizational: $3,048,015
+    - Membership Dues - Individuals & Affiliates: $279,464
   - Meetings & Conferences: $1,073,913
   - Education & Certification: $1,258,412
   - Project Management Fees: $236,215
-  - Other Program Services: $0
-- Contributions & Grants: $1,589,790
-- Investment Income: $65,365
-- Salaries & Compensation: $821,406
-- Other Expenses: $5,851,400
-- Management Services: $2,381,085
+- Federal Grants and Contracts: $1,564,790
+- Investment Income: $269,959
+- Other Revenue: $251,399
+- Program Services Expenses: $4,240,944
+  - Membership, Meetings & Education: $1,913,396
+  - Standards Development, PMO & Tooling: $481,610
+  - Federal Grant Projects: $1,845,938
+- Supporting Services Expenses: $2,388,452
+  - Management & General: $2,388,452
+  - Membership Development: $0
 
 **2021:**
-- Total Revenue: $9,574,871
-- Total Expenses: $7,498,758
-- Net Income: $2,076,113
+- Total Revenue: $10,237,243
+- Total Expenses: $7,428,892
+- Net Income: $2,808,351
 - Net Assets: $10,659,615
 - Employees: 0
-- Program Service Revenue: $6,735,197
-  - Membership Dues: $3,545,105
+- Program Service Revenue: $6,635,197
+  - Membership Dues (Total): $3,445,105
+    - Membership Dues - Organizational: $3,152,467
+    - Membership Dues - Individuals & Affiliates: $292,638
   - Meetings & Conferences: $1,375,530
   - Education & Certification: $1,529,532
   - Project Management Fees: $285,030
-  - Other Program Services: $0
-- Contributions & Grants: $2,371,760
-- Investment Income: $237,831
-- Salaries & Compensation: $850,664
-- Other Expenses: $6,648,094
-- Management Services: $2,555,120
+- Federal Grants and Contracts: $2,371,760
+- Investment Income: $900,722
+- Other Revenue: $230,083
+- Net Assets Released from Restrictions: $99,481
+- Program Services Expenses: $4,687,892
+  - Membership, Meetings & Education: $2,007,605
+  - Standards Development, PMO & Tooling: $594,659
+  - Federal Grant Projects: $2,085,628
+- Supporting Services Expenses: $2,741,000
+  - Management & General: $2,741,000
+  - Membership Development: $0
 
 **2022:**
-- Total Revenue: $10,218,106
-- Total Expenses: $9,487,523
-- Net Income: $730,583
+- Total Revenue: $9,368,305
+- Total Expenses: $9,409,460
+- Net Income: $-41,155
 - Net Assets: $10,618,460
-- Employees: 2
+- Employees: 0
 - Program Service Revenue: $7,462,488
-  - Membership Dues: $3,578,197
+  - Membership Dues (Total): $3,578,197
+    - Membership Dues - Organizational: $3,303,927
+    - Membership Dues - Individuals & Affiliates: $274,270
   - Meetings & Conferences: $1,916,903
   - Education & Certification: $1,573,888
   - Project Management Fees: $393,500
-  - Other Program Services: $0
-- Contributions & Grants: $2,521,017
-- Investment Income: $92,093
-- Salaries & Compensation: $1,197,161
-- Other Expenses: $8,290,362
-- Management Services: $2,686,306
+- Federal Grants and Contracts: $2,520,794
+- Investment Income: $-757,708
+- Other Revenue: $142,731
+- Program Services Expenses: $6,082,689
+  - Membership, Meetings & Education: $3,059,982
+  - Standards Development, PMO & Tooling: $719,361
+  - Federal Grant Projects: $2,303,346
+- Supporting Services Expenses: $3,326,771
+  - Management & General: $3,326,771
+  - Membership Development: $0
 
 **2023:**
-- Total Revenue: $9,748,974
-- Total Expenses: $12,209,584
-- Net Income: $-2,460,610
-- Net Assets: $9,329,880
-- Employees: 3
+- Total Revenue: $10,863,933
+- Total Expenses: $12,126,994
+- Net Income: $-1,263,061
+- Net Assets: $10,618,460
+- Employees: 0
 - Program Service Revenue: $6,487,718
-  - Membership Dues: $3,000,923
+  - Membership Dues (Total): $3,000,923
+    - Membership Dues - Organizational: $2,819,114
+    - Membership Dues - Individuals & Affiliates: $181,809
   - Meetings & Conferences: $1,689,359
   - Education & Certification: $1,367,615
   - Project Management Fees: $429,821
-  - Other Program Services: $0
-- Contributions & Grants: $2,798,223
-- Investment Income: $280,250
-- Salaries & Compensation: $1,748,486
-- Other Expenses: $10,461,098
-- Management Services: $3,739,545
+- Federal Grants and Contracts: $2,798,223
+- Investment Income: $1,369,690
+- Other Revenue: $182,783
+- Net Assets Released from Restrictions: $25,519
+- Program Services Expenses: $7,739,734
+  - Membership, Meetings & Education: $3,969,340
+  - Standards Development, PMO & Tooling: $919,318
+  - Federal Grant Projects: $2,851,076
+- Supporting Services Expenses: $4,387,260
+  - Management & General: $4,361,010
+  - Membership Development: $26,250
 
 **2024:**
-- Total Revenue: $10,485,763
-- Total Expenses: $11,935,114
-- Net Income: $-1,449,351
+- Total Revenue: $10,856,214
+- Total Expenses: $11,841,033
+- Net Income: $-984,819
 - Net Assets: $8,345,061
-- Employees: 19
+- Employees: 0
 - Program Service Revenue: $6,634,380
-  - Membership Dues: $3,065,031
-  - Meetings & Conferences: $1,888,048
+  - Membership Dues (Total): $3,065,031
+    - Membership Dues - Organizational: $2,809,755
+    - Membership Dues - Individuals & Affiliates: $255,276
+  - Meetings & Conferences: $1,996,248
   - Education & Certification: $1,223,801
   - Project Management Fees: $349,300
-  - Other Program Services: $0
-- Contributions & Grants: $2,960,019
-- Investment Income: $623,483
-- Salaries & Compensation: $4,405,676
-- Other Expenses: $7,529,438
+- Federal Grants and Contracts: $2,959,899
+- Investment Income: $993,934
+- Other Revenue: $268,001
+- Program Services Expenses: $6,347,491
+  - Membership, Meetings & Education: $2,835,935
+  - Standards Development, PMO & Tooling: $840,075
+  - Federal Grant Projects: $2,671,481
+- Supporting Services Expenses: $5,493,542
+  - Management & General: $4,913,343
+  - Membership Development: $580,199
 
 
 ## Key Context for Analysis
@@ -239,23 +189,23 @@ Please analyze the following financial data and provide a structured assessment 
 - **Cost Attribution**: While AMG acquisition is a significant factor, increased operating expenses also reflect strategic investments in financial management, HR services, and other professional services to support organizational growth
 
 ### Revenue Streams Analysis
-- **Program Services** (primary revenue): Membership dues, meetings, education, project management
-- **Contributions & Grants**: Primarily government funding
+- **Program Services Revenue** (primary revenue): Membership dues (with breakdown by Organizational vs Individuals & Affiliates), meetings, education, project management, other program services
+- **Federal Grants and Contracts**: Government funding
 - **Investment Income**: Market-dependent returns
 - **Other Revenue**: Miscellaneous sources
+- **Net Assets Released from Restrictions**: Assets released from donor restrictions
 
-### Expense Categories
-- **Salaries & Compensation**: Regular employee costs (includes former AMG staff in 2024)
-- **Officers, Directors, Trustees, Key Employees & Highest Compensated Employees**: Executive and key personnel compensation (includes expanded roles post-AMG acquisition)
-- **Professional Services**: External consulting and contractor fees (includes financial management services, HR services, and other professional contractors)
-- **Land, Building & Equipment**: Capital and equipment costs
-- **Other Operating Expenses**: Remaining operational costs, facilities, etc.
-- **Management Services**: Pre-2024 external AMG services (transitioned to internal salaries in 2024)
+### Expense Categories (New Structure)
+- **Program Services Expenses**:
+  - Membership, Meetings & Education
+  - Standards Development, PMO & Tooling
+  - Federal Grant Projects
+- **Supporting Services Expenses**:
+  - Management & General
+  - Membership Development
 
-### Contractor Compensation Reporting
-- **High-Value Contractors**: Services from contractors receiving >$100,000 are reported in the "Total number of independent contractors who received more than $100,000 of compensation from the organization = 23" category
-- **Includes**: Financial management services (CFO/controller, 1.5 FTE accountants), HR services (Lemma Consulting), and other professional services
-- **Cost Attribution**: These represent strategic investments in organizational capacity, not just AMG acquisition-related costs
+### Functional Expenses
+Expenses are also tracked by functional category (e.g., Salaries and wages, Employee benefits, Professional fees, etc.) with breakdowns showing how much is allocated to Program Services vs Supporting Services.
 
 ## 2025+ HL7 Strategic Vision: Revenue Diversification Strategies
 
@@ -288,8 +238,8 @@ By focusing on these diversification strategies, HL7 intends to:
 Please provide insights on:
 
 1. **Financial Health Trends**: Multi-year patterns in revenue, expenses, and net income, with special attention to the impact of the April 2013 business model change
-2. **Revenue Diversification**: Stability and growth of different revenue streams, with specific attention to HL7's strategic goals for reducing reliance on membership dues and how the 2013 standards access change affected this
-3. **Expense Management**: Efficiency and cost control measures, including detailed analysis of major expense categories and the multiple factors driving cost increases
+2. **Revenue Diversification**: Stability and growth of different revenue streams, with specific attention to HL7's strategic goals for reducing reliance on membership dues and how the 2013 standards access change affected this. Include analysis of membership dues breakdown (Organizational vs Individuals & Affiliates) and Net Assets Released from Restrictions.
+3. **Expense Management**: Efficiency and cost control measures, including detailed analysis of Program Services Expenses vs Supporting Services Expenses, and how expenses are allocated across functional categories
 4. **Compensation Analysis**: Trends in executive and key personnel compensation, including the impact of the AMG acquisition on leadership structure and compensation levels, as well as strategic investments in financial management and HR services
 5. **Asset Management**: Net asset trends and financial stability
 6. **Business Model Evolution**: How the 2013 change to free standards access affected membership value proposition and revenue development over time

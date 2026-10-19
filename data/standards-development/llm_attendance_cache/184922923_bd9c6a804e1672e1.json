@@ -1,0 +1,83 @@
+{
+  "attendees": [
+    {
+      "name": "Nathan Botts",
+      "organization": "Westat",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave DeBronkhart",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bryant Karras, MD",
+      "organization": "Washington DOH",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alexander Nictiz",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bill Lober",
+      "organization": "UW",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jan Oldenburg",
+      "organization": "Personal Health Consulting",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alison Kemp",
+      "organization": "ONC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sandy Vance",
+      "organization": "CounterPoint",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Hill",
+      "organization": "MITRE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jessica Skopac",
+      "organization": "MITRE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Padula",
+      "organization": "CHOP",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "James Cummings",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abigail Watson",
+      "organization": "MITRE",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

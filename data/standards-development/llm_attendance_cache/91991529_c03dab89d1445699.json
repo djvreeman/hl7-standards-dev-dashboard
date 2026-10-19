@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Erin Holt Coyne",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Craig Newman",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

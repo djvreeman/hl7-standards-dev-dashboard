@@ -1,0 +1,21 @@
+{
+  "description": "Zotero tags in group 5872416 that are topical/regional labels, not countries. All other tags on items are treated as country names for the national-adoption map.",
+  "tags": [
+    "CDA R2",
+    "CDA®",
+    "Europe and Central Asia",
+    "FHIR",
+    "FHIR IG",
+    "FHIR National Core",
+    "HL7",
+    "Initiative",
+    "Policy",
+    "Regulation",
+    "Technical Framework",
+    "clinical quality language",
+    "health level 7",
+    "health level seven",
+    "hl7.org",
+    "structured product labeling"
+  ]
+}

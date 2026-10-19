@@ -1,0 +1,59 @@
+{
+  "attendees": [
+    {
+      "name": "Christol",
+      "organization": "US Realm",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Bob Bowman",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mark Roberts",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Amol Vyas",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Corey Spears",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Chase",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rebecca F",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Loyd Mckenzie",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Russ Ott",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

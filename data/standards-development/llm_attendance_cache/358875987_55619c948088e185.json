@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Mike Nusbaum",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Aaron Nusstein",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

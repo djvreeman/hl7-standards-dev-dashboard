@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en" class="wa-theme-default wa-palette-default wa-brand-red wa-neutral-gray wa-success-green wa-warning-yellow wa-danger-orange">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HL7 Work Group Health History</title>
+
+    <link rel="stylesheet" href="https://cdn.webawesome.com/css/webawesome.min.css">
+    <script type="module" src="https://cdn.webawesome.com/js/webawesome.min.js"></script>
+    <script src="https://kit.fontawesome.com/56329dcbf7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/fonts.css">
+    <link rel="stylesheet" href="/static/css/dashboard.css?v=20261008b">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /*
+         * Page color semantics (HL7 palette only):
+         *   Green  #16a34a / #0f8e48  — healthy / pass
+         *   Yellow #ca8a04            — caution band + gold star (not volume)
+         *   Red    #dc2626            — concern / fail / rising load (Δ+)
+         *   Blue   #5f9baf            — volume intensity (less → more) on count matrices
+         *   Gray   #747679 / #6b7280  — absent, sunset, flat/cooling Δ
+         */
+        .legacy-banner {
+            background: rgba(234, 88, 12, 0.08);   /* --wa-danger */
+            border: 1px solid rgba(234, 88, 12, 0.35);
+            border-left: 4px solid #ea580c;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+            color: #ea580c;
+            line-height: 1.45;
+        }
+        .legacy-banner strong { color: #ea580c; }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .summary-card {
+            background: #fff;
+            border: 1px solid var(--border-color, #e2e8f0);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            border-top: 3px solid #dc2626;
+        }
+        .summary-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        .summary-label {
+            margin-top: 0.35rem;
+            font-size: 0.8rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .panel {
+            background: #fff;
+            border: 1px solid var(--border-color, #e2e8f0);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .panel-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 0 0 0.35rem;
+        }
+        .panel-subtitle {
+            color: #6b7280;
+            font-size: 0.925rem;
+            margin: 0 0 1rem;
+        }
+
+        .controls-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1rem;
+            align-items: end;
+            margin-bottom: 1rem;
+        }
+        .control-group label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #6b7280;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+        .control-group select {
+            min-width: 14rem;
+            padding: 0.45rem 0.65rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background: #fff;
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1.25rem;
+            margin-bottom: 0.85rem;
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+        .legend-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .swatch {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 3px;
+            border: 1px solid rgba(0,0,0,0.08);
+            display: inline-block;
+        }
+        .band-green { background: rgba(22, 163, 74, 0.28); }     /* --wa-success */
+        .band-yellow { background: rgba(202, 138, 4, 0.3); }    /* --hl7-yellow-dk */
+        .band-red { background: rgba(220, 38, 38, 0.22); }      /* --hl7-red */
+        .band-present { background: rgba(107, 114, 128, 0.18); } /* --wa-neutral */
+        .band-absent { background: rgba(116, 118, 121, 0.12); }  /* --hl7-dark-gray */
+        .band-green.gold-star { box-shadow: inset 0 0 0 2px #ca8a04; font-weight: 700; }
+
+        .chart-wrap {
+            position: relative;
+            height: 280px;
+            margin-top: 0.5rem;
+        }
+        .chart-wrap.tall { height: 320px; }
+        .gold-mark { color: #ca8a04; font-weight: 700; }  /* --hl7-yellow-dk */
+        .source-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            align-items: center;
+            margin: 0.35rem 0 0.85rem;
+            font-size: 0.875rem;
+        }
+        .source-links a {
+            color: #b91c1c;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .source-links a:hover { text-decoration: underline; }
+        .source-links .source-pdfs {
+            color: #6b7280;
+            font-weight: 400;
+        }
+        .source-links .source-pdfs a {
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .heatmap-scroll {
+            overflow-x: auto;
+            overflow-y: visible;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+        }
+        .heatmap-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 0.75rem;
+            min-width: 100%;
+        }
+        .heatmap-table th,
+        .heatmap-table td {
+            padding: 0.4rem 0.4rem;
+            border-bottom: 1px solid #f3f4f6;
+            border-right: 1px solid #f3f4f6;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .heatmap-table th {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 2;
+            font-weight: 600;
+            color: #6b7280;
+            font-size: 0.68rem;
+        }
+        .heatmap-table th.sortable {
+            cursor: pointer;
+            user-select: none;
+        }
+        .heatmap-table th.sortable:hover {
+            color: #dc2626;
+            background: #f9fafb;
+        }
+        .heatmap-table th.sortable.is-sorted {
+            color: #dc2626;
+        }
+        .heatmap-table th.sortable .sort-ind {
+            display: inline-block;
+            margin-left: 0.15rem;
+            font-size: 0.65rem;
+            opacity: 0.35;
+        }
+        .heatmap-table th.sortable.is-sorted .sort-ind {
+            opacity: 1;
+        }
+        .heatmap-table th.wg-col,
+        .heatmap-table td.wg-col {
+            position: sticky;
+            left: 0;
+            background: #fff;
+            z-index: 3;
+            text-align: left;
+            font-weight: 600;
+            color: #1f2937;
+            min-width: 22rem;
+            max-width: none;
+            width: 22rem;
+            white-space: nowrap;
+            border-right: 1px solid #e5e7eb;
+        }
+        .heatmap-table th.wg-col { z-index: 4; }
+        .heatmap-table td.heat-cell {
+            cursor: pointer;
+            min-width: 2.4rem;
+        }
+        .heatmap-table td.heat-cell:hover {
+            outline: 2px solid #dc2626;
+            outline-offset: -2px;
+        }
+        .heatmap-table.count-matrix td.heat-cell {
+            cursor: default;
+        }
+        .heatmap-table.count-matrix td.heat-cell:hover {
+            outline: none;
+        }
+        .heatmap-table tr:hover td.wg-col { background: #f9fafb; }
+        .heatmap-table td.wg-col.is-sunset {
+            color: #747679;
+        }
+        .sunset-mark {
+            display: inline-block;
+            margin-left: 0.35rem;
+            color: #747679;
+            font-weight: 700;
+            font-size: 0.85em;
+            letter-spacing: 0;
+            vertical-align: 0.05em;
+        }
+        .sunset-legend-mark {
+            color: #747679;
+            font-weight: 700;
+            margin-right: 0.15rem;
+        }
+
+        .count-matrix .heat-cell {
+            font-variant-numeric: tabular-nums;
+            font-weight: 600;
+            min-width: 2.6rem;
+        }
+        .count-matrix .heat-cell.is-zero,
+        .count-matrix .heat-cell.is-empty {
+            color: #9ca3af;
+            font-weight: 500;
+            background: #f9fafb;
+        }
+        .count-legend {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            flex-wrap: wrap;
+            margin: 0.35rem 0 0.75rem;
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        .count-legend .ramp {
+            display: inline-flex;
+            height: 0.85rem;
+            width: 7rem;
+            border-radius: 3px;
+            border: 1px solid rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .count-legend .ramp span { flex: 1; }
+        /* Shared volume ramp: --hl7-blue #5f9baf (same for FHIR + ballot matrices) */
+        .count-legend.volume .ramp span:nth-child(1) { background: rgba(95, 155, 175, 0.12); }
+        .count-legend.volume .ramp span:nth-child(2) { background: rgba(95, 155, 175, 0.35); }
+        .count-legend.volume .ramp span:nth-child(3) { background: rgba(95, 155, 175, 0.65); }
+        .count-legend.volume .ramp span:nth-child(4) { background: #5f9baf; }
+
+        /* Composite summary columns (ballot load) — distinct from trimester data */
+        .heatmap-table th.summary-col,
+        .heatmap-table td.summary-col {
+            background: #f3f4f6;
+            font-weight: 700;
+            min-width: 3.4rem;
+            border-bottom-color: #e5e7eb;
+            border-right-color: #d1d5db;
+        }
+        .heatmap-table th.summary-col {
+            color: #374151;
+            font-size: 0.65rem;
+            letter-spacing: 0.01em;
+        }
+        .heatmap-table th.summary-col.sortable:hover,
+        .heatmap-table th.summary-col.sortable.is-sorted {
+            color: #dc2626;
+            background: #e5e7eb;
+        }
+        .heatmap-table td.summary-col {
+            color: #1f2937;
+            font-variant-numeric: tabular-nums;
+        }
+        .heatmap-table th.summary-col.summary-edge,
+        .heatmap-table td.summary-col.summary-edge {
+            border-right: 3px solid #747679;
+        }
+        .heatmap-table td.summary-col.delta-up { color: #dc2626; }      /* rising load → concern/attention */
+        .heatmap-table td.summary-col.delta-down { color: #747679; }    /* cooling → neutral gray (not “healthy”) */
+        .heatmap-table td.summary-col.delta-flat { color: #6b7280; font-weight: 600; }
+        .heatmap-table td.summary-col.is-zero {
+            color: #9ca3af;
+            font-weight: 600;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .data-table th,
+        .data-table td {
+            text-align: left;
+            padding: 0.65rem 0.75rem;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+        .data-table th {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #6b7280;
+            font-weight: 600;
+        }
+        .data-table th.sortable {
+            cursor: pointer;
+            user-select: none;
+        }
+        .data-table th.sortable:hover,
+        .data-table th.sortable.is-sorted {
+            color: #dc2626;
+        }
+        .data-table th.sortable .sort-ind {
+            display: inline-block;
+            margin-left: 0.15rem;
+            font-size: 0.65rem;
+            opacity: 0.35;
+        }
+        .data-table th.sortable.is-sorted .sort-ind {
+            opacity: 1;
+        }
+        .data-table th.num { text-align: right; }
+        .data-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+        .data-table tr.clickable { cursor: pointer; }
+        .data-table tr.clickable:hover { background: #f9fafb; }
+        .data-table tr.is-sunset td:first-child { color: #747679; }
+
+        .band-pill {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            padding: 0.15rem 0.45rem;
+            border-radius: 999px;
+        }
+        .pill-green {
+            background: rgba(22, 163, 74, 0.18);
+            color: #0f8e48;                 /* --hl7-green */
+        }
+        .pill-yellow {
+            background: rgba(202, 138, 4, 0.2);
+            color: #ca8a04;                 /* --hl7-yellow-dk */
+        }
+        .pill-red {
+            background: rgba(220, 38, 38, 0.16);
+            color: #dc2626;                 /* --hl7-red */
+        }
+        .pill-present {
+            background: rgba(107, 114, 128, 0.16);
+            color: #6b7280;                 /* --wa-neutral */
+        }
+        .pill-absent {
+            background: rgba(116, 118, 121, 0.12);
+            color: #747679;                 /* --hl7-dark-gray */
+        }
+
+        .wg-metrics-section {
+            margin-top: 1.75rem;
+            padding: 1.25rem 1.35rem 1.35rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            background: #fafbfc;
+        }
+        .wg-metrics-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            justify-content: space-between;
+            gap: 0.75rem 1rem;
+            margin-bottom: 0.85rem;
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+            gap: 0.65rem;
+            margin-top: 0;
+        }
+        .metric-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 0.65rem 0.75rem;
+            background: #fafafa;
+        }
+        .metric-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: #6b7280;
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+        }
+        .metric-value {
+            font-size: 0.95rem;
+            color: #111827;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .loading, .error {
+            padding: 1.5rem;
+            text-align: center;
+            color: #6b7280;
+        }
+        .error { color: #b91c1c; }
+
+        @media (max-width: 1100px) {
+            .summary-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
+        @media (max-width: 900px) {
+            .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 640px) {
+            .summary-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="/static/hl7-international-logo.png" alt="HL7 International" class="logo-image">
+            </div>
+            <div class="header-title">
+                <h1 class="dashboard-title">{{ dashboard_title or "Work Group Health History" }}</h1>
+                <p class="dashboard-subtitle">Final Work Group Health scorecards across cycles</p>
+            </div>
+        </div>
+        <div class="navigation-container">
+            <div class="navigation" id="steward-navigation"></div>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="legacy-banner" id="legacyBanner">
+            <strong>Legacy Final scorecard archive.</strong>
+            This page shows published Final Work Group Health PDF scorecards only.
+            Interim reports are excluded. Each Final is labeled by the
+            <em>preceding</em> HL7 trimester it reports (e.g. Sep Final → T2).
+            The score is the newest T-column only (PDF legend: 0–3 green, 4–7 yellow, 8+ red).
+            A <span class="gold-mark">gold star</span> is the star icon printed on the Final PDF
+            (not the same as zero infractions).
+        </div>
+
+        <div class="summary-grid" id="summaryGrid">
+            <div class="summary-card"><div class="summary-value" id="statCycles">—</div><div class="summary-label">Final cycles</div></div>
+            <div class="summary-card"><div class="summary-value" id="statWgs">—</div><div class="summary-label">Work groups seen</div></div>
+            <div class="summary-card"><div class="summary-value" id="statLatest">—</div><div class="summary-label">Latest Final</div></div>
+            <div class="summary-card"><div class="summary-value" id="statLatestCount">—</div><div class="summary-label">WGs on latest Final</div></div>
+            <div class="summary-card"><div class="summary-value" id="statGold">—</div><div class="summary-label">Gold stars (latest)</div></div>
+        </div>
+
+        <div class="panel">
+            <h2 class="panel-title">Gold stars over time</h2>
+            <p class="panel-subtitle">Count of work groups with a gold-star icon on each Final PDF.</p>
+            <div class="chart-wrap">
+                <canvas id="goldStarChart"></canvas>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2 class="panel-title">Portfolio health bands</h2>
+            <p class="panel-subtitle">Same bands as the heatmap and PDF legend: Green (0–3), Yellow (4–7), and Red (8+) on each Final’s newest T-column. The line is mean infractions among groups present that cycle.</p>
+            <div class="chart-wrap tall">
+                <canvas id="portfolioBandChart"></canvas>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2 class="panel-title">Portfolio heatmap</h2>
+            <p class="panel-subtitle">Rows are work groups; columns are Final cycles. Click a cell to open that work group’s history. ★ marks a gold-star icon from the Final PDF.</p>
+            <div class="legend">
+                <span class="legend-item"><span class="swatch band-green"></span> Green (0–3)</span>
+                <span class="legend-item"><span class="gold-mark">★</span> Gold star (PDF icon)</span>
+                <span class="legend-item"><span class="swatch band-yellow"></span> Yellow (4–7)</span>
+                <span class="legend-item"><span class="swatch band-red"></span> Red (8+)</span>
+                <span class="legend-item"><span class="swatch band-absent"></span> Absent</span>
+                <span class="legend-item"><span class="sunset-legend-mark" aria-hidden="true">⊘</span> Sunset / retired</span>
+            </div>
+            <div class="heatmap-scroll" id="heatmapContainer">
+                <div class="loading">Loading heatmap…</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2 class="panel-title">FHIR resources by work group</h2>
+            <p class="panel-subtitle">Base FHIR resources owned by each work group (<code>structuredefinition-wg</code>) across FHIR core versions. Current is the tip of the FHIR core checkout (post-R5 / R6 draft).</p>
+            <div class="count-legend volume">
+                <span>Fewer</span>
+                <span class="ramp" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+                <span>More resources</span>
+                <span id="fhirMatrixTotals"></span>
+                <span class="legend-item" style="margin-left:0.5rem;"><span class="sunset-legend-mark" aria-hidden="true">⊘</span> Sunset / retired</span>
+            </div>
+            <div class="heatmap-scroll" id="fhirOwnershipContainer">
+                <div class="loading">Loading FHIR ownership matrix…</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2 class="panel-title">Specifications balloted by work group</h2>
+            <p class="panel-subtitle">Distinct specifications balloted each trimester, attributed by Jira <code>defaultWorkgroup</code> (SPECS.json). Gray summary columns are composites: <strong>Last 2 yrs</strong> = sum of distinct specs over the latest 6 trimesters; <strong>Δ prior 2 yrs</strong> = that total minus the prior 6 trimesters (rising vs cooling). Affiliate AU pilot specs excluded.</p>
+            <div class="count-legend volume">
+                <span>Fewer</span>
+                <span class="ramp" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+                <span>More specs</span>
+                <span class="legend-item" style="margin-left:0.5rem;"><span class="swatch" style="background:#f3f4f6;border-color:#747679;"></span> Summary (not a trimester)</span>
+                <span class="legend-item"><span style="color:#dc2626;font-weight:700;">+Δ</span> rising · <span style="color:#747679;font-weight:700;">−Δ</span> cooling</span>
+                <span class="legend-item"><span class="sunset-legend-mark" aria-hidden="true">⊘</span> Sunset / retired</span>
+            </div>
+            <div class="heatmap-scroll" id="ballotSpecsContainer">
+                <div class="loading">Loading ballot matrix…</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2 class="panel-title">Cycle detail</h2>
+            <p class="panel-subtitle">All work groups published on the selected Final. Open the Confluence Final reports page (and scorecard PDFs) for the source.</p>
+            <div class="controls-row">
+                <div class="control-group">
+                    <label for="cycleSelect">Final cycle</label>
+                    <select id="cycleSelect"></select>
+                </div>
+            </div>
+            <div class="source-links" id="cycleSourceLinks"></div>
+            <div id="cycleBandSummary" class="legend"></div>
+            <div id="cycleTableContainer"><div class="loading">Loading cycle…</div></div>
+        </div>
+
+        <div class="panel">
+            <h2 class="panel-title">Work group drill-down</h2>
+            <p class="panel-subtitle">One work group across every Final scorecard.</p>
+            <div class="controls-row">
+                <div class="control-group">
+                    <label for="wgSelect">Work group</label>
+                    <select id="wgSelect"></select>
+                </div>
+            </div>
+            <div id="wgHistoryContainer"><div class="loading">Loading work group…</div></div>
+            <div class="wg-metrics-section">
+                <div class="wg-metrics-header">
+                    <div>
+                        <h3 class="panel-title" style="margin:0;font-size:1rem;">Metric cells</h3>
+                        <p class="panel-subtitle" style="margin:0.35rem 0 0;">Raw scorecard columns from one Final for the selected work group.</p>
+                    </div>
+                    <div class="control-group">
+                        <label for="wgCycleSelect">Metric cycle</label>
+                        <select id="wgCycleSelect"></select>
+                    </div>
+                </div>
+                <div id="wgMetricsContainer" class="metric-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let overview = null;
+        let selectedCycle = null;
+        let selectedWg = null;
+        let wgDetail = null;
+        let goldStarChart = null;
+        let portfolioBandChart = null;
+        let wgStatus = null; // { deprecated_keys: [], byKey: {}, byName: {} }
+        // Per-matrix sort: { col: 'wg' | columnIndex, dir: 'asc' | 'desc' }
+        const matrixSort = {
+            health: { col: 'wg', dir: 'asc' },
+            fhir: { col: 'wg', dir: 'asc' },
+            ballot: { col: 'wg', dir: 'asc' },
+        };
+        let fhirMatrixState = null;
+        let ballotMatrixState = null;
+        let cycleDetailData = null;
+        let cycleSort = { col: 'wg', dir: 'asc' };
+        const BAND_SORT_ORDER = { green: 0, yellow: 1, red: 2, present: 3, absent: 4 };
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadStewardNavigation();
+            await loadWorkgroupStatus();
+            await Promise.all([
+                loadOverview(),
+                loadFhirOwnershipMatrix(),
+                loadBallotSpecsMatrix(),
+            ]);
+        });
+
+        async function loadWorkgroupStatus() {
+            try {
+                const response = await fetch('/api/standards-development/workgroup-status');
+                if (!response.ok) throw new Error(await response.text());
+                const data = await response.json();
+                const byKey = {};
+                const byName = {};
+                (data.deprecated || []).forEach(row => {
+                    byKey[row.wg_key] = row;
+                    byName[(row.wg_name || '').toLowerCase()] = row;
+                });
+                wgStatus = {
+                    deprecated_keys: new Set(data.deprecated_keys || []),
+                    byKey,
+                    byName,
+                    meta: data.meta || {},
+                };
+            } catch (error) {
+                console.error(error);
+                wgStatus = { deprecated_keys: new Set(), byKey: {}, byName: {}, meta: {} };
+            }
+        }
+
+        function isSunsetWg(wgKey, wgName) {
+            if (!wgStatus) return false;
+            if (wgKey && wgStatus.deprecated_keys.has(wgKey)) return true;
+            if (wgName && wgStatus.byName[(wgName || '').toLowerCase()]) return true;
+            return false;
+        }
+
+        function formatWgLabel(wgKey, wgName) {
+            const name = escapeHtml(wgName || wgKey || '');
+            if (!isSunsetWg(wgKey, wgName)) return name;
+            const tip = 'Sunset / retired (deprecated in Jira work group list)';
+            return `${name}<span class="sunset-mark" title="${escapeAttr(tip)}" aria-label="Sunset">⊘</span>`;
+        }
+
+        function sdDropdownHtml(navLinkActive) {
+            const currentPath = window.location.pathname;
+            const isInsights = currentPath === '/standards-development-insights';
+            const isHistory = currentPath === '/wg-health-history';
+            const isMeetings = currentPath === '/wg-meeting-participation';
+            return `<div class="nav-dropdown"><a href="/Standards Development" class="nav-link ${navLinkActive}" id="nav-standards-development">Standards Development</a><div class="dropdown-menu"><a href="/standards-development-insights" class="dropdown-item ${isInsights ? 'active' : ''}">Standards Development Insights</a><a href="/wg-health-history" class="dropdown-item ${isHistory ? 'active' : ''}">Work Group Health History</a><a href="/wg-meeting-participation" class="dropdown-item ${isMeetings ? 'active' : ''}">Meeting Participation</a></div></div>`;
+        }
+
+        async function loadStewardNavigation() {
+            try {
+                const response = await fetch('/api/stewards');
+                const stewards = await response.json();
+                const navigationHtml = stewards.map(steward => {
+                    if (steward === 'Finance') {
+                        const currentPath = window.location.pathname;
+                        const isFinancialHealth = currentPath === '/financial-health';
+                        const isGeographic = currentPath === '/financial-geographic';
+                        return `<div class="nav-dropdown"><a href="/Finance" class="nav-link" id="nav-finance">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item ${isFinancialHealth ? 'active' : ''}">Financial Health Trends and Insights</a><a href="/financial-geographic" class="dropdown-item ${isGeographic ? 'active' : ''}">Geographic Insights</a></div></div>`;
+                    }
+                    if (steward === 'Membership') {
+                        const currentPath = window.location.pathname;
+                        const isMembershipHealth = currentPath === '/membership-health';
+                        return `<div class="nav-dropdown"><a href="/Membership" class="nav-link" id="nav-membership">Membership</a><div class="dropdown-menu"><a href="/membership-health" class="dropdown-item ${isMembershipHealth ? 'active' : ''}">Membership Health</a></div></div>`;
+                    }
+                    if (steward === 'Standards Development') {
+                        return sdDropdownHtml('active');
+                    }
+                    const href = (steward === 'HL7 International' || steward === 'HL7') ? '/' : `/${steward}`;
+                    return `<a href="${href}" class="nav-link" id="nav-${steward.toLowerCase().replace(/\s+/g, '-')}">${steward}</a>`;
+                }).join('');
+                document.getElementById('steward-navigation').innerHTML = navigationHtml;
+            } catch (error) {
+                console.error(error);
+                document.getElementById('steward-navigation').innerHTML = `
+                    <a href="/" class="nav-link">HL7 International</a>
+                    <a href="/CSDO" class="nav-link">CSDO</a>
+                    ${sdDropdownHtml('active')}
+                `;
+            }
+        }
+
+        async function loadOverview() {
+            try {
+                const response = await fetch('/api/standards-development/wg-health-history');
+                if (!response.ok) throw new Error(await response.text());
+                overview = await response.json();
+
+                document.getElementById('statCycles').textContent = overview.summary.cycle_count;
+                document.getElementById('statWgs').textContent = overview.summary.workgroup_count;
+                document.getElementById('statLatest').textContent =
+                    overview.summary.latest_cycle_label || shortCycle(overview.summary.latest_cycle) || '—';
+                document.getElementById('statLatestCount').textContent = overview.summary.latest_wg_count;
+                document.getElementById('statGold').textContent = overview.summary.latest_gold_star_count ?? '—';
+
+                renderGoldStarChart();
+                renderPortfolioBandChart();
+                renderHeatmap();
+                populateSelectors();
+
+                selectedCycle = overview.latest_cycle || (overview.cycles[0] && overview.cycles[0].cycle);
+                if (selectedCycle) {
+                    document.getElementById('cycleSelect').value = selectedCycle;
+                    await loadCycle(selectedCycle);
+                }
+
+                const params = new URLSearchParams(window.location.search);
+                const wgParam = params.get('wg');
+                selectedWg = wgParam || (overview.workgroups[0] && overview.workgroups[0].wg_key);
+                if (selectedWg) {
+                    document.getElementById('wgSelect').value = selectedWg;
+                    await loadWorkgroup(selectedWg);
+                }
+            } catch (error) {
+                console.error(error);
+                document.getElementById('heatmapContainer').innerHTML = `<div class="error">Failed to load WG Health history.</div>`;
+            }
+        }
+
+        function renderGoldStarChart() {
+            const timeline = overview.gold_star_timeline || [];
+            const ctx = document.getElementById('goldStarChart');
+            if (!ctx || !timeline.length) return;
+            if (goldStarChart) goldStarChart.destroy();
+            goldStarChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: timeline.map(r => r.label || shortCycle(r.cycle)),
+                    datasets: [
+                        {
+                            label: 'Gold stars (0 infractions)',
+                            data: timeline.map(r => r.gold_star_count),
+                            borderColor: '#ca8a04',
+                            backgroundColor: 'rgba(202, 138, 4, 0.15)',
+                            fill: true,
+                            tension: 0.25,
+                            pointRadius: 3,
+                            pointBackgroundColor: '#ca8a04',
+                        },
+                        {
+                            label: 'Work groups on Final',
+                            data: timeline.map(r => r.wg_count),
+                            borderColor: '#6b7280',
+                            backgroundColor: 'transparent',
+                            borderDash: [4, 4],
+                            tension: 0.25,
+                            pointRadius: 2,
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        tooltip: { mode: 'index', intersect: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { precision: 0 }
+                        }
+                    }
+                }
+            });
+        }
+
+        function buildPortfolioBandSeries() {
+            const heat = overview.heatmap || {};
+            const cycles = heat.cycles || [];
+            const rows = heat.rows || [];
+            const series = {
+                labels: cycles.map(shortCycle),
+                cycles,
+                green: [],
+                yellow: [],
+                red: [],
+                present: [],
+                meanInfractions: [],
+            };
+            cycles.forEach((cycleId, idx) => {
+                let green = 0, yellow = 0, red = 0, present = 0;
+                let infSum = 0, infCount = 0;
+                rows.forEach(row => {
+                    const cell = (row.cells || [])[idx];
+                    if (!cell || cell.health_band === 'absent') return;
+                    const band = cell.health_band || 'present';
+                    if (band === 'green') green += 1;
+                    else if (band === 'yellow') yellow += 1;
+                    else if (band === 'red') red += 1;
+                    else present += 1;
+                    if (cell.total_infractions != null) {
+                        infSum += Number(cell.total_infractions);
+                        infCount += 1;
+                    }
+                });
+                series.green.push(green);
+                series.yellow.push(yellow);
+                series.red.push(red);
+                series.present.push(present);
+                series.meanInfractions.push(infCount ? +(infSum / infCount).toFixed(2) : null);
+            });
+            return series;
+        }
+
+        function renderPortfolioBandChart() {
+            const ctx = document.getElementById('portfolioBandChart');
+            if (!ctx || !overview.heatmap) return;
+            const series = buildPortfolioBandSeries();
+            if (portfolioBandChart) portfolioBandChart.destroy();
+            portfolioBandChart = new Chart(ctx, {
+                data: {
+                    labels: series.labels,
+                    datasets: [
+                        {
+                            type: 'bar',
+                            label: 'Green (0–3)',
+                            data: series.green,
+                            backgroundColor: 'rgba(22, 163, 74, 0.4)',
+                            borderColor: '#16a34a',
+                            borderWidth: 1,
+                            stack: 'bands',
+                            yAxisID: 'y',
+                            order: 2,
+                        },
+                        {
+                            type: 'bar',
+                            label: 'Yellow (4–7)',
+                            data: series.yellow,
+                            backgroundColor: 'rgba(202, 138, 4, 0.4)',
+                            borderColor: '#ca8a04',
+                            borderWidth: 1,
+                            stack: 'bands',
+                            yAxisID: 'y',
+                            order: 2,
+                        },
+                        {
+                            type: 'bar',
+                            label: 'Red (8+)',
+                            data: series.red,
+                            backgroundColor: 'rgba(220, 38, 38, 0.35)',
+                            borderColor: '#dc2626',
+                            borderWidth: 1,
+                            stack: 'bands',
+                            yAxisID: 'y',
+                            order: 2,
+                        },
+                        {
+                            type: 'line',
+                            label: 'Mean infractions',
+                            data: series.meanInfractions,
+                            borderColor: '#1f2937',
+                            backgroundColor: '#1f2937',
+                            borderWidth: 2,
+                            pointRadius: 3,
+                            tension: 0.25,
+                            yAxisID: 'y1',
+                            order: 1,
+                        },
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        tooltip: {
+                            callbacks: {
+                                afterBody(items) {
+                                    const idx = items[0] && items[0].dataIndex;
+                                    if (idx == null) return '';
+                                    const total = (series.green[idx] || 0) + (series.yellow[idx] || 0)
+                                        + (series.red[idx] || 0) + (series.present[idx] || 0);
+                                    return `Present on Final: ${total}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            stacked: true,
+                            ticks: { maxRotation: 45, minRotation: 0, autoSkip: true, maxTicksLimit: 24 }
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            title: { display: true, text: 'Work groups' },
+                            ticks: { precision: 0 }
+                        },
+                        y1: {
+                            position: 'right',
+                            beginAtZero: true,
+                            grid: { drawOnChartArea: false },
+                            title: { display: true, text: 'Mean infractions' },
+                        }
+                    }
+                }
+            });
+        }
+
+        function populateSelectors() {
+            const cycleSelect = document.getElementById('cycleSelect');
+            const wgCycleSelect = document.getElementById('wgCycleSelect');
+            const wgSelect = document.getElementById('wgSelect');
+
+            cycleSelect.innerHTML = overview.cycles.map(c =>
+                `<option value="${c.cycle}">${c.label || shortCycle(c.cycle)} (${c.gold_star_count || 0}★ / ${c.wg_count} WGs)</option>`
+            ).join('');
+            wgCycleSelect.innerHTML = overview.cycles.map(c =>
+                `<option value="${c.cycle}">${c.label || shortCycle(c.cycle)}</option>`
+            ).join('');
+            wgSelect.innerHTML = overview.workgroups.map(w =>
+                `<option value="${w.wg_key}">${escapeHtml(w.wg_name)}${w.gold_star_count ? ` (${w.gold_star_count}★)` : ''}</option>`
+            ).join('');
+
+            cycleSelect.addEventListener('change', async (e) => {
+                selectedCycle = e.target.value;
+                await loadCycle(selectedCycle);
+            });
+            wgSelect.addEventListener('change', async (e) => {
+                selectedWg = e.target.value;
+                const url = new URL(window.location.href);
+                url.searchParams.set('wg', selectedWg);
+                window.history.replaceState({}, '', url);
+                await loadWorkgroup(selectedWg);
+            });
+            wgCycleSelect.addEventListener('change', () => renderWgMetrics());
+        }
+
+        function sortIndicator(sortState, col) {
+            if (sortState.col !== col) return '<span class="sort-ind" aria-hidden="true">↕</span>';
+            return `<span class="sort-ind" aria-hidden="true">${sortState.dir === 'asc' ? '↑' : '↓'}</span>`;
+        }
+
+        function toggleMatrixSort(sortKey, col) {
+            const state = matrixSort[sortKey];
+            if (state.col === col) {
+                state.dir = state.dir === 'asc' ? 'desc' : 'asc';
+            } else {
+                state.col = col;
+                // Value columns default to highest-first; name column A→Z
+                state.dir = col === 'wg' ? 'asc' : 'desc';
+            }
+        }
+
+        function compareNullableNumber(a, b, dir) {
+            const aMissing = a == null;
+            const bMissing = b == null;
+            if (aMissing && bMissing) return 0;
+            if (aMissing) return 1;  // missing always last
+            if (bMissing) return -1;
+            const diff = a - b;
+            return dir === 'asc' ? diff : -diff;
+        }
+
+        function renderHeatmap() {
+            const heat = overview.heatmap;
+            const container = document.getElementById('heatmapContainer');
+            if (!heat || !heat.rows) {
+                container.innerHTML = '<div class="error">No heatmap data.</div>';
+                return;
+            }
+            const sort = matrixSort.health;
+            const rows = [...heat.rows].sort((a, b) => {
+                if (sort.col === 'wg') {
+                    const cmp = (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' });
+                    return sort.dir === 'asc' ? cmp : -cmp;
+                }
+                const ai = typeof sort.col === 'number' ? a.cells[sort.col] : null;
+                const bi = typeof sort.col === 'number' ? b.cells[sort.col] : null;
+                const av = ai && ai.health_band !== 'absent' ? ai.total_infractions : null;
+                const bv = bi && bi.health_band !== 'absent' ? bi.total_infractions : null;
+                const num = compareNullableNumber(av, bv, sort.dir);
+                if (num !== 0) return num;
+                return (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' });
+            });
+
+            const head = heat.cycles.map((c, i) => {
+                const active = sort.col === i ? ' is-sorted' : '';
+                return `<th class="sortable${active}" data-sort-col="${i}" title="Sort by ${escapeAttr(shortCycle(c))} (${escapeAttr(c)})">${shortCycle(c)}${sortIndicator(sort, i)}</th>`;
+            }).join('');
+            const wgActive = sort.col === 'wg' ? ' is-sorted' : '';
+            const body = rows.map(row => {
+                const cells = row.cells.map(cell => {
+                    const band = cell.health_band || 'absent';
+                    const gold = !!cell.gold_star;
+                    let label = '';
+                    if (band === 'absent') label = '';
+                    else if (gold) label = '★';
+                    else if (cell.total_infractions == null) label = '·';
+                    else label = String(cell.total_infractions);
+                    const title = `${row.wg_name} · ${shortCycle(cell.cycle)} (${cell.cycle}): ${gold ? 'gold star' : band}${cell.total_infractions != null ? ` (${cell.total_infractions})` : ''}`;
+                    return `<td class="heat-cell band-${band}${gold ? ' gold-star' : ''}" title="${escapeAttr(title)}" data-wg="${escapeAttr(row.wg_key)}" data-cycle="${escapeAttr(cell.cycle)}">${label}</td>`;
+                }).join('');
+                const sunset = isSunsetWg(row.wg_key, row.wg_name);
+                const wgTitle = sunset
+                    ? `${row.wg_name} — sunset / retired`
+                    : row.wg_name;
+                return `<tr><td class="wg-col${sunset ? ' is-sunset' : ''}" title="${escapeAttr(wgTitle)}">${formatWgLabel(row.wg_key, row.wg_name)}</td>${cells}</tr>`;
+            }).join('');
+
+            container.innerHTML = `
+                <table class="heatmap-table">
+                    <thead><tr>
+                        <th class="wg-col sortable${wgActive}" data-sort-col="wg" title="Sort by work group">Work group${sortIndicator(sort, 'wg')}</th>
+                        ${head}
+                    </tr></thead>
+                    <tbody>${body}</tbody>
+                </table>
+            `;
+
+            container.querySelectorAll('th.sortable').forEach(th => {
+                th.addEventListener('click', () => {
+                    const raw = th.getAttribute('data-sort-col');
+                    const col = raw === 'wg' ? 'wg' : Number(raw);
+                    toggleMatrixSort('health', col);
+                    renderHeatmap();
+                });
+            });
+
+            container.querySelectorAll('td.heat-cell').forEach(td => {
+                td.addEventListener('click', async () => {
+                    const wg = td.getAttribute('data-wg');
+                    const cycle = td.getAttribute('data-cycle');
+                    selectedWg = wg;
+                    document.getElementById('wgSelect').value = wg;
+                    if (cycle && cycle !== 'absent') {
+                        document.getElementById('wgCycleSelect').value = cycle;
+                        document.getElementById('cycleSelect').value = cycle;
+                        selectedCycle = cycle;
+                        await loadCycle(cycle);
+                    }
+                    const url = new URL(window.location.href);
+                    url.searchParams.set('wg', wg);
+                    window.history.replaceState({}, '', url);
+                    await loadWorkgroup(wg);
+                    document.getElementById('wgHistoryContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+        }
+
+        async function loadFhirOwnershipMatrix() {
+            const el = document.getElementById('fhirOwnershipContainer');
+            try {
+                const response = await fetch('/api/standards-development/fhir-resource-ownership-matrix');
+                if (!response.ok) throw new Error(await response.text());
+                fhirMatrixState = {
+                    data: await response.json(),
+                    opts: {
+                        sortKey: 'fhir',
+                        palette: 'volume',
+                        columnKey: 'versions',
+                        columnLabel: (v) => v,
+                        cellCount: (cell) => cell.count,
+                        cellTitle: (row, col, count) =>
+                            `${row.wg_name} · ${col}: ${count == null ? 'none' : count + ' resource' + (count === 1 ? '' : 's')}`,
+                        totalsId: 'fhirMatrixTotals',
+                        totalsFrom: (data) => {
+                            const t = data.version_totals || {};
+                            return Object.keys(t).map(k => `${k}: ${t[k]}`).join(' · ');
+                        },
+                    },
+                };
+                renderCountMatrix(el, fhirMatrixState.data, fhirMatrixState.opts);
+            } catch (error) {
+                console.error(error);
+                el.innerHTML = '<div class="error">Failed to load FHIR resource ownership matrix.</div>';
+            }
+        }
+
+        function enrichBallotComposites(data) {
+            const trimesters = data.trimesters || [];
+            const recent = trimesters.slice(-6);
+            const prior = trimesters.length >= 12 ? trimesters.slice(-12, -6) : trimesters.slice(0, -6);
+            const recentSet = new Set(recent);
+            const priorSet = new Set(prior);
+            data.meta = data.meta || {};
+            data.meta.composite_window = {
+                last_2y_trimesters: recent,
+                prior_2y_trimesters: prior,
+            };
+            (data.rows || []).forEach(row => {
+                let last2y = 0;
+                let prior2y = 0;
+                (row.cells || []).forEach(cell => {
+                    const n = cell.count || 0;
+                    if (recentSet.has(cell.trimester)) last2y += n;
+                    if (priorSet.has(cell.trimester)) prior2y += n;
+                });
+                row.summary = {
+                    last2y,
+                    prior2y,
+                    delta: last2y - prior2y,
+                };
+            });
+            return data;
+        }
+
+        async function loadBallotSpecsMatrix() {
+            const el = document.getElementById('ballotSpecsContainer');
+            try {
+                const response = await fetch('/api/standards-development/wg-ballot-specs-matrix');
+                if (!response.ok) throw new Error(await response.text());
+                const data = enrichBallotComposites(await response.json());
+                const recent = (data.meta.composite_window || {}).last_2y_trimesters || [];
+                const prior = (data.meta.composite_window || {}).prior_2y_trimesters || [];
+                ballotMatrixState = {
+                    data,
+                    opts: {
+                        sortKey: 'ballot',
+                        palette: 'volume',
+                        columnKey: 'trimesters',
+                        columnLabels: data.trimester_labels,
+                        columnLabel: (t, i, labels) => (labels && labels[i]) || t,
+                        cellCount: (cell) => cell.count,
+                        cellTitle: (row, col, count, cell) => {
+                            const label = cell.label || col;
+                            if (count == null) return `${row.wg_name} · ${label}: none`;
+                            return `${row.wg_name} · ${label}: ${count} spec${count === 1 ? '' : 's'} balloted`;
+                        },
+                        summaryColumns: [
+                            {
+                                key: 'last2y',
+                                label: 'Last 2 yrs',
+                                title: `Sum of distinct specs balloted in ${recent.join(', ') || 'the latest 6 trimesters'}`,
+                                value: (row) => (row.summary && row.summary.last2y) || 0,
+                                format: (n) => String(n),
+                                heat: true,
+                            },
+                            {
+                                key: 'delta',
+                                label: 'Δ prior 2 yrs',
+                                title: `Last 2 yrs minus prior window (${prior.join(', ') || 'prior 6 trimesters'}). Positive = rising ballot load.`,
+                                value: (row) => (row.summary ? row.summary.delta : 0),
+                                format: (n) => (n > 0 ? `+${n}` : String(n)),
+                                heat: false,
+                                delta: true,
+                                edge: true,
+                            },
+                        ],
+                    },
+                };
+                renderCountMatrix(el, ballotMatrixState.data, ballotMatrixState.opts);
+            } catch (error) {
+                console.error(error);
+                el.innerHTML = '<div class="error">Failed to load ballot specifications matrix.</div>';
+            }
+        }
+
+        function renderCountMatrix(container, data, opts) {
+            const columns = data[opts.columnKey] || [];
+            const labels = opts.columnLabels || null;
+            const summaryCols = opts.summaryColumns || [];
+            const sort = matrixSort[opts.sortKey] || { col: 'wg', dir: 'asc' };
+            if (!columns.length || !(data.rows || []).length) {
+                container.innerHTML = '<div class="error">No matrix data.</div>';
+                return;
+            }
+            let max = 0;
+            let summaryMax = 0;
+            data.rows.forEach(row => {
+                (row.cells || []).forEach(cell => {
+                    const n = opts.cellCount(cell);
+                    if (n != null && n > max) max = n;
+                });
+                summaryCols.forEach(sc => {
+                    if (!sc.heat) return;
+                    const n = sc.value(row);
+                    if (n != null && n > summaryMax) summaryMax = n;
+                });
+            });
+            if (opts.totalsId && opts.totalsFrom) {
+                const totalsEl = document.getElementById(opts.totalsId);
+                if (totalsEl) totalsEl.textContent = opts.totalsFrom(data);
+            }
+
+            const rows = [...data.rows].sort((a, b) => {
+                if (sort.col === 'wg') {
+                    const cmp = (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' });
+                    return sort.dir === 'asc' ? cmp : -cmp;
+                }
+                const summaryDef = summaryCols.find(sc => sc.key === sort.col);
+                if (summaryDef) {
+                    const num = compareNullableNumber(summaryDef.value(a), summaryDef.value(b), sort.dir);
+                    if (num !== 0) return num;
+                    return (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' });
+                }
+                const ai = typeof sort.col === 'number' ? (a.cells || [])[sort.col] : null;
+                const bi = typeof sort.col === 'number' ? (b.cells || [])[sort.col] : null;
+                const av = ai ? opts.cellCount(ai) : null;
+                const bv = bi ? opts.cellCount(bi) : null;
+                const num = compareNullableNumber(av, bv, sort.dir);
+                if (num !== 0) return num;
+                return (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' });
+            });
+
+            const summaryHead = summaryCols.map(sc => {
+                const active = sort.col === sc.key ? ' is-sorted' : '';
+                const edge = sc.edge ? ' summary-edge' : '';
+                return `<th class="sortable summary-col${edge}${active}" data-sort-col="${escapeAttr(sc.key)}" title="${escapeAttr(sc.title || sc.label)}">${escapeHtml(sc.label)}${sortIndicator(sort, sc.key)}</th>`;
+            }).join('');
+            const head = columns.map((col, i) => {
+                const label = opts.columnLabel(col, i, labels);
+                const active = sort.col === i ? ' is-sorted' : '';
+                return `<th class="sortable${active}" data-sort-col="${i}" title="Sort by ${escapeAttr(String(label))}">${escapeHtml(String(label))}${sortIndicator(sort, i)}</th>`;
+            }).join('');
+            const wgActive = sort.col === 'wg' ? ' is-sorted' : '';
+            const body = rows.map(row => {
+                const summaryCells = summaryCols.map(sc => {
+                    const n = sc.value(row);
+                    const edge = sc.edge ? ' summary-edge' : '';
+                    let cls = `summary-col${edge}`;
+                    let style = '';
+                    if (sc.delta) {
+                        if (n > 0) cls += ' delta-up';
+                        else if (n < 0) cls += ' delta-down';
+                        else cls += ' delta-flat';
+                    } else if (sc.heat) {
+                        style = countHeatStyle(n || null, summaryMax, opts.palette);
+                        if (!n) cls += ' is-zero';
+                    } else if (!n) {
+                        cls += ' is-zero';
+                    }
+                    const title = sc.delta
+                        ? `${row.wg_name}: last 2 yrs ${(row.summary && row.summary.last2y) || 0}, prior ${(row.summary && row.summary.prior2y) || 0}, Δ ${sc.format(n)}`
+                        : `${row.wg_name}: ${n} distinct spec${n === 1 ? '' : 's'} in last 2 years`;
+                    return `<td class="${cls}" style="${style}" title="${escapeAttr(title)}">${escapeHtml(sc.format(n))}</td>`;
+                }).join('');
+                const cells = (row.cells || []).map((cell, i) => {
+                    const col = columns[i];
+                    const count = opts.cellCount(cell);
+                    const style = countHeatStyle(count, max, opts.palette);
+                    const empty = count == null || count === 0;
+                    const label = empty ? (count === 0 ? '0' : '') : String(count);
+                    const title = opts.cellTitle(row, col, count, cell);
+                    const cls = empty ? (count === 0 ? 'is-zero' : 'is-empty') : '';
+                    return `<td class="heat-cell ${cls}" style="${style}" title="${escapeAttr(title)}">${label}</td>`;
+                }).join('');
+                const sunset = isSunsetWg(row.wg_key, row.wg_name);
+                const wgTitle = sunset
+                    ? `${row.wg_name} — sunset / retired`
+                    : row.wg_name;
+                return `<tr><td class="wg-col${sunset ? ' is-sunset' : ''}" title="${escapeAttr(wgTitle)}">${formatWgLabel(row.wg_key, row.wg_name)}</td>${summaryCells}${cells}</tr>`;
+            }).join('');
+            container.innerHTML = `
+                <table class="heatmap-table count-matrix">
+                    <thead><tr>
+                        <th class="wg-col sortable${wgActive}" data-sort-col="wg" title="Sort by work group">Work group${sortIndicator(sort, 'wg')}</th>
+                        ${summaryHead}
+                        ${head}
+                    </tr></thead>
+                    <tbody>${body}</tbody>
+                </table>
+            `;
+
+            container.querySelectorAll('th.sortable').forEach(th => {
+                th.addEventListener('click', () => {
+                    const raw = th.getAttribute('data-sort-col');
+                    let col = raw;
+                    if (raw !== 'wg' && !summaryCols.some(sc => sc.key === raw)) {
+                        col = Number(raw);
+                    }
+                    toggleMatrixSort(opts.sortKey, col);
+                    renderCountMatrix(container, data, opts);
+                });
+            });
+        }
+
+        function countHeatStyle(count, max, palette) {
+            if (count == null || count === 0 || !max) return '';
+            const t = Math.min(1, count / max);
+            // Volume intensity: --hl7-blue #5f9baf (shared by FHIR + ballot matrices)
+            // palette arg kept for call-site clarity; volume is the only count ramp on this page
+            const base = [95, 155, 175];
+            const alpha = 0.12 + t * 0.88;
+            const text = alpha > 0.55 ? '#ffffff' : '#1f2937';
+            return `background: rgba(${base[0]}, ${base[1]}, ${base[2]}, ${alpha.toFixed(3)}); color: ${text};`;
+        }
+
+        function renderCycleSourceLinks(data) {
+            const el = document.getElementById('cycleSourceLinks');
+            if (!el) return;
+            const label = data.label || shortCycle(data.cycle) || data.cycle;
+            const parts = [];
+            if (data.confluence_url) {
+                parts.push(
+                    `<a href="${escapeAttr(data.confluence_url)}" target="_blank" rel="noopener noreferrer">Open ${escapeHtml(label)} Final report on Confluence →</a>`
+                );
+            }
+            const pdfs = (data.source_files || []).filter(s => s.confluence_url && s.filename);
+            if (pdfs.length) {
+                const pdfLinks = pdfs.map(s => {
+                    const name = s.steering_division
+                        ? `${s.steering_division}: ${s.filename}`
+                        : s.filename;
+                    return `<a href="${escapeAttr(s.confluence_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(name)}</a>`;
+                }).join(' · ');
+                parts.push(`<span class="source-pdfs">Scorecard PDF${pdfs.length > 1 ? 's' : ''}: ${pdfLinks}</span>`);
+            }
+            el.innerHTML = parts.length
+                ? parts.join('')
+                : `<span class="source-pdfs">No Confluence source link for this cycle.</span>`;
+        }
+
+        async function loadCycle(cycle) {
+            const container = document.getElementById('cycleTableContainer');
+            container.innerHTML = '<div class="loading">Loading cycle…</div>';
+            try {
+                const response = await fetch(`/api/standards-development/wg-health-history/cycles/${encodeURIComponent(cycle)}`);
+                if (!response.ok) throw new Error(await response.text());
+                cycleDetailData = await response.json();
+                selectedCycle = cycle;
+
+                renderCycleSourceLinks(cycleDetailData);
+
+                const bands = cycleDetailData.band_counts || {};
+                document.getElementById('cycleBandSummary').innerHTML = [
+                    `<span class="legend-item"><span class="gold-mark">★</span> Gold stars: ${cycleDetailData.gold_star_count || 0}</span>`,
+                    ...['green','yellow','red','present']
+                        .filter(b => bands[b])
+                        .map(b => `<span class="legend-item"><span class="swatch band-${b}"></span> ${capitalize(b)}: ${bands[b]}</span>`)
+                ].join('');
+
+                renderCycleTable();
+            } catch (error) {
+                console.error(error);
+                cycleDetailData = null;
+                container.innerHTML = '<div class="error">Failed to load cycle detail.</div>';
+                const links = document.getElementById('cycleSourceLinks');
+                if (links) links.innerHTML = '';
+            }
+        }
+
+        function renderCycleTable() {
+            const container = document.getElementById('cycleTableContainer');
+            if (!cycleDetailData) {
+                container.innerHTML = '<div class="error">No cycle data.</div>';
+                return;
+            }
+            const cycle = cycleDetailData.cycle || selectedCycle;
+            const sort = cycleSort;
+            const rows = [...(cycleDetailData.workgroups || [])].sort((a, b) => {
+                let cmp = 0;
+                if (sort.col === 'wg') {
+                    cmp = (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' });
+                } else if (sort.col === 'steering') {
+                    cmp = (a.steering_division || '').localeCompare(b.steering_division || '', undefined, { sensitivity: 'base' });
+                } else if (sort.col === 'infractions') {
+                    return compareNullableNumber(
+                        a.total_infractions == null ? null : a.total_infractions,
+                        b.total_infractions == null ? null : b.total_infractions,
+                        sort.dir
+                    ) || (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' });
+                } else if (sort.col === 'gold') {
+                    cmp = (a.gold_star ? 1 : 0) - (b.gold_star ? 1 : 0);
+                } else if (sort.col === 'band') {
+                    const ao = BAND_SORT_ORDER[a.health_band || 'present'] ?? 99;
+                    const bo = BAND_SORT_ORDER[b.health_band || 'present'] ?? 99;
+                    cmp = ao - bo;
+                }
+                if (sort.col !== 'infractions' && sort.dir === 'desc') cmp = -cmp;
+                if (cmp !== 0) return cmp;
+                return (a.wg_name || '').localeCompare(b.wg_name || '', undefined, { sensitivity: 'base' });
+            });
+
+            const cols = [
+                { key: 'wg', label: 'Work group', cls: '' },
+                { key: 'steering', label: 'Steering division', cls: '' },
+                { key: 'infractions', label: 'Infractions', cls: 'num' },
+                { key: 'gold', label: 'Gold star', cls: '' },
+                { key: 'band', label: 'Band', cls: '' },
+            ];
+            const head = cols.map(c => {
+                const active = sort.col === c.key ? ' is-sorted' : '';
+                return `<th class="sortable ${c.cls}${active}" data-sort-col="${c.key}" title="Sort by ${escapeAttr(c.label)}">${escapeHtml(c.label)}${sortIndicator(sort, c.key)}</th>`;
+            }).join('');
+
+            const body = rows.map(wg => {
+                const sunset = isSunsetWg(wg.wg_key, wg.wg_name);
+                return `
+                    <tr class="clickable${sunset ? ' is-sunset' : ''}" data-wg="${escapeAttr(wg.wg_key)}">
+                        <td title="${escapeAttr(sunset ? `${wg.wg_name} — sunset / retired` : wg.wg_name)}">${formatWgLabel(wg.wg_key, wg.wg_name)}</td>
+                        <td>${wg.steering_division ? escapeHtml(wg.steering_division) : '—'}</td>
+                        <td class="num">${wg.total_infractions == null ? '—' : wg.total_infractions}</td>
+                        <td>${wg.gold_star ? '<span class="gold-mark">★</span>' : '—'}</td>
+                        <td><span class="band-pill pill-${wg.health_band || 'present'}">${escapeHtml(wg.health_band || 'present')}</span></td>
+                    </tr>
+                `;
+            }).join('');
+
+            container.innerHTML = `
+                <div style="overflow:auto;">
+                    <table class="data-table">
+                        <thead><tr>${head}</tr></thead>
+                        <tbody>${body || '<tr><td colspan="5">No work groups parsed for this cycle.</td></tr>'}</tbody>
+                    </table>
+                </div>
+            `;
+
+            container.querySelectorAll('th.sortable').forEach(th => {
+                th.addEventListener('click', () => {
+                    const col = th.getAttribute('data-sort-col');
+                    if (cycleSort.col === col) {
+                        cycleSort.dir = cycleSort.dir === 'asc' ? 'desc' : 'asc';
+                    } else {
+                        cycleSort.col = col;
+                        // Numeric / severity columns default high→low; names A→Z
+                        cycleSort.dir = (col === 'wg' || col === 'steering') ? 'asc' : 'desc';
+                    }
+                    renderCycleTable();
+                });
+            });
+
+            container.querySelectorAll('tr.clickable').forEach(tr => {
+                tr.addEventListener('click', async () => {
+                    selectedWg = tr.getAttribute('data-wg');
+                    document.getElementById('wgSelect').value = selectedWg;
+                    document.getElementById('wgCycleSelect').value = cycle;
+                    const url = new URL(window.location.href);
+                    url.searchParams.set('wg', selectedWg);
+                    window.history.replaceState({}, '', url);
+                    await loadWorkgroup(selectedWg);
+                });
+            });
+        }
+
+        async function loadWorkgroup(wgKey) {
+            const container = document.getElementById('wgHistoryContainer');
+            container.innerHTML = '<div class="loading">Loading work group…</div>';
+            try {
+                const response = await fetch(`/api/standards-development/wg-health-history/workgroups/${encodeURIComponent(wgKey)}`);
+                if (!response.ok) throw new Error(await response.text());
+                wgDetail = await response.json();
+
+                const rows = (wgDetail.history || []).map(h => `
+                    <tr>
+                        <td title="${escapeAttr(h.cycle)}">${escapeHtml(shortCycle(h.cycle))}</td>
+                        <td class="num">${h.present ? (h.total_infractions == null ? '—' : h.total_infractions) : '—'}</td>
+                        <td>${h.gold_star ? '<span class="gold-mark">★</span>' : '—'}</td>
+                        <td><span class="band-pill pill-${h.health_band || 'absent'}">${escapeHtml(h.health_band || 'absent')}</span></td>
+                        <td>${h.steering_division ? escapeHtml(h.steering_division) : '—'}</td>
+                    </tr>
+                `).join('');
+
+                container.innerHTML = `
+                    <p class="panel-subtitle" style="margin-top:0;">
+                        <strong>${escapeHtml(wgDetail.wg_name)}</strong>
+                        · present in ${wgDetail.present_cycle_count} of ${wgDetail.cycle_count} Finals
+                        · <span class="gold-mark">${wgDetail.gold_star_count || 0}★</span> gold stars
+                    </p>
+                    <div style="overflow:auto;">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Cycle</th>
+                                    <th class="num">Infractions</th>
+                                    <th>Gold star</th>
+                                    <th>Band</th>
+                                    <th>Steering division</th>
+                                </tr>
+                            </thead>
+                            <tbody>${rows}</tbody>
+                        </table>
+                    </div>
+                `;
+
+                if (!document.getElementById('wgCycleSelect').value && overview.latest_cycle) {
+                    document.getElementById('wgCycleSelect').value = overview.latest_cycle;
+                }
+                renderWgMetrics();
+            } catch (error) {
+                console.error(error);
+                container.innerHTML = '<div class="error">Failed to load work group detail.</div>';
+                document.getElementById('wgMetricsContainer').innerHTML = '';
+            }
+        }
+
+        function renderWgMetrics() {
+            const container = document.getElementById('wgMetricsContainer');
+            if (!wgDetail) {
+                container.innerHTML = '';
+                return;
+            }
+            const cycle = document.getElementById('wgCycleSelect').value;
+            const entry = (wgDetail.history || []).find(h => h.cycle === cycle);
+            if (!entry || !entry.present) {
+                container.innerHTML = `<div class="metric-card"><div class="metric-label">${escapeHtml(cycle || '')}</div><div class="metric-value">Not on this Final</div></div>`;
+                return;
+            }
+            const cells = entry.cells || {};
+            const keys = Object.keys(cells);
+            if (!keys.length) {
+                container.innerHTML = '<div class="metric-card"><div class="metric-value">No metric cells stored for this cycle.</div></div>';
+                return;
+            }
+            container.innerHTML = keys.map(key => `
+                <div class="metric-card">
+                    <div class="metric-label">${escapeHtml(key)}</div>
+                    <div class="metric-value">${cells[key] == null || cells[key] === '' ? '—' : escapeHtml(String(cells[key]))}</div>
+                </div>
+            `).join('');
+        }
+
+        function shortCycle(cycle) {
+            // Prefer API period_label when a cycle object (or overview row) is passed.
+            if (cycle && typeof cycle === 'object') {
+                return cycle.label || cycle.period_label || shortCycle(cycle.cycle);
+            }
+            // Final publication → preceding trimester: Jan/Feb→prior T3, May→T1, Sep→T2
+            const m = String(cycle).match(/^(20\d{2})(Jan|Feb|May|Sep)$/);
+            if (!m) return cycle;
+            const year = parseInt(m[1], 10);
+            const month = m[2];
+            if (month === 'Jan' || month === 'Feb') {
+                return String((year - 1) % 100).padStart(2, '0') + 'T3';
+            }
+            if (month === 'May') {
+                return String(year % 100).padStart(2, '0') + 'T1';
+            }
+            return String(year % 100).padStart(2, '0') + 'T2';
+        }
+        function capitalize(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+        function escapeAttr(text) { return escapeHtml(text).replace(/'/g, '&#39;'); }
+    </script>
+</body>
+</html>

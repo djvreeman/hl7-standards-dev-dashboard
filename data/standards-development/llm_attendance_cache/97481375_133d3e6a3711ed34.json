@@ -1,0 +1,23 @@
+{
+  "attendees": [
+    {
+      "name": "Gora Datta",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Timon Grob",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Tracy Okubo",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,95 @@
+{
+  "attendees": [
+    {
+      "name": "Floyd Eisenberg",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Denning",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jen Seeman",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gay Dolin",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Viet Nguyen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Peter Muir",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rob McClure",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Patty Craig",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jay Lyle",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Josh Mandel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Molly Malavey",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Tanvi Shah",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Karin Frank",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Zabrina Gonzaga",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Linda Michaelsen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

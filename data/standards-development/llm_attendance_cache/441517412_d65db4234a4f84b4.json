@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "SD",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Khalid",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Joanne",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Brett",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "JohnD",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Bas van H",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 0.9
+}

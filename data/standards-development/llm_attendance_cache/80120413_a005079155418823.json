@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Paul Knapp",
+      "organization": "Knapp Consulting",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Brian Pech",
+      "organization": "Kaiser-Permanente",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bryn Rhodes",
+      "organization": "Database Consulting Group",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lorraine Constable",
+      "organization": "Constable Consulting",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sean Muir",
+      "organization": "JKM Software",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

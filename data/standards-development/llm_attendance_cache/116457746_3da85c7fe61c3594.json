@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "MK",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Celine",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Knapp",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Corey Spears",
+      "organization": "Mitre",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rachel Foerster",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Susan Langford",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ronald MacDurmon",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sean Ma",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

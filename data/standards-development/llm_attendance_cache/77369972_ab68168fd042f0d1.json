@@ -1,0 +1,143 @@
+{
+  "attendees": [
+    {
+      "name": "Ken Fuchs",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Steven Dain",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Anil Kochhar",
+      "organization": "FDA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bj\u00f6rn Andersen",
+      "organization": "Draeger, Lubeck",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Chris Courville",
+      "organization": "Epic/UK Bristol",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dario Wieschebrock",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Fabian Baumeister",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "David Gregorczyk",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Javier Espina",
+      "organization": "Philips",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Garguilo",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Malcolm Clarke",
+      "organization": "BSI Standards Institution",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Martin Kasparick",
+      "organization": "University of Rostock",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Martin Rosner",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Faughn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sajjad Syed",
+      "organization": "Software Dev, alternate on 11073 FDA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Satoshi Kobayashi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Tom Thompson",
+      "organization": "IEEE SA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gora Datta",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ray Krasinski",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Oyvind Aassve",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Rhoads",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Koichiro Matsumoto",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

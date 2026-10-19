@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "Reuben Daniels",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Carter",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Peter Jordan",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rutt Lindstrom",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Robert Hausam",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Lawley",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Grahame Grieve",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Elliot Silver",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

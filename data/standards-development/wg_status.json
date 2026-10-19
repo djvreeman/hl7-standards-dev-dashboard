@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "generated_at": "2026-10-08T10:22:36.996033+00:00",
+    "source": "https://raw.githubusercontent.com/HL7/JIRA-Spec-Artifacts/master/xml/_workgroups.xml",
+    "description": "Work groups marked deprecated in HL7 JIRA-Spec-Artifacts _workgroups.xml. Keys mapped to WGH master keys where known."
+  },
+  "deprecated": [
+    {
+      "wg_key": "anesthesia",
+      "wg_name": "Anesthesia",
+      "jira_key": "gas",
+      "jira_name": "Anesthesia",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "architecture-review-board",
+      "wg_name": "Architecture Review Board",
+      "jira_key": "arb",
+      "jira_name": "Architecture Review Board",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "attachments",
+      "wg_name": "Attachments",
+      "jira_key": "att",
+      "jira_name": "Attachments",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "community-based-care-and-privacy",
+      "wg_name": "Community-Based Care and Privacy",
+      "jira_key": "cbcc",
+      "jira_name": "Community-Based Care and Privacy",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "emergency-care",
+      "wg_name": "Emergency Care",
+      "jira_key": "ec",
+      "jira_name": "Emergency Care",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "fhir-governance-board",
+      "wg_name": "FHIR Governance Board",
+      "jira_key": "fgb",
+      "jira_name": "FHIR Governance Board",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "health-care-devices",
+      "wg_name": "Health Care Devices",
+      "jira_key": "hcd",
+      "jira_name": "Health Care Devices",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "health-standards-integration",
+      "wg_name": "Health Standards Integration",
+      "jira_key": "hsi",
+      "jira_name": "Health Standards Integration",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "ig-project",
+      "wg_name": "IG Project",
+      "jira_key": "project",
+      "jira_name": "IG Project",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "modeling-and-methodology",
+      "wg_name": "Modeling and Methodology",
+      "jira_key": "mnm",
+      "jira_name": "Modeling & Methodology",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "process-improvement",
+      "wg_name": "Process Improvement Committee",
+      "jira_key": "pic",
+      "jira_name": "Process Improvement Committee",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "project-services",
+      "wg_name": "Project Services",
+      "jira_key": "ps",
+      "jira_name": "Project Services",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "publishing",
+      "wg_name": "Publishing",
+      "jira_key": "pubs",
+      "jira_name": "Publishing",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "standards-governance-board",
+      "wg_name": "Standards Governance Board",
+      "jira_key": "sgb",
+      "jira_name": "Standards Governance Board",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "templates",
+      "wg_name": "Templates",
+      "jira_key": "templates",
+      "jira_name": "Templates",
+      "status": "deprecated"
+    },
+    {
+      "wg_key": "us-realm-task-force",
+      "wg_name": "US Realm Task Force",
+      "jira_key": "us-realm",
+      "jira_name": "US Realm Task Force",
+      "status": "deprecated"
+    }
+  ],
+  "deprecated_keys": [
+    "anesthesia",
+    "architecture-review-board",
+    "attachments",
+    "community-based-care-and-privacy",
+    "emergency-care",
+    "fhir-governance-board",
+    "health-care-devices",
+    "health-standards-integration",
+    "ig-project",
+    "modeling-and-methodology",
+    "process-improvement",
+    "project-services",
+    "publishing",
+    "standards-governance-board",
+    "templates",
+    "us-realm-task-force"
+  ],
+  "excluded_keys": [
+    "executive-committee",
+    "fhir-director",
+    "hl7-australia-au-core",
+    "hl7-australia-au-erequesting",
+    "hl7-australia-fhir",
+    "hl7-australia-technical-steering-committee",
+    "hl7-australia-terminology",
+    "hl7-australia-v2",
+    "hl7-europe",
+    "orchestration-services-and-architecture"
+  ],
+  "excluded_names": [
+    "Executive Committee",
+    "FHIR Director",
+    "HL7 Australia AU Core",
+    "HL7 Australia AU eRequesting",
+    "HL7 Australia FHIR",
+    "HL7 Australia Technical Steering Committee",
+    "HL7 Australia Terminology",
+    "HL7 Australia V2",
+    "HL7 Europe"
+  ],
+  "wg_key_aliases": {
+    "orchestration-services-and-architecture": "orchestration-services-architecture"
+  },
+  "deprecated_names_lower": [
+    "anesthesia",
+    "architecture review board",
+    "attachments",
+    "community-based care and privacy",
+    "emergency care",
+    "fhir governance board",
+    "health care devices",
+    "health standards integration",
+    "ig project",
+    "modeling and methodology",
+    "process improvement committee",
+    "project services",
+    "publishing",
+    "standards governance board",
+    "templates",
+    "us realm task force"
+  ]
+}

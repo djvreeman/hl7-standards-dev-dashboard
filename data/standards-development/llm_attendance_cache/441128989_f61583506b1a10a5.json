@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Reuben Daniels",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Carter",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,77 @@
+{
+  "attendees": [
+    {
+      "name": "Gino Canessa",
+      "organization": "Microsoft",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sandy Vance",
+      "organization": "Counterpoint",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Cynthia Blackwell",
+      "organization": "VHA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Vassil Peytchev",
+      "organization": "Epic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Christopher Schaut",
+      "organization": "Epic",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alexander H???",
+      "organization": "Nictiz (HL7 Netherlands)",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Emma Jones",
+      "organization": "Allscripts",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rita T",
+      "organization": "PCD Contributor",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jan Oldenberg",
+      "organization": "Part. Health Consulting",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rachel Richesson",
+      "organization": "Univ. of Michigan",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Maria Moen",
+      "organization": "ADVault, Inc.",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Moehrke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

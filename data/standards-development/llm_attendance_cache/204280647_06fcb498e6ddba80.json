@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "Gary Dickinson",
+      "organization": "FHL7",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Ritter",
+      "organization": "FHL7",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Matt Graham",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rob Hausam",
+      "organization": "MD",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mark Janczewski",
+      "organization": "MD MPH",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael van der Zel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Brody",
+      "organization": "DPM",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lincoln Weed",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

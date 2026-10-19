@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Joginder Madra",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Danny Wise",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Austin Kreisler",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Keith Boone",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Wayne Kubick",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

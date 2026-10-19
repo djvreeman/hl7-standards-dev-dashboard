@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "John Moehrke",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Trish Williams",
+      "organization": "HL7 Australia",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Pyke",
+      "organization": "CBCP",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alexander Zautke",
+      "organization": "HL7 Germany",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Hide",
+      "organization": "HL7 Japan",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alex Mense",
+      "organization": "HL7 Austria",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kumar Satyam",
+      "organization": "Philips Architect, HL7 India",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

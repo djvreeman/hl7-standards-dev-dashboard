@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Reinhard",
+      "organization": "PA",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Brian",
+      "organization": "PA",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Line",
+      "organization": "PA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Beat",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

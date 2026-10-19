@@ -1,0 +1,442 @@
+{
+  "meta": {
+    "generated_at": "2026-10-08T12:25:40.793392+00:00",
+    "description": "Count of FHIR base resources owned by each work group (structuredefinition-wg) per FHIR core version.",
+    "sources": {
+      "R4": "hl7.fhir.r4.core@4.0.1 (packages.fhir.org)",
+      "R4B": "hl7.fhir.r4b.core@4.3.0 (packages.fhir.org)",
+      "R5": "hl7.fhir.r5.core@5.0.0 (packages.fhir.org)",
+      "Current": "local FHIR core checkout tip (post-R5 / R6 draft)"
+    },
+    "method": "StructureDefinition kind=resource, derivation\u2260constraint, extension structuredefinition-wg; codes remapped to WGH master keys",
+    "work_group_master": "Display names and keys from WGH master data (normalize-wgh-finals WG_DISPLAY). FHIR structuredefinition-wg codes remapped via FHIR_WG_CODE_TO_KEY (fhir\u2192fhir-infrastructure, phx\u2192pharmacy, sec\u2192security, \u2026)."
+  },
+  "versions": [
+    "R4",
+    "R4B",
+    "R5",
+    "Current"
+  ],
+  "version_totals": {
+    "R4": 148,
+    "R4B": 143,
+    "R5": 162,
+    "Current": 141
+  },
+  "rows": [
+    {
+      "wg_key": "biomedical-research-regulation",
+      "wg_name": "Biomedical Research & Regulation",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 18
+        },
+        {
+          "version": "R4B",
+          "count": 10
+        },
+        {
+          "version": "R5",
+          "count": 16
+        },
+        {
+          "version": "Current",
+          "count": 10
+        }
+      ],
+      "total": 54
+    },
+    {
+      "wg_key": "clinical-decision-support",
+      "wg_name": "Clinical Decision Support",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 14
+        },
+        {
+          "version": "R4B",
+          "count": 14
+        },
+        {
+          "version": "R5",
+          "count": 13
+        },
+        {
+          "version": "Current",
+          "count": 11
+        }
+      ],
+      "total": 52
+    },
+    {
+      "wg_key": "clinical-genomics",
+      "wg_name": "Clinical Genomics",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 1
+        },
+        {
+          "version": "R4B",
+          "count": 1
+        },
+        {
+          "version": "R5",
+          "count": 2
+        },
+        {
+          "version": "Current",
+          "count": 2
+        }
+      ],
+      "total": 6
+    },
+    {
+      "wg_key": "clinical-quality-information",
+      "wg_name": "Clinical Quality Information",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 2
+        },
+        {
+          "version": "R4B",
+          "count": 2
+        },
+        {
+          "version": "R5",
+          "count": 2
+        },
+        {
+          "version": "Current",
+          "count": 2
+        }
+      ],
+      "total": 8
+    },
+    {
+      "wg_key": "community-based-care-and-privacy",
+      "wg_name": "Community-Based Care and Privacy",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 1
+        },
+        {
+          "version": "R4B",
+          "count": 1
+        },
+        {
+          "version": "R5",
+          "count": 1
+        },
+        {
+          "version": "Current",
+          "count": null
+        }
+      ],
+      "total": 3
+    },
+    {
+      "wg_key": "devices",
+      "wg_name": "Devices",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 1
+        },
+        {
+          "version": "R4B",
+          "count": 1
+        },
+        {
+          "version": "R5",
+          "count": 1
+        },
+        {
+          "version": "Current",
+          "count": 2
+        }
+      ],
+      "total": 5
+    },
+    {
+      "wg_key": "fhir-infrastructure",
+      "wg_name": "FHIR Infrastructure",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 24
+        },
+        {
+          "version": "R4B",
+          "count": 25
+        },
+        {
+          "version": "R5",
+          "count": 30
+        },
+        {
+          "version": "Current",
+          "count": 26
+        }
+      ],
+      "total": 105
+    },
+    {
+      "wg_key": "financial-management",
+      "wg_name": "Financial Management",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 13
+        },
+        {
+          "version": "R4B",
+          "count": 13
+        },
+        {
+          "version": "R5",
+          "count": 12
+        },
+        {
+          "version": "Current",
+          "count": 8
+        }
+      ],
+      "total": 46
+    },
+    {
+      "wg_key": "imaging-integration",
+      "wg_name": "Imaging Integration",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 1
+        },
+        {
+          "version": "R4B",
+          "count": 1
+        },
+        {
+          "version": "R5",
+          "count": 2
+        },
+        {
+          "version": "Current",
+          "count": 2
+        }
+      ],
+      "total": 6
+    },
+    {
+      "wg_key": "infrastructure-and-messaging",
+      "wg_name": "Infrastructure and Messaging",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 2
+        },
+        {
+          "version": "R4B",
+          "count": 2
+        },
+        {
+          "version": "R5",
+          "count": 2
+        },
+        {
+          "version": "Current",
+          "count": 2
+        }
+      ],
+      "total": 8
+    },
+    {
+      "wg_key": "orders-and-observations",
+      "wg_name": "Orders & Observations",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 19
+        },
+        {
+          "version": "R4B",
+          "count": 20
+        },
+        {
+          "version": "R5",
+          "count": 26
+        },
+        {
+          "version": "Current",
+          "count": 26
+        }
+      ],
+      "total": 91
+    },
+    {
+      "wg_key": "patient-administration",
+      "wg_name": "Patient Administration",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 21
+        },
+        {
+          "version": "R4B",
+          "count": 21
+        },
+        {
+          "version": "R5",
+          "count": 22
+        },
+        {
+          "version": "Current",
+          "count": 17
+        }
+      ],
+      "total": 81
+    },
+    {
+      "wg_key": "patient-care",
+      "wg_name": "Patient Care",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 13
+        },
+        {
+          "version": "R4B",
+          "count": 13
+        },
+        {
+          "version": "R5",
+          "count": 14
+        },
+        {
+          "version": "Current",
+          "count": 15
+        }
+      ],
+      "total": 55
+    },
+    {
+      "wg_key": "pharmacy",
+      "wg_name": "Pharmacy",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 6
+        },
+        {
+          "version": "R4B",
+          "count": 6
+        },
+        {
+          "version": "R5",
+          "count": 7
+        },
+        {
+          "version": "Current",
+          "count": 8
+        }
+      ],
+      "total": 27
+    },
+    {
+      "wg_key": "public-health",
+      "wg_name": "Public Health",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 3
+        },
+        {
+          "version": "R4B",
+          "count": 3
+        },
+        {
+          "version": "R5",
+          "count": 3
+        },
+        {
+          "version": "Current",
+          "count": 1
+        }
+      ],
+      "total": 10
+    },
+    {
+      "wg_key": "security",
+      "wg_name": "Security",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 2
+        },
+        {
+          "version": "R4B",
+          "count": 2
+        },
+        {
+          "version": "R5",
+          "count": 3
+        },
+        {
+          "version": "Current",
+          "count": 3
+        }
+      ],
+      "total": 10
+    },
+    {
+      "wg_key": "structured-documents",
+      "wg_name": "Structured Documents",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 3
+        },
+        {
+          "version": "R4B",
+          "count": 3
+        },
+        {
+          "version": "R5",
+          "count": 1
+        },
+        {
+          "version": "Current",
+          "count": 1
+        }
+      ],
+      "total": 8
+    },
+    {
+      "wg_key": "terminology-infrastructure",
+      "wg_name": "Terminology Infrastructure",
+      "cells": [
+        {
+          "version": "R4",
+          "count": 4
+        },
+        {
+          "version": "R4B",
+          "count": 5
+        },
+        {
+          "version": "R5",
+          "count": 5
+        },
+        {
+          "version": "Current",
+          "count": 5
+        }
+      ],
+      "total": 19
+    }
+  ]
+}

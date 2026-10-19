@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "Abdullah Rafiqi",
+      "organization": "ICF",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Adam Holmes",
+      "organization": "MITRE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Amenze Okpah",
+      "organization": "NCQA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Anne Smith",
+      "organization": "NCQA",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Ben Hamlin",
+      "organization": "IPRO",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Beth Snevely",
+      "organization": "ICF",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bryn Rhodes",
+      "organization": "ICF",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Chris Schuler",
+      "organization": "Smile Digital Health",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

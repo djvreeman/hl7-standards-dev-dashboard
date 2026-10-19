@@ -1,0 +1,59 @@
+{
+  "attendees": [
+    {
+      "name": "Rob Hausam",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Stephen Chu",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Jose",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Evelyn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Margaret",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Daniel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Tom",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jeff R",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lauri",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

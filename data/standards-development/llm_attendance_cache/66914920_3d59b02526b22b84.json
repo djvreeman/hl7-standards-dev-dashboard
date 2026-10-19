@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "Rob",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Nathan",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ioana",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Frank",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alean Kirnak",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Eric",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Robert Worden",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Floyd",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rob Reynolds",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bryn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Denning",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abdullah",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

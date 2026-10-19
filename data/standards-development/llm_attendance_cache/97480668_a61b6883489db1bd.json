@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "Debi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Virginia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jeff Danford",
+      "organization": "Allscripts",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Mark Schrimshire",
+      "organization": "Onyx",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Vassil",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joel Schneider",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lloyd McKenzie",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

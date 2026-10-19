@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Vanessa Candelora",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Corey Spears",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abbie",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "David Pyke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jessica",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

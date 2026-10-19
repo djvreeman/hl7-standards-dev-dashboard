@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "John",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Mohamad",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alex",
+      "organization": "Europe and Austria",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Hideyuki",
+      "organization": "Japan",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Trish",
+      "organization": "Australia",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Oliver",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "David",
+      "organization": "Canada",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

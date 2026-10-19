@@ -1,0 +1,11 @@
+{
+  "attendees": [
+    {
+      "name": "Rob Hausam",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    }
+  ],
+  "confidence": 1
+}

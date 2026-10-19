@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "Anne",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Paul",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Juliet Rubini",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Bryn Rhodes",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Stan Rankins",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Yan",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Amol Vyos",
+      "organization": "NCQA",
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 0.9
+}

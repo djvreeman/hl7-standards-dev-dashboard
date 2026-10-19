@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Austin",
+      "organization": "SD",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Russ",
+      "organization": "SD",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Matt",
+      "organization": "SD",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gay",
+      "organization": "SD",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joanne",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Khalid",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

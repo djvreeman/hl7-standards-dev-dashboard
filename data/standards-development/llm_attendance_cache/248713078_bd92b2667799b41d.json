@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "Anil Kochhar",
+      "organization": "FDA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John J. Garguilo",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Michael Faughn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Elliot Silver",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Erik Moll",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Martin Rosner",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Schluter",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

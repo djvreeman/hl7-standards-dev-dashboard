@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Lisa R. Nelson",
+      "organization": "MaxMD",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Linda Michaelsen",
+      "organization": "Optum",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Giorgio Cangioli",
+      "organization": "HL7 Italy",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Emma Jones",
+      "organization": "Allscripts",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Yan Heras",
+      "organization": "Optimum eHealth LLC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Raychelle Fernandez",
+      "organization": "Dynamic Health IT",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

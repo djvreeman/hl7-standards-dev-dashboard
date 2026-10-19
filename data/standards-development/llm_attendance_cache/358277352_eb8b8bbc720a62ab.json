@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Aly",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bob",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Patrick",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "JJ",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

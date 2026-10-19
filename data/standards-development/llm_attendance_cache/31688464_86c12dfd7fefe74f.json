@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Sandy",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ted",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Susan Barber",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Heather Grain",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

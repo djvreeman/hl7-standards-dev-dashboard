@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Rachel Dunscombe",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Janice Reese",
+      "organization": "FAST",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

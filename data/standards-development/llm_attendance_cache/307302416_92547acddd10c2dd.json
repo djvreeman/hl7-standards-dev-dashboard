@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Isaac Vetter",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John D'Amore",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Stephen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Virginia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abigail",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

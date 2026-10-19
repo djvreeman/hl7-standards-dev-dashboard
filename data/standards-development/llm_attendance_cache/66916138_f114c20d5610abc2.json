@@ -1,0 +1,95 @@
+{
+  "attendees": [
+    {
+      "name": "John Rhoads",
+      "organization": "IEEE",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Tom Thompson",
+      "organization": "IEEE-SA",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Garguilo",
+      "organization": "IEEE",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Brian Reinhold",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Stefan Schlichting",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Martin Rosner",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Schluter",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ken Fuchs",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Daidi Zhong",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Steve Griffiths",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Faughn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abhyankar",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gora Datta",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Matt Graham",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

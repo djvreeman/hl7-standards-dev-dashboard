@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Paul Knapp",
+      "organization": "Knapp Consulting",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Andy Stechishin",
+      "organization": "CANA Software & Services",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Brian Pech",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "David Booth",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bryn Rhodes",
+      "organization": "Database Consulting",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

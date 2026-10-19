@@ -1,0 +1,47 @@
+country,in_survey,in_map
+Argentina,Y,Y
+Australia,N,Y
+Austria,Y,Y
+Bangladesh,N,Y
+Belgium,N,Y
+Botswana,N,Y
+Brazil,Y,Y
+Canada,N,Y
+Chile,Y,Y
+Colombia,Y,Y
+Costa Rica,Y,N
+Croatia,Y,N
+Cyprus,Y,N
+Czech Republic,N,Y
+Ecuador,Y,N
+Ethiopia,Y,N
+Finland,Y,N
+France,Y,N
+Germany,Y,Y
+Greece,Y,N
+Ireland,Y,N
+Israel,Y,N
+Italy,Y,N
+Japan,N,Y
+Kenya,Y,N
+"Korea, Republic of",Y,N
+Lao People's Democratic Republic,Y,N
+Marshall Islands,Y,N
+Nepal,Y,N
+Netherlands,Y,N
+New Zealand,N,Y
+Nigeria,Y,N
+Norway,Y,N
+Poland,Y,N
+Rwanda,Y,N
+Saudi Arabia,Y,Y
+Slovenia,Y,N
+Spain,Y,N
+Sri Lanka,Y,N
+Suriname,N,Y
+Sweden,Y,N
+Switzerland,Y,N
+Taiwan,Y,N
+Uganda,Y,N
+United Kingdom,Y,Y
+United States,Y,Y

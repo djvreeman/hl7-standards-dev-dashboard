@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Robert Jenders",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Peter Haug",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

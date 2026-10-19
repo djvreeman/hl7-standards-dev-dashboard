@@ -1,0 +1,149 @@
+{
+  "attendees": [
+    {
+      "name": "Greg",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Russ",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Manisha",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Joel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jean",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Angie",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Eric",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Tony",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "LT Col Ford",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "CDR Stallings",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Col William Baez",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "LtCol Tansel Acar",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "LTC Kevin Parker",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "CDR Steve Stallings",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "LtCol Jeff Ford",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bob Cox (CDS)",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Eric Kirnbauer (Tesia)",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Susan Langford",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Karen Clark",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Michael Honeycutt",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kipp Clemmons (DSS)",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rebeka Fiehn",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave DeRoode",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Chris Johnson (BCBS)",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

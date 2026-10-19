@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "Preston Lee",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Cynthia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "KR",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Trish",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Nicole",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "LC",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "JS",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "PW",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

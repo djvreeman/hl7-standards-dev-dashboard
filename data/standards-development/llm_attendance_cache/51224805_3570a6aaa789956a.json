@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "Lorraine Constable",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Preston Lee",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Sean Muir",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Ken Lord",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "LC",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "SL",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "VM",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "ML",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

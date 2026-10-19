@@ -1,0 +1,53 @@
+{
+  "attendees": [
+    {
+      "name": "Amit Popat",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Cindy Bush",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "AbdulMalik Shakir",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Laura Rappleye",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Craig Newman",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Genny Luensman",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Erin Holt Coyne",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sarah Gaunt",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

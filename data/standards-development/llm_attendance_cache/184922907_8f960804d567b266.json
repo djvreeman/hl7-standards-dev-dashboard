@@ -1,0 +1,23 @@
+{
+  "attendees": [
+    {
+      "name": "James Cummings",
+      "organization": "caregiver",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Alison Kemp",
+      "organization": "ONC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Todd Cooper",
+      "organization": "PHN & Devices WG",
+      "present": true,
+      "role": "co_chair"
+    }
+  ],
+  "confidence": 1
+}

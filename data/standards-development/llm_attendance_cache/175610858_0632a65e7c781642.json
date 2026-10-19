@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Abdullah Rafiqi",
+      "organization": "ICF",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abigail Watson",
+      "organization": "MITRE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Amol Vyas",
+      "organization": "Cambia Health",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Anne Smith",
+      "organization": "NCQA",
+      "present": true,
+      "role": "co_chair"
+    }
+  ],
+  "confidence": 1
+}

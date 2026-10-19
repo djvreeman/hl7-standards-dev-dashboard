@@ -1,0 +1,59 @@
+{
+  "attendees": [
+    {
+      "name": "Zabrina",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Raychelle",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lisa",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Giorgio",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Linda",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Yan",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Carlson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Didi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John D'Amore",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

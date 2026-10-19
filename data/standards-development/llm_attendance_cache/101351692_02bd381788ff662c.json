@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "Humana, ONC *FAST*",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rachel Foerster & Associates, ONC *FAST*",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "POCP, ONC *FAST*",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "ONC",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Sequoia Project",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "POCP",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gigi Mendenhall",
+      "organization": "Perspecta",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

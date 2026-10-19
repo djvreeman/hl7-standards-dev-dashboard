@@ -1,0 +1,65 @@
+{
+  "attendees": [
+    {
+      "name": "Jamie",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "May",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Kevin",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Arthur",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Liz",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Patrick",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Bob F",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Grant W",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Clem",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rachel",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

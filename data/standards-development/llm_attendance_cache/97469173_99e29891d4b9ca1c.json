@@ -1,0 +1,77 @@
+{
+  "attendees": [
+    {
+      "name": "Ken Fuchs",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Garguilo",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Chris Courville",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Stefan Schlichting",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Michael Kirwan",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Danica Marinac-Dabic",
+      "organization": "FDA/SMART/MDEPINET",
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "James Cheng MD",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Kosta Makrodimitris",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Christoph Fischer",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Steven Griffiths",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Isabelle",
+      "organization": "FDA",
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Debi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Virginia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "David Hay",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Timon Grob",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

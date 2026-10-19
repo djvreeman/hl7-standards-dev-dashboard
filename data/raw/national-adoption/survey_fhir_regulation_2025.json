@@ -1,0 +1,43 @@
+{
+  "survey_year": 2025,
+  "source": "2025 State of FHIR Survey Results (HL7 International and Firely, May 2025)",
+  "question": "Does the regulation specifically mention FHIR?",
+  "notes": "Unique countries from respondent lists. A country is included if any respondent selected Mandated or Advised. Contradictions (*) still count when at least one Mandated/Advised response exists.",
+  "mandated": [
+    "Bangladesh",
+    "Belgium",
+    "Brazil",
+    "Chile",
+    "Costa Rica",
+    "Czech Republic",
+    "Finland",
+    "France",
+    "Germany",
+    "Israel",
+    "Italy",
+    "Netherlands",
+    "Philippines",
+    "Poland",
+    "Saudi Arabia",
+    "Spain",
+    "Switzerland",
+    "United States"
+  ],
+  "advised": [
+    "Belgium",
+    "Bosnia and Herzegovina",
+    "Brazil",
+    "Colombia",
+    "Costa Rica",
+    "Croatia",
+    "France",
+    "Greece",
+    "Japan",
+    "Netherlands",
+    "New Zealand",
+    "Norway",
+    "Taiwan",
+    "Uganda",
+    "United Arab Emirates"
+  ]
+}

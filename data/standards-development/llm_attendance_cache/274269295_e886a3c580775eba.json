@@ -1,0 +1,23 @@
+{
+  "attendees": [
+    {
+      "name": "Matt Graham",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Martin FitzGerald",
+      "organization": "GS1",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

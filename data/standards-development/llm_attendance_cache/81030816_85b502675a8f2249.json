@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "Juliet",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Yan",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Riki Merrick",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "JD",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Floyd",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Paul",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Cooper Thompson",
+      "organization": "Epic",
+      "present": true,
+      "role": "co_chair"
+    }
+  ],
+  "confidence": 0.9
+}

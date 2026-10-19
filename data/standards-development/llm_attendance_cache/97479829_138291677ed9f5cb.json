@@ -1,0 +1,17 @@
+{
+  "attendees": [
+    {
+      "name": "Calvin",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Melva Peters",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

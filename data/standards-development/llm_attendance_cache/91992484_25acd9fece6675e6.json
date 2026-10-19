@@ -1,0 +1,23 @@
+{
+  "attendees": [
+    {
+      "name": "Danny Wise",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Joginder Madra",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "AbdulMalik Shakir",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

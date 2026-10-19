@@ -1,0 +1,23 @@
+{
+  "attendees": [
+    {
+      "name": "Andy Stechishin",
+      "organization": "CANA Software & Services",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Brian Pech",
+      "organization": "Kaiser-Permanente",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Bryn Rhodes",
+      "organization": "Database Consulting Group",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

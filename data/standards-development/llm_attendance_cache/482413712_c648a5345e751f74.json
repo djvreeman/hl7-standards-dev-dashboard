@@ -1,0 +1,59 @@
+{
+  "attendees": [
+    {
+      "name": "Nathan Bunker",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rob Snelick",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Erin Little",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abdel El Ouakili",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Youssef Bouij",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Abdelghoi Elouakili",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Doug York",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lori Forquet",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Matt Blackmon",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

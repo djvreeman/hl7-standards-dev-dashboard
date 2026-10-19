@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Becky Gradl",
+      "organization": "Academy of Nutrition and Dietetics",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Margaret Dittloff",
+      "organization": "Academy of Nutrition and Dietetics",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave Carlson",
+      "organization": "VA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Clare Hicks",
+      "organization": "CBORD",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Yanyan Hu",
+      "organization": "The Joint Commission",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Della Rieley",
+      "organization": "DM&A",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

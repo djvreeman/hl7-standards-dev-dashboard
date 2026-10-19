@@ -1,0 +1,23 @@
+{
+  "attendees": [
+    {
+      "name": "Russell Buchanan",
+      "organization": "Accenture",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Laurie Whitsel",
+      "organization": "American Heart Association",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Maria Isler",
+      "organization": "American Heart Association",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

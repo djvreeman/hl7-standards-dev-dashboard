@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en" class="wa-theme-default wa-palette-default wa-brand-red wa-neutral-gray wa-success-green wa-warning-yellow wa-danger-orange">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HL7 Standards Development Insights Dashboard</title>
+    
+    <!-- WebAwesome CSS -->
+    <link rel="stylesheet" href="https://cdn.webawesome.com/css/webawesome.min.css">
+    <!-- WebAwesome JS for custom elements -->
+    <script type="module" src="https://cdn.webawesome.com/js/webawesome.min.js"></script>
+    <!-- Font Awesome Pro Kit -->
+    <script src="https://kit.fontawesome.com/56329dcbf7.js" crossorigin="anonymous"></script>
+    
+    <!-- HL7 Brand Fonts -->
+    <link rel="stylesheet" href="/static/css/fonts.css">
+    
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="/static/css/dashboard.css?v=20261002">
+    <style>
+        #createLlmPromptBtn,
+        #createLlmPromptBtn:hover,
+        #createLlmPromptBtn:focus {
+            background: #16a34a !important;
+            color: #ffffff;
+        }
+        #createLlmPromptBtn:hover {
+            background: #15803d !important;
+        }
+        #llmPromptGenerate,
+        #llmPromptGenerate:hover,
+        #llmPromptGenerate:focus {
+            background: #16a34a !important;
+            color: #ffffff;
+        }
+        #llmPromptGenerate:hover {
+            background: #15803d !important;
+        }
+    </style>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- html2canvas and JSZip for PNG export -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="/static/hl7-international-logo.png" alt="HL7 International" class="logo-image">
+            </div>
+            <div class="header-title">
+                <h1 class="dashboard-title">{{ dashboard_title or "Standards Development Insights" }}</h1>
+                <p class="dashboard-subtitle">HL7 Standards Development Performance Analysis</p>
+            </div>
+        </div>
+        <div class="navigation-container">
+            <div class="navigation" id="steward-navigation">
+                <!-- Dynamic steward navigation will be loaded here -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="dashboard-container">
+        <!-- Filters -->
+        <div class="filters">
+            <label class="filter-toggle">
+                <div class="toggle-switch">
+                    <input type="checkbox" id="kpiFilter">
+                    <span class="toggle-slider"></span>
+                </div>
+                <span class="toggle-label">Show KPIs Only</span>
+            </label>
+            <label class="filter-toggle">
+                <div class="toggle-switch">
+                    <input type="checkbox" id="meetingFlagsFilter">
+                    <span class="toggle-slider"></span>
+                </div>
+                <span class="toggle-label">Show WGM Location Flags</span>
+            </label>
+            <button class="wa-button" id="refreshBtn">
+                Refresh Data
+            </button>
+            <button class="wa-button llm-prompt-create" id="createLlmPromptBtn" type="button" style="background: #16a34a; color: #ffffff;">
+                Create LLM Prompt
+            </button>
+            <button class="wa-button" id="exportChartsPngBtn" style="margin-left: auto;">
+                <i class="fas fa-download"></i> Export Charts as PNG
+            </button>
+        </div>
+        
+        <!-- Layout Controls -->
+        <div class="layout-controls">
+            <button class="layout-toggle" id="twoColumnBtn">Two Column</button>
+            <button class="layout-toggle active" id="singleColumnBtn">Single Column</button>
+        </div>
+        
+        <!-- Issues Section -->
+        <h2 class="section-header">Issues</h2>
+        <div class="charts-grid single-column" id="issues-charts-grid">
+            <div class="loading">Loading Issues indicators...</div>
+        </div>
+        
+        <!-- Ballots Section -->
+        <h2 class="section-header">Ballots</h2>
+        <div class="charts-grid single-column" id="ballots-charts-grid">
+            <div class="loading">Loading Ballots indicators...</div>
+        </div>
+        
+        <!-- Ecosystem Section -->
+        <h2 class="section-header">Ecosystem</h2>
+        <div class="charts-grid single-column" id="ecosystem-charts-grid">
+            <div class="loading">Loading Ecosystem indicators...</div>
+        </div>
+        
+        <!-- HL7 International Published Standards Section -->
+        <h2 class="section-header">HL7 International Published Standards</h2>
+        <div class="published-standards-section">
+            <!-- Published Specifications Chart -->
+            <div class="charts-grid single-column" id="published-specifications-chart-grid">
+                <div class="chart-container">
+                    <div class="chart-title">Published Specifications by Realm</div>
+                    <div class="chart-wrapper">
+                        <canvas id="published-specifications-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Standards Published By Year Section - Always Full Width -->
+            <div class="standards-by-year-section">
+                <h3 class="section-subheader section-spacing">Standards Published By Year</h3>
+                
+                <div class="year-picker-container">
+                <label for="yearPicker" class="year-picker-label">Select Year:</label>
+                <select id="yearPicker" class="year-picker">
+                    <option value="">Loading years...</option>
+                </select>
+                <label class="filter-toggle">
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="showLabelsToggle" checked>
+                        <span class="toggle-slider"></span>
+                    </div>
+                    <span class="toggle-label">Show Labels</span>
+                </label>
+                <button id="exportPngBtn" class="wa-button" style="margin-left: auto;">
+                    <i class="fas fa-download"></i> Export as PNG
+                </button>
+            </div>
+            <div id="published-standards-summary" class="published-standards-summary" style="display: none;">
+                <!-- Summary table will be populated here -->
+            </div>
+                <div id="published-standards-container" class="published-standards-container">
+                    <div class="loading">Select a year to view published standards</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let charts = {};
+        let meetingLocations = {};
+        let showMeetingFlags = false;
+        
+        const meetingFlagsPlugin = {
+            id: 'meetingFlagsOverlay',
+            afterDraw(chart) {
+                updateMeetingFlagOverlay(chart);
+            },
+            beforeDestroy(chart) {
+                const overlay = chart.canvas && chart.canvas.parentElement
+                    ? chart.canvas.parentElement.querySelector('.meeting-flags-overlay')
+                    : null;
+                if (overlay) {
+                    overlay.remove();
+                }
+            }
+        };
+        
+        if (typeof Chart !== 'undefined' && Chart.register) {
+            Chart.register(meetingFlagsPlugin);
+        }
+        
+        function getMeetingLocation(period) {
+            if (!period || !meetingLocations) {
+                return null;
+            }
+            return meetingLocations[period] || null;
+        }
+        
+        function meetingLocationTooltipFooter(tooltipItems) {
+            if (!tooltipItems || !tooltipItems.length) {
+                return '';
+            }
+            const loc = getMeetingLocation(tooltipItems[0].label);
+            if (!loc) {
+                return '';
+            }
+            if (loc.kind === 'virtual') {
+                return 'Meeting: Virtual';
+            }
+            if (loc.kind === 'hybrid') {
+                return 'Meeting: Hybrid';
+            }
+            const place = loc.meeting || loc.country;
+            return place ? `WGM: ${place}` : '';
+        }
+        
+        function attachMeetingFlagOptions(options) {
+            options.layout = options.layout || {};
+            options.layout.padding = options.layout.padding || { top: 0, right: 0, bottom: 0, left: 0 };
+            if (typeof options.layout.padding === 'number') {
+                options.layout.padding = { top: options.layout.padding, right: options.layout.padding, bottom: options.layout.padding, left: options.layout.padding };
+            }
+            options.layout.padding.top = showMeetingFlags ? 8 : (options.layout.padding.top || 0);
+            
+            options.scales = options.scales || {};
+            options.scales.y = options.scales.y || {};
+            options.scales.y.grace = showMeetingFlags ? '12%' : 0;
+            
+            options.plugins = options.plugins || {};
+            options.plugins.tooltip = options.plugins.tooltip || {};
+            options.plugins.tooltip.callbacks = options.plugins.tooltip.callbacks || {};
+            options.plugins.tooltip.callbacks.footer = meetingLocationTooltipFooter;
+            return options;
+        }
+        
+        function createMeetingFlagElement(loc, index) {
+            const el = document.createElement('div');
+            el.className = 'meeting-flag';
+            el.dataset.index = String(index);
+            
+            const tooltip = document.createElement('div');
+            tooltip.className = 'meeting-flag-tooltip';
+            if (loc.kind === 'virtual') {
+                tooltip.textContent = loc.meeting ? `${loc.meeting} (Virtual)` : 'Virtual meeting';
+            } else if (loc.kind === 'hybrid') {
+                tooltip.textContent = loc.meeting ? `${loc.meeting} (Hybrid)` : 'Hybrid meeting';
+            } else {
+                tooltip.textContent = loc.meeting
+                    ? `${loc.meeting} (${loc.country})`
+                    : loc.country;
+            }
+            el.appendChild(tooltip);
+            el.setAttribute('aria-label', tooltip.textContent);
+            
+            if (loc.kind === 'virtual') {
+                el.classList.add('meeting-flag-special');
+                el.insertAdjacentHTML('beforeend', '<i class="fas fa-globe" aria-hidden="true"></i>');
+            } else if (loc.kind === 'hybrid') {
+                el.classList.add('meeting-flag-special');
+                el.insertAdjacentHTML('beforeend', '<i class="fas fa-laptop-house" aria-hidden="true"></i>');
+            } else if (loc.iso2) {
+                const img = document.createElement('img');
+                img.src = `https://flagcdn.com/w40/${loc.iso2}.png`;
+                img.srcset = `https://flagcdn.com/w80/${loc.iso2}.png 2x`;
+                img.alt = loc.country || loc.iso2;
+                img.loading = 'lazy';
+                el.appendChild(img);
+            } else {
+                el.classList.add('meeting-flag-special');
+                const label = document.createElement('span');
+                label.textContent = (loc.country || '?').slice(0, 2).toUpperCase();
+                el.appendChild(label);
+            }
+            return el;
+        }
+        
+        function updateMeetingFlagOverlay(chart) {
+            const wrapper = chart && chart.canvas ? chart.canvas.parentElement : null;
+            if (!wrapper) {
+                return;
+            }
+            
+            let overlay = wrapper.querySelector('.meeting-flags-overlay');
+            if (!showMeetingFlags) {
+                if (overlay) {
+                    overlay.style.display = 'none';
+                }
+                return;
+            }
+            
+            const xScale = chart.scales && chart.scales.x;
+            const chartArea = chart.chartArea;
+            if (!xScale || !chartArea) {
+                return;
+            }
+            
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.className = 'meeting-flags-overlay';
+                wrapper.appendChild(overlay);
+            }
+            overlay.style.display = 'block';
+            
+            const labels = chart.data.labels || [];
+            const signature = labels.join('|') + '|' + Object.keys(meetingLocations).length;
+            if (overlay.dataset.signature !== signature) {
+                overlay.dataset.signature = signature;
+                overlay.innerHTML = '';
+                labels.forEach((label, index) => {
+                    const loc = getMeetingLocation(label);
+                    if (!loc) {
+                        return;
+                    }
+                    overlay.appendChild(createMeetingFlagElement(loc, index));
+                });
+            }
+            
+            const spacing = labels.length > 1
+                ? Math.abs(xScale.getPixelForValue(1) - xScale.getPixelForValue(0))
+                : 24;
+            const flagWidth = Math.max(12, Math.min(24, spacing - 4));
+            const flagHeight = Math.round(flagWidth * (2 / 3));
+            
+            overlay.querySelectorAll('.meeting-flag').forEach(el => {
+                const index = parseInt(el.dataset.index, 10);
+                if (Number.isNaN(index)) {
+                    return;
+                }
+                const x = xScale.getPixelForValue(index);
+                el.style.width = `${flagWidth}px`;
+                el.style.height = `${flagHeight}px`;
+                el.style.left = `${x}px`;
+                el.style.top = `${chartArea.top + 4}px`;
+            });
+        }
+        
+        function applyMeetingFlagVisibility() {
+            Object.values(charts).forEach(chart => {
+                if (!chart || !chart.options || !chart.canvas || !document.body.contains(chart.canvas)) {
+                    return;
+                }
+                try {
+                    if (chart.options.scales && chart.options.scales.y) {
+                        chart.options.scales.y.grace = showMeetingFlags ? '12%' : 0;
+                    }
+                    const padding = chart.options.layout && chart.options.layout.padding;
+                    if (padding && typeof padding === 'object') {
+                        padding.top = showMeetingFlags ? 8 : 0;
+                    }
+                    chart.update();
+                } catch (error) {
+                    console.warn('Unable to update meeting flag overlay for chart', error);
+                }
+            });
+        }
+        
+        async function loadMeetingLocations() {
+            try {
+                const response = await fetch('/api/standards-development/meeting-locations');
+                const data = await response.json();
+                meetingLocations = data.locations || {};
+            } catch (error) {
+                console.error('Error loading meeting locations:', error);
+                meetingLocations = {};
+            }
+        }
+        
+        // Function to convert text to Title Case while preserving acronyms
+        function toTitleCase(str) {
+            if (!str) return str;
+            return str.replace(/\w\S*/g, function(txt) {
+                // If the word is all uppercase (acronym), preserve it as-is
+                if (txt === txt.toUpperCase() && txt.length > 1) {
+                    return txt;
+                }
+                // Otherwise, convert to Title Case
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            });
+        }
+        
+        
+
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            loadStewardNavigation();
+            loadMeetingLocations().then(() => {
+                loadCharts();
+                setupPublishedStandards();
+            });
+            setupLayoutControls();
+            setupFilters();
+            setupLabelToggle();
+            setupChartZipExport();
+        });
+        
+        function setupLabelToggle() {
+            const toggle = document.getElementById('showLabelsToggle');
+            if (toggle) {
+                toggle.addEventListener('change', function() {
+                    const labels = document.querySelectorAll('.train-track-card-labels');
+                    labels.forEach(label => {
+                        if (this.checked) {
+                            label.style.display = 'flex';
+                        } else {
+                            label.style.display = 'none';
+                        }
+                    });
+                });
+            }
+        }
+        
+        // Load steward navigation dynamically
+        async function loadStewardNavigation() {
+            try {
+                const response = await fetch('/api/stewards');
+                const stewards = await response.json();
+                
+                const navigationHtml = stewards.map(steward => {
+                    const isActive = steward === 'HL7 International' || steward === 'HL7' ? 'active' : '';
+                    
+                    // Special handling for Finance steward - create dropdown instead of direct link
+                    if (steward === 'Finance') {
+                        const currentPath = window.location.pathname;
+                        const isFinancialHealth = currentPath === '/financial-health';
+                        const isGeographic = currentPath === '/financial-geographic';
+                        return `<div class="nav-dropdown"><a href="/Finance" class="nav-link" id="nav-finance">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item ${isFinancialHealth ? 'active' : ''}">Financial Health Trends and Insights</a><a href="/financial-geographic" class="dropdown-item ${isGeographic ? 'active' : ''}">Geographic Insights</a></div></div>`;
+                    }
+                    
+                    // Special handling for Standards Development steward - create dropdown
+                    if (steward === 'Standards Development') {
+                        const currentPath = window.location.pathname;
+                        const isStandardsDevelopmentInsights = currentPath === '/standards-development-insights';
+                        const isWgHealthHistory = currentPath === '/wg-health-history';
+                        const isWgMeetingParticipation = currentPath === '/wg-meeting-participation';
+                        return `<div class="nav-dropdown"><a href="/Standards Development" class="nav-link active" id="nav-standards-development">Standards Development</a><div class="dropdown-menu"><a href="/standards-development-insights" class="dropdown-item ${isStandardsDevelopmentInsights ? 'active' : ''}">Standards Development Insights</a><a href="/wg-health-history" class="dropdown-item ${isWgHealthHistory ? 'active' : ''}">Work Group Health History</a><a href="/wg-meeting-participation" class="dropdown-item ${isWgMeetingParticipation ? 'active' : ''}">Meeting Participation</a></div></div>`;
+                    }
+                    
+                    // Special handling for Membership steward - create dropdown
+                    if (steward === 'Membership') {
+                        const currentPath = window.location.pathname;
+                        const isMembershipHealth = currentPath === '/membership-health';
+                        return `<div class="nav-dropdown"><a href="/Membership" class="nav-link" id="nav-membership">Membership</a><div class="dropdown-menu"><a href="/membership-health" class="dropdown-item ${isMembershipHealth ? 'active' : ''}">Membership Health</a></div></div>`;
+                    }
+                    
+                    const href = (steward === 'HL7 International' || steward === 'HL7') ? '/' : `/${steward}`;
+                    return `<a href="${href}" class="nav-link ${isActive}" id="nav-${steward.toLowerCase().replace(/\s+/g, '-')}">${steward}</a>`;
+                }).join('');
+                
+                document.getElementById('steward-navigation').innerHTML = navigationHtml;
+            } catch (error) {
+                console.error('Error loading steward navigation:', error);
+                // Fallback to basic navigation
+                const currentPath = window.location.pathname;
+                const isStandardsDevelopmentInsights = currentPath === '/standards-development-insights';
+                const isWgHealthHistory = currentPath === '/wg-health-history';
+                        const isWgMeetingParticipation = currentPath === '/wg-meeting-participation';
+                document.getElementById('steward-navigation').innerHTML = `
+                    <a href="/" class="nav-link">HL7 International</a>
+                    <a href="/CSDO" class="nav-link">CSDO</a>
+                    <div class="nav-dropdown"><a href="/Finance" class="nav-link">Finance</a><div class="dropdown-menu"><a href="/financial-health" class="dropdown-item">Financial Health Trends and Insights</a><a href="/financial-geographic" class="dropdown-item">Geographic Insights</a></div></div>
+                    <div class="nav-dropdown"><a href="/Standards Development" class="nav-link active">Standards Development</a><div class="dropdown-menu"><a href="/standards-development-insights" class="dropdown-item ${isStandardsDevelopmentInsights ? 'active' : ''}">Standards Development Insights</a><a href="/wg-health-history" class="dropdown-item ${isWgHealthHistory ? 'active' : ''}">Work Group Health History</a><a href="/wg-meeting-participation" class="dropdown-item ${isWgMeetingParticipation ? 'active' : ''}">Meeting Participation</a></div></div>
+                `;
+            }
+        }
+        
+        async function loadCharts() {
+            try {
+                await Promise.all([
+                    loadSectionCharts('issues', 'ISSUES', 'issues-charts-grid'),
+                    loadSectionCharts('ballots', 'BALLOTS', 'ballots-charts-grid'),
+                    loadSectionCharts('ecosystem', 'ECOSYSTEM', 'ecosystem-charts-grid')
+                ]);
+            } catch (error) {
+                console.error('Error loading charts:', error);
+            }
+        }
+        
+        async function loadSectionCharts(section, tag, gridId) {
+            try {
+                // Get list of indicators for this tag
+                const indicatorsResponse = await fetch(`/api/standards-development/indicators/${tag}`);
+                let indicators = await indicatorsResponse.json();
+                
+                // Filter by KPI tag if checkbox is checked
+                const kpiFilter = document.getElementById('kpiFilter');
+                if (kpiFilter && kpiFilter.checked) {
+                    indicators = indicators.filter(indicator => 
+                        indicator.tags && indicator.tags.some(t => t.toUpperCase() === 'KPI')
+                    );
+                }
+                
+                const grid = document.getElementById(gridId);
+                if (!grid) {
+                    console.error(`Grid element not found: ${gridId}`);
+                    return;
+                }
+                
+                if (!indicators || indicators.length === 0) {
+                    grid.innerHTML = `<div class="loading">No ${tag} indicators found</div>`;
+                    return;
+                }
+                
+                // Clear loading message
+                grid.innerHTML = '';
+                
+                // For Ecosystem section, prepend composite package version charts
+                if (gridId === 'ecosystem-charts-grid') {
+                    const compositeCharts = [
+                        { id: 'ecosystem-package-versions-new', endpoint: 'package-versions-new', title: 'Package Versions: New R4, R4B, R5' },
+                        { id: 'ecosystem-package-versions-total', endpoint: 'package-versions-total', title: 'Package Versions: Total R4, R4B, R5' }
+                    ];
+                    for (const composite of compositeCharts) {
+                        const chartContainer = document.createElement('div');
+                        chartContainer.className = 'chart-container';
+                        chartContainer.innerHTML = `
+                            <div class="chart-title">${toTitleCase(composite.title)}</div>
+                            <div class="chart-wrapper">
+                                <canvas id="${composite.id}"></canvas>
+                            </div>
+                        `;
+                        grid.appendChild(chartContainer);
+                        await loadIndicatorChart(composite.id, composite.endpoint);
+                    }
+                }
+                
+                // Create a chart container for each indicator
+                for (const indicator of indicators) {
+                    const chartId = `${section}-${indicator.id}`;
+                    const chartContainer = document.createElement('div');
+                    chartContainer.className = 'chart-container';
+                    const titleCaseName = toTitleCase(indicator.name);
+                    chartContainer.innerHTML = `
+                        <div class="chart-title">${titleCaseName}</div>
+                        <div class="chart-wrapper">
+                            <canvas id="${chartId}"></canvas>
+                        </div>
+                    `;
+                    grid.appendChild(chartContainer);
+                    
+                    // Load chart data for this indicator
+                    await loadIndicatorChart(chartId, indicator.id);
+                }
+            } catch (error) {
+                console.error(`Error loading charts for ${section}:`, error);
+                const grid = document.getElementById(gridId);
+                if (grid) {
+                    grid.innerHTML = `<div class="error">Failed to load ${tag} indicators</div>`;
+                }
+            }
+        }
+        
+        async function loadIndicatorChart(chartId, indicatorId) {
+            try {
+                const response = await fetch(`/api/standards-development/charts/${indicatorId}`);
+                const chartData = await response.json();
+                
+                const canvas = document.getElementById(chartId);
+                if (!canvas) {
+                    console.error(`Canvas element not found: ${chartId}`);
+                    return;
+                }
+                
+                const ctx = canvas.getContext('2d');
+                
+                // Destroy existing chart if it exists
+                if (charts[chartId]) {
+                    charts[chartId].destroy();
+                }
+                
+                // Check if we have data
+                if (!chartData.datasets || chartData.datasets.length === 0) {
+                    const titleCaseTitle = toTitleCase(chartData.title || 'Indicator');
+                    canvas.parentElement.parentElement.innerHTML = `
+                        <div class="chart-title">${titleCaseTitle}</div>
+                        <div class="loading">No data available</div>
+                    `;
+                    return;
+                }
+                
+                const config = {
+                    type: chartData.type || 'line',
+                    data: {
+                        labels: chartData.labels || [],
+                        datasets: chartData.datasets || []
+                    },
+                    options: attachMeetingFlagOptions({
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(value) {
+                                        // Format numbers appropriately
+                                        if (value >= 1000000) {
+                                            return (value / 1000000).toFixed(1) + 'M';
+                                        } else if (value >= 1000) {
+                                            return (value / 1000).toFixed(1) + 'K';
+                                        }
+                                        return value;
+                                    }
+                                }
+                            },
+                            x: {
+                                display: true
+                            }
+                        }
+                    })
+                };
+                
+                charts[chartId] = new Chart(ctx, config);
+            } catch (error) {
+                console.error(`Error loading chart ${chartId}:`, error);
+                const canvas = document.getElementById(chartId);
+                if (canvas) {
+                    canvas.parentElement.parentElement.innerHTML = `
+                        <div class="chart-title">Indicator</div>
+                        <div class="error">Failed to load chart data</div>
+                    `;
+                }
+            }
+        }
+        
+        // Setup Filters
+        function setupFilters() {
+            const kpiFilter = document.getElementById('kpiFilter');
+            const meetingFlagsFilter = document.getElementById('meetingFlagsFilter');
+            const refreshBtn = document.getElementById('refreshBtn');
+            
+            // KPI Filter toggle
+            if (kpiFilter) {
+                kpiFilter.addEventListener('change', function() {
+                    // Reload charts with KPI filter
+                    loadCharts();
+                });
+            }
+            
+            if (meetingFlagsFilter) {
+                meetingFlagsFilter.addEventListener('change', function() {
+                    showMeetingFlags = this.checked;
+                    applyMeetingFlagVisibility();
+                });
+            }
+            
+            // Refresh button
+            if (refreshBtn) {
+                refreshBtn.addEventListener('click', async function() {
+                    try {
+                        // Show loading state
+                        this.disabled = true;
+                        this.textContent = 'Refreshing...';
+                        
+                        // Call the refresh endpoint
+                        const refreshResponse = await fetch('/api/refresh', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }
+                        });
+                        
+                        if (!refreshResponse.ok) {
+                            throw new Error('Failed to refresh data');
+                        }
+                        
+                        // Reload charts and published-standards section (chart + year list)
+                        await loadMeetingLocations();
+                        await Promise.all([
+                            loadCharts(),
+                            reloadPublishedStandardsSection()
+                        ]);
+                        
+                        // Show success message
+                        this.textContent = 'Data Refreshed!';
+                        setTimeout(() => {
+                            this.textContent = 'Refresh Data';
+                            this.disabled = false;
+                        }, 2000);
+                        
+                    } catch (error) {
+                        console.error('Error refreshing data:', error);
+                        this.textContent = 'Refresh Failed';
+                        setTimeout(() => {
+                            this.textContent = 'Refresh Data';
+                            this.disabled = false;
+                        }, 2000);
+                    }
+                });
+            }
+        }
+        
+        // Layout Controls
+        function setupLayoutControls() {
+            const twoColumnBtn = document.getElementById('twoColumnBtn');
+            const singleColumnBtn = document.getElementById('singleColumnBtn');
+            const chartsGrids = [
+                document.getElementById('issues-charts-grid'),
+                document.getElementById('ballots-charts-grid'),
+                document.getElementById('ecosystem-charts-grid'),
+                document.getElementById('published-specifications-chart-grid')
+            ];
+            
+            if (!twoColumnBtn || !singleColumnBtn) {
+                console.error('Layout control buttons not found');
+                return;
+            }
+            
+            // Function to resize all charts
+            function resizeAllCharts() {
+                // Use setTimeout to ensure DOM has updated before resizing
+                setTimeout(() => {
+                    Object.values(charts).forEach(chart => {
+                        if (chart && typeof chart.resize === 'function') {
+                            chart.resize();
+                        }
+                    });
+                }, 100);
+            }
+            
+            twoColumnBtn.addEventListener('click', function() {
+                chartsGrids.forEach(grid => {
+                    if (grid) {
+                        grid.classList.remove('single-column');
+                        grid.classList.add('two-column');
+                    }
+                });
+                twoColumnBtn.classList.add('active');
+                singleColumnBtn.classList.remove('active');
+                resizeAllCharts();
+            });
+            
+            singleColumnBtn.addEventListener('click', function() {
+                chartsGrids.forEach(grid => {
+                    if (grid) {
+                        grid.classList.remove('two-column');
+                        grid.classList.add('single-column');
+                    }
+                });
+                singleColumnBtn.classList.add('active');
+                twoColumnBtn.classList.remove('active');
+                resizeAllCharts();
+            });
+        }
+        
+        
+
+        
+        // Load Published Specifications Chart
+        async function loadPublishedSpecificationsChart() {
+            try {
+                const response = await fetch('/api/published-standards/chart');
+                const chartData = await response.json();
+                
+                const canvas = document.getElementById('published-specifications-chart');
+                if (!canvas) {
+                    console.error('Canvas element not found: published-specifications-chart');
+                    return;
+                }
+                
+                const ctx = canvas.getContext('2d');
+                
+                // Destroy existing chart if it exists
+                if (charts['published-specifications-chart']) {
+                    charts['published-specifications-chart'].destroy();
+                }
+                
+                // Check if we have data
+                if (!chartData.datasets || chartData.datasets.length === 0) {
+                    canvas.parentElement.parentElement.innerHTML = `
+                        <div class="chart-title">Published Specifications by Realm</div>
+                        <div class="loading">No data available</div>
+                    `;
+                    return;
+                }
+                
+                // Configure datasets for stacking
+                // First two datasets (U.S. Realm and Universal Realm) will stack
+                // Last dataset (Total) will be a separate line
+                const datasets = chartData.datasets.map((dataset, index) => {
+                    if (index < 2) {
+                        // Stack the first two datasets (areas)
+                        return {
+                            ...dataset,
+                            stack: 'realm'  // Stack these together
+                        };
+                    } else {
+                        // Total line - don't stack
+                        return {
+                            ...dataset,
+                            stack: undefined  // Don't stack this one
+                        };
+                    }
+                });
+                
+                const config = {
+                    type: 'line',
+                    data: {
+                        labels: chartData.labels || [],
+                        datasets: datasets
+                    },
+                    options: attachMeetingFlagOptions({
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: {
+                            mode: 'index',
+                            intersect: false,
+                        },
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    afterLabel: function(context) {
+                                        // Show percentage of total for realm indicators
+                                        const datasetIndex = context.datasetIndex;
+                                        const dataIndex = context.dataIndex;
+                                        // Total is the last dataset (index 2)
+                                        const totalDataset = datasets[2];
+                                        if (datasetIndex < 2 && totalDataset && totalDataset.data[dataIndex] > 0) {
+                                            const total = totalDataset.data[dataIndex];
+                                            const value = context.parsed.y;
+                                            const percentage = ((value / total) * 100).toFixed(1);
+                                            return `${percentage}% of total`;
+                                        }
+                                        return '';
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                stacked: true,  // Enable stacking for datasets with stack property
+                                ticks: {
+                                    callback: function(value) {
+                                        return value;
+                                    }
+                                }
+                            },
+                            x: {
+                                display: true,
+                                stacked: false  // Don't stack on x-axis
+                            }
+                        }
+                    })
+                };
+                
+                charts['published-specifications-chart'] = new Chart(ctx, config);
+            } catch (error) {
+                console.error('Error loading published specifications chart:', error);
+                const canvas = document.getElementById('published-specifications-chart');
+                if (canvas) {
+                    canvas.parentElement.parentElement.innerHTML = `
+                        <div class="chart-title">Published Specifications by Realm</div>
+                        <div class="error">Failed to load chart data</div>
+                    `;
+                }
+            }
+        }
+        
+        // Published Standards Section
+        async function reloadPublishedStandardsSection() {
+            await loadPublishedSpecificationsChart();
+
+            const yearPicker = document.getElementById('yearPicker');
+            const container = document.getElementById('published-standards-container');
+
+            if (!yearPicker || !container) {
+                return;
+            }
+
+            const previouslySelected = parseInt(yearPicker.value, 10);
+
+            try {
+                const yearsResponse = await fetch('/api/published-standards/years');
+                const yearsData = await yearsResponse.json();
+                const years = yearsData.years || [];
+
+                yearPicker.innerHTML = '';
+                if (years.length > 0) {
+                    const currentYear = new Date().getFullYear();
+                    let defaultYear = years.includes(previouslySelected)
+                        ? previouslySelected
+                        : (years.includes(currentYear) ? currentYear : years[years.length - 1]);
+
+                    years.forEach(year => {
+                        const option = document.createElement('option');
+                        option.value = year;
+                        option.textContent = year;
+                        if (year === defaultYear) {
+                            option.selected = true;
+                        }
+                        yearPicker.appendChild(option);
+                    });
+
+                    await loadPublishedStandards(defaultYear);
+                } else {
+                    container.innerHTML = '<div class="loading">No published standards data available</div>';
+                }
+            } catch (error) {
+                console.error('Error loading years:', error);
+                container.innerHTML = '<div class="error">Failed to load years</div>';
+            }
+        }
+
+        async function setupPublishedStandards() {
+            await reloadPublishedStandardsSection();
+
+            const yearPicker = document.getElementById('yearPicker');
+            if (yearPicker && !yearPicker.dataset.listenersBound) {
+                yearPicker.addEventListener('change', async function() {
+                    const selectedYear = parseInt(this.value);
+                    const container = document.getElementById('published-standards-container');
+                    if (selectedYear) {
+                        await loadPublishedStandards(selectedYear);
+                    } else if (container) {
+                        container.innerHTML = '<div class="loading">Select a year to view published standards</div>';
+                    }
+                });
+                yearPicker.dataset.listenersBound = 'true';
+            }
+
+            const exportBtn = document.getElementById('exportPngBtn');
+            if (exportBtn && !exportBtn.dataset.listenersBound) {
+                exportBtn.addEventListener('click', async function() {
+                    await exportStandardsToPNG();
+                });
+                exportBtn.dataset.listenersBound = 'true';
+            }
+        }
+        
+        function slugifyFilename(text) {
+            return String(text || 'chart')
+                .trim()
+                .replace(/[<>:"/\\|?*\x00-\x1f]/g, '')
+                .replace(/\s+/g, '_')
+                .replace(/_+/g, '_')
+                .replace(/^_+|_+$/g, '')
+                .slice(0, 80) || 'chart';
+        }
+
+        function trimCanvasToEqualPadding(canvas, paddingPx) {
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+            const data = ctx.getImageData(0, 0, width, height).data;
+
+            let minX = width;
+            let minY = height;
+            let maxX = -1;
+            let maxY = -1;
+
+            for (let y = 0; y < height; y++) {
+                for (let x = 0; x < width; x++) {
+                    if (data[(y * width + x) * 4 + 3] > 8) {
+                        if (x < minX) minX = x;
+                        if (x > maxX) maxX = x;
+                        if (y < minY) minY = y;
+                        if (y > maxY) maxY = y;
+                    }
+                }
+            }
+
+            if (maxX < 0) {
+                return canvas;
+            }
+
+            const contentW = maxX - minX + 1;
+            const contentH = maxY - minY + 1;
+            const trimmed = document.createElement('canvas');
+            trimmed.width = contentW + paddingPx * 2;
+            trimmed.height = contentH + paddingPx * 2;
+            const trimmedCtx = trimmed.getContext('2d');
+            trimmedCtx.clearRect(0, 0, trimmed.width, trimmed.height);
+            trimmedCtx.drawImage(
+                canvas,
+                minX, minY, contentW, contentH,
+                paddingPx, paddingPx, contentW, contentH
+            );
+            return trimmed;
+        }
+
+        async function waitForImages(root) {
+            const images = Array.from(root.querySelectorAll('img'));
+            await Promise.all(images.map(img => {
+                if (img.complete && img.naturalWidth > 0) {
+                    return Promise.resolve();
+                }
+                return img.decode ? img.decode().catch(() => {}) : new Promise(resolve => {
+                    img.onload = resolve;
+                    img.onerror = resolve;
+                });
+            }));
+        }
+
+        function formatPeriodForFilename(period) {
+            return String(period || '')
+                .trim()
+                .replace(/-/g, '')
+                .replace(/\s+/g, '') || 'Period';
+        }
+
+        function getInsightsChartExportWidth() {
+            // Match the single-column card width on the designed dashboard
+            // (max-width 1400px with 2rem page padding), not the current window
+            // and not a stretched 1920px canvas.
+            const dashboard = document.querySelector('.dashboard-container');
+            const styles = dashboard ? window.getComputedStyle(dashboard) : null;
+            const maxWidth = styles && parseFloat(styles.maxWidth);
+            const paddingLeft = styles ? parseFloat(styles.paddingLeft) : 32;
+            const paddingRight = styles ? parseFloat(styles.paddingRight) : 32;
+            const designedWidth = (Number.isFinite(maxWidth) ? maxWidth : 1400) - paddingLeft - paddingRight;
+            return Math.max(800, Math.round(designedWidth));
+        }
+
+        function getChartEndPeriod(container) {
+            const canvas = container.querySelector('canvas');
+            if (!canvas) {
+                return 'Period';
+            }
+            const chart = charts[canvas.id] || Object.values(charts).find(item => item && item.canvas === canvas);
+            const labels = chart && chart.data && chart.data.labels;
+            if (labels && labels.length) {
+                return formatPeriodForFilename(labels[labels.length - 1]);
+            }
+            return 'Period';
+        }
+
+        function getChartContainersForExport() {
+            const gridIds = [
+                'issues-charts-grid',
+                'ballots-charts-grid',
+                'ecosystem-charts-grid',
+                'published-specifications-chart-grid'
+            ];
+            const containers = [];
+            gridIds.forEach(id => {
+                const grid = document.getElementById(id);
+                if (!grid) {
+                    return;
+                }
+                grid.querySelectorAll('.chart-container').forEach(container => {
+                    if (container.querySelector('.error, .loading')) {
+                        return;
+                    }
+                    if (!container.querySelector('canvas')) {
+                        return;
+                    }
+                    containers.push(container);
+                });
+            });
+            return containers;
+        }
+
+        function getLiveChart(container) {
+            const canvas = container.querySelector('canvas');
+            if (!canvas) {
+                return null;
+            }
+            return charts[canvas.id] || Object.values(charts).find(item => item && item.canvas === canvas) || null;
+        }
+
+        function cloneChartDataForExport(liveChart) {
+            return {
+                labels: Array.from(liveChart.data.labels || []),
+                datasets: (liveChart.data.datasets || []).map(dataset => {
+                    const clone = {};
+                    [
+                        'label', 'data', 'backgroundColor', 'borderColor', 'borderWidth',
+                        'borderDash', 'fill', 'tension', 'pointRadius', 'pointHoverRadius',
+                        'pointBackgroundColor', 'pointBorderColor', 'type', 'stack',
+                        'yAxisID', 'order', 'hidden', 'spanGaps', 'showLine', 'stepped'
+                    ].forEach(key => {
+                        if (dataset[key] === undefined) {
+                            return;
+                        }
+                        clone[key] = Array.isArray(dataset[key]) ? dataset[key].slice() : dataset[key];
+                    });
+                    return clone;
+                })
+            };
+        }
+
+        function buildExportChartOptions(liveChart) {
+            const yScale = liveChart.options && liveChart.options.scales && liveChart.options.scales.y;
+            const xScale = liveChart.options && liveChart.options.scales && liveChart.options.scales.x;
+            return attachMeetingFlagOptions({
+                animation: false,
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false
+                },
+                plugins: {
+                    legend: { position: 'top' },
+                    title: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        stacked: !!(yScale && yScale.stacked),
+                        ticks: {
+                            callback: function(value) {
+                                if (value >= 1000000) {
+                                    return (value / 1000000).toFixed(1) + 'M';
+                                }
+                                if (value >= 1000) {
+                                    return (value / 1000).toFixed(1) + 'K';
+                                }
+                                return value;
+                            }
+                        }
+                    },
+                    x: {
+                        display: true,
+                        stacked: !!(xScale && xScale.stacked)
+                    }
+                }
+            });
+        }
+
+        async function captureChartContainerToPng(container, exportWidth) {
+            const liveChart = getLiveChart(container);
+            const host = document.createElement('div');
+            host.setAttribute('aria-hidden', 'true');
+            host.style.position = 'absolute';
+            host.style.left = '0';
+            host.style.top = `${Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) + 200}px`;
+            host.style.zIndex = '-8000';
+            host.style.pointerEvents = 'none';
+
+            const clone = container.cloneNode(true);
+            clone.style.width = `${exportWidth}px`;
+            clone.style.maxWidth = `${exportWidth}px`;
+            clone.style.margin = '0';
+            clone.style.boxShadow = 'none';
+            clone.style.overflow = 'hidden';
+            clone.style.boxSizing = 'border-box';
+
+            clone.querySelectorAll('.meeting-flags-overlay').forEach(overlay => overlay.remove());
+
+            const clonedWrapper = clone.querySelector('.chart-wrapper');
+            if (clonedWrapper) {
+                clonedWrapper.style.height = '400px';
+                clonedWrapper.style.width = '100%';
+            }
+
+            const clonedCanvas = clone.querySelector('canvas');
+            let exportChart = null;
+            if (clonedCanvas && liveChart) {
+                clonedCanvas.removeAttribute('width');
+                clonedCanvas.removeAttribute('height');
+                clonedCanvas.style.width = '100%';
+                clonedCanvas.style.height = '100%';
+            }
+
+            host.appendChild(clone);
+            document.body.appendChild(host);
+
+            if (clonedCanvas && liveChart) {
+                exportChart = new Chart(clonedCanvas.getContext('2d'), {
+                    type: liveChart.config.type,
+                    data: cloneChartDataForExport(liveChart),
+                    options: buildExportChartOptions(liveChart)
+                });
+            }
+
+            await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+            await waitForImages(clone);
+            await new Promise(resolve => setTimeout(resolve, 80));
+
+            try {
+                const rect = clone.getBoundingClientRect();
+                const captureWidth = Math.ceil(Math.max(clone.offsetWidth, exportWidth));
+                const captureHeight = Math.ceil(Math.max(clone.offsetHeight, clone.scrollHeight));
+                const rawCanvas = await html2canvas(clone, {
+                    backgroundColor: null,
+                    scale: 2,
+                    logging: false,
+                    useCORS: true,
+                    allowTaint: false,
+                    x: 0,
+                    y: 0,
+                    width: captureWidth,
+                    height: captureHeight,
+                    windowWidth: captureWidth,
+                    windowHeight: captureHeight,
+                    scrollX: -rect.left,
+                    scrollY: -rect.top
+                });
+                return trimCanvasToEqualPadding(rawCanvas, 24);
+            } finally {
+                if (exportChart) {
+                    exportChart.destroy();
+                }
+                document.body.removeChild(host);
+            }
+        }
+
+        function canvasToPngBlob(canvas) {
+            return new Promise((resolve, reject) => {
+                canvas.toBlob(function(blob) {
+                    if (!blob) {
+                        reject(new Error('Failed to create PNG'));
+                        return;
+                    }
+                    resolve(blob);
+                }, 'image/png');
+            });
+        }
+
+        function blobToBase64(blob) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = function () {
+                    const result = String(reader.result || '');
+                    const comma = result.indexOf(',');
+                    resolve(comma >= 0 ? result.slice(comma + 1) : result);
+                };
+                reader.onerror = function () {
+                    reject(reader.error || new Error('Failed to read chart image'));
+                };
+                reader.readAsDataURL(blob);
+            });
+        }
+
+        async function waitForInsightCharts() {
+            const started = Date.now();
+            while (Date.now() - started < 20000) {
+                const stillLoading = document.querySelector(
+                    '#issues-charts-grid .loading, #ballots-charts-grid .loading, #ecosystem-charts-grid .loading, #published-specifications-chart-grid .loading'
+                );
+                if (!stillLoading && getChartContainersForExport().length) {
+                    return;
+                }
+                await new Promise(resolve => setTimeout(resolve, 200));
+            }
+        }
+
+        async function captureInsightChartsForPrompt(onProgress) {
+            if (typeof html2canvas !== 'function') {
+                throw new Error('Chart capture is not available');
+            }
+            await waitForInsightCharts();
+            const containers = getChartContainersForExport();
+            const exportWidth = getInsightsChartExportWidth();
+            const usedNames = new Set();
+            const captured = [];
+            for (let i = 0; i < containers.length; i++) {
+                if (onProgress) {
+                    onProgress(i + 1, containers.length);
+                }
+                const container = containers[i];
+                const canvas = await captureChartContainerToPng(container, exportWidth);
+                const blob = await canvasToPngBlob(canvas);
+                const title = (container.querySelector('.chart-title')?.textContent || `chart_${i + 1}`).trim();
+                const period = getChartEndPeriod(container);
+                const index = String(i + 1).padStart(3, '0');
+                let filename = `${period}_${index}_${slugifyFilename(title)}.png`;
+                if (usedNames.has(filename)) {
+                    filename = `${period}_${index}_${i + 1}_${slugifyFilename(title)}.png`;
+                }
+                usedNames.add(filename);
+                captured.push({
+                    filename: filename,
+                    title: title,
+                    data: await blobToBase64(blob)
+                });
+            }
+            return captured;
+        }
+
+        async function exportInsightChartsZip() {
+            const exportBtn = document.getElementById('exportChartsPngBtn');
+            const originalText = exportBtn ? exportBtn.innerHTML : '';
+            const containers = getChartContainersForExport();
+
+            if (!containers.length) {
+                alert('No charts to export. Wait for the dashboard to finish loading.');
+                return;
+            }
+
+            if (typeof html2canvas !== 'function' || typeof JSZip === 'undefined') {
+                alert('Export libraries failed to load. Please refresh and try again.');
+                return;
+            }
+
+            try {
+                if (exportBtn) {
+                    exportBtn.disabled = true;
+                    exportBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Exporting 0/${containers.length}...`;
+                }
+
+                const zip = new JSZip();
+                const dateStamp = new Date().toISOString().split('T')[0];
+                const folder = zip.folder('HL7_Standards_Development_Insights_Charts');
+                const usedNames = new Set();
+                const exportWidth = getInsightsChartExportWidth();
+
+                for (let i = 0; i < containers.length; i++) {
+                    if (exportBtn) {
+                        exportBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Exporting ${i + 1}/${containers.length}...`;
+                    }
+
+                    const container = containers[i];
+                    const canvas = await captureChartContainerToPng(container, exportWidth);
+                    const blob = await canvasToPngBlob(canvas);
+                    const title = container.querySelector('.chart-title')?.textContent || `chart_${i + 1}`;
+                    const period = getChartEndPeriod(container);
+                    const index = String(i + 1).padStart(3, '0');
+                    let filename = `${period}_${index}_${slugifyFilename(title)}.png`;
+                    if (usedNames.has(filename)) {
+                        filename = `${period}_${index}_${i + 1}_${slugifyFilename(title)}.png`;
+                    }
+                    usedNames.add(filename);
+                    folder.file(filename, blob);
+                }
+
+                if (exportBtn) {
+                    exportBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating zip...';
+                }
+
+                const zipBlob = await zip.generateAsync({ type: 'blob' });
+                const url = URL.createObjectURL(zipBlob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `HL7_Standards_Development_Insights_Charts_${dateStamp}.zip`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+
+                if (exportBtn) {
+                    exportBtn.disabled = false;
+                    exportBtn.innerHTML = originalText;
+                }
+            } catch (error) {
+                console.error('Error exporting insight charts:', error);
+                alert('Failed to export charts. Please try again.');
+                if (exportBtn) {
+                    exportBtn.disabled = false;
+                    exportBtn.innerHTML = originalText || '<i class="fas fa-download"></i> Export Charts as PNG';
+                }
+            }
+        }
+
+        function setupChartZipExport() {
+            const exportBtn = document.getElementById('exportChartsPngBtn');
+            if (exportBtn && !exportBtn.dataset.listenersBound) {
+                exportBtn.addEventListener('click', async function() {
+                    await exportInsightChartsZip();
+                });
+                exportBtn.dataset.listenersBound = 'true';
+            }
+        }
+
+        function downloadCanvasAsPng(canvas, filename) {
+            return new Promise((resolve, reject) => {
+                canvas.toBlob(function(blob) {
+                    if (!blob) {
+                        reject(new Error('Failed to create PNG'));
+                        return;
+                    }
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = filename;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(url);
+                    resolve();
+                }, 'image/png');
+            });
+        }
+
+        async function captureElementToCanvas(element, options = {}) {
+            const transparent = Boolean(options.transparent);
+            const wrapper = document.createElement('div');
+            wrapper.style.background = transparent ? 'transparent' : '#ffffff';
+            wrapper.style.padding = options.padding || '2rem';
+            wrapper.style.position = 'absolute';
+            wrapper.style.left = '-9999px';
+            wrapper.style.top = '0';
+
+            if (options.compact) {
+                wrapper.style.width = 'max-content';
+                wrapper.style.display = 'inline-block';
+            } else {
+                wrapper.style.width = '100%';
+            }
+
+            const clone = element.cloneNode(true);
+            clone.style.display = 'block';
+            if (options.compact) {
+                clone.style.margin = '0';
+            }
+            if (transparent) {
+                clone.style.overflow = 'hidden';
+                clone.style.boxShadow = 'none';
+            }
+            wrapper.appendChild(clone);
+            document.body.appendChild(wrapper);
+
+            await new Promise(resolve => setTimeout(resolve, 300));
+
+            try {
+                return await html2canvas(wrapper, {
+                    backgroundColor: transparent ? null : '#ffffff',
+                    scale: 2,
+                    logging: false,
+                    useCORS: true,
+                    allowTaint: false,
+                    width: wrapper.scrollWidth,
+                    height: wrapper.scrollHeight,
+                    windowWidth: wrapper.scrollWidth,
+                    windowHeight: wrapper.scrollHeight
+                });
+            } finally {
+                document.body.removeChild(wrapper);
+            }
+        }
+
+        async function exportStandardsToPNG() {
+            const container = document.getElementById('published-standards-container');
+            const summaryContainer = document.getElementById('published-standards-summary');
+            const yearPicker = document.getElementById('yearPicker');
+            const selectedYear = yearPicker ? yearPicker.value : '';
+            
+            if (!container) {
+                alert('No standards data to export');
+                return;
+            }
+            
+            // Check if there's content to export
+            if (container.innerHTML.includes('Select a year') || container.innerHTML.includes('Loading') || container.innerHTML.includes('No published standards')) {
+                alert('Please select a year with published standards first');
+                return;
+            }
+            
+            const exportBtn = document.getElementById('exportPngBtn');
+            const originalText = exportBtn ? exportBtn.innerHTML : '';
+            
+            try {
+                if (exportBtn) {
+                    exportBtn.disabled = true;
+                    exportBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Exporting...';
+                }
+
+                const dateStamp = new Date().toISOString().split('T')[0];
+                const yearLabel = selectedYear || 'Year';
+                const hasSummary = summaryContainer
+                    && summaryContainer.style.display !== 'none'
+                    && summaryContainer.innerHTML.trim() !== '';
+
+                const listingCanvas = await captureElementToCanvas(container);
+                const summaryCanvas = hasSummary
+                    ? await captureElementToCanvas(summaryContainer, {
+                        compact: true,
+                        padding: '8px',
+                        transparent: true
+                    })
+                    : null;
+
+                await downloadCanvasAsPng(
+                    listingCanvas,
+                    `HL7_Published_Standards_${yearLabel}_${dateStamp}.png`
+                );
+
+                if (summaryCanvas) {
+                    await new Promise(resolve => setTimeout(resolve, 400));
+                    await downloadCanvasAsPng(
+                        summaryCanvas,
+                        `HL7_Published_Standards_Summary_${yearLabel}_${dateStamp}.png`
+                    );
+                }
+
+                if (exportBtn) {
+                    exportBtn.disabled = false;
+                    exportBtn.innerHTML = originalText;
+                }
+            } catch (error) {
+                console.error('Error exporting to PNG:', error);
+                alert('Failed to export images. Please try again.');
+                
+                if (exportBtn) {
+                    exportBtn.disabled = false;
+                    exportBtn.innerHTML = '<i class="fas fa-download"></i> Export as PNG';
+                }
+            }
+        }
+        
+        async function loadPublishedStandards(year) {
+            const container = document.getElementById('published-standards-container');
+            const summaryContainer = document.getElementById('published-standards-summary');
+            if (!container) {
+                return;
+            }
+            
+            container.innerHTML = '<div class="loading">Loading published standards...</div>';
+            if (summaryContainer) {
+                summaryContainer.style.display = 'none';
+            }
+            
+            try {
+                const response = await fetch(`/api/published-standards/year/${year}`);
+                const data = await response.json();
+                
+                if (!data.standards || data.standards.length === 0) {
+                    container.innerHTML = `<div class="loading">No published standards found for ${year}</div>`;
+                    if (summaryContainer) {
+                        summaryContainer.style.display = 'none';
+                    }
+                    return;
+                }
+                
+                // Create train track visualization (this also creates the summary)
+                container.innerHTML = createTrainTrackVisualization(data.standards, year);
+            } catch (error) {
+                console.error('Error loading published standards:', error);
+                container.innerHTML = '<div class="error">Failed to load published standards</div>';
+                if (summaryContainer) {
+                    summaryContainer.style.display = 'none';
+                }
+            }
+        }
+        
+        function createSummaryTable(standards) {
+            let totalCount = standards.length;
+            let universalCount = 0;
+            let usRealmCount = 0;
+            let acceleratorCount = 0;
+            
+            standards.forEach(standard => {
+                const realmLower = (standard.realm || '').toLowerCase();
+                if (realmLower === 'universal') {
+                    universalCount++;
+                } else if (realmLower.includes('united states') || realmLower.includes('us realm')) {
+                    usRealmCount++;
+                }
+                
+                if (standard.accelerator) {
+                    acceleratorCount++;
+                }
+            });
+            
+            let html = `<div class="standards-summary-table">`;
+            html += `<div class="summary-row">`;
+            html += `<div class="summary-icon"><i class="fas fa-file-alt"></i></div>`;
+            html += `<div class="summary-label">All Published Specifications</div>`;
+            html += `<div class="summary-count">${totalCount}</div>`;
+            html += `</div>`;
+            
+            html += `<div class="summary-row">`;
+            html += `<div class="summary-icon summary-icon-green"><i class="fas fa-globe"></i></div>`;
+            html += `<div class="summary-label">Universal Realm</div>`;
+            html += `<div class="summary-count">${universalCount}</div>`;
+            html += `</div>`;
+            
+            html += `<div class="summary-row">`;
+            html += `<div class="summary-icon summary-icon-blue"><i class="fas fa-flag-usa"></i></div>`;
+            html += `<div class="summary-label">U.S. Realm</div>`;
+            html += `<div class="summary-count">${usRealmCount}</div>`;
+            html += `</div>`;
+            
+            html += `<div class="summary-row">`;
+            html += `<div class="summary-icon summary-icon-red"><i class="fas fa-rocket"></i></div>`;
+            html += `<div class="summary-label">Accelerators</div>`;
+            html += `<div class="summary-count">${acceleratorCount}</div>`;
+            html += `</div>`;
+            
+            html += `</div>`;
+            return html;
+        }
+        
+        function createTrainTrackVisualization(standards, year) {
+            // Group standards by month
+            const standardsByMonth = {};
+            standards.forEach(standard => {
+                const dateStr = standard.date || '';
+                let monthKey = 'Unknown';
+                
+                if (dateStr) {
+                    try {
+                        const parts = dateStr.split('/');
+                        if (parts.length === 3) {
+                            const month = parseInt(parts[0], 10);
+                            const day = parseInt(parts[1], 10);
+                            let yearPart = parseInt(parts[2], 10);
+                            
+                            if (yearPart < 100) {
+                                yearPart += 2000;
+                            }
+                            
+                            const date = new Date(yearPart, month - 1, day);
+                            if (!isNaN(date.getTime())) {
+                                monthKey = date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                            }
+                        }
+                    } catch (e) {
+                        // Keep as Unknown
+                    }
+                }
+                
+                if (!standardsByMonth[monthKey]) {
+                    standardsByMonth[monthKey] = [];
+                }
+                standardsByMonth[monthKey].push(standard);
+            });
+            
+            // Sort months chronologically
+            const sortedMonths = Object.keys(standardsByMonth).sort((a, b) => {
+                if (a === 'Unknown') return 1;
+                if (b === 'Unknown') return -1;
+                try {
+                    const dateA = new Date(a);
+                    const dateB = new Date(b);
+                    return dateA - dateB;
+                } catch (e) {
+                    return a.localeCompare(b);
+                }
+            });
+            
+            // Create summary table
+            const summaryHtml = createSummaryTable(standards);
+            const summaryContainer = document.getElementById('published-standards-summary');
+            if (summaryContainer) {
+                summaryContainer.innerHTML = summaryHtml;
+                summaryContainer.style.display = 'block';
+            }
+            
+            let html = `<div class="train-track-wrapper">`;
+            html += `<div class="train-track-header"><h3>${year} Published Standards (${standards.length} total)</h3></div>`;
+            html += `<div class="train-track-container">`;
+            html += `<div class="train-track-line"></div>`;
+            html += `<div class="train-track-months">`;
+            
+            sortedMonths.forEach((month, monthIndex) => {
+                const monthStandards = standardsByMonth[month];
+                const isLastMonth = monthIndex === sortedMonths.length - 1;
+                
+                html += `<div class="train-track-month-group ${isLastMonth ? 'last-month' : ''}">`;
+                html += `<div class="train-track-month-circle"></div>`;
+                html += `<div class="train-track-month-label">${month}</div>`;
+                html += `<div class="train-track-month-standards">`;
+                
+                monthStandards.forEach((standard) => {
+                    html += `<div class="train-track-standard-item">`;
+                    html += `<div class="train-track-card">`;
+                    html += `<div class="train-track-card-title">${escapeHtml(standard.name)}</div>`;
+                    html += `<div class="train-track-card-labels">`;
+                    
+                    // Family label
+                    if (standard.family) {
+                        const familyClass = `family-${standard.family.toLowerCase()}`;
+                        html += `<div class="train-track-card-meta ${familyClass}">${escapeHtml(standard.family)}</div>`;
+                    }
+                    
+                    // Realm label
+                    if (standard.realm) {
+                        const realmLower = standard.realm.toLowerCase();
+                        let realmClass = '';
+                        let realmIcon = '';
+                        
+                        if (realmLower === 'universal') {
+                            realmClass = 'realm-universal';
+                            realmIcon = '<i class="fas fa-globe"></i>';
+                        } else if (realmLower.includes('united states') || realmLower.includes('us realm')) {
+                            realmClass = 'realm-united-states';
+                            realmIcon = '<i class="fas fa-flag-usa"></i>';
+                        }
+                        
+                        if (realmClass) {
+                            html += `<div class="train-track-card-meta ${realmClass}">${realmIcon}${escapeHtml(standard.realm)}</div>`;
+                        }
+                    }
+                    
+                    // Accelerator label
+                    if (standard.accelerator) {
+                        html += `<div class="train-track-card-meta accelerator"><i class="fas fa-rocket"></i>${escapeHtml(standard.accelerator)}</div>`;
+                    }
+                    
+                    html += `</div>`;
+                    html += `</div>`;
+                    html += `</div>`;
+                });
+                
+                html += `</div>`;
+                html += `</div>`;
+            });
+            
+            html += `</div>`;
+            html += `</div>`;
+            html += `</div>`;
+            
+            return html;
+        }
+        
+        function parseDateForSort(dateStr) {
+            if (!dateStr) return new Date(0);
+            try {
+                const parts = dateStr.split('/');
+                if (parts.length === 3) {
+                    const month = parseInt(parts[0], 10);
+                    const day = parseInt(parts[1], 10);
+                    let yearPart = parseInt(parts[2], 10);
+                    if (yearPart < 100) {
+                        yearPart += 2000;
+                    }
+                    return new Date(yearPart, month - 1, day);
+                }
+            } catch (e) {
+                // Ignore
+            }
+            return new Date(0);
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+    <script src="/static/js/standards-llm-prompt.js?v=20261002b"></script>
+    <script>
+        initStandardsLlmPrompt({
+            scope: 'insights',
+            kpiFilterId: 'kpiFilter',
+            includePublications: true,
+            captureImages: captureInsightChartsForPrompt
+        });
+    </script>
+</body>
+</html>

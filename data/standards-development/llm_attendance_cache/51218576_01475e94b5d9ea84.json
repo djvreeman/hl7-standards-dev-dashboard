@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Anita Walden",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Amy Nordo",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lindsey Hoggle",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Diana Ovelgoenne",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Michael Kipness",
+      "organization": "IEEE SA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Javier Espina",
+      "organization": "Philips",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Paul Schluter",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ken Fuchs",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Eric Moll",
+      "organization": "Philips",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Rhoads",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

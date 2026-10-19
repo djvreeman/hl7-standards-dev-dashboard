@@ -1,0 +1,429 @@
+{
+  "years": [
+    {
+      "year": 2024,
+      "countries": {
+        "Australia": {
+          "country": "Australia",
+          "membership_revenue": 1905.0,
+          "affiliate_revenue": 0.0
+        },
+        "Bulgaria": {
+          "country": "Bulgaria",
+          "membership_revenue": 1905.0,
+          "affiliate_revenue": 0.0
+        },
+        "Canada": {
+          "country": "Canada",
+          "membership_revenue": 55675.0,
+          "affiliate_revenue": 2262.75
+        },
+        "Denmark": {
+          "country": "Denmark",
+          "membership_revenue": 1905.0,
+          "affiliate_revenue": 5401.06
+        },
+        "Estonia": {
+          "country": "Estonia",
+          "membership_revenue": 5460.0,
+          "affiliate_revenue": 0.0
+        },
+        "Finland": {
+          "country": "Finland",
+          "membership_revenue": 1545.0,
+          "affiliate_revenue": 0.0
+        },
+        "France": {
+          "country": "France",
+          "membership_revenue": 28835.0,
+          "affiliate_revenue": 0.0
+        },
+        "Germany": {
+          "country": "Germany",
+          "membership_revenue": 3915.0,
+          "affiliate_revenue": 10490.6
+        },
+        "Ireland": {
+          "country": "Ireland",
+          "membership_revenue": 1545.0,
+          "affiliate_revenue": 0.0
+        },
+        "Japan": {
+          "country": "Japan",
+          "membership_revenue": 5460.0,
+          "affiliate_revenue": 0.0
+        },
+        "Luxembourg": {
+          "country": "Luxembourg",
+          "membership_revenue": 1545.0,
+          "affiliate_revenue": 0.0
+        },
+        "Malaysia": {
+          "country": "Malaysia",
+          "membership_revenue": 4635.0,
+          "affiliate_revenue": 0.0
+        },
+        "Netherlands": {
+          "country": "Netherlands",
+          "membership_revenue": 52530.0,
+          "affiliate_revenue": 0.0
+        },
+        "Poland": {
+          "country": "Poland",
+          "membership_revenue": 5460.0,
+          "affiliate_revenue": 0.0
+        },
+        "South Africa": {
+          "country": "South Africa",
+          "membership_revenue": 3195.0,
+          "affiliate_revenue": 0.0
+        },
+        "Korea, Rep.": {
+          "country": "Korea, Rep.",
+          "membership_revenue": 16500.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Spain": {
+          "country": "Spain",
+          "membership_revenue": 4275.0,
+          "affiliate_revenue": 0.0
+        },
+        "Switzerland": {
+          "country": "Switzerland",
+          "membership_revenue": 26465.0,
+          "affiliate_revenue": 10649.91
+        },
+        "United Kingdom": {
+          "country": "United Kingdom",
+          "membership_revenue": 16175.0,
+          "affiliate_revenue": 11123.0
+        },
+        "United States": {
+          "country": "United States",
+          "membership_revenue": 2325877.08,
+          "affiliate_revenue": 0.0
+        },
+        "Other (International Affiliates)": {
+          "country": "Other (International Affiliates)",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 32007.44
+        },
+        "Taiwan, China": {
+          "country": "Taiwan, China",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 7540.0
+        },
+        "China": {
+          "country": "China",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 2044.0
+        },
+        "Brazil": {
+          "country": "Brazil",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Croatia": {
+          "country": "Croatia",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Italy": {
+          "country": "Italy",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 12070.0
+        },
+        "Romania": {
+          "country": "Romania",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "United Arab Emirates": {
+          "country": "United Arab Emirates",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        }
+      }
+    },
+    {
+      "year": 2025,
+      "countries": {
+        "South Africa": {
+          "country": "South Africa",
+          "membership_revenue": 3195.0,
+          "affiliate_revenue": 0.0
+        },
+        "Romania": {
+          "country": "Romania",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Philippines": {
+          "country": "Philippines",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Estonia": {
+          "country": "Estonia",
+          "membership_revenue": 5460.0,
+          "affiliate_revenue": 0.0
+        },
+        "Singapore": {
+          "country": "Singapore",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Poland": {
+          "country": "Poland",
+          "membership_revenue": 5460.0,
+          "affiliate_revenue": 4050.0
+        },
+        "Finland": {
+          "country": "Finland",
+          "membership_revenue": 1545.0,
+          "affiliate_revenue": 2750.0
+        },
+        "Slovak Republic": {
+          "country": "Slovak Republic",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "India": {
+          "country": "India",
+          "membership_revenue": 3095.0,
+          "affiliate_revenue": 0.0
+        },
+        "Brazil": {
+          "country": "Brazil",
+          "membership_revenue": 775.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Ecuador": {
+          "country": "Ecuador",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Ukraine": {
+          "country": "Ukraine",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Sweden": {
+          "country": "Sweden",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 2690.0
+        },
+        "Czechia": {
+          "country": "Czechia",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1200.0
+        },
+        "Malaysia": {
+          "country": "Malaysia",
+          "membership_revenue": 4635.0,
+          "affiliate_revenue": 0.0
+        },
+        "Colombia": {
+          "country": "Colombia",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Austria": {
+          "country": "Austria",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 10330.0
+        },
+        "Switzerland": {
+          "country": "Switzerland",
+          "membership_revenue": 26465.0,
+          "affiliate_revenue": 12820.0
+        },
+        "Belgium": {
+          "country": "Belgium",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Saudi Arabia": {
+          "country": "Saudi Arabia",
+          "membership_revenue": 775.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Denmark": {
+          "country": "Denmark",
+          "membership_revenue": 1905.0,
+          "affiliate_revenue": 6960.0
+        },
+        "Netherlands": {
+          "country": "Netherlands",
+          "membership_revenue": 52530.0,
+          "affiliate_revenue": 20700.0
+        },
+        "Argentina": {
+          "country": "Argentina",
+          "membership_revenue": 1545.0,
+          "affiliate_revenue": 1100.0
+        },
+        "Hong Kong SAR, China": {
+          "country": "Hong Kong SAR, China",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 7800.0
+        },
+        "Slovenia": {
+          "country": "Slovenia",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Montenegro": {
+          "country": "Montenegro",
+          "membership_revenue": 775.0,
+          "affiliate_revenue": 0.0
+        },
+        "Costa Rica": {
+          "country": "Costa Rica",
+          "membership_revenue": 1545.0,
+          "affiliate_revenue": 0.0
+        },
+        "Japan": {
+          "country": "Japan",
+          "membership_revenue": 5460.0,
+          "affiliate_revenue": 9400.0
+        },
+        "Luxembourg": {
+          "country": "Luxembourg",
+          "membership_revenue": 1545.0,
+          "affiliate_revenue": 0.0
+        },
+        "Malta": {
+          "country": "Malta",
+          "membership_revenue": 2370.0,
+          "affiliate_revenue": 0.0
+        },
+        "Canada": {
+          "country": "Canada",
+          "membership_revenue": 63645.0,
+          "affiliate_revenue": 2400.0
+        },
+        "Chile": {
+          "country": "Chile",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "United Arab Emirates": {
+          "country": "United Arab Emirates",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Portugal": {
+          "country": "Portugal",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 2850.0
+        },
+        "Russian Federation": {
+          "country": "Russian Federation",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Australia": {
+          "country": "Australia",
+          "membership_revenue": 5000.0,
+          "affiliate_revenue": 4250.0
+        },
+        "Italy": {
+          "country": "Italy",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 14800.0
+        },
+        "New Zealand": {
+          "country": "New Zealand",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 2860.0
+        },
+        "Ireland": {
+          "country": "Ireland",
+          "membership_revenue": 1545.0,
+          "affiliate_revenue": 0.0
+        },
+        "Mexico": {
+          "country": "Mexico",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Norway": {
+          "country": "Norway",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 8930.0
+        },
+        "France": {
+          "country": "France",
+          "membership_revenue": 28835.0,
+          "affiliate_revenue": 12190.0
+        },
+        "Spain": {
+          "country": "Spain",
+          "membership_revenue": 4275.0,
+          "affiliate_revenue": 2290.0
+        },
+        "United States": {
+          "country": "United States",
+          "membership_revenue": 2949645.0,
+          "affiliate_revenue": 0.0
+        },
+        "China": {
+          "country": "China",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 2200.0
+        },
+        "Korea, Rep.": {
+          "country": "Korea, Rep.",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1600.0
+        },
+        "Peru": {
+          "country": "Peru",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Bulgaria": {
+          "country": "Bulgaria",
+          "membership_revenue": 1905.0,
+          "affiliate_revenue": 0.0
+        },
+        "Greece": {
+          "country": "Greece",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1290.0
+        },
+        "United Kingdom": {
+          "country": "United Kingdom",
+          "membership_revenue": 16175.0,
+          "affiliate_revenue": 9970.0
+        },
+        "Croatia": {
+          "country": "Croatia",
+          "membership_revenue": 775.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Germany": {
+          "country": "Germany",
+          "membership_revenue": 3915.0,
+          "affiliate_revenue": 26000.0
+        },
+        "Central America and Dominican Republic": {
+          "country": "Central America and Dominican Republic",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1000.0
+        },
+        "Taiwan, China": {
+          "country": "Taiwan, China",
+          "membership_revenue": 0.0,
+          "affiliate_revenue": 1100.0
+        }
+      }
+    }
+  ],
+  "years_available": [
+    2024,
+    2025
+  ],
+  "latest_year": 2025
+}

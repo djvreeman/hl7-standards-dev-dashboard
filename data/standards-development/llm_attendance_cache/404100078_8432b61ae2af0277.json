@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Corey",
+      "organization": "FM/PIE",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Yunwei",
+      "organization": "USRSC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Lloyd",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Grahame",
+      "organization": "OO",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

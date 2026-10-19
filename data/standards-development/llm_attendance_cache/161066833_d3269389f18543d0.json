@@ -1,0 +1,65 @@
+{
+  "attendees": [
+    {
+      "name": "Jerry",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "VM",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "KL",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "SL",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "JG",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Paul Knapp",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Ron Parker",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Joel Gruenberg",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Sarah Gaunt",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Ken Rubin",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

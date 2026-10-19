@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Laura",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "John Spinosa",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "Ruby Nash",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    },
+    {
+      "name": "David DeRoode",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}

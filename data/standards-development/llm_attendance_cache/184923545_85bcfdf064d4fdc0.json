@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Chrissy Minor",
+      "organization": "CDC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Eric Larson",
+      "organization": "AIRA",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Craig Newman",
+      "organization": "Altarum",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Daryl",
+      "organization": "HLN",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Stamm",
+      "organization": "EPIC",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Nathan Bunker",
+      "organization": "AIRA",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

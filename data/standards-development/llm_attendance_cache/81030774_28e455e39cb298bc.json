@@ -1,0 +1,11 @@
+{
+  "attendees": [
+    {
+      "name": "Frank McKinney",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

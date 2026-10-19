@@ -1,0 +1,83 @@
+{
+  "attendees": [
+    {
+      "name": "Todd Cooper",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Chris Courville",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Garguilo",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Rhoads",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Martin Hurrell",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "John Walsh",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Martin Rosner",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Ken Fuchs",
+      "organization": null,
+      "present": true,
+      "role": "chair"
+    },
+    {
+      "name": "Daidi Zhong",
+      "organization": null,
+      "present": true,
+      "role": "vice-chair"
+    },
+    {
+      "name": "Steven Dain",
+      "organization": null,
+      "present": true,
+      "role": "secretary"
+    },
+    {
+      "name": "Stefan Schlichting",
+      "organization": null,
+      "present": true,
+      "role": "chair"
+    },
+    {
+      "name": "Konstantinos Makrodimitris",
+      "organization": null,
+      "present": true,
+      "role": "secretary"
+    },
+    {
+      "name": "Tom Thompson",
+      "organization": null,
+      "present": true,
+      "role": "liaison"
+    }
+  ],
+  "confidence": 1
+}

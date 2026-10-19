@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "Jan Oldenburg",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Robert Stegwee",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Maria Moen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jessica Skopac",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Katey from Phreesia",
+      "organization": "Phreesia",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Dave DeBronkhart",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

@@ -1,0 +1,29 @@
+{
+  "attendees": [
+    {
+      "name": "Riki",
+      "organization": "INM",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Riki",
+      "organization": "v2 Mgmt",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rob",
+      "organization": "Vocab",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Ralf",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

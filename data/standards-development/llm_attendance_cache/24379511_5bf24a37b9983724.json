@@ -1,0 +1,47 @@
+{
+  "attendees": [
+    {
+      "name": "Melva Peters",
+      "organization": null,
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Scott Robertson",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jean",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Shelley Spiro",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Julie",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "John Hatem",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

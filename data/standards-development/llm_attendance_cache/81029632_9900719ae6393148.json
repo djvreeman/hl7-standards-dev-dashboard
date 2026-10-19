@@ -1,0 +1,11 @@
+{
+  "attendees": [
+    {
+      "name": "Michael Muzoora",
+      "organization": "Berlin",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

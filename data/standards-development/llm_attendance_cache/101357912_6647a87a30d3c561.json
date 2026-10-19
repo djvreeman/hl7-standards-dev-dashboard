@@ -1,0 +1,11 @@
+{
+  "attendees": [
+    {
+      "name": "Craig",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

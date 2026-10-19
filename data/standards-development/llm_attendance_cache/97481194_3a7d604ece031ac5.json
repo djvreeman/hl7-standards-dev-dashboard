@@ -1,0 +1,35 @@
+{
+  "attendees": [
+    {
+      "name": "Virginia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jeff",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Vassil",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Timon",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Debi",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

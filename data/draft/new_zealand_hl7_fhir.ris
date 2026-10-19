@@ -1,0 +1,60 @@
+TY  - ELEC
+TI  - About the Health Provider Index (HPI)
+AU  - Health New Zealand Te Whatu Ora
+PY  - 2026
+DA  - 2026///
+PB  - Health New Zealand Te Whatu Ora
+UR  - https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/health-identity/health-provider-index-hpi/about-the-health-provider-index-hpi
+N2  - Official Health NZ guidance describing the national Health Provider Index (HPI), a central database of unique identifying information about health practitioners, facilities, organisations, and provider roles. Supports national digital health identity infrastructure used with New Zealand FHIR implementations.
+KW  - New Zealand
+KW  - FHIR
+KW  - HL7
+KW  - Initiative
+KW  - Policy
+ER  - 
+
+TY  - ELEC
+TI  - New Zealand HPI Implementation Guide
+AU  - Health New Zealand Te Whatu Ora
+PY  - 2025
+DA  - 2025/04/06/
+PB  - Health New Zealand Te Whatu Ora
+UR  - https://hpi-ig.hip.digital.health.nz/
+N2  - FHIR R4 Implementation Guide for the New Zealand Health Provider Index (HPI) API. Profiles and guidance for Practitioner, Location (facility), Organisation, and PractitionerRole resources used as the national registry of healthcare providers.
+KW  - New Zealand
+KW  - FHIR
+KW  - FHIR IG
+KW  - HL7
+KW  - Technical Framework
+ER  - 
+
+TY  - ELEC
+TI  - Health New Zealand Te Whatu Ora Shared Care FHIR API Implementation Guide
+AU  - Health New Zealand Te Whatu Ora
+PY  - 2026
+DA  - 2026/09/02/
+PB  - Health New Zealand Te Whatu Ora
+UR  - https://fhir-ig.digital.health.nz/shared-care/index.html
+N2  - National FHIR Implementation Guide for the Te Whatu Ora Shared Care API covering national shared care plans, questionnaires, outreach referrals, remote patient monitoring, outpatient workflows, messaging, GP care reporting, and pharmacy claiming.
+KW  - New Zealand
+KW  - FHIR
+KW  - FHIR IG
+KW  - HL7
+KW  - Technical Framework
+ER  - 
+
+TY  - ELEC
+TI  - HL7 FHIR New Zealand Base Implementation Guide
+AU  - HL7 New Zealand
+PY  - 2026
+DA  - 2026/07/24/
+PB  - HL7 New Zealand
+UR  - https://fhir.org.nz/ig/base/index.html
+N2  - National base FHIR Implementation Guide for New Zealand providing reusable extensions, identifiers, terminology, naming systems, and profiles (including NHI and HPI-related artifacts) for consistent FHIR implementation across New Zealand programmes and APIs.
+KW  - New Zealand
+KW  - FHIR
+KW  - FHIR IG
+KW  - FHIR National Core
+KW  - HL7
+KW  - Technical Framework
+ER  - 

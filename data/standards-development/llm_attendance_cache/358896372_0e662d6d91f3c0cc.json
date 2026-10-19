@@ -1,0 +1,41 @@
+{
+  "attendees": [
+    {
+      "name": "John H",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jean",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Tom de Jong",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Tim Schuller",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Victor van Hagen",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Daniel Zhang",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

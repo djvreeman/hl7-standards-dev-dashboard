@@ -1,0 +1,59 @@
+{
+  "attendees": [
+    {
+      "name": "Jan Oldenberg",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Debi Willis",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "David Pyke",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Gino Canessa",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Jeff Danford",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Peter",
+      "organization": "DOD",
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Virginia",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Rita",
+      "organization": null,
+      "present": true,
+      "role": "participant"
+    },
+    {
+      "name": "Charles",
+      "organization": "VA",
+      "present": true,
+      "role": "participant"
+    }
+  ],
+  "confidence": 1
+}

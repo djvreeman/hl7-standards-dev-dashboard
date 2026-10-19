@@ -1,0 +1,1011 @@
+# Instructions
+
+You are answering questions about HL7 International standards development. Use only the organizational context in this file and the data tables that follow it.
+
+When you answer:
+
+- Cite the indicator name and the time period for every number.
+- A blank cell is missing data. It is not zero. A reported zero is written as 0.
+- If a measurement note qualifies a value, quote that note with the value. Notes often record data-quality gaps or which ballot cycles fell inside the trimester.
+- Annual targets apply to a calendar year. A trimester value is one slice of that year. Say so when you compare them. Respect the target operation: `sum` means add the trimesters in that year; `average` means average them.
+- `higher` means a larger value is better. `lower` means a smaller value is better.
+- Do not invent indicators, periods, ballot dates, or causes that are not in this prompt.
+- If the question cannot be answered from this prompt, say what is missing.
+
+# How time periods work
+
+Dashboard periods use `YYYY-TN`. Reports and counts bucket months this way:
+
+- `T1` is January–April, and includes the January Working Group Meeting.
+- `T2` is May–August, and includes the May Working Group Meeting.
+- `T3` is September–December, and includes the September Working Group Meeting.
+
+A label that does not match `YYYY-TN`, such as `2026-AllTime`, is a separate snapshot. It is not a fourth trimester.
+
+Ballot-cycle codes in measurement notes, such as `202605` or `202609`, are `YYYYMM` cycle names. They are not trimester labels. A trimester can contain more than one cycle. Use the note's consensus-group counts when a period mixes cycles.
+
+# Organization
+
+HL7 International is a nonprofit that develops healthcare interoperability standards. In April 2013, HL7 made its standards freely available. Before that, access required membership.
+
+In 2022, HL7 created two divisions, Standards Development and Standards Implementation, and hired a Chief Standards Development Officer. Indicators in this prompt are the ones shown on the Standards Development dashboard that produced it. Some are shared with HL7 International.
+
+# FHIR core ballots
+
+This calendar is maintained by hand in `data/standards-development/llm_context.md`. It is not extracted from the indicator tables.
+
+Publication dates and version labels come from the [FHIR publication directory](https://hl7.org/fhir/directory.html). Scope notes come from each version's ballot introduction. Use this list to tell a FHIR core ballot apart from an ordinary implementation-guide ballot.
+
+Measurement notes name the HL7 cycles inside a trimester (`YYYYMM`). The aligned cycle below is the cycle that opens with that publication: a mid-December publication opens the January cycle of the next year, an early-April publication opens the May cycle, and a July or August publication opens the September cycle. A December publication and the Working Group Meeting can fall in different trimesters. The only R6 cycle named in the ballot text is January 2026: the [ballot 3 introduction](https://hl7.org/fhir/6.0.0-ballot3/ballot-intro.html) says the following full ballot was expected in that cycle, and [ballot 4](https://hl7.org/fhir/6.0.0-ballot4/ballot-intro.html) is that publication.
+
+## FHIR R6
+
+R6 is not published as a final release in this list. The current published release in the directory is still FHIR R5 (`5.0.0`, 26 Mar 2023). `6.0.0-snapshot1` (17 Jul 2026, "FHIR R6 Stable (Sept 2026)") is a snapshot, not a ballot.
+
+| Version | Published | Dashboard period | Aligned HL7 cycle | What was balloted |
+| --- | --- | --- | --- | --- |
+| [6.0.0-ballot1](https://hl7.org/fhir/6.0.0-ballot1/ballot-intro.html) | 2023-12-19 | 2023-T3 | January 2024 (`202401`) | 1st draft. Focused review only, not a full normative ballot. In scope: ActorDefinition, ExampleScenario, GraphDefinition, ImplementationGuide, MessageHeader, Requirements. Comments outside that list were out of scope. |
+| [6.0.0-ballot2](https://hl7.org/fhir/6.0.0-ballot2/ballot-intro.html) | 2024-08-13 | 2024-T2 | September 2024 (`202409`) | 2nd draft. Another focused draft ballot of candidate normative content, not the full specification. |
+| [6.0.0-ballot3](https://hl7.org/fhir/6.0.0-ballot3/ballot-intro.html) | 2025-04-03 | 2025-T1 | May 2025 (`202505`) | 3rd draft, and the last draft ballot. The ballot introduction said the next ballot, expected in the January 2026 cycle, would be the full mixed normative/trial-use ballot. Review focus included readiness for normative, Additional Resources, Group, RelativeTime, and new or removed resources (DeviceAlert, InsuranceProduct, MolecularDefinition, PersonalRelationship; EvidenceReport removed). |
+| [6.0.0-ballot4](https://hl7.org/fhir/6.0.0-ballot4/ballot-intro.html) | 2025-12-18 | Published in 2025-T3; January cycle closes in 2026-T1 | January 2026 (`202601`) | 1st full ballot, and the first normative ballot of R6. The whole specification was balloted as a full normative ANSI standard. The version history calls it "R6 1st Normative Ballot." Substantive changes after this ballot require another ballot. |
+| [6.0.0-ballot5](https://hl7.org/fhir/6.0.0-ballot5/ballot-intro.html) | 2026-07-17 | 2026-T2 | September 2026 (`202609`) | 2nd full ballot. Also a normative ballot of the whole specification. The ballot introduction says the implementable content is fully normative: no draft or trial-use content remains. A further full ballot was still expected. |
+
+## Earlier FHIR core ballots
+
+These rows are the other ballot publications in the same directory, not implementation-guide ballots. The path label is the cycle name HL7 published with that package. Where the directory date and the path label disagree, both are shown.
+
+| Version | Directory date | Path label | What was balloted |
+| --- | --- | --- | --- |
+| 3.2.0 | 2018-04-02 | 2018Jan | Draft for comment. First candidate normative content for R4. |
+| 3.3.0 | 2018-04-02 | 2018May | R4 Ballot #1. Mixed normative/trial use. First normative ballot. |
+| 3.5.0 | 2018-08-21 | 2018Sep | R4 Ballot #2. Mixed normative/trial use. Second normative ballot. |
+| 3.5a.0 | 2018-11-09 | 2018Dec | Special R4 Ballot #3. Normative packages for terminology, conformance, and Observation. |
+| 4.1.0 | 2021-03-11 | 2021Mar | R4B Ballot #1. |
+| 4.6.0 | 2021-04-15 | 2021May | R5 draft ballot. |
+| 5.0.0-ballot | 2022-09-10 | 2022Sep | R5 ballot. R5 (`5.0.0`) was published 26 Mar 2023 as trial use, not as a normative release. |
+
+Cycles that appear in the measurement notes and are absent from these tables are other HL7 ballots. Do not call them FHIR R6 unless this file says so.
+
+---
+
+# Data in this prompt
+
+Source page: Standards Development Insights.
+Issues, Ballots, and Ecosystem charts, the R4/R4B/R5 package-version composites, the published-specifications chart, Working Group Meeting locations, and a publication summary.
+Show KPIs Only is off.
+Indicator data last updated: 2026-09-15.
+Prompt generated: 2026-10-15.
+Publication titles are included for the latest year only.
+
+## Issues
+
+### Issue submitters (ID 19)
+
+- Unit: count (N)
+- Tags: KPI, ISSUES
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target |
+| --- | --- | --- |
+| 2022-T1 | 260 |  |
+| 2022-T2 | 202 |  |
+| 2022-T3 | 238 |  |
+| 2023-T1 | 219 |  |
+| 2023-T2 | 192 |  |
+| 2023-T3 | 184 |  |
+| 2024-T1 | 224 |  |
+| 2024-T2 | 208 |  |
+| 2024-T3 | 241 |  |
+| 2025-T1 | 215 |  |
+| 2025-T2 | 209 |  |
+| 2025-T3 | 199 |  |
+| 2026-T1 | 264 |  |
+| 2026-T2 | 234 |  |
+
+### Issue submitters: New (ID 20)
+
+- Unit: % (%)
+- Tags: KPI, ISSUES
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target |
+| --- | --- | --- |
+| 2022-T1 | 29.2 | 20 |
+| 2022-T2 | 18.3 | 20 |
+| 2022-T3 | 15.1 | 20 |
+| 2023-T1 | 16.4 | 20 |
+| 2023-T2 | 17.2 | 20 |
+| 2023-T3 | 23.4 | 20 |
+| 2024-T1 | 18.8 | 20 |
+| 2024-T2 | 19.7 | 20 |
+| 2024-T3 | 27.8 | 20 |
+| 2025-T1 | 21.9 | 20 |
+| 2025-T2 | 18.2 | 20 |
+| 2025-T3 | 19.6 | 20 |
+| 2026-T1 | 31.4 | 20 |
+| 2026-T2 | 17.1 | 20 |
+
+### Issues resolved (ID 21)
+
+- Unit: issues (N)
+- Tags: KPI, ISSUES
+- Better when: higher
+- Annual target: none
+- Definition: **Issues resolved**: Number of specification feedback issues (as tracked in Jira for FHIR, CDA, V2 and OTHER product families) transitioning to a resolved status.
+
+| Period | Value | Period target |
+| --- | --- | --- |
+| 2022-T1 | 2581 |  |
+| 2022-T2 | 2435 |  |
+| 2022-T3 | 1869 |  |
+| 2023-T1 | 2600 |  |
+| 2023-T2 | 1167 |  |
+| 2023-T3 | 1686 |  |
+| 2024-T1 | 2196 |  |
+| 2024-T2 | 1289 |  |
+| 2024-T3 | 1603 |  |
+| 2025-T1 | 1598 |  |
+| 2025-T2 | 950 |  |
+| 2025-T3 | 1072 |  |
+| 2026-T1 | 1298 | 1000 |
+| 2026-T2 | 726 |  |
+
+### Issues resulting in specification changes (ID 55)
+
+- Unit: % (%)
+- Tags: ISSUES
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target |
+| --- | --- | --- |
+| 2026-AllTime | 74.8 | 70 |
+
+### Resolution Time: Average (ID 35)
+
+- Unit: days (days)
+- Tags: ISSUES
+- Better when: lower
+- Annual target: none
+- Definition: **Time to issue resolution: average**: Time from creation of issue to first transition to any resolved state (Deferred, Resolved - Change Required, Published, Duplicate, Resolved - No Change, or Applied). Calculated as average days.
+
+| Period | Value | Period target |
+| --- | --- | --- |
+| 2022-T1 | 290 |  |
+| 2022-T2 | 305 |  |
+| 2022-T3 | 263 |  |
+| 2023-T1 | 309 |  |
+| 2023-T2 | 182 |  |
+| 2023-T3 | 207 |  |
+| 2024-T1 | 238 |  |
+| 2024-T2 | 262 |  |
+| 2024-T3 | 151 |  |
+| 2025-T1 | 316 |  |
+| 2025-T2 | 117 |  |
+| 2025-T3 | 53 |  |
+| 2026-T1 | 39 |  |
+| 2026-T2 | 35 |  |
+
+### Resolution Time: Median (ID 36)
+
+- Unit: days (days)
+- Tags: ISSUES
+- Better when: lower
+- Annual target: none
+- Definition: **Time to issue resolution: median**: Time from creation of issue to first transition to any resolved state (Deferred, Resolved - Change Required, Published, Duplicate, Resolved - No Change, or Applied). Calculated as median days.
+
+| Period | Value | Period target |
+| --- | --- | --- |
+| 2022-T1 | 111 |  |
+| 2022-T2 | 133 |  |
+| 2022-T3 | 139 |  |
+| 2023-T1 | 76 |  |
+| 2023-T2 | 134 |  |
+| 2023-T3 | 71 |  |
+| 2024-T1 | 46 |  |
+| 2024-T2 | 78 |  |
+| 2024-T3 | 55 |  |
+| 2025-T1 | 99 |  |
+| 2025-T2 | 36 |  |
+| 2025-T3 | 29 |  |
+| 2026-T1 | 17 |  |
+| 2026-T2 | 22 |  |
+
+### Resolution Time: P80 (ID 37)
+
+- Unit: days (days)
+- Tags: ISSUES
+- Better when: lower
+- Annual target: none
+- Definition: **Time to issue resolution: P80**: Time from creation of issue to first transition to any resolved state (Deferred, Resolved - Change Required, Published, Duplicate, Resolved - No Change, or Applied). Calculated as the 80th percentile of resolution time.
+
+| Period | Value | Period target |
+| --- | --- | --- |
+| 2022-T1 | 381 |  |
+| 2022-T2 | 431 |  |
+| 2022-T3 | 308 |  |
+| 2023-T1 | 295 |  |
+| 2023-T2 | 260 |  |
+| 2023-T3 | 259 |  |
+| 2024-T1 | 189 |  |
+| 2024-T2 | 279 |  |
+| 2024-T3 | 159 |  |
+| 2025-T1 | 305 |  |
+| 2025-T2 | 229 |  |
+| 2025-T3 | 87 |  |
+| 2026-T1 | 69 |  |
+| 2026-T2 | 73 |  |
+
+### Resolution to Application Time: Average (ID 38)
+
+- Unit: days (days)
+- Tags: ISSUES
+- Better when: lower
+- Annual target: none
+- Definition: **Time to (resolved) issue being applied in specification**: Time from issue entering 'Resolved - Change Required' status to 'Applied'.
+
+| Period | Value | Period target |
+| --- | --- | --- |
+| 2022-T1 | 231 |  |
+| 2022-T2 | 361 |  |
+| 2022-T3 | 312 |  |
+| 2023-T1 | 182 |  |
+| 2023-T2 | 194 |  |
+| 2023-T3 | 116 |  |
+| 2024-T1 | 176 |  |
+| 2024-T2 | 265 |  |
+| 2024-T3 | 184 |  |
+| 2025-T1 | 232 |  |
+| 2025-T2 | 61 |  |
+| 2025-T3 | 40 |  |
+| 2026-T1 | 37 |  |
+| 2026-T2 | 24 |  |
+
+## Ballots
+
+### Active voters (ID 40)
+
+- Unit: count (N)
+- Tags: BALLOTS
+- Better when: higher
+- Annual target: none
+- Definition: **Active voters**: Number of people who cast an 'active' vote (either Affirmative or Negative) in any of the Consensus Groups
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2022-T1 | 205 |  |  |
+| 2022-T2 | 177 |  |  |
+| 2022-T3 | 245 |  |  |
+| 2023-T1 | 190 |  |  |
+| 2023-T2 | 161 |  |  |
+| 2023-T3 | 157 |  |  |
+| 2024-T1 | 213 |  |  |
+| 2024-T2 | 180 |  |  |
+| 2024-T3 | 210 |  |  |
+| 2025-T1 | 176 |  |  |
+| 2025-T2 | 141 |  |  |
+| 2025-T3 | 206 |  |  |
+| 2026-T1 | 242 |  |  |
+| 2026-T2 | 224 |  | Includes ballot cycles: 202605 (21 CGs), 202609 (1 CG). Unique enrollment/active counts span all consensus groups that closed in this period. |
+
+### Active voters (ID 41)
+
+- Unit: % (%)
+- Tags: BALLOTS
+- Better when: higher
+- Annual target: none
+- Definition: **Active voters percent**: Number of people who cast an 'active' vote (either Affirmative or Negative) in any of the Consensus Groups out of all enrolled voters in the Consensus Groups.
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2022-T1 | 70.4467 |  |  |
+| 2022-T2 | 65.7993 |  |  |
+| 2022-T3 | 75.8514 |  |  |
+| 2023-T1 | 69.8529 |  |  |
+| 2023-T2 | 72.1973 |  |  |
+| 2023-T3 | 53.2203 |  |  |
+| 2024-T1 | 70.7641 |  |  |
+| 2024-T2 | 73.4694 |  |  |
+| 2024-T3 | 75.8123 |  |  |
+| 2025-T1 | 69.2913 |  |  |
+| 2025-T2 | 66.8246 |  |  |
+| 2025-T3 | 73.8351 |  |  |
+| 2026-T1 | 72.2388 |  |  |
+| 2026-T2 | 64 |  | Includes ballot cycles: 202605 (21 CGs), 202609 (1 CG). Unique enrollment/active counts span all consensus groups that closed in this period. |
+
+### Active voters % per CG (ID 42)
+
+- Unit: average (%)
+- Tags: BALLOTS
+- Better when: higher
+- Annual target: none
+- Definition: **Active voters % per CG average**: Average of the % of Active Voters per Consensus Group across all CGs in the time period.
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2022-T1 | 37.3 |  |  |
+| 2022-T2 | 50.5 |  |  |
+| 2022-T3 | 44.6 |  |  |
+| 2023-T1 | 40.3 |  |  |
+| 2023-T2 | 44.2 |  |  |
+| 2023-T3 | 31.3 |  |  |
+| 2024-T1 | 41.6 |  |  |
+| 2024-T2 | 42.3 |  |  |
+| 2024-T3 | 36.3 |  |  |
+| 2025-T1 | 39.6 |  |  |
+| 2025-T2 | 24.4 |  |  |
+| 2025-T3 | 33.9 |  |  |
+| 2026-T1 | 37.3 |  |  |
+| 2026-T2 | 34.2 |  | Includes ballot cycles: 202605 (21 CGs), 202609 (1 CG). Unique enrollment/active counts span all consensus groups that closed in this period. |
+
+### Balloters enrolled (ID 39)
+
+- Unit: count (N)
+- Tags: BALLOTS
+- Better when: higher
+- Annual target: none
+- Definition: **Balloters enrolled**: Number of people (unique individuals) enrolled in any of the Consensus Groups. Derived from Jira, which does not include withdraw or reaffirmation, or other special ballots like GOM approval.
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2022-T1 | 291 |  |  |
+| 2022-T2 | 269 |  |  |
+| 2022-T3 | 323 |  |  |
+| 2023-T1 | 272 |  |  |
+| 2023-T2 | 223 |  |  |
+| 2023-T3 | 295 |  |  |
+| 2024-T1 | 301 |  |  |
+| 2024-T2 | 245 |  |  |
+| 2024-T3 | 277 |  |  |
+| 2025-T1 | 254 |  |  |
+| 2025-T2 | 211 |  |  |
+| 2025-T3 | 279 |  |  |
+| 2026-T1 | 335 |  |  |
+| 2026-T2 | 350 |  | Includes ballot cycles: 202605 (21 CGs), 202609 (1 CG). Unique enrollment/active counts span all consensus groups that closed in this period. |
+
+### Balloters per CG (ID 4)
+
+- Unit: average (N)
+- Tags: KPI, BALLOTS
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2022-T1 | 136.3 | 100 |  |
+| 2022-T2 | 130.5 | 100 |  |
+| 2022-T3 | 165.7 | 100 |  |
+| 2023-T1 | 141.4 | 100 |  |
+| 2023-T2 | 143.1 | 100 |  |
+| 2023-T3 | 149 | 100 |  |
+| 2024-T1 | 138.6 | 100 |  |
+| 2024-T2 | 127.9 | 100 |  |
+| 2024-T3 | 145.7 | 100 |  |
+| 2025-T1 | 138.9 | 100 |  |
+| 2025-T2 | 106.7 | 100 |  |
+| 2025-T3 | 127.6 | 100 |  |
+| 2026-T1 | 169.1 | 100 |  |
+| 2026-T2 | 128.2 | 100 | Includes ballot cycles: 202605 (21 CGs), 202609 (1 CG). Unique enrollment/active counts span all consensus groups that closed in this period. |
+
+## Ecosystem
+
+### Composite charts
+
+The Ecosystem section draws two combined charts from these series. Each series is listed once.
+
+- Package versions: New R4, R4B, R5 uses indicators 49, 50, and 51.
+- Package versions: Total R4, R4B, R5 uses indicators 52, 53, and 54.
+
+These package-version series stay on the dashboard when Show KPIs Only is on, as long as another Ecosystem indicator is still visible.
+
+### Package versions: New R4 (ID 49)
+
+- Unit: count (N)
+- Tags: ECOSYSTEM
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2022-T1 | 54 |  |  |
+| 2022-T2 | 58 |  |  |
+| 2022-T3 | 141 |  |  |
+| 2023-T1 | 114 |  |  |
+| 2023-T2 | 131 |  |  |
+| 2023-T3 | 205 |  |  |
+| 2024-T1 | 282 |  |  |
+| 2024-T2 | 409 |  |  |
+| 2024-T3 | 479 |  |  |
+| 2025-T1 | 375 |  |  |
+| 2025-T2 | 482 |  |  |
+| 2025-T3 | 560 |  |  |
+| 2026-T1 | 347 |  | Failed to fetch versions for 37 package(s) from API |
+| 2026-T2 | 567 |  | Failed to fetch versions for 42 package(s) from API |
+
+### Package versions: New R4B (ID 50)
+
+- Unit: count (N)
+- Tags: ECOSYSTEM
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2022-T1 | 2 |  |  |
+| 2022-T2 | 7 |  |  |
+| 2022-T3 | 6 |  |  |
+| 2023-T1 | 13 |  |  |
+| 2023-T2 | 18 |  |  |
+| 2023-T3 | 20 |  |  |
+| 2024-T1 | 27 |  |  |
+| 2024-T2 | 57 |  |  |
+| 2024-T3 | 49 |  |  |
+| 2025-T1 | 29 |  |  |
+| 2025-T2 | 41 |  |  |
+| 2025-T3 | 23 |  |  |
+| 2026-T1 | 23 |  | Failed to fetch versions for 37 package(s) from API |
+| 2026-T2 | 66 |  | Failed to fetch versions for 42 package(s) from API |
+
+### Package versions: New R5 (ID 51)
+
+- Unit: count (N)
+- Tags: ECOSYSTEM
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2022-T1 | 0 |  |  |
+| 2022-T2 | 0 |  |  |
+| 2022-T3 | 2 |  |  |
+| 2023-T1 | 12 |  |  |
+| 2023-T2 | 4 |  |  |
+| 2023-T3 | 14 |  |  |
+| 2024-T1 | 8 |  |  |
+| 2024-T2 | 32 |  |  |
+| 2024-T3 | 22 |  |  |
+| 2025-T1 | 30 |  |  |
+| 2025-T2 | 56 |  |  |
+| 2025-T3 | 59 |  |  |
+| 2026-T1 | 63 |  | Failed to fetch versions for 37 package(s) from API |
+| 2026-T2 | 110 |  | Failed to fetch versions for 42 package(s) from API |
+
+### Package versions: Total R4 (ID 52)
+
+- Unit: count (N)
+- Tags: ECOSYSTEM
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2022-T1 | 303 |  |  |
+| 2022-T2 | 361 |  |  |
+| 2022-T3 | 502 |  |  |
+| 2023-T1 | 616 |  |  |
+| 2023-T2 | 747 |  |  |
+| 2023-T3 | 952 |  |  |
+| 2024-T1 | 1234 |  |  |
+| 2024-T2 | 1643 |  |  |
+| 2024-T3 | 2122 |  |  |
+| 2025-T1 | 2497 |  |  |
+| 2025-T2 | 2979 |  |  |
+| 2025-T3 | 3539 |  |  |
+| 2026-T1 | 4402 |  | Failed to fetch versions for 37 package(s) from API |
+| 2026-T2 | 5105 |  | Failed to fetch versions for 42 package(s) from API |
+
+### Package versions: Total R4B (ID 53)
+
+- Unit: count (N)
+- Tags: ECOSYSTEM
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2022-T1 | 6 |  |  |
+| 2022-T2 | 13 |  |  |
+| 2022-T3 | 19 |  |  |
+| 2023-T1 | 32 |  |  |
+| 2023-T2 | 50 |  |  |
+| 2023-T3 | 70 |  |  |
+| 2024-T1 | 97 |  |  |
+| 2024-T2 | 154 |  |  |
+| 2024-T3 | 203 |  |  |
+| 2025-T1 | 232 |  |  |
+| 2025-T2 | 273 |  |  |
+| 2025-T3 | 296 |  |  |
+| 2026-T1 | 319 |  | Failed to fetch versions for 37 package(s) from API |
+| 2026-T2 | 387 |  | Failed to fetch versions for 42 package(s) from API |
+
+### Package versions: Total R5 (ID 54)
+
+- Unit: count (N)
+- Tags: ECOSYSTEM
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2022-T1 | 0 |  |  |
+| 2022-T2 | 0 |  |  |
+| 2022-T3 | 2 |  |  |
+| 2023-T1 | 14 |  |  |
+| 2023-T2 | 18 |  |  |
+| 2023-T3 | 32 |  |  |
+| 2024-T1 | 40 |  |  |
+| 2024-T2 | 72 |  |  |
+| 2024-T3 | 94 |  |  |
+| 2025-T1 | 124 |  |  |
+| 2025-T2 | 180 |  |  |
+| 2025-T3 | 239 |  |  |
+| 2026-T1 | 305 |  | Failed to fetch versions for 37 package(s) from API |
+| 2026-T2 | 421 |  | Failed to fetch versions for 42 package(s) from API |
+
+### Other Ecosystem indicators
+
+### IG repos using auto-build pipeline (ID 33)
+
+- Unit: specifications (N)
+- Tags: ECOSYSTEM
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target |
+| --- | --- | --- |
+| 2024-T3 | 505 | 500 |
+| 2025-T1 | 573 | 550 |
+| 2025-T2 | 593 | 550 |
+| 2025-T3 | 643 | 550 |
+| 2026-T1 | 657 | 550 |
+| 2026-T2 | 690 | 550 |
+
+### Package versions (ID 45)
+
+- Unit: count (N)
+- Tags: ECOSYSTEM
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2019-T1 | 124 |  | Failed to fetch versions for 35 package(s) from API |
+| 2019-T2 | 150 |  | Failed to fetch versions for 35 package(s) from API |
+| 2019-T3 | 189 |  | Failed to fetch versions for 35 package(s) from API |
+| 2020-T1 | 229 |  | Failed to fetch versions for 35 package(s) from API |
+| 2020-T2 | 303 |  | Failed to fetch versions for 35 package(s) from API |
+| 2020-T3 | 370 |  | Failed to fetch versions for 35 package(s) from API |
+| 2021-T1 | 405 |  | Failed to fetch versions for 35 package(s) from API |
+| 2021-T2 | 441 |  | Failed to fetch versions for 35 package(s) from API |
+| 2021-T3 | 513 |  | Failed to fetch versions for 35 package(s) from API |
+| 2022-T1 | 571 |  | Failed to fetch versions for 35 package(s) from API |
+| 2022-T2 | 640 |  | Failed to fetch versions for 35 package(s) from API |
+| 2022-T3 | 830 |  | Failed to fetch versions for 35 package(s) from API |
+| 2023-T1 | 979 |  | Failed to fetch versions for 35 package(s) from API |
+| 2023-T2 | 1140 |  | Failed to fetch versions for 35 package(s) from API |
+| 2023-T3 | 1388 |  | Failed to fetch versions for 35 package(s) from API |
+| 2024-T1 | 1717 |  | Failed to fetch versions for 35 package(s) from API |
+| 2024-T2 | 2229 |  | Failed to fetch versions for 35 package(s) from API |
+| 2024-T3 | 2794 |  | Failed to fetch versions for 35 package(s) from API |
+| 2025-T1 | 3249 |  | Failed to fetch versions for 35 package(s) from API |
+| 2025-T2 | 3860 |  | Failed to fetch versions for 35 package(s) from API |
+| 2025-T3 | 4517 |  | Failed to fetch versions for 35 package(s) from API |
+| 2026-T1 | 5543 |  | Failed to fetch versions for 37 package(s) from API |
+| 2026-T2 | 6520 |  | Failed to fetch versions for 42 package(s) from API |
+
+### Packages (ID 43)
+
+- Unit: count (N)
+- Tags: ECOSYSTEM
+- Better when: higher
+- Annual target: none
+- Definition: **Packages**: Number of packages available in the FHIR ecosystem. Most packages correspond to an IG. Sourced from packages2.fhir.org.
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2019-T1 | 55 |  | Failed to fetch 35 package(s) from API |
+| 2019-T2 | 68 |  | Failed to fetch 35 package(s) from API |
+| 2019-T3 | 90 |  | Failed to fetch 35 package(s) from API |
+| 2020-T1 | 108 |  | Failed to fetch 35 package(s) from API |
+| 2020-T2 | 130 |  | Failed to fetch 35 package(s) from API |
+| 2020-T3 | 141 |  | Failed to fetch 35 package(s) from API |
+| 2021-T1 | 147 |  | Failed to fetch 35 package(s) from API |
+| 2021-T2 | 161 |  | Failed to fetch 35 package(s) from API |
+| 2021-T3 | 182 |  | Failed to fetch 35 package(s) from API |
+| 2022-T1 | 198 |  | Failed to fetch 35 package(s) from API |
+| 2022-T2 | 221 |  | Failed to fetch 35 package(s) from API |
+| 2022-T3 | 280 |  | Failed to fetch 35 package(s) from API |
+| 2023-T1 | 333 |  | Failed to fetch 35 package(s) from API |
+| 2023-T2 | 400 |  | Failed to fetch 35 package(s) from API |
+| 2023-T3 | 468 |  | Failed to fetch 35 package(s) from API |
+| 2024-T1 | 574 |  | Failed to fetch 35 package(s) from API |
+| 2024-T2 | 691 |  | Failed to fetch 35 package(s) from API |
+| 2024-T3 | 835 |  | Failed to fetch 35 package(s) from API |
+| 2025-T1 | 946 |  | Failed to fetch 35 package(s) from API |
+| 2025-T2 | 1071 |  | Failed to fetch 35 package(s) from API |
+| 2025-T3 | 1172 |  | Failed to fetch 35 package(s) from API |
+| 2026-T1 | 1247 |  | Failed to fetch 37 package(s) from API |
+| 2026-T2 | 1349 |  | Failed to fetch 42 package(s) from API |
+
+### Packages versions: New (ID 46)
+
+- Unit: count (N)
+- Tags: ECOSYSTEM
+- Better when: higher
+- Annual target: none
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2019-T1 | 23 |  | Failed to fetch versions for 35 package(s) from API |
+| 2019-T2 | 26 |  | Failed to fetch versions for 35 package(s) from API |
+| 2019-T3 | 39 |  | Failed to fetch versions for 35 package(s) from API |
+| 2020-T1 | 40 |  | Failed to fetch versions for 35 package(s) from API |
+| 2020-T2 | 74 |  | Failed to fetch versions for 35 package(s) from API |
+| 2020-T3 | 67 |  | Failed to fetch versions for 35 package(s) from API |
+| 2021-T1 | 35 |  | Failed to fetch versions for 35 package(s) from API |
+| 2021-T2 | 36 |  | Failed to fetch versions for 35 package(s) from API |
+| 2021-T3 | 72 |  | Failed to fetch versions for 35 package(s) from API |
+| 2022-T1 | 58 |  | Failed to fetch versions for 35 package(s) from API |
+| 2022-T2 | 69 |  | Failed to fetch versions for 35 package(s) from API |
+| 2022-T3 | 190 |  | Failed to fetch versions for 35 package(s) from API |
+| 2023-T1 | 149 |  | Failed to fetch versions for 35 package(s) from API |
+| 2023-T2 | 161 |  | Failed to fetch versions for 35 package(s) from API |
+| 2023-T3 | 248 |  | Failed to fetch versions for 35 package(s) from API |
+| 2024-T1 | 329 |  | Failed to fetch versions for 35 package(s) from API |
+| 2024-T2 | 512 |  | Failed to fetch versions for 35 package(s) from API |
+| 2024-T3 | 565 |  | Failed to fetch versions for 35 package(s) from API |
+| 2025-T1 | 455 |  | Failed to fetch versions for 35 package(s) from API |
+| 2025-T2 | 611 |  | Failed to fetch versions for 35 package(s) from API |
+| 2025-T3 | 657 |  | Failed to fetch versions for 35 package(s) from API |
+| 2026-T1 | 469 |  | Failed to fetch versions for 37 package(s) from API |
+| 2026-T2 | 826 |  | Failed to fetch versions for 42 package(s) from API |
+
+### Packages: New (ID 44)
+
+- Unit: count (N)
+- Tags: ECOSYSTEM
+- Better when: higher
+- Annual target: none
+- Definition: **Packages: new**: Number of new packages available in the FHIR ecosystem. Most packages correspond to an IG. Sourced from packages2.fhir.org.
+
+| Period | Value | Period target | Notes |
+| --- | --- | --- | --- |
+| 2019-T1 | 9 |  | Failed to fetch 35 package(s) from API |
+| 2019-T2 | 13 |  | Failed to fetch 35 package(s) from API |
+| 2019-T3 | 22 |  | Failed to fetch 35 package(s) from API |
+| 2020-T1 | 18 |  | Failed to fetch 35 package(s) from API |
+| 2020-T2 | 22 |  | Failed to fetch 35 package(s) from API |
+| 2020-T3 | 11 |  | Failed to fetch 35 package(s) from API |
+| 2021-T1 | 6 |  | Failed to fetch 35 package(s) from API |
+| 2021-T2 | 14 |  | Failed to fetch 35 package(s) from API |
+| 2021-T3 | 21 |  | Failed to fetch 35 package(s) from API |
+| 2022-T1 | 16 |  | Failed to fetch 35 package(s) from API |
+| 2022-T2 | 23 |  | Failed to fetch 35 package(s) from API |
+| 2022-T3 | 59 |  | Failed to fetch 35 package(s) from API |
+| 2023-T1 | 53 |  | Failed to fetch 35 package(s) from API |
+| 2023-T2 | 67 |  | Failed to fetch 35 package(s) from API |
+| 2023-T3 | 68 |  | Failed to fetch 35 package(s) from API |
+| 2024-T1 | 106 |  | Failed to fetch 35 package(s) from API |
+| 2024-T2 | 117 |  | Failed to fetch 35 package(s) from API |
+| 2024-T3 | 144 |  | Failed to fetch 35 package(s) from API |
+| 2025-T1 | 111 |  | Failed to fetch 35 package(s) from API |
+| 2025-T2 | 125 |  | Failed to fetch 35 package(s) from API |
+| 2025-T3 | 101 |  | Failed to fetch 35 package(s) from API |
+| 2026-T1 | 68 |  | Failed to fetch 37 package(s) from API |
+| 2026-T2 | 85 |  | Failed to fetch 42 package(s) from API |
+
+## Published specifications by realm
+
+The dashboard chart stacks U.S. Realm (ID 47) and Universal Realm (ID 48) under Total published specifications (ID 27). This chart stays visible when Show KPIs Only is on.
+
+### Published specifications (ID 27)
+
+- Unit: specifications (N)
+- Tags: KPI
+- Better when: higher
+- Annual targets (sum): 2019: 57, 2020: 57, 2021: 57, 2022: 57, 2023: 57, 2024: 57, 2025: 57, 2026: 57
+- Definition: **Published specifications**: Number of new specification (i.e. standards or protocol specifications) editions published by HL7 International.
+
+| Period | Value | Period target |
+| --- | --- | --- |
+| 2019-T1 | 7 |  |
+| 2019-T2 | 16 |  |
+| 2019-T3 | 18 |  |
+| 2020-T1 | 17 |  |
+| 2020-T2 | 16 |  |
+| 2020-T3 | 29 |  |
+| 2021-T1 | 12 |  |
+| 2021-T2 | 20 |  |
+| 2021-T3 | 21 |  |
+| 2022-T1 | 15 |  |
+| 2022-T2 | 23 |  |
+| 2022-T3 | 20 |  |
+| 2023-T1 | 21 |  |
+| 2023-T2 | 19 |  |
+| 2023-T3 | 22 |  |
+| 2024-T1 | 16 |  |
+| 2024-T2 | 20 |  |
+| 2024-T3 | 20 |  |
+| 2025-T1 | 16 |  |
+| 2025-T2 | 23 |  |
+| 2025-T3 | 16 |  |
+| 2026-T1 | 21 |  |
+| 2026-T2 | 27 |  |
+
+### Published specifications: U.S. Realm (ID 47)
+
+- Unit: specifications (N)
+- Tags: none
+- Better when: higher
+- Annual targets (sum): 2019: 10, 2020: 10, 2021: 10, 2022: 10, 2023: 10, 2024: 10, 2025: 10, 2026: 10
+
+| Period | Value | Period target |
+| --- | --- | --- |
+| 2019-T1 | 3 |  |
+| 2019-T2 | 2 |  |
+| 2019-T3 | 9 |  |
+| 2020-T1 | 13 |  |
+| 2020-T2 | 10 |  |
+| 2020-T3 | 17 |  |
+| 2021-T1 | 5 |  |
+| 2021-T2 | 14 |  |
+| 2021-T3 | 16 |  |
+| 2022-T1 | 12 |  |
+| 2022-T2 | 17 |  |
+| 2022-T3 | 14 |  |
+| 2023-T1 | 13 |  |
+| 2023-T2 | 16 |  |
+| 2023-T3 | 15 |  |
+| 2024-T1 | 11 |  |
+| 2024-T2 | 14 |  |
+| 2024-T3 | 16 |  |
+| 2025-T1 | 12 |  |
+| 2025-T2 | 17 |  |
+| 2025-T3 | 10 |  |
+| 2026-T1 | 14 |  |
+| 2026-T2 | 11 |  |
+
+### Published specifications: Universal Realm (ID 48)
+
+- Unit: specifications (N)
+- Tags: none
+- Better when: higher
+- Annual targets (sum): 2019: 10, 2020: 10, 2021: 10, 2022: 10, 2023: 10, 2024: 10, 2025: 10, 2026: 10
+
+| Period | Value | Period target |
+| --- | --- | --- |
+| 2019-T1 | 4 |  |
+| 2019-T2 | 14 |  |
+| 2019-T3 | 9 |  |
+| 2020-T1 | 4 |  |
+| 2020-T2 | 6 |  |
+| 2020-T3 | 12 |  |
+| 2021-T1 | 7 |  |
+| 2021-T2 | 6 |  |
+| 2021-T3 | 5 |  |
+| 2022-T1 | 3 |  |
+| 2022-T2 | 6 |  |
+| 2022-T3 | 6 |  |
+| 2023-T1 | 8 |  |
+| 2023-T2 | 3 |  |
+| 2023-T3 | 7 |  |
+| 2024-T1 | 5 |  |
+| 2024-T2 | 6 |  |
+| 2024-T3 | 4 |  |
+| 2025-T1 | 4 |  |
+| 2025-T2 | 6 |  |
+| 2025-T3 | 6 |  |
+| 2026-T1 | 7 |  |
+| 2026-T2 | 16 |  |
+
+## Working Group Meeting locations
+
+Host for the trimester Working Group Meeting. The dashboard can overlay these on the charts. The indicator values above are unchanged.
+
+| Period | Location |
+| --- | --- |
+| 2001-T1 | USA — January 2001 Orlando |
+| 2001-T2 | USA — May 2001 Minneapolis |
+| 2001-T3 | USA — October 2001 Salt Lake City |
+| 2002-T1 | USA — January 2002 San Diego |
+| 2002-T2 | USA — April 2002 Atlanta |
+| 2002-T3 | USA — September 2002 Baltimore |
+| 2003-T1 | USA — January 2003 San Antonio |
+| 2003-T2 | USA — May 2003 Cleveland |
+| 2003-T3 | USA — September 2003 Memphis |
+| 2004-T1 | USA — January 2004 San Diego |
+| 2004-T2 | USA — May 2004 San Antonio |
+| 2004-T3 | USA — September 2004 Atlanta |
+| 2005-T1 | USA — January 2005 Orlando |
+| 2005-T2 | Netherlands — May 2005 Netherlands |
+| 2005-T3 | USA — September 2005 San Diego |
+| 2006-T1 | USA — January 2006 Phoenix |
+| 2006-T2 | USA — May 2006 San Antonio |
+| 2006-T3 | USA — September 2006 Boca Raton |
+| 2007-T1 | USA — January 2007 San Diego |
+| 2007-T2 | Germany — May 2007 Cologne |
+| 2007-T3 | USA — September 2007 Atlanta |
+| 2008-T1 | USA — January 2008 San Antonio |
+| 2008-T2 | USA — May 2008 Phoenix |
+| 2008-T3 | Canada — September 2008 Vancouver |
+| 2009-T1 | USA — January 2009 Orlando |
+| 2009-T2 | Japan — May 2009 Kyoto |
+| 2009-T3 | USA — September 2009 Atlanta |
+| 2010-T1 | USA — January 2010 Phoenix |
+| 2010-T2 | Brazil — May 2010 Brazil |
+| 2010-T3 | USA — October 2010 Cambridge |
+| 2011-T1 | Australia — January 2011 Sydney |
+| 2011-T2 | USA — May 2011 Lake Buena Vista |
+| 2011-T3 | USA — September 2011 San Diego |
+| 2012-T1 | USA — January 2012 San Antonio |
+| 2012-T2 | Canada — May 2012 Vancouver |
+| 2012-T3 | USA — September 2012 Baltimore |
+| 2013-T1 | USA — January 2013 Phoenix |
+| 2013-T2 | USA — May 2013 Atlanta |
+| 2013-T3 | USA — September 2013 Cambridge |
+| 2014-T1 | USA — January 2014 San Antonio |
+| 2014-T2 | USA — May 2014 Phoenix |
+| 2014-T3 | USA — September 2014 Chicago |
+| 2015-T1 | USA — January 2015 San Antonio |
+| 2015-T2 | France — May 2015 Paris |
+| 2015-T3 | USA — October 2015 Atlanta |
+| 2016-T1 | USA — January 2016 Orlando |
+| 2016-T2 | Canada — May 2016 Montreal |
+| 2016-T3 | USA — September 2016 Baltimore |
+| 2017-T1 | USA — January 2017 San Antonio |
+| 2017-T2 | Spain — May 2017 Madrid |
+| 2017-T3 | USA — September 2017 San Diego |
+| 2018-T1 | USA — January 2018 New Orleans |
+| 2018-T2 | Germany — May 2018 Cologne |
+| 2018-T3 | USA — Sept - Oct 2018 Baltimore |
+| 2019-T1 | USA — Jan 2019 - San Antonio |
+| 2019-T2 | Canada — May 2019 Montreal |
+| 2019-T3 | USA — Sept - 2019 Atlanta |
+| 2020-T1 | Australia — Feb - 2020 Austarlia no numbers because AUS ran meeting |
+| 2020-T2 | USA — May-2020 WGM no meeting/COVID |
+| 2020-T3 | Virtual — Sept-2020 Virtual WGM |
+| 2021-T1 | Virtual — Jan -2021 Virtual WGM |
+| 2021-T2 | Virtual — May-2021 Virtual WGM |
+| 2021-T3 | Virtual — Sept-2021 Virtual WGM |
+| 2022-T1 | Virtual — Jan -2022 Virtual WGM |
+| 2022-T2 | Virtual — May-2022 Virtual WGM |
+| 2022-T3 | USA — Sept-2022 Baltimore WGM |
+| 2023-T1 | USA — Jan 2023 Henderson, NV |
+| 2023-T2 | USA — May 2023 - NOLA |
+| 2023-T3 | USA — Sept 2023 - Phoenix |
+| 2024-T1 | Virtual — Jan 2024 - Virtual WGM |
+| 2024-T2 | USA — May 2024 - Dallas, TX |
+| 2024-T3 | USA — Sep 2024 - Atlanta, GA |
+| 2025-T1 | Virtual — Jan 2025 - Virtual |
+| 2025-T2 | Spain — May 2025 - Madrid, Spain |
+| 2025-T3 | USA — Sep 2025 - Pittsburgh, PA |
+| 2026-T1 | Virtual — Jan 2026 - Virtual |
+| 2026-T2 | Netherlands — May 2026 - Rotterdam, Netherlands |
+| 2026-T3 | USA — Sep 2026 - Rockville, MD |
+
+## Published standards
+
+Counts of HL7 publications (publication status only; reaffirmations excluded).
+
+| Year | Publications |
+| --- | --- |
+| 2019 | 41 |
+| 2020 | 62 |
+| 2021 | 53 |
+| 2022 | 58 |
+| 2023 | 62 |
+| 2024 | 56 |
+| 2025 | 55 |
+| 2026 | 48 |
+
+### By family
+
+| Name | Count |
+| --- | --- |
+| FHIR | 268 |
+| CDA | 65 |
+| OTHER | 62 |
+| V2 | 20 |
+| V3 | 20 |
+
+### By realm
+
+| Name | Count |
+| --- | --- |
+| United States | 281 |
+| Universal | 154 |
+
+### Titles in 2026
+
+Earlier years are counts only. Ask again with the full publication list to include every title.
+
+- 1/29/2026: Errata: FHIR® R4 IG: FHIR Clinical Documents, Edition 1.0.1 (FHIR, Universal)
+- 2/10/2026: STU: FHIR® IG: National Health Care Surveys (NHCS), Edition 2 – US Realm (FHIR, United States)
+- 2/17/2026: STU: FHIR® IG: Public Health Profiles Library, Edition 2 – US Realm (FHIR, United States)
+- 2/24/2026: STU: CDA R2 IG: National Healthcare Surveys (NHCS), Edition 4 – US Realm (CDA, United States)
+- 3/12/2026: STU: EHR-Guidance: Pathways for Human-Computer Interaction in Electronic Health Information Record Systems to Reduce Clinician Burden (ISO TR 4419:2026) (OTHER, Universal)
+- 3/19/2026: Errata: FHIR® IG: Patient Cost Transparency, Edition 2.0.1 – US Realm (FHIR, United States)
+- 3/24/2026: Unballoted STU Update: FHIR® IG: Health Record Exchange (HRex) Framework, Edition 1.2 – US Realm (FHIR, United States)
+- 3/24/2026: STU: FHIR® Structured Data Capture (SDC) IG, Edition 4 (FHIR, Universal)
+- 3/25/2026: STU: FHIR® IG: Coverage Requirements Discovery, Edition 2.2 – US Realm (FHIR, United States)
+- 3/25/2026: STU: FHIR® IG: Prior-Authorization Support (PAS), Edition 2.2 – US Realm (FHIR, United States)
+- 3/27/2026: STU Technical Correction: FHIR® IG: Coverage Requirements Discovery, Edition 2.2.1 – US Realm (FHIR, United States)
+- 3/27/2026: STU: FHIR® IG: Prior-Authorization Support (PAS), Edition 2.2.1 – US Realm (FHIR, United States)
+- 3/27/2026: Unballoted STU Update: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®) Edition 2.2.0 (FHIR, United States)
+- 3/27/2026: STU: FHIR® IG: Documentation Templates and Rules (DTR), Edition 2.2 – US Realm (FHIR, United States)
+- 3/31/2026: STU: FHIR® R4 IG: Personal Health Device (PHD), Edition 2 (FHIR, Universal)
+- 3/31/2026: STU: FHIR® IG: Situational Awareness Framework for Reporting (US SAFR), Edition 1 – US Realm (FHIR, United States)
+- 4/1/2026: STU: FHIR® IG: Symptoms Data Standards, Edition 1 (FHIR, Universal)
+- 4/6/2026: Errata: FHIR® R4 IG: QI-Core, Edition 7.0.2 – US Realm (FHIR, United States)
+- 4/7/2026: STU: FHIR® R5 IG: CardX Cardiac Implantable Electronic Devices, Edition 1 (FHIR, Universal)
+- 4/27/2026: STU: FHIR® IG: Person-Centered Outcomes (PCO), Edition 1 – US Realm (FHIR, United States)
+- 4/29/2026: Informative: FHIR® IG: FHIR to OMOP, Edition 1 (FHIR, Universal)
+- 5/1/2026: STU: FHIR® IG: SMART Health Cards Vaccination and Testing, Edition 1 (FHIR, Universal)
+- 5/6/2026: STU: FHIR® IG: Radiation Dose Summary for Diagnostic Procedures on FHIR, Edition 1 (FHIR, Universal)
+- 5/12/2026: STU: FHIR® IG: Transitions of Care for Post-Acute Providers, Edition 1- US Realm (FHIR, United States)
+- 5/16/2026: STU: FHIR® IG: Core Extensions, Edition 5.3 (FHIR, Universal)
+- 5/30/2026: STU: FHIR® IG: US-Core, Edition 9.0.0 – US Realm (FHIR, United States)
+- 6/3/2026: STU: FHIR® IG: Application Feature Framework, Edition 1 (FHIR, Universal)
+- 6/3/2026: STU: FHIR® IG: Order Catalog, Release 1 (FHIR, Universal)
+- 6/3/2026: Informative: Informative Document: Use of FHIR Query & Response Paradigm for Public Health Data Exchange, Edition 1- US Realm (FHIR, United States)
+- 6/5/2026: STU: FHIR® IG: C-CDA on FHIR, Edition 2 – US Realm (FHIR, United States)
+- 6/12/2026: Informative: CDA® R2 FHIR® StructureDefinition Format, Edition 1 (CDA, United States)
+- 6/12/2026: Normative: Electronic Health Record System Functional Model, Release 2.1.1 (OTHER, Universal)
+- 6/12/2026: STU: CDA® R2 IG: Consolidated CDA Templates for Clinical Notes, Edition 5 – US Realm (CDA, United States)
+- 6/17/2026: STU: FHIR® IG: Potential Drug-Drug Interaction (PDDI) Clinical Decision Support (CDS), Edition 1 (FHIR, Universal)
+- 6/18/2026: Errata: FHIR® IG: International Patient Summary, Edition 2.0.1 (FHIR, Universal)
+- 6/23/2026: Normative: Personal Health Record System Functional Model, Release 2.0.1 (OTHER, Universal)
+- 6/24/2026: Informative: White Paper: Retrieval of Immunization Data via Bulk FHIR, Edition 1- US Realm (FHIR, United States)
+- 7/1/2026: STU: FHIR® IG: Canonical Resource Management Infrastructure (CRMI), Edition 2 (FHIR, Universal)
+- 7/1/2026: STU: Health Level Seven Arden Syntax for Medical Logic Systems, Version 3.0 Release 1 – STU3 (OTHER, Universal)
+- 7/2/2026: Unballoted STU Update: FHIR® IG: FHIR Clinical Document, Edition 1.1 (FHIR, Universal)
+- 7/28/2026: STU: Cross-Paradigm Specification: FHIRPath, Edition 3 (FHIR, Universal)
+- 7/29/2026: Unballoted STU Update: CDA® R2 IG: Healthcare Associated Infection Reports, Release 4, STU 4.4.1 (CDA, United States)
+- 8/12/2026: STU: Specification: Clinical Quality Language (CQL), Release 2 (OTHER, Universal)
+- 8/21/2026: Informative: FHIR® IG: Common CQL Artifacts for FHIR, Edition 2 – US Realm (FHIR, United States)
+- 8/21/2026: Unballoted STU Update: FHIR® IG: Payer Data Exchange (PDex), Release 2.2.0 – US Realm (FHIR, United States)
+- 8/24/2026: Informative: Domain Analysis Model: School Based Physical Fitness Testing (SB-PFT), Edition 1- US Realm (OTHER, United States)
+- 8/26/2026: Informative: Informative Document: Patient Information Quality Improvement (PIQI) Framework, Edition 1 (OTHER, Universal)
+- 8/27/2026: Informative: Guidance: Field Guide to Sharable Clinical Pathways, Edition 3 (OTHER, Universal)
+
+## Chart images
+
+The downloaded zip has this prompt as `prompt.md` and these chart images in `charts/`. They are the charts visible on the Standards Development Insights page when the prompt was created. Upload the image files with this prompt when the model can read images. The tables above already contain the numbers.
+
+- Issue Submitters: `charts/2026T2_001_Issue_Submitters.png`
+- Issue Submitters: New: `charts/2026T2_002_Issue_Submitters_New.png`
+- Issues Resolved: `charts/2026T2_003_Issues_Resolved.png`
+- Issues Resulting In Specification Changes: `charts/2026AllTime_004_Issues_Resulting_In_Specification_Changes.png`
+- Resolution Time: Average: `charts/2026T2_005_Resolution_Time_Average.png`
+- Resolution Time: Median: `charts/2026T2_006_Resolution_Time_Median.png`
+- Resolution Time: P80: `charts/2026T2_007_Resolution_Time_P80.png`
+- Resolution To Application Time: Average: `charts/2026T2_008_Resolution_To_Application_Time_Average.png`
+- Active Voters: `charts/2026T2_009_Active_Voters.png`
+- Active Voters: `charts/2026T2_010_Active_Voters.png`
+- Active Voters % Per CG: `charts/2026T2_011_Active_Voters___Per_CG.png`
+- Balloters Enrolled: `charts/2026T2_012_Balloters_Enrolled.png`
+- Balloters Per CG: `charts/2026T2_013_Balloters_Per_CG.png`
+- Package Versions: New R4, R4B, R5: `charts/2026T2_014_Package_Versions_New_R4__R4B__R5.png`
+- Package Versions: Total R4, R4B, R5: `charts/2026T2_015_Package_Versions_Total_R4__R4B__R5.png`
+- IG Repos Using Auto-build Pipeline: `charts/2026T2_016_IG_Repos_Using_Auto-build_Pipeline.png`
+- Package Versions: `charts/2026T2_017_Package_Versions.png`
+- Package Versions: New R4: `charts/2026T2_018_Package_Versions_New_R4.png`
+- Package Versions: New R4B: `charts/2026T2_019_Package_Versions_New_R4B.png`
+- Package Versions: New R5: `charts/2026T2_020_Package_Versions_New_R5.png`
+- Package Versions: Total R4: `charts/2026T2_021_Package_Versions_Total_R4.png`
+- Package Versions: Total R4B: `charts/2026T2_022_Package_Versions_Total_R4B.png`
+- Package Versions: Total R5: `charts/2026T2_023_Package_Versions_Total_R5.png`
+- Packages: `charts/2026T2_024_Packages.png`
+- Packages Versions: New: `charts/2026T2_025_Packages_Versions_New.png`
+- Packages: New: `charts/2026T2_026_Packages_New.png`
+- Published Specifications by Realm: `charts/2026T2_027_Published_Specifications_by_Realm.png`
+
+## Question
+
+Previously, when I reported on 2026 T1 numbers, I said: Median Issue Resolution Time has improved by 41.4% since last trimester and a massive 67.9% improvement based on the median for all of 2025 (which is the benchmark we’ll compare ourselves to at the end of the year).
+
+How should I describe the situation of issue resolution time at the close of 2026 T2?
+
+Answer this question using only the context and data above.

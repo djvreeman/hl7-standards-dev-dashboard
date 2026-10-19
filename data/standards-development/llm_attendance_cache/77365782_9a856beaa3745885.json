@@ -1,0 +1,23 @@
+{
+  "attendees": [
+    {
+      "name": "Brian",
+      "organization": "PA",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Cooper",
+      "organization": "PA",
+      "present": true,
+      "role": "co_chair"
+    },
+    {
+      "name": "Alex",
+      "organization": null,
+      "present": true,
+      "role": "unknown"
+    }
+  ],
+  "confidence": 1
+}
